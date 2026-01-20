@@ -11,7 +11,7 @@ use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
- * Enum ConsentType
+ * Enum ConsentType.
  *
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
@@ -53,7 +53,6 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
     public function getColor(): string
     {
         return $this->transClass(self::class, $this->value.'.color');
-
     }
 
     public function getIcon(): string

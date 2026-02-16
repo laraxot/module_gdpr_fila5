@@ -50,4 +50,17 @@ return [
             'label' => 'showPassword',
         ],
     ],
+    'label' => 'Register Widget',
+    'plural_label' => 'Register Widget (Plurale)',
+    'navigation' => [
+        'name' => 'Register Widget',
+        'plural' => 'Register Widget',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Register Widget',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
 ];

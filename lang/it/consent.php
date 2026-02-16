@@ -43,4 +43,6 @@ return [
         'withdraw' => 'Revoca',
         'renew' => 'Rinnova',
     ],
+    'label' => 'Consent',
+    'plural_label' => 'Consent (Plurale)',
 ];

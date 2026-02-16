@@ -23,4 +23,40 @@ return [
     'settings_save' => 'Salva la mia selezione',
     'settings_title' => 'Impostazioni cookie',
     'settings_text' => 'Il nostro sito web memorizza quattro tipi di cookie. In qualsiasi momento puoi scegliere quali cookie accettare e quali rifiutare. Puoi leggere di più su cosa sono i cookie e quali tipi di cookie memorizziamo nella nostra <a href=":policyUrl" target="_blank" class="underline hover:no-underline">Cookie Policy</a>.',
+    'label' => 'Texts',
+    'plural_label' => 'Texts (Plurale)',
+    'navigation' => [
+        'name' => 'Texts',
+        'plural' => 'Texts',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Texts',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Texts',
+        ],
+        'edit' => [
+            'label' => 'Modifica Texts',
+        ],
+        'delete' => [
+            'label' => 'Elimina Texts',
+        ],
+    ],
 ];

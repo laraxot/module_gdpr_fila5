@@ -36,4 +36,17 @@ return [
         'data_retention' => 'Conservazione Dati',
         'data_sharing' => 'Condivisione Dati',
     ],
+    'label' => 'Profile',
+    'plural_label' => 'Profile (Plurale)',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Profile',
+        ],
+        'edit' => [
+            'label' => 'Modifica Profile',
+        ],
+        'delete' => [
+            'label' => 'Elimina Profile',
+        ],
+    ],
 ];

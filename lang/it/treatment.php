@@ -40,4 +40,17 @@ return [
         'public_interest' => 'Interesse Pubblico',
         'legitimate_interests' => 'Interessi Legittimi',
     ],
+    'label' => 'Treatment',
+    'plural_label' => 'Treatment (Plurale)',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Treatment',
+        ],
+        'edit' => [
+            'label' => 'Modifica Treatment',
+        ],
+        'delete' => [
+            'label' => 'Elimina Treatment',
+        ],
+    ],
 ];

@@ -20,4 +20,40 @@ return [
     'Laravel workshops' => 'workshop Laravel',
     'Laravel networking' => 'networking Laravel',
     'LaravelPizza' => 'LaravelPizza',
+    'label' => 'New Keys',
+    'plural_label' => 'New Keys (Plurale)',
+    'navigation' => [
+        'name' => 'New Keys',
+        'plural' => 'New Keys',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'New Keys',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea New Keys',
+        ],
+        'edit' => [
+            'label' => 'Modifica New Keys',
+        ],
+        'delete' => [
+            'label' => 'Elimina New Keys',
+        ],
+    ],
 ];

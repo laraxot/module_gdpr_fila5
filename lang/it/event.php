@@ -41,4 +41,17 @@ return [
         'data_modified' => 'Dati Modificati',
         'data_deleted' => 'Dati Eliminati',
     ],
+    'label' => 'Event',
+    'plural_label' => 'Event (Plurale)',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Event',
+        ],
+        'edit' => [
+            'label' => 'Modifica Event',
+        ],
+        'delete' => [
+            'label' => 'Elimina Event',
+        ],
+    ],
 ];

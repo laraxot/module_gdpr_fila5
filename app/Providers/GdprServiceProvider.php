@@ -9,9 +9,9 @@ use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 use function Safe\realpath;
+use function Safe\realpath;
 
 use Statikbe\CookieConsent\CookieConsentMiddleware;
-use function Safe\realpath;
 
 class GdprServiceProvider extends XotBaseServiceProvider
 {

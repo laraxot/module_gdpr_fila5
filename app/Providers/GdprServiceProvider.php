@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Providers;
 
 use Illuminate\Routing\Router;
-use function Safe\realpath;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+
+use function Safe\realpath;
+
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 
 class GdprServiceProvider extends XotBaseServiceProvider

@@ -6,6 +6,8 @@ uses(TestCase::class);
 
 uses(TestCase::class);
 
+uses(\Modules\Gdpr\Tests\TestCase::class);
+
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;

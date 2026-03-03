@@ -13,9 +13,9 @@ uses(TestCase::class);
 beforeEach(function (): void {
     // Skip if database not available
     try {
-        \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+        DB::connection()->getPdo();
+    } catch (Exception $e) {
+        $this->markTestSkipped('Database not available: '.$e->getMessage());
     }
 });
 

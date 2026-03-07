@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -15,7 +14,6 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
 
     /** @var array<int, string> */
     protected array $connectionsToTransact = [

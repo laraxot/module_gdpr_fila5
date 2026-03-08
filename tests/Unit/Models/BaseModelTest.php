@@ -8,7 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 
 beforeEach(function () {
+<<<<<<< HEAD
+    $this->baseModel = new class extends BaseModel {
+||||||| 6161e129d
+    $this->baseModel = new class extends BaseModel
+    {
+=======
     // @var mixed baseModel = new class extends BaseModel {
+>>>>>>> feature/ralph-loop-implementation
         protected $table = 'test_gdpr_table';
     };
 });

@@ -93,7 +93,7 @@ class RegisterWidget extends XotBaseWidget
             $user = app(CreateUserAction::class)->execute($validatedData);
             app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent));
             app(LogRegistrationAction::class)->execute($user, [
-                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent)
+                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent),
             ]);
 
             return $user;
@@ -110,7 +110,7 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent)
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent),
         ]);
     }
 }

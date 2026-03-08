@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Tests\Unit\Models;
 
 uses(TestCase::class);
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 use Modules\Gdpr\Tests\TestCase;
 

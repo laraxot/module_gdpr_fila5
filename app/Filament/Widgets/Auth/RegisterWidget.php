@@ -72,31 +72,29 @@ class RegisterWidget extends XotBaseWidget
     public function submit(): void
     {
         // Validate form data using Livewire attributes
-        // @var mixed validate(;
+        $this->validate();
 
         // Validate GDPR consents
-        app(ValidateGdprConsentAction::class)->execute(
-            // @var mixed privacy_accepted,
-            // @var mixed terms_accepted
+        app(ValidateGdprConsentAction::class)->execute($privacy_accepted, $terms_accepted
         );
 
         // Prepare form data
         $formData = [
-            'first_name' => // @var mixed first_name,
-            'last_name' => // @var mixed last_name,
-            'email' => // @var mixed email,
-            'password' => // @var mixed password,
-            'password_confirmation' => // @var mixed password_confirmation,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'email' => $email,
+            'password' => $password,
+            'password_confirmation' => $password_confirmation,
         ];
 
         $validatedData = app(ValidateUserDataAction::class)->execute($formData);
-        // @var mixed logRegistrationAttempt($formData;
+        $this->logRegistrationAttempt($formData);
 
         $user = DB::connection('user')->transaction(function () use ($validatedData) {
             $user = app(CreateUserAction::class)->execute($validatedData);
-            app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent;
+            app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent));
             app(LogRegistrationAction::class)->execute($user, [
-                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent
+                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
             ]);
 
             return $user;
@@ -113,7 +111,7 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
         ]);
     }
 }

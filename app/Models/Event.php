@@ -14,7 +14,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
 use Modules\Xot\Contracts\ProfileContract;
-
 use function Safe\json_encode;
 
 /**
@@ -64,8 +63,6 @@ class Event extends BaseModel
 {
     use HasUuids;
 
-    protected $table = 'gdpr_events';
-
     public $fillable = [
         'id',
         'action',
@@ -74,6 +71,8 @@ class Event extends BaseModel
         'subject_id',
         'payload',
     ];
+
+    protected $table = 'gdpr_events';
 
     public function consent(): BelongsTo
     {

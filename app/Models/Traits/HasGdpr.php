@@ -141,7 +141,7 @@ trait HasGdpr
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /* @var array<string> */
+        /** @var array<string> */
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 

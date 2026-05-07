@@ -7,13 +7,13 @@ namespace Modules\Gdpr\Filament\Resources\EventResource\Schemas;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Component as SchemaComponent;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class EventForm extends XotBaseResourceForm
 {
     /**
-     * @return array<string, Component>
+     * @return array<int|string, SchemaComponent>
      */
     public static function getFormSchema(): array
     {
@@ -25,5 +25,6 @@ class EventForm extends XotBaseResourceForm
             'action' => TextInput::make('action')->required()->maxLength(191),
             'payload' => Textarea::make('payload')->required()->columnSpanFull(),
         ];
+
     }
 }

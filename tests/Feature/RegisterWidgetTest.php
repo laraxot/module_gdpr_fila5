@@ -21,7 +21,7 @@ uses(TestCase::class);
 // ValidateGdprConsentAction
 // ---------------------------------------------------------------------------
 
-it('validates gdpr consent passes when both accepted', function (): void {
+it('validates gdpr consent passes when both accepted', function(): void {
     $action = app(ValidateGdprConsentAction::class);
 
     // Should not throw
@@ -30,19 +30,19 @@ it('validates gdpr consent passes when both accepted', function (): void {
     expect(true)->toBeTrue();
 });
 
-it('validates gdpr consent fails when privacy not accepted', function (): void {
+it('validates gdpr consent fails when privacy not accepted', function(): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(false, true);
 })->throws(Illuminate\Validation\ValidationException::class);
 
-it('validates gdpr consent fails when terms not accepted', function (): void {
+it('validates gdpr consent fails when terms not accepted', function(): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(true, false);
 })->throws(Illuminate\Validation\ValidationException::class);
 
-it('validates gdpr consent fails when both not accepted', function (): void {
+it('validates gdpr consent fails when both not accepted', function(): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(false, false);
@@ -52,7 +52,7 @@ it('validates gdpr consent fails when both not accepted', function (): void {
 // CollectGdprConsentsAction
 // ---------------------------------------------------------------------------
 
-it('collects gdpr consents correctly', function (): void {
+it('collects gdpr consents correctly', function(): void {
     $action = app(CollectGdprConsentsAction::class);
 
     $result = $action->execute(true, true, false);
@@ -64,7 +64,7 @@ it('collects gdpr consents correctly', function (): void {
     ]);
 });
 
-it('collects gdpr consents with all true', function (): void {
+it('collects gdpr consents with all true', function(): void {
     $action = app(CollectGdprConsentsAction::class);
 
     $result = $action->execute(true, true, true);
@@ -74,7 +74,7 @@ it('collects gdpr consents with all true', function (): void {
     expect($result['marketing_consent'])->toBeTrue();
 });
 
-it('collects gdpr consents with all false', function (): void {
+it('collects gdpr consents with all false', function(): void {
     $action = app(CollectGdprConsentsAction::class);
 
     $result = $action->execute(false, false, false);
@@ -88,7 +88,7 @@ it('collects gdpr consents with all false', function (): void {
 // ValidateUserDataAction
 // ---------------------------------------------------------------------------
 
-it('validates and transforms user data correctly', function (): void {
+it('validates and transforms user data correctly', function(): void {
     $action = app(ValidateUserDataAction::class);
 
     $email = 'mario.rossi.'.uniqid().'@example.com';
@@ -109,7 +109,7 @@ it('validates and transforms user data correctly', function (): void {
     expect(Hash::check('SecureP@ssw0rd!', $result['password']))->toBeTrue();
 });
 
-it('validates user data hashes the password', function (): void {
+it('validates user data hashes the password', function(): void {
     $action = app(ValidateUserDataAction::class);
 
     $formData = [
@@ -126,7 +126,7 @@ it('validates user data hashes the password', function (): void {
     expect(Hash::check('MyP@ssword123!', $result['password']))->toBeTrue();
 });
 
-it('validates user data always sets customer_user type', function (): void {
+it('validates user data always sets customer_user type', function(): void {
     $action = app(ValidateUserDataAction::class);
 
     $formData = [
@@ -237,7 +237,7 @@ it('saves gdpr consents with marketing accepted', function (): void {
 // Full registration flow (unit-level, no Livewire rendering)
 // ---------------------------------------------------------------------------
 
-it('can create a user with customer_user type via CreateUserAction', function (): void {
+it('can create a user with customer_user type via CreateUserAction', function(): void {
     $action = app(Modules\User\Actions\User\CreateUserAction::class);
 
     $data = [
@@ -339,7 +339,7 @@ it('full registration pipeline works end to end', function (): void {
 // Translation keys exist
 // ---------------------------------------------------------------------------
 
-it('has all required translation keys for register page', function (): void {
+it('has all required translation keys for register page', function(): void {
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',

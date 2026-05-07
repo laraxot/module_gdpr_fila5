@@ -7,13 +7,13 @@ namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Schemas;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Component as SchemaComponent;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class TreatmentForm extends XotBaseResourceForm
 {
     /**
-     * @return array<string, Component>
+     * @return array<int|string, SchemaComponent>
      */
     public static function getFormSchema(): array
     {
@@ -26,5 +26,6 @@ class TreatmentForm extends XotBaseResourceForm
             'documentUrl' => TextInput::make('documentUrl')->maxLength(191)->default(null),
             'weight' => TextInput::make('weight')->required()->numeric(),
         ];
+
     }
 }

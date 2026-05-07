@@ -26,6 +26,5 @@ class TreatmentForm extends XotBaseResourceForm
             'documentUrl' => TextInput::make('documentUrl')->maxLength(191)->default(null),
             'weight' => TextInput::make('weight')->required()->numeric(),
         ];
-
     }
 }

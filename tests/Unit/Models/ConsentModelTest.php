@@ -10,7 +10,7 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
 
 test('consent_fillable_attributes', function () {
-    $consent = new Consent;
+    $consent = new Consent();
     $fillable = $consent->getFillable();
 
     expect($fillable)->toContain('subject_id');
@@ -22,19 +22,19 @@ test('consent_fillable_attributes', function () {
 });
 
 test('consent_has_treatment_relationship_method', function () {
-    $consent = new Consent;
+    $consent = new Consent();
 
     expect(method_exists($consent, 'treatment'))->toBeTrue();
 });
 
 test('consent_is_not_incrementing', function () {
-    $consent = new Consent;
+    $consent = new Consent();
 
     expect($consent->getIncrementing())->toBeFalse();
 });
 
 test('consent_is_uuid', function () {
-    $consent = new Consent;
+    $consent = new Consent();
     $traits = class_uses_recursive($consent);
 
     expect($traits)->toHaveKey('Illuminate\Database\Eloquent\Concerns\HasUuids');

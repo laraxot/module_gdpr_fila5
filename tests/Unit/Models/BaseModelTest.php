@@ -11,8 +11,7 @@ use Modules\Gdpr\Models\BaseModel;
 use Modules\Gdpr\Tests\TestCase;
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel
-    {
+    $this->baseModel = new class extends BaseModel {
         protected $table = 'test_gdpr_table';
     };
 });

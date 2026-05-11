@@ -1,12 +1,12 @@
-# Gdpr Module - memories Index
+# Gdpr Module - concepts Index
 
 ## Purpose
-Index for Gdpr module memories.
+Index for Gdpr module concepts.
 
 ## On-Demand Loading
 
 ```bash
-qmd search "Gdpr memories" --limit 5
+qmd search "Gdpr concepts" --limit 5
 ```
 
 ## See Also

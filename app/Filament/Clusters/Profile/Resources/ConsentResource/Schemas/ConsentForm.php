@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Modules\base_quaeris_fila5\var\www\_bases\base_quaeris_fila5\laravel\Modules\Gdpr\app\Filament\Resources\TreatmentResource\Schemas;
+namespace Modules\base_quaeris_fila5\var\www\_bases\base_quaeris_fila5\laravel\Modules\Gdpr\app\Filament\Clusters\Profile\Resources\ConsentResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
-class TreatmentForm extends XotBaseResourceForm
+class ConsentForm extends XotBaseResourceForm
 {
     /**
      * @return array<int|string, \Filament\Schemas\Components\Component>

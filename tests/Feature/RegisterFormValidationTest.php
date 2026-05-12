@@ -87,7 +87,7 @@ it('validates password must contain symbol', function (): void {
     test()->markTestSkipped('ValidateUserDataAction does not validate password - validation is in RegisterWidget');
 });
 
-it('accepts valid strong password', function(): void {
+it('accepts valid strong password', function (): void {
     $formData = [
         'first_name' => 'Mario',
         'last_name' => 'Rossi',
@@ -108,22 +108,22 @@ it('validates password confirmation must match', function (): void {
 // GDPR Consent Validation
 // ---------------------------------------------------------------------------
 
-it('validates privacy consent is required', function(): void {
+it('validates privacy consent is required', function (): void {
     $this->expectException(ValidationException::class);
     app(ValidateGdprConsentAction::class)->execute(false, true);
 });
 
-it('validates terms consent is required', function(): void {
+it('validates terms consent is required', function (): void {
     $this->expectException(ValidationException::class);
     app(ValidateGdprConsentAction::class)->execute(true, false);
 });
 
-it('validates both consents required', function(): void {
+it('validates both consents required', function (): void {
     $this->expectException(ValidationException::class);
     app(ValidateGdprConsentAction::class)->execute(false, false);
 });
 
-it('accepts valid consent combination', function(): void {
+it('accepts valid consent combination', function (): void {
     $result = app(ValidateGdprConsentAction::class)->execute(true, true);
     expect($result)->toBeNull();
 });
@@ -132,7 +132,7 @@ it('accepts valid consent combination', function(): void {
 // User Type Security
 // ---------------------------------------------------------------------------
 
-it('always sets type to customer_user regardless of input', function(): void {
+it('always sets type to customer_user regardless of input', function (): void {
     $formData = [
         'first_name' => 'Hacker',
         'last_name' => 'Attempt',
@@ -161,7 +161,7 @@ it('always sets type to customer_user and lang', function (): void {
     expect($result)->toHaveKey('lang');
 });
 
-it('sets email_verified_at on registration', function(): void {
+it('sets email_verified_at on registration', function (): void {
     $formData = [
         'first_name' => 'Mario',
         'last_name' => 'Rossi',
@@ -178,7 +178,7 @@ it('sets email_verified_at on registration', function(): void {
 // Duplicate Email Prevention
 // ---------------------------------------------------------------------------
 
-it('prevents duplicate email registration', function(): void {
+it('prevents duplicate email registration', function (): void {
     $email = 'duplicate-'.Str::random(8).'@example.com';
 
     User::create([

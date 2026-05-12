@@ -37,7 +37,7 @@ uses(TestCase::class);
 // Happy path: full registration pipeline
 // ---------------------------------------------------------------------------
 
-it('completes full registration with privacy and terms accepted', function(): void {
+it('completes full registration with privacy and terms accepted', function (): void {
     // 1. Validate GDPR consents (should not throw)
     app(ValidateGdprConsentAction::class)->execute(true, true);
 
@@ -105,7 +105,7 @@ it('completes full registration with privacy and terms accepted', function(): vo
     expect($marketingConsent->accepted_at)->toBeNull();
 });
 
-it('completes registration with all consents including marketing', function(): void {
+it('completes registration with all consents including marketing', function (): void {
     $formData = [
         'first_name' => 'Giulia',
         'last_name' => 'Bianchi',
@@ -143,15 +143,15 @@ it('completes registration with all consents including marketing', function(): v
 // Validation failures: GDPR consents
 // ---------------------------------------------------------------------------
 
-it('fails registration when privacy not accepted', function(): void {
+it('fails registration when privacy not accepted', function (): void {
     app(ValidateGdprConsentAction::class)->execute(false, true);
 })->throws(ValidationException::class);
 
-it('fails registration when terms not accepted', function(): void {
+it('fails registration when terms not accepted', function (): void {
     app(ValidateGdprConsentAction::class)->execute(true, false);
 })->throws(ValidationException::class);
 
-it('fails registration when both consents not accepted', function(): void {
+it('fails registration when both consents not accepted', function (): void {
     app(ValidateGdprConsentAction::class)->execute(false, false);
 })->throws(ValidationException::class);
 
@@ -159,7 +159,7 @@ it('fails registration when both consents not accepted', function(): void {
 // User data validation
 // ---------------------------------------------------------------------------
 
-it('always sets customer_user type regardless of input', function(): void {
+it('always sets customer_user type regardless of input', function (): void {
     $formData = [
         'first_name' => 'Hacker',
         'last_name' => 'Attempt',
@@ -175,7 +175,7 @@ it('always sets customer_user type regardless of input', function(): void {
     expect($result['email_verified_at'])->not->toBeNull();
 });
 
-it('hashes password during validation', function(): void {
+it('hashes password during validation', function (): void {
     $formData = [
         'first_name' => 'Test',
         'last_name' => 'User',
@@ -194,7 +194,7 @@ it('hashes password during validation', function(): void {
 // Consent persistence details
 // ---------------------------------------------------------------------------
 
-it('saves consent with correct IP and user agent', function(): void {
+it('saves consent with correct IP and user agent', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
 
     Treatment::firstOrCreate(
@@ -222,7 +222,7 @@ it('saves consent with correct IP and user agent', function(): void {
     expect($savedConsents->count())->toBeGreaterThanOrEqual(2);
 });
 
-it('does not create consents when treatments do not exist', function(): void {
+it('does not create consents when treatments do not exist', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
 
     // Ensure no treatments for a unique name
@@ -248,7 +248,7 @@ it('does not create consents when treatments do not exist', function(): void {
 // Duplicate email prevention
 // ---------------------------------------------------------------------------
 
-it('prevents duplicate user registration with same email', function(): void {
+it('prevents duplicate user registration with same email', function (): void {
     $email = 'duplicate-'.uniqid().'@example.com';
 
     // First user

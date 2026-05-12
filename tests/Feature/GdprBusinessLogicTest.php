@@ -40,7 +40,7 @@ it('can create and manage gdpr consents', function (): void {
     expect($consent->subject_id)->toBe($user->id);
 });
 
-it('can work with gdpr treatments', function(): void {
+it('can work with gdpr treatments', function (): void {
     // Act
     $treatment = Treatment::create([
         'name' => 'Email Marketing',
@@ -62,7 +62,7 @@ it('can work with gdpr treatments', function(): void {
     expect($treatment->required)->toBeFalse();
 });
 
-it('can link consents to treatments', function(): void {
+it('can link consents to treatments', function (): void {
     // Arrange
     $user = User::factory()->create();
     $treatment = Treatment::create([
@@ -90,7 +90,7 @@ it('can link consents to treatments', function(): void {
     expect($consent->subject_id)->toBe($user->id);
 });
 
-it('can manage gdpr events', function(): void {
+it('can manage gdpr events', function (): void {
     // Arrange
     $user = User::factory()->create();
 
@@ -118,7 +118,7 @@ it('can manage gdpr events', function(): void {
     expect($event->ip)->toBe('192.168.1.1');
 });
 
-it('can track gdpr audit trail', function(): void {
+it('can track gdpr audit trail', function (): void {
     // Arrange
     $user = User::factory()->create();
 
@@ -156,7 +156,7 @@ it('can track gdpr audit trail', function(): void {
     expect($userEvents)->toHaveCount(2);
 });
 
-it('can handle different treatment types', function(): void {
+it('can handle different treatment types', function (): void {
     // Act
     $treatment1 = Treatment::create([
         'name' => 'Marketing Communications',
@@ -193,7 +193,7 @@ it('can handle different treatment types', function(): void {
     expect($treatment3->active)->toBeFalse();
 });
 
-it('can manage treatment weights', function(): void {
+it('can manage treatment weights', function (): void {
     // Act
     $treatmentLow = Treatment::create([
         'name' => 'Low Priority',
@@ -221,7 +221,7 @@ it('can manage treatment weights', function(): void {
     expect($treatments->last()->name)->toBe('High Priority');
 });
 
-it('can manage consent with treatment relationships', function(): void {
+it('can manage consent with treatment relationships', function (): void {
     // Arrange
     $user = User::factory()->create();
     $treatment = Treatment::create([
@@ -249,7 +249,7 @@ it('can manage consent with treatment relationships', function(): void {
     expect($consent->treatment_id)->toBe($treatment->id);
 });
 
-it('can manage multiple consents per subject', function(): void {
+it('can manage multiple consents per subject', function (): void {
     // Arrange
     $user = User::factory()->create();
     $treatment1 = Treatment::create([
@@ -289,7 +289,7 @@ it('can manage multiple consents per subject', function(): void {
     expect($consentTreatmentIds)->toContain($treatment2->id);
 });
 
-it('can create events with detailed payloads', function(): void {
+it('can create events with detailed payloads', function (): void {
     // Arrange
     $user = User::factory()->create();
 
@@ -320,7 +320,7 @@ it('can create events with detailed payloads', function(): void {
     expect($payload['data_categories'])->toContain('personal');
 });
 
-it('can handle treatment document references', function(): void {
+it('can handle treatment document references', function (): void {
     // Act
     $treatmentWithDoc = Treatment::create([
         'name' => 'Policy Update',
@@ -350,7 +350,7 @@ it('can handle treatment document references', function(): void {
     expect($treatmentWithoutDoc->documentUrl)->toBeNull();
 });
 
-it('can manage treatment active status', function(): void {
+it('can manage treatment active status', function (): void {
     // Act
     $activeTreatment = Treatment::create([
         'name' => 'Active Treatment',
@@ -377,7 +377,7 @@ it('can manage treatment active status', function(): void {
     expect($activeTreatments)->not->toContain($inactiveTreatment);
 });
 
-it('can manage consent timestamps', function(): void {
+it('can manage consent timestamps', function (): void {
     // Arrange
     $user = User::factory()->create();
 

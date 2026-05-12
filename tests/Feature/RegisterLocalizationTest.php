@@ -24,7 +24,7 @@ uses(TestCase::class);
 // All Locales Have Required Keys
 // ---------------------------------------------------------------------------
 
-it('has all required keys in Italian locale', function(): void {
+it('has all required keys in Italian locale', function (): void {
     app()->setLocale('it');
 
     $requiredKeys = [
@@ -58,7 +58,7 @@ it('has all required keys in Italian locale', function(): void {
     }
 });
 
-it('has all required keys in English locale', function(): void {
+it('has all required keys in English locale', function (): void {
     app()->setLocale('en');
 
     $requiredKeys = [
@@ -92,7 +92,7 @@ it('has all required keys in English locale', function(): void {
     }
 });
 
-it('has all required keys in Spanish locale', function(): void {
+it('has all required keys in Spanish locale', function (): void {
     app()->setLocale('es');
 
     $requiredKeys = [
@@ -113,7 +113,7 @@ it('has all required keys in Spanish locale', function(): void {
     }
 });
 
-it('has all required keys in German locale', function(): void {
+it('has all required keys in German locale', function (): void {
     app()->setLocale('de');
 
     $requiredKeys = [
@@ -134,7 +134,7 @@ it('has all required keys in German locale', function(): void {
     }
 });
 
-it('has all required keys in French locale', function(): void {
+it('has all required keys in French locale', function (): void {
     app()->setLocale('fr');
 
     $requiredKeys = [
@@ -155,7 +155,7 @@ it('has all required keys in French locale', function(): void {
     }
 });
 
-it('has all required keys in Russian locale', function(): void {
+it('has all required keys in Russian locale', function (): void {
     app()->setLocale('ru');
 
     $requiredKeys = [
@@ -180,37 +180,37 @@ it('has all required keys in Russian locale', function(): void {
 // Locale Detection Tests
 // ---------------------------------------------------------------------------
 
-it('detects Italian locale from URL', function(): void {
+it('detects Italian locale from URL', function (): void {
     $response = $this->get('/it/auth/register');
     $response->assertSee('lang="it"', false);
     $response->assertStatus(200);
 });
 
-it('detects English locale from URL', function(): void {
+it('detects English locale from URL', function (): void {
     $response = $this->get('/en/auth/register');
     $response->assertSee('lang="en"', false);
     $response->assertStatus(200);
 });
 
-it('detects Spanish locale from URL', function(): void {
+it('detects Spanish locale from URL', function (): void {
     $response = $this->get('/es/auth/register');
     $response->assertSee('lang="es"', false);
     $response->assertStatus(200);
 });
 
-it('detects German locale from URL', function(): void {
+it('detects German locale from URL', function (): void {
     $response = $this->get('/de/auth/register');
     $response->assertSee('lang="de"', false);
     $response->assertStatus(200);
 });
 
-it('detects French locale from URL', function(): void {
+it('detects French locale from URL', function (): void {
     $response = $this->get('/fr/auth/register');
     $response->assertSee('lang="fr"', false);
     $response->assertStatus(200);
 });
 
-it('detects Russian locale from URL', function(): void {
+it('detects Russian locale from URL', function (): void {
     $response = $this->get('/ru/auth/register');
     $response->assertSee('lang="ru"', false);
     $response->assertStatus(200);
@@ -220,25 +220,25 @@ it('detects Russian locale from URL', function(): void {
 // Translation Content Tests
 // ---------------------------------------------------------------------------
 
-it('Italian title contains pizza reference', function(): void {
+it('Italian title contains pizza reference', function (): void {
     app()->setLocale('it');
     $title = __('gdpr::register.title');
     expect($title)->toContain('Pizza');
 });
 
-it('English title contains pizza reference', function(): void {
+it('English title contains pizza reference', function (): void {
     app()->setLocale('en');
     $title = __('gdpr::register.title');
     expect($title)->toContain('Pizza');
 });
 
-it('Italian CTA is action-oriented', function(): void {
+it('Italian CTA is action-oriented', function (): void {
     app()->setLocale('it');
     $cta = __('gdpr::register.form.cta_title');
     expect($cta)->toContain('gratuito');
 });
 
-it('English CTA is action-oriented', function(): void {
+it('English CTA is action-oriented', function (): void {
     app()->setLocale('en');
     $cta = __('gdpr::register.form.cta_title');
     expect($cta)->toContain('FREE');

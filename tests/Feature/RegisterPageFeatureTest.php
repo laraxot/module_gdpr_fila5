@@ -8,7 +8,7 @@ use Modules\Gdpr\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('renders the English register page with hero and form texts', function(): void {
+it('renders the English register page with hero and form texts', function (): void {
     $response = $this->get('/en/auth/register');
 
     $response->assertStatus(200);
@@ -19,14 +19,14 @@ it('renders the English register page with hero and form texts', function(): voi
     $response->assertSee(__('gdpr::register.form.terms_notice'), false);
 });
 
-it('uses the localized login link on the register page', function(): void {
+it('uses the localized login link on the register page', function (): void {
     $response = $this->get('/en/auth/register');
 
     $response->assertStatus(200);
     $response->assertSee('/en/auth/login', false);
 });
 
-it('has all required translation keys used by the register page', function(): void {
+it('has all required translation keys used by the register page', function (): void {
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',

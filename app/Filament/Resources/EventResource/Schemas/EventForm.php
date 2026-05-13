@@ -24,5 +24,6 @@ class EventForm extends XotBaseResourceForm
             'action' => TextInput::make('action')->required()->maxLength(191),
             'payload' => Textarea::make('payload')->required()->columnSpanFull(),
         ];
+
     }
 }

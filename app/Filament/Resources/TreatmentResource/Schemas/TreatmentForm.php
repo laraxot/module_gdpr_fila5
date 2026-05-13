@@ -20,5 +20,6 @@ class TreatmentForm extends XotBaseResourceForm
                 'name' => TextInput::make('name'),
             ]),
         ];
+
     }
 }

@@ -11,7 +11,7 @@ use Modules\Gdpr\Tests\TestCase;
 
 test('treatment_fillable_attributes', function () {
     $treatment = new Treatment();
-    $treatment = new Treatment;
+    $treatment = new Treatment();
     $fillable = $treatment->getFillable();
 
     expect($fillable)->toContain('id');
@@ -26,14 +26,14 @@ test('treatment_fillable_attributes', function () {
 
 test('treatment_is_not_incrementing', function () {
     $treatment = new Treatment();
-    $treatment = new Treatment;
+    $treatment = new Treatment();
 
     expect($treatment->getIncrementing())->toBeFalse();
 });
 
 test('treatment_is_uuid', function () {
     $treatment = new Treatment();
-    $treatment = new Treatment;
+    $treatment = new Treatment();
     $traits = class_uses_recursive($treatment);
 
     expect($traits)->toHaveKey('Illuminate\Database\Eloquent\Concerns\HasUuids');
@@ -41,7 +41,7 @@ test('treatment_is_uuid', function () {
 
 test('treatment_extends_base_model', function () {
     $treatment = new Treatment();
-    $treatment = new Treatment;
+    $treatment = new Treatment();
 
     expect($treatment)->toBeInstanceOf(Modules\Gdpr\Models\BaseModel::class);
 });

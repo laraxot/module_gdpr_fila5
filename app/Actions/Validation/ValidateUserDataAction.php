@@ -18,6 +18,7 @@ class ValidateUserDataAction
      * @param array<string, mixed> $formData
      * @param array<string, mixed> $formData
      *
+     * @param  array<string, mixed>  $formData
      * @return array<string, mixed>
      */
     public function execute(array $formData): array

@@ -342,6 +342,6 @@ it('widget is not visible to authenticated users', function (): void {
 });
 
 it('widget is visible to guest users', function (): void {
-    $widget = new Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
+    $widget = new Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget();
     expect($widget->canView())->toBeTrue();
 });

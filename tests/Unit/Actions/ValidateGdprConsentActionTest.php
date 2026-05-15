@@ -11,29 +11,29 @@ use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Tests\TestCase;
 
 test('ValidateGdprConsentAction passes with valid consents', function () {
-    $action = new ValidateGdprConsentAction;
-    $action = new ValidateGdprConsentAction;
+    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction();
 
     expect(fn () => $action->execute(true, true))->not->toThrow(ValidationException::class);
 });
 
 test('ValidateGdprConsentAction throws with false privacy', function () {
-    $action = new ValidateGdprConsentAction;
-    $action = new ValidateGdprConsentAction;
+    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction();
 
     expect(fn () => $action->execute(false, true))->toThrow(ValidationException::class);
 });
 
 test('ValidateGdprConsentAction throws with false terms', function () {
-    $action = new ValidateGdprConsentAction;
-    $action = new ValidateGdprConsentAction;
+    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction();
 
     expect(fn () => $action->execute(true, false))->toThrow(ValidationException::class);
 });
 
 test('ValidateGdprConsentAction throws with both false', function () {
-    $action = new ValidateGdprConsentAction;
-    $action = new ValidateGdprConsentAction;
+    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction();
 
     expect(fn () => $action->execute(false, false))->toThrow(ValidationException::class);
 });

@@ -14,8 +14,8 @@ test('treatment_resource_extends_xot_base_resource', function () {
 });
 
 test('treatment_resource_model_is_treatment', function () {
-    $resource = new TreatmentResource;
-    $resource = new TreatmentResource;
+    $resource = new TreatmentResource();
+    $resource = new TreatmentResource();
     expect($resource->getModel())->toBe(Modules\Gdpr\Models\Treatment::class);
 });
 

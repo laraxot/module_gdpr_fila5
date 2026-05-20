@@ -22,5 +22,6 @@ class ConsentForm extends XotBaseResourceForm
                 ->required(),
             'subject_id' => TextInput::make('subject_id')->required()->maxLength(191),
         ];
+
     }
 }

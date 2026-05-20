@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Treatment;
 
-class TreatmentsTableSeeder extends Seeder
+class TreatmentsTableSeeder extends \Illuminate\Database\Seeder
 {
     /**
      * Run the database seeds.

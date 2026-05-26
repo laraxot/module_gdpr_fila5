@@ -148,6 +148,7 @@ use function Safe\json_encode;
  * @property Consent|null         $consent
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+ *
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
@@ -164,8 +165,11 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereTreatmentId($value)
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class Event extends BaseModel

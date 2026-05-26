@@ -77,13 +77,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent                         whereIpAddress($value)
  * @method static Builder<static>|Consent                         whereUserAgent($value)
  *
- * @property string|null $ip_address
- * @property string|null $user_agent
- *
- * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
- * @method static Builder<static>|Consent                         whereIpAddress($value)
- * @method static Builder<static>|Consent                         whereUserAgent($value)
- *
  * @mixin \Eloquent
  */
 class Consent extends BaseModel

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Schemas;
+namespace Modules\base_quaeris_fila5\var\www\_bases\base_quaeris_fila5\laravel\Modules\Gdpr\app\Filament\Resources\TreatmentResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;

@@ -83,7 +83,7 @@ class TreatmentsTableSeeder extends Seeder
                     'required' => $treatment['required'],
                     'active' => $treatment['active'],
                     'weight' => $treatment['weight'],
-                    'documentVersion' => $treatment['documentVersion'] ?? null ?? '1.0',
+                    'documentVersion' => $treatment['documentVersion'],
                 ]
             );
         }

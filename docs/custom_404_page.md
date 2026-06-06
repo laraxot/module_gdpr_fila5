@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: getting_started
+topic: custom_404_page
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 

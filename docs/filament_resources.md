@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: getting_started
+topic: filament_resources
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 

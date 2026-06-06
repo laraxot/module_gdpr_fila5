@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: getting_started
+topic: algolia_docsearch
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 

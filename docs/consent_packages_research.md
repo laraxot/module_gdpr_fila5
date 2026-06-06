@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: getting_started
+topic: consent_packages_research
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 

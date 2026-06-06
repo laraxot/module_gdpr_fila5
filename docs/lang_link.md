@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: getting_started
+topic: lang_link
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 

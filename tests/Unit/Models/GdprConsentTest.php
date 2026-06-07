@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Unit\Models;
-
-uses(\Modules\Gdpr\Tests\TestCase::class);
-
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\User\Models\User;
-
 test('gdpr consent can be created', function () {
     $user = User::factory()->create();
 

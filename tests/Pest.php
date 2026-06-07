@@ -23,7 +23,6 @@ uses(TestCase::class)->in(__DIR__);
 */
 
 expect()->extend('toBeRedirectedTo', function ($expected) {
-    return function (Illuminate\Testing\TestResponse $response) use ($expected) {
         return $response->assertRedirect($expected);
     };
 });

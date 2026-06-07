@@ -2,14 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Unit\Models;
-
-uses(\Modules\Gdpr\Tests\TestCase::class);
-
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\User\Models\User;
-
-describe('GDPR Consent Business Logic', function () {
     it('records consent with required metadata', function () {
         $user = User::factory()->create();
 

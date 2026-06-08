@@ -16,7 +16,7 @@ use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\User\Actions\Activity\LogRegistrationAction;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**
  * GDPR-Compliant Registration Widget.
@@ -25,7 +25,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * GDPR consents are Livewire public properties so the Blade view
  * can render custom HTML with clickable links to privacy/terms pages.
  */
-class RegisterWidget extends XotBaseWidget
+class GdprConsentForm extends XotBaseSchemaWidget
 {
     #[Validate('accepted', message: '')]
     public bool $privacy_accepted = false;

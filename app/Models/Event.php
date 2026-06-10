@@ -159,6 +159,9 @@ class Event extends BaseModel
 
     protected $table = 'gdpr_events';
 
+    /**
+     * @return BelongsTo<Consent, $this>
+     */
     public function consent(): BelongsTo
     {
         return $this->belongsTo(Consent::class);

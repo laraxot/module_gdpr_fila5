@@ -7,6 +7,9 @@ namespace Modules\Gdpr\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Gdpr\Models\Event;
 
+/**
+ * @extends Factory<Event>
+ */
 class EventFactory extends Factory
 {
     /**

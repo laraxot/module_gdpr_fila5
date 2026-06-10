@@ -101,6 +101,9 @@ class Consent extends BaseModel
         'user_agent',
     ];
 
+    /**
+     * @return BelongsTo<Treatment, $this>
+     */
     public function treatment(): BelongsTo
     {
         return $this->belongsTo(Treatment::class);

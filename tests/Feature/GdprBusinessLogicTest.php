@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-use Illuminate\Support\Facades\DB;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Event;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
+
 use function Safe\json_decode;
 use function Safe\json_encode;
 

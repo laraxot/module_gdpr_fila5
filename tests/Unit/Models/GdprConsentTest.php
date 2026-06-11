@@ -42,7 +42,7 @@ test('gdpr consent is not incrementing', function () {
 
 test('gdpr consent uses uuid trait', function () {
     $consent = new Consent();
-        $traits = class_uses_recursive($consent);
+    $traits = class_uses_recursive($consent);
 
     Assert::assertArrayHasKey('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);
 });

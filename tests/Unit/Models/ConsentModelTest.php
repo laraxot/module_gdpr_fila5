@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -29,7 +28,7 @@ test('consent_fillable_attributes', function (): void {
 test('consent_has_treatment_relationship_method', function (): void {
     $consent = new Consent();
 
-    Assert::assertTrue((new ReflectionClass($consent))->hasMethod('treatment'));
+    Assert::assertTrue((new \ReflectionClass($consent))->hasMethod('treatment'));
 });
 
 test('consent_is_not_incrementing', function (): void {

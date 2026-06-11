@@ -9,14 +9,15 @@ use Illuminate\Http\Response;
 use Illuminate\Testing\TestResponse;
 use Livewire\Features\SupportTesting\Testable;
 
-/**
+/*
  * Stub per PHPStan — funzioni globali Pest Laravel.
  * Runtime: fornite da pestphp/pest-plugin-laravel.
  */
 
 if (! function_exists('Pest\Laravel\get')) {
     /**
-     * @param  array<string, string>  $headers
+     * @param array<string, string> $headers
+     *
      * @return TestResponse<Response>
      */
     function get(string $uri, array $headers = []): TestResponse
@@ -27,8 +28,9 @@ if (! function_exists('Pest\Laravel\get')) {
 
 if (! function_exists('Pest\Laravel\post')) {
     /**
-     * @param  array<string, mixed>  $data
-     * @param  array<string, string>  $headers
+     * @param array<string, mixed>  $data
+     * @param array<string, string> $headers
+     *
      * @return TestResponse<Response>
      */
     function post(string $uri, array $data = [], array $headers = []): TestResponse
@@ -49,7 +51,8 @@ if (! function_exists('actingAs')) {
 
 if (! function_exists('livewire')) {
     /**
-     * @param  array<string, mixed>  $params
+     * @param array<string, mixed> $params
+     *
      * @return Testable<\Livewire\Component>
      */
     function livewire(string $component, array $params = []): Testable

@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Tests\Unit\Actions;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -18,5 +17,5 @@ test('SaveGdprConsentsAction can be instantiated', function (): void {
 
 test('SaveGdprConsentsAction execute method exists', function (): void {
     $action = new SaveGdprConsentsAction();
-    Assert::assertTrue((new ReflectionClass($action))->hasMethod('execute'));
+    Assert::assertTrue((new \ReflectionClass($action))->hasMethod('execute'));
 });

@@ -9,7 +9,6 @@ use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\BaseProfile;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -34,5 +33,5 @@ test('profile_is_model', function (): void {
 test('profile_has_standard_attributes', function (): void {
     $profile = new Profile();
 
-    Assert::assertTrue((new ReflectionClass($profile))->hasMethod('user'));
+    Assert::assertTrue((new \ReflectionClass($profile))->hasMethod('user'));
 });

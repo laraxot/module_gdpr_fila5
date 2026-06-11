@@ -9,7 +9,6 @@ use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -24,11 +23,11 @@ test('profile_resource_model_is_profile', function (): void {
 });
 
 test('profile_resource_has_form_schema', function (): void {
-    Assert::assertTrue((new ReflectionClass(ProfileResource::class))->hasMethod('getFormSchema'));
+    Assert::assertTrue((new \ReflectionClass(ProfileResource::class))->hasMethod('getFormSchema'));
 });
 
 test('profile_resource_has_pages', function (): void {
-    Assert::assertTrue((new ReflectionClass(ProfileResource::class))->hasMethod('getPages'));
+    Assert::assertTrue((new \ReflectionClass(ProfileResource::class))->hasMethod('getPages'));
     $pages = ProfileResource::getPages();
 
     Assert::assertNotEmpty($pages);

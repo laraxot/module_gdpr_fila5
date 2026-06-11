@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Event;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -29,7 +28,7 @@ test('event_fillable_attributes', function (): void {
 test('event_has_consent_relationship_method', function (): void {
     $event = new Event();
 
-    Assert::assertTrue((new ReflectionClass($event))->hasMethod('consent'));
+    Assert::assertTrue((new \ReflectionClass($event))->hasMethod('consent'));
 });
 
 test('event_table_name_is_gdpr_events', function (): void {
@@ -54,11 +53,11 @@ test('event_is_uuid', function (): void {
 test('event_has_set_payload_attribute', function (): void {
     $event = new Event();
 
-    Assert::assertTrue((new ReflectionClass($event))->hasMethod('setPayloadAttribute'));
+    Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setPayloadAttribute'));
 });
 
 test('event_has_set_ip_attribute', function (): void {
     $event = new Event();
 
-    Assert::assertTrue((new ReflectionClass($event))->hasMethod('setIpAttribute'));
+    Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setIpAttribute'));
 });

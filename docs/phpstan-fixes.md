@@ -1,4 +1,12 @@
-# GDPR Module - PHPStan Fixes Session 2025-10-01
+# GDPR Module — PHPStan
+
+## 2026-06-10 — STORY-306 · L10 · 0 errori codice
+
+`./vendor/bin/phpstan analyse Modules/Gdpr` — 728→0 (test Assert, TestCase wrappers). Issue [#334](https://github.com/laraxot/base_fixcity_fila5/issues/334).
+
+---
+
+## Storico — Session 2025-10-01 · Level 9
 
 ## ✅ Stato: ZERO ERRORI - PHPStan Level 9 Compliance
 

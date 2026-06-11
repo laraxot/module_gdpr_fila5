@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
 
 uses(TestCase::class);
 

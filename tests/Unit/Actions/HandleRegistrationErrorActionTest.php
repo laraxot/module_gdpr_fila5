@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Tests\Unit\Actions;
 use Modules\Gdpr\Actions\Registration\HandleRegistrationErrorAction;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -18,5 +17,5 @@ test('HandleRegistrationErrorAction can be instantiated', function (): void {
 
 test('HandleRegistrationErrorAction execute method exists', function (): void {
     $action = new HandleRegistrationErrorAction();
-    Assert::assertTrue((new ReflectionClass($action))->hasMethod('execute'));
+    Assert::assertTrue((new \ReflectionClass($action))->hasMethod('execute'));
 });

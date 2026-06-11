@@ -8,8 +8,6 @@ use Livewire\Livewire;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Models\User;
-use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 

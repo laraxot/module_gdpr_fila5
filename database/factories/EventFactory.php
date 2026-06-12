@@ -12,16 +12,18 @@ use Modules\Gdpr\Models\Event;
  */
 class EventFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     */
     protected $model = Event::class;
 
     /**
-     * Define the model's default state.
+     * @return array<string, mixed>
      */
     public function definition(): array
     {
-        return [];
+        return [
+            'subject_id' => fake()->uuid(),
+            'ip' => '127.0.0.1',
+            'action' => 'consent_given',
+            'payload' => '{}',
+        ];
     }
 }

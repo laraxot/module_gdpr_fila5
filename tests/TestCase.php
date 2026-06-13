@@ -76,7 +76,7 @@ abstract class TestCase extends XotBaseTestCase
     {
         $this->expectException($exceptionClass);
         if (null !== $message) {
-            $this->expectExceptionMessage($message);
+            $this->expectThrowableMessage($message);
         }
     }
 

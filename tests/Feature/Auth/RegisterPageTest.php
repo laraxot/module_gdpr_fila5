@@ -9,9 +9,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Gdpr\Tests\TestCase;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 beforeEach(function (): void {
+    /** @var \Modules\Gdpr\Tests\TestCase $this */
     LaravelLocalization::setLocale('en');
     app()->setLocale('en');
     config(['app.locale' => 'en']);

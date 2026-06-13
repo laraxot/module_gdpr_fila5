@@ -151,7 +151,7 @@ class Treatment extends BaseModel
 
         static::creating(function (Treatment $treatment): void {
             $name = $treatment->name;
-            if (! is_string($name) || $name === '') {
+            if (! is_string($name) || '' === $name) {
                 return;
             }
 

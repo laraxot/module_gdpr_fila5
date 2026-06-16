@@ -8,7 +8,7 @@ use Modules\Gdpr\Models\BaseModel;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 function makeGdprBaseModel(): BaseModel
 {

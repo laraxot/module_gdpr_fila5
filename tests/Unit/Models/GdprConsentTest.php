@@ -9,9 +9,10 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 beforeEach(function (): void {
+    /** @var \Modules\Gdpr\Tests\TestCase $this */
     gdprAssertDatabaseAvailable();
 });
 
@@ -42,7 +43,7 @@ test('gdpr consent is not incrementing', function () {
 
 test('gdpr consent uses uuid trait', function () {
     $consent = new Consent();
-        $traits = class_uses_recursive($consent);
+    $traits = class_uses_recursive($consent);
 
     Assert::assertArrayHasKey('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);
 });

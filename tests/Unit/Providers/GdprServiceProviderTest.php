@@ -8,9 +8,8 @@ use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 test('gdpr_service_provider_extends_xot_base_service_provider', function (): void {
     $provider = new GdprServiceProvider(app());
@@ -20,7 +19,7 @@ test('gdpr_service_provider_extends_xot_base_service_provider', function (): voi
 
 test('gdpr_service_provider_has_name', function (): void {
     $provider = new GdprServiceProvider(app());
-    $reflection = new ReflectionClass($provider);
+    $reflection = new \ReflectionClass($provider);
     $property = $reflection->getProperty('name');
     $property->setAccessible(true);
 
@@ -29,7 +28,7 @@ test('gdpr_service_provider_has_name', function (): void {
 
 test('gdpr_service_provider_has_module_dir', function (): void {
     $provider = new GdprServiceProvider(app());
-    $reflection = new ReflectionClass($provider);
+    $reflection = new \ReflectionClass($provider);
     $property = $reflection->getProperty('module_dir');
     $property->setAccessible(true);
 
@@ -38,7 +37,7 @@ test('gdpr_service_provider_has_module_dir', function (): void {
 
 test('gdpr_service_provider_has_module_ns', function (): void {
     $provider = new GdprServiceProvider(app());
-    $reflection = new ReflectionClass($provider);
+    $reflection = new \ReflectionClass($provider);
     $property = $reflection->getProperty('module_ns');
     $property->setAccessible(true);
 

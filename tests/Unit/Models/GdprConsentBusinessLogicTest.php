@@ -11,10 +11,11 @@ use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 describe('GDPR Consent Business Logic', function () {
     beforeEach(function (): void {
+    /** @var \Modules\Gdpr\Tests\TestCase $this */
         gdprAssertDatabaseAvailable();
     });
 

@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Tests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
+use Modules\Fixcity\Models\User;
 use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
@@ -15,14 +16,24 @@ use PHPUnit\Framework\Assert;
 /**
  * Base test case for Gdpr module.
  *
- * Uses MySQL from .env.testing.
- * All module connections are mapped by TenantServiceProvider.
- * Migrations must be run ONCE externally: php artisan migrate --env=testing
- * DatabaseTransactions handles rollback between tests.
+ * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
+ * prepareSharedFixcitySqliteForTesting() runs before transactions begin.
  */
 abstract class TestCase extends XotBaseTestCase
 {
     use DatabaseTransactions;
+
+    /** @var list<string> */
+    protected $connectionsToTransact = ['sqlite'];
+
+    protected function setUp(): void
+    {
+        $this->prepareSharedFixcitySqliteForTesting();
+
+        parent::setUp();
+
+        config(['auth.providers.users.model' => User::class]);
+    }
 
     /**
      * @return array<int, class-string>
@@ -37,7 +48,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function assertDatabaseHasRow(string $table, array $data, ?string $connection = null): void
     {
@@ -45,7 +56,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function assertDatabaseMissingRow(string $table, array $data, ?string $connection = null): void
     {
@@ -59,13 +70,18 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param  class-string<\Throwable>  $exceptionClass
+     * @param class-string<\Throwable> $exceptionClass
      */
     public function expectApplicationException(string $exceptionClass, ?string $message = null): void
     {
         $this->expectException($exceptionClass);
-        if ($message !== null) {
-            $this->expectExceptionMessage($message);
+        if (null !== $message) {
+            $this->expectThrowableMessage($message);
         }
+    }
+
+    protected static function uniqueTreatmentName(string $prefix = 'treatment'): string
+    {
+        return $prefix.'-'.uniqid('', true);
     }
 }

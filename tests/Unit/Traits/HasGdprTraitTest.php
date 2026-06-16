@@ -7,9 +7,8 @@ namespace Modules\Gdpr\Tests\Unit\Traits;
 use Modules\Gdpr\Models\Traits\HasGdpr;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 test('has_gdpr_trait_is_trait', function (): void {
     Assert::assertTrue(trait_exists(HasGdpr::class));
@@ -29,7 +28,7 @@ test('has_gdpr_trait_has_required_methods', function (): void {
 });
 
 test('has_gdpr_trait_methods_are_public', function (): void {
-    $reflection = new ReflectionClass(HasGdpr::class);
+    $reflection = new \ReflectionClass(HasGdpr::class);
 
     foreach ([
         'consents',

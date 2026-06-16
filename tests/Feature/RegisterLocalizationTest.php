@@ -7,7 +7,7 @@ namespace Modules\Gdpr\Tests\Feature;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 /*
  * Localization Tests for Registration Page.
@@ -223,23 +223,23 @@ it('detects Russian locale from URL', function (): void {
 it('Italian title contains pizza reference', function (): void {
     app()->setLocale('it');
     $title = __('gdpr::register.title');
-    Assert::assertStringContainsString((string)'Pizza', (string)$title);
+    Assert::assertStringContainsString((string) 'Pizza', (string) $title);
 });
 
 it('English title contains pizza reference', function (): void {
     app()->setLocale('en');
     $title = __('gdpr::register.title');
-    Assert::assertStringContainsString((string)'Pizza', (string)$title);
+    Assert::assertStringContainsString((string) 'Pizza', (string) $title);
 });
 
 it('Italian CTA is action-oriented', function (): void {
     app()->setLocale('it');
     $cta = __('gdpr::register.form.cta_title');
-    Assert::assertStringContainsString((string)'gratuito', (string)$cta);
+    Assert::assertStringContainsString((string) 'gratuito', (string) $cta);
 });
 
 it('English CTA is action-oriented', function (): void {
     app()->setLocale('en');
     $cta = __('gdpr::register.form.cta_title');
-    Assert::assertStringContainsString((string)'FREE', (string)$cta);
+    Assert::assertStringContainsString((string) 'FREE', (string) $cta);
 });

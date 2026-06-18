@@ -139,12 +139,18 @@ trait HasGdpr
      *
      * @return array<string>
      */
+    /** @return array<string> */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /* @var array<string> */
-        return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
+        /** @var array<string> $consentTypes */
+        $consentTypes = ConsentType::getRequiredConsentTypes();
+
+        /** @var array<string> $given */
+        $given = $givenConsents;
+
+        return array_diff($consentTypes, $given);
     }
 
     /**

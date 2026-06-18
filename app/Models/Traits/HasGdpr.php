@@ -19,6 +19,8 @@ use Modules\Gdpr\Models\Treatment;
  *
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
+ *
+ * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
  */
 trait HasGdpr
 {

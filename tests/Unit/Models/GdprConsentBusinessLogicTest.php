@@ -66,7 +66,7 @@ describe('GDPR Consent Business Logic', function () {
     });
 
     it('validates fillable consent fields', function () {
-        $consent = new Consent();
+        $consent = new Consent;
         $fillable = $consent->getFillable();
 
         assertFillableContains([

@@ -11,11 +11,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('SaveGdprConsentsAction can be instantiated', function (): void {
-    $action = new SaveGdprConsentsAction();
+    $action = new SaveGdprConsentsAction;
     Assert::assertInstanceOf(SaveGdprConsentsAction::class, $action);
 });
 
 test('SaveGdprConsentsAction execute method exists', function (): void {
-    $action = new SaveGdprConsentsAction();
+    $action = new SaveGdprConsentsAction;
     Assert::assertTrue((new \ReflectionClass($action))->hasMethod('execute'));
 });

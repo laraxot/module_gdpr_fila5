@@ -13,25 +13,25 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('profile_extends_base_profile', function (): void {
-    $profile = new Profile();
+    $profile = new Profile;
 
     Assert::assertInstanceOf(BaseProfile::class, $profile);
 });
 
 test('profile_has_gdpr_connection', function (): void {
-    $profile = new Profile();
+    $profile = new Profile;
 
     Assert::assertSame('gdpr', $profile->getConnectionName());
 });
 
 test('profile_is_model', function (): void {
-    $profile = new Profile();
+    $profile = new Profile;
 
     Assert::assertInstanceOf(Model::class, $profile);
 });
 
 test('profile_has_standard_attributes', function (): void {
-    $profile = new Profile();
+    $profile = new Profile;
 
     Assert::assertTrue((new \ReflectionClass($profile))->hasMethod('user'));
 });

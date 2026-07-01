@@ -13,11 +13,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('consent_resource_extends_xot_base_resource', function (): void {
-    Assert::assertInstanceOf(XotBaseResource::class, new ConsentResource());
+    Assert::assertInstanceOf(XotBaseResource::class, new ConsentResource);
 });
 
 test('consent_resource_model_is_consent', function (): void {
-    $resource = new ConsentResource();
+    $resource = new ConsentResource;
 
     Assert::assertSame(Consent::class, $resource->getModel());
 });

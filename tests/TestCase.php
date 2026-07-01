@@ -7,8 +7,8 @@ namespace Modules\Gdpr\Tests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
-use Modules\Fixcity\Models\User;
 use Modules\Gdpr\Providers\GdprServiceProvider;
+use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
@@ -48,7 +48,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function assertDatabaseHasRow(string $table, array $data, ?string $connection = null): void
     {
@@ -56,7 +56,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function assertDatabaseMissingRow(string $table, array $data, ?string $connection = null): void
     {
@@ -70,12 +70,12 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param class-string<\Throwable> $exceptionClass
+     * @param  class-string<\Throwable>  $exceptionClass
      */
     public function expectApplicationException(string $exceptionClass, ?string $message = null): void
     {
         $this->expectException($exceptionClass);
-        if (null !== $message) {
+        if ($message !== null) {
             $this->expectThrowableMessage($message);
         }
     }

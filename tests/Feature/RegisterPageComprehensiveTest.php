@@ -337,11 +337,11 @@ it('widget is not visible to authenticated users', function (): void {
     $user = UserFactory::new()->createOne(['type' => 'customer_user']);
 
     gdprActingAs($user);
-    $widget = new RegisterWidget();
+    $widget = new RegisterWidget;
     Assert::assertFalse($widget->canView());
 });
 
 it('widget is visible to guest users', function (): void {
-    $widget = new RegisterWidget();
+    $widget = new RegisterWidget;
     Assert::assertTrue($widget->canView());
 });

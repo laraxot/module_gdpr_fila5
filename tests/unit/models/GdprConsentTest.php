@@ -16,33 +16,6 @@ beforeEach(function (): void {
     gdprAssertDatabaseAvailable();
 });
 
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
 test('gdpr consent can be created', function () {
     $consent = ConsentFactory::new()->createOne([
         'type' => 'privacy_policy',
@@ -57,19 +30,19 @@ test('gdpr consent can be created', function () {
 });
 
 test('gdpr consent has treatment relationship method', function () {
-    $consent = new Consent;
+    $consent = new Consent();
 
     Assert::assertContains('treatment', get_class_methods($consent));
 });
 
 test('gdpr consent is not incrementing', function () {
-    $consent = new Consent;
+    $consent = new Consent();
 
     Assert::assertFalse($consent->getIncrementing());
 });
 
 test('gdpr consent uses uuid trait', function () {
-    $consent = new Consent;
+    $consent = new Consent();
     $traits = class_uses_recursive($consent);
 
     Assert::assertArrayHasKey('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);

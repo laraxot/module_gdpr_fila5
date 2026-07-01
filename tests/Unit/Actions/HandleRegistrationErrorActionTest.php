@@ -11,11 +11,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('HandleRegistrationErrorAction can be instantiated', function (): void {
-    $action = new HandleRegistrationErrorAction;
+    $action = new HandleRegistrationErrorAction();
     Assert::assertInstanceOf(HandleRegistrationErrorAction::class, $action);
 });
 
 test('HandleRegistrationErrorAction execute method exists', function (): void {
-    $action = new HandleRegistrationErrorAction;
+    $action = new HandleRegistrationErrorAction();
     Assert::assertTrue((new \ReflectionClass($action))->hasMethod('execute'));
 });

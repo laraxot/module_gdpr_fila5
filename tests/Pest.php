@@ -1,0 +1,43 @@
+<?php
+
+declare(strict_types=1);
+
+use Modules\Gdpr\Tests\TestCase;
+
+/*
+|--------------------------------------------------------------------------
+| Pest Configuration
+|--------------------------------------------------------------------------
+|
+| This file configures Pest for the Gdpr module tests.
+|
+*/
+
+uses(TestCase::class)->in(__DIR__);
+
+/*
+|--------------------------------------------------------------------------
+| Expectations
+|--------------------------------------------------------------------------
+|
+*/
+
+expect()->extend('toBeRedirectedTo', function ($expected) {
+        return $response->assertRedirect($expected);
+    };
+});
+
+/*
+|--------------------------------------------------------------------------
+| Hooks
+|--------------------------------------------------------------------------
+|
+*/
+
+beforeEach(function () {
+    // DatabaseTransactions trait handles rollback automatically
+});
+
+afterEach(function () {
+    // DatabaseTransactions trait handles rollback automatically
+});

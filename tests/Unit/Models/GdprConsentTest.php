@@ -34,6 +34,15 @@ beforeEach(function () {
     }
 });
 
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        DB::connection()->getPdo();
+    } catch (Exception $e) {
+        $this->markTestSkipped('Database not available: '.$e->getMessage());
+    }
+});
+
 test('gdpr consent can be created', function () {
     $consent = ConsentFactory::new()->createOne([
         'type' => 'privacy_policy',

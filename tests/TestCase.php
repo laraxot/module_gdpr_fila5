@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Tests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
+use Modules\Fixcity\Models\User;
 use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;

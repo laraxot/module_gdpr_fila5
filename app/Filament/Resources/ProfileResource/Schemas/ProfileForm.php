@@ -30,6 +30,5 @@ class ProfileForm extends XotBaseResourceForm
             'deleted_by' => TextInput::make('deleted_by')->maxLength(36)->default(null),
             'is_active' => Toggle::make('is_active')->required(),
         ];
-
     }
 }

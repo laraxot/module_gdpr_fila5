@@ -10,13 +10,13 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
-    Assert::assertInstanceOf(Treatment::class, new Treatment());
-    Assert::assertInstanceOf(Profile::class, new Profile());
+    Assert::assertInstanceOf(Treatment::class, new Treatment);
+    Assert::assertInstanceOf(Profile::class, new Profile);
 });
 
 it('verifica che le proprietà delle classi siano accessibili', function (): void {
-    $treatment = new Treatment();
-    $profile = new Profile();
+    $treatment = new Treatment;
+    $profile = new Profile;
 
     Assert::assertIsArray($treatment->getFillable());
     Assert::assertIsArray($profile->getFillable());

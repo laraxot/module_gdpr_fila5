@@ -10,9 +10,6 @@ return new class extends XotBaseMigration
 {
     protected ?string $model_class = Event::class;
 
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         // -- CREATE --

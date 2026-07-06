@@ -9,9 +9,6 @@ return new class extends XotBaseMigration
 {
     protected $connection = 'gdpr';
 
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         // -- CREATE --

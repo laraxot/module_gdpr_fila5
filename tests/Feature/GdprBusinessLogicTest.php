@@ -40,7 +40,7 @@ it('can create and manage gdpr consents', function (): void {
     Assert::assertSame($user->id, $consent->subject_id);
 });
 
-it('can work with gdpr treatments', function (): void {
+it('can work with gdpr treatments', function(): void {
     // Act
     $treatment = Treatment::create([
         'name' => 'Email Marketing',
@@ -62,7 +62,7 @@ it('can work with gdpr treatments', function (): void {
     Assert::assertFalse($treatment->required);
 });
 
-it('can link consents to treatments', function (): void {
+it('can link consents to treatments', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
     $treatment = Treatment::create([
@@ -90,7 +90,7 @@ it('can link consents to treatments', function (): void {
     Assert::assertSame($user->id, $consent->subject_id);
 });
 
-it('can manage gdpr events', function (): void {
+it('can manage gdpr events', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
 
@@ -118,7 +118,7 @@ it('can manage gdpr events', function (): void {
     Assert::assertSame('192.168.1.1', $event->ip);
 });
 
-it('can track gdpr audit trail', function (): void {
+it('can track gdpr audit trail', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
 
@@ -156,7 +156,7 @@ it('can track gdpr audit trail', function (): void {
     Assert::assertCount(2, $userEvents);
 });
 
-it('can handle different treatment types', function (): void {
+it('can handle different treatment types', function(): void {
     // Act
     $treatment1 = Treatment::create([
         'name' => 'Marketing Communications',
@@ -191,7 +191,7 @@ it('can handle different treatment types', function (): void {
     Assert::assertFalse($treatment3->active);
 });
 
-it('can manage treatment weights', function (): void {
+it('can manage treatment weights', function(): void {
     // Act
     $treatmentLow = Treatment::create([
         'name' => 'Low Priority',
@@ -222,7 +222,7 @@ it('can manage treatment weights', function (): void {
     Assert::assertSame('High Priority', $last->name);
 });
 
-it('can manage consent with treatment relationships', function (): void {
+it('can manage consent with treatment relationships', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
     $treatment = Treatment::create([
@@ -250,7 +250,7 @@ it('can manage consent with treatment relationships', function (): void {
     Assert::assertSame($treatment->id, $consent->treatment_id);
 });
 
-it('can manage multiple consents per subject', function (): void {
+it('can manage multiple consents per subject', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
     $treatment1 = Treatment::create([
@@ -289,7 +289,7 @@ it('can manage multiple consents per subject', function (): void {
     Assert::assertContains($treatment2->id, $consentTreatmentIds);
 });
 
-it('can create events with detailed payloads', function (): void {
+it('can create events with detailed payloads', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
 
@@ -323,7 +323,7 @@ it('can create events with detailed payloads', function (): void {
     Assert::assertContains('personal', $categories);
 });
 
-it('can handle treatment document references', function (): void {
+it('can handle treatment document references', function(): void {
     // Act
     $treatmentWithDoc = Treatment::create([
         'name' => 'Policy Update',
@@ -352,7 +352,7 @@ it('can handle treatment document references', function (): void {
     Assert::assertNull($treatmentWithoutDoc->documentUrl);
 });
 
-it('can manage treatment active status', function (): void {
+it('can manage treatment active status', function(): void {
     // Act
     $activeTreatment = Treatment::create([
         'name' => 'Active Treatment',
@@ -378,7 +378,7 @@ it('can manage treatment active status', function (): void {
     Assert::assertFalse($activeTreatments->contains('id', $inactiveTreatment->id));
 });
 
-it('can manage consent timestamps', function (): void {
+it('can manage consent timestamps', function(): void {
     // Arrange
     $user = UserFactory::new()->createOne();
 

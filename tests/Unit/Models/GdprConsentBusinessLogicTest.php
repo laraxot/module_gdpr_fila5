@@ -5,23 +5,24 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Modules\Gdpr\Database\Factories\ConsentFactory;
+use Modules\Gdpr\Database\Factories\TreatmentFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('GDPR Consent Business Logic', function () {
     beforeEach(function (): void {
-    /** @var \Modules\Gdpr\Tests\TestCase $this */
+        /* @var \Modules\Gdpr\Tests\TestCase $this */
         gdprAssertDatabaseAvailable();
     });
 
     it('records consent with required metadata', function () {
         $user = UserFactory::new()->createOne();
-        $treatment = Treatment::query()->create([
+        $treatment = TreatmentFactory::new()->createOne([
             'name' => 'marketing_emails',
             'description' => 'Marketing emails',
             'weight' => 1,
@@ -29,7 +30,7 @@ describe('GDPR Consent Business Logic', function () {
             'required' => false,
         ]);
 
-        $consent = Consent::query()->create([
+        $consent = ConsentFactory::new()->createOne([
             'subject_id' => $user->id,
             'treatment_id' => $treatment->id,
             'user_id' => $user->id,
@@ -47,7 +48,7 @@ describe('GDPR Consent Business Logic', function () {
     });
 
     it('links consent to treatment', function () {
-        $treatment = Treatment::query()->create([
+        $treatment = TreatmentFactory::new()->createOne([
             'name' => 'analytics',
             'description' => 'Analytics processing',
             'weight' => 5,

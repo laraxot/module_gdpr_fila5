@@ -1,23 +1,23 @@
 {
   "version": "0.2.2",
-  "timestamp": "2026-07-09T17:06:53.397Z",
+  "timestamp": "2026-07-09T19:26:05.321Z",
   "project": {
     "name": "Gdpr",
     "path": "/var/www/_bases/base_fixcity_fila5/laravel/Modules/Gdpr",
     "languages": {
-      "Markdown": 295,
+      "Markdown": 303,
       "JSON": 10,
-      "XML": 2,
-      "PHP": 227,
+      "YAML": 2,
+      "XML": 3,
+      "PHP": 250,
       "JavaScript": 6,
-      "YAML": 1,
       "SCSS": 1
     },
     "frameworks": [
       "TailwindCSS"
     ],
-    "totalFiles": 542,
-    "totalLines": 31481,
+    "totalFiles": 575,
+    "totalLines": 31920,
     "hasTests": true,
     "hasDependencyFile": true,
     "dependencyFile": "package.json",
@@ -98,5 +98,5 @@
   "mediumCount": 0,
   "lowCount": 0,
   "aiPowered": false,
-  "durationMs": 253
+  "durationMs": 200
 }

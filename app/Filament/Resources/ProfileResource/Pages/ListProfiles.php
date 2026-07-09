@@ -15,7 +15,7 @@ class ListProfiles extends UserListProfiles
     protected static string $resource = ProfileResource::class;
 
     /**
-     * @return array<string, Tables\Columns\Column>
+     * @return array<string, TextColumn|IconColumn>
      */
     #[\Override]
     public function getTableColumns(): array

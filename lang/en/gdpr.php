@@ -7,15 +7,15 @@ declare(strict_types=1);
 // Canon: Modules/Gdpr/docs/wiki — domain i18n only.
 // File: lang/en/gdpr.php
 return [
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
     'register' => [
         'title' => 'Create your account',
         'subtitle' => 'Join the most delicious Laravel developer community!',

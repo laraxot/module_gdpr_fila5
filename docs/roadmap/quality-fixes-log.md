@@ -38,9 +38,3 @@ Storico correzioni PHPMD e PHPStan.
 ## PHPInsights Issues
 
 - [ ] Unable to run due to missing composer.lock file.
-
-## 2026-07-12 PHPMD/PHPInsights sweep
-
-- [x] `app/Actions/Registration/HandleRegistrationErrorAction.php`: removed unused `$widget` parameter (`UnusedFormalParameter`) — the action is not currently wired into `RegisterWidget`'s catch path, so the parameter served no purpose.
-- [x] `app/Models/Traits/HasGdpr.php`: removed duplicated `@param $metadata` and duplicated `@return array<string>` doc block lines. Cosmetic only.
-- Everything else flagged (StaticAccess on Facades/Filament components, naming-length nags, ordered-class-elements style) left as-is per project convention — false positives for idiomatic Laravel/Filament code.

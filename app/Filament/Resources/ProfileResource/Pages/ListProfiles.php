@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ProfileResource\Pages;
 
+use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ProfileResource;
@@ -14,7 +15,7 @@ class ListProfiles extends UserListProfiles
     protected static string $resource = ProfileResource::class;
 
     /**
-     * @return array<string, TextColumn|IconColumn>
+     * @return array<string, Tables\Columns\Column>
      */
     #[\Override]
     public function getTableColumns(): array

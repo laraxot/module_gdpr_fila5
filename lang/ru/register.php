@@ -2,20 +2,7 @@
 
 declare(strict_types=1);
 
-// Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Gdpr/docs/wiki — domain i18n only.
-// File: lang/ru/register.php
 return [
-    // Laraxot — see module docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
     'title' => 'Начните свое путешествие с пиццей 🍕',
     'subtitle' => 'Присоединяйтесь к нашему растущему сообществу любителей пиццы и разработчиков. Эксклюзивный доступ к митапам и учебным материалам.',
     'submit' => 'Присоединиться к сообществу',

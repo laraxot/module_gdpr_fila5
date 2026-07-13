@@ -132,7 +132,4 @@ docs/archive/
 *~head
 
 agentdb.rvf
-
-# claude-audit bridge (non committare)
 audit-coverage/
-tests/AuditCoverage/*

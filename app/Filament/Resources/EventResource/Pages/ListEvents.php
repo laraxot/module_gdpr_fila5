@@ -12,9 +12,6 @@ class ListEvents extends XotBaseListRecords
 {
     protected static string $resource = EventResource::class;
 
-    /**
-     * @return array<string, TextColumn>
-     */
     public function getTableColumns(): array
     {
         return [

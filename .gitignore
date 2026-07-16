@@ -64,23 +64,14 @@ Homestead.json
 # Dependencies
 vendor/
 node_modules/
-package-lock.json
 
 # Build and compiled files
-/build
 docs/cache/
 cache/
 
 # Cache and temporary files
-*.cache
-*.lock
-*.phar
-*.log
-.php-cs-fixer.cache
 
 # Git related
-.git-rewrite/
-.git-blame-ignore-revs
 
 # Backup files
 *.old
@@ -92,21 +83,16 @@ cache/
 
 # Documentation and cache
 docs/phpstan/
-docs/cache/
-cache/
 
 # Development tools
 .windsurf/
 .cursor/
 
 # PHPStan documentation
-docs/phpstan/
 
 # Old directories
 resources/views/Components_old
-database/Migrations_old
 database/Seeders_old
-database/Factories_old
 database_old
 
 # Other
@@ -117,7 +103,6 @@ database_old
 laravel
 public_html
 lang/lang/
-_docs/
 _docs/
 
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
@@ -138,3 +123,17 @@ tests/AuditCoverage/
 .vscode/
 .devcontainer/
 tests/AuditCoverage
+
+# AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
+scripts/
+bashscripts/
+docs/archived/
+docs/legacy/
+docs/workbench/
+.circleci/
+tests/.claude-audit/
+_bmad-output/
+test-results/
+.kilocode/
+.kiro/
+.ralph/

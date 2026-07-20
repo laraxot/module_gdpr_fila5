@@ -6,7 +6,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Gdpr\Models\Consent;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-/**
+/*
  * Adds the columns HasGdpr::giveConsent()/revokeConsent() have always written to
  * (metadata, revoked_at, revoked_ip_address) but that no prior consents migration
  * ever created — calling those trait methods previously threw a SQL error.

@@ -1,3 +1,18 @@
+---
+title: "Gdpr — indice della documentazione"
+description: "Documentazione del modulo Gdpr: funzionalita del modulo."
+module: Gdpr
+tags: [gdpr, documentazione, modulo, laraxot]
+status: active
+repository: https://github.com/laraxot/module_gdpr_fila5
+related:
+  - ./00-index.md
+  - ./index.md
+  - ../../../../docs/wiki/audits/docs-redundancy-audit.md
+issues: https://github.com/laraxot/module_gdpr_fila5/issues
+discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
+---
+
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant

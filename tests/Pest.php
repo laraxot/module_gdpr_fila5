@@ -7,3 +7,5 @@ declare(strict_types=1);
  * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
  * Vietato pest()->extend() / expect()->extend() / uses()->in() qui (PHPStan method.internalClass).
  */
+
+require_once __DIR__.'/../../Xot/tests/XotBasePest.php';

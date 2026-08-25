@@ -29,5 +29,9 @@ it('can create user via factory', function (): void {
         'last_name' => 'User',
     ]);
 
+<<<<<<< HEAD
    Assert::assertSame('test@example.com', $user->email);
+=======
+    Assert::assertSame('test@example.com', $user->email);
+>>>>>>> laraxot/dev
 });

@@ -28,25 +28,41 @@ uses(TestCase::class);
 it('validates gdpr consent passes when both accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
+<<<<<<< HEAD
    gdprAssertDoesNotThrow(ValidationException::class, fn () => $action->execute(true, true));
+=======
+    gdprAssertDoesNotThrow(ValidationException::class, fn () => $action->execute(true, true));
+>>>>>>> laraxot/dev
 });
 
 it('validates gdpr consent fails when privacy not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
+<<<<<<< HEAD
    gdprAssertThrows(ValidationException::class, fn () => $action->execute(false, true));
+=======
+    gdprAssertThrows(ValidationException::class, fn () => $action->execute(false, true));
+>>>>>>> laraxot/dev
 });
 
 it('validates gdpr consent fails when terms not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
+<<<<<<< HEAD
    gdprAssertThrows(ValidationException::class, fn () => $action->execute(true, false));
+=======
+    gdprAssertThrows(ValidationException::class, fn () => $action->execute(true, false));
+>>>>>>> laraxot/dev
 });
 
 it('validates gdpr consent fails when both not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
+<<<<<<< HEAD
    gdprAssertThrows(ValidationException::class, fn () => $action->execute(false, false));
+=======
+    gdprAssertThrows(ValidationException::class, fn () => $action->execute(false, false));
+>>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -58,7 +74,11 @@ it('collects gdpr consents correctly', function (): void {
 
     $result = $action->execute(true, true, false);
 
+<<<<<<< HEAD
    Assert::assertSame([
+=======
+    Assert::assertSame([
+>>>>>>> laraxot/dev
         'privacy_accepted' => true,
         'terms_accepted' => true,
         'marketing_consent' => false,
@@ -70,7 +90,11 @@ it('collects gdpr consents with all true', function (): void {
 
     $result = $action->execute(true, true, true);
 
+<<<<<<< HEAD
    Assert::assertTrue($result['privacy_accepted']);
+=======
+    Assert::assertTrue($result['privacy_accepted']);
+>>>>>>> laraxot/dev
     Assert::assertTrue($result['terms_accepted']);
     Assert::assertTrue($result['marketing_consent']);
 });
@@ -80,7 +104,11 @@ it('collects gdpr consents with all false', function (): void {
 
     $result = $action->execute(false, false, false);
 
+<<<<<<< HEAD
    Assert::assertFalse($result['privacy_accepted']);
+=======
+    Assert::assertFalse($result['privacy_accepted']);
+>>>>>>> laraxot/dev
     Assert::assertFalse($result['terms_accepted']);
     Assert::assertFalse($result['marketing_consent']);
 });
@@ -92,7 +120,11 @@ it('collects gdpr consents with all false', function (): void {
 it('validates and transforms user data correctly', function (): void {
     $action = app(ValidateUserDataAction::class);
 
+<<<<<<< HEAD
    $email = 'mario.rossi.'.uniqid().'@example.com';
+=======
+    $email = 'mario.rossi.'.uniqid().'@example.com';
+>>>>>>> laraxot/dev
     $formData = [
         'first_name' => 'Mario',
         'last_name' => 'Rossi',
@@ -102,7 +134,11 @@ it('validates and transforms user data correctly', function (): void {
 
     $result = $action->execute($formData);
 
+<<<<<<< HEAD
    Assert::assertSame('Mario', $result['first_name']);
+=======
+    Assert::assertSame('Mario', $result['first_name']);
+>>>>>>> laraxot/dev
     Assert::assertSame('Rossi', $result['last_name']);
     Assert::assertSame($email, $result['email']);
     Assert::assertSame('customer_user', $result['type']);
@@ -117,14 +153,22 @@ it('validates user data hashes the password', function (): void {
     $formData = [
         'first_name' => 'Test',
         'last_name' => 'User',
+<<<<<<< HEAD
        'email' => 'hash-test-'.uniqid().'@example.com',
+=======
+        'email' => 'hash-test-'.uniqid().'@example.com',
+>>>>>>> laraxot/dev
         'password' => 'MyP@ssword123!',
     ];
 
     $result = $action->execute($formData);
 
     // Password should be hashed, not plain text
+<<<<<<< HEAD
    Assert::assertNotSame('MyP@ssword123!', $result['password']);
+=======
+    Assert::assertNotSame('MyP@ssword123!', $result['password']);
+>>>>>>> laraxot/dev
     $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
 });
@@ -135,14 +179,22 @@ it('validates user data always sets customer_user type', function (): void {
     $formData = [
         'first_name' => 'Admin',
         'last_name' => 'Attempt',
+<<<<<<< HEAD
        'email' => 'admin-attempt-'.uniqid().'@example.com',
+=======
+        'email' => 'admin-attempt-'.uniqid().'@example.com',
+>>>>>>> laraxot/dev
         'password' => 'Tr1ckyP@ss!',
     ];
 
     $result = $action->execute($formData);
 
     // Type must always be customer_user regardless of input
+<<<<<<< HEAD
    Assert::assertSame('customer_user', $result['type']);
+=======
+    Assert::assertSame('customer_user', $result['type']);
+>>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -150,7 +202,11 @@ it('validates user data always sets customer_user type', function (): void {
 // ---------------------------------------------------------------------------
 
 it('saves gdpr consents for a user when treatments exist', function (): void {
+<<<<<<< HEAD
    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+=======
+    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+>>>>>>> laraxot/dev
         gdprSkipTest('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -182,12 +238,20 @@ it('saves gdpr consents for a user when treatments exist', function (): void {
     // Verify consents were saved
     $savedConsents = Consent::where('subject_id', $user->id)->get();
 
+<<<<<<< HEAD
    Assert::assertGreaterThanOrEqual(2, $savedConsents->count());
+=======
+    Assert::assertGreaterThanOrEqual(2, $savedConsents->count());
+>>>>>>> laraxot/dev
 
     // Privacy consent should be accepted
     $privacyConsent = $savedConsents->where('treatment_id', $privacyTreatment->id)->first();
     if ($privacyConsent) {
+<<<<<<< HEAD
        Assert::assertNotNull($privacyConsent->accepted_at);
+=======
+        Assert::assertNotNull($privacyConsent->accepted_at);
+>>>>>>> laraxot/dev
         Assert::assertSame('127.0.0.1', $privacyConsent->ip_address);
         Assert::assertSame('PestTest/1.0', $privacyConsent->user_agent);
     }
@@ -195,12 +259,20 @@ it('saves gdpr consents for a user when treatments exist', function (): void {
     // Marketing consent should NOT be accepted
     $marketingConsent = $savedConsents->where('treatment_id', $marketingTreatment->id)->first();
     if ($marketingConsent) {
+<<<<<<< HEAD
        Assert::assertNull($marketingConsent->accepted_at);
+=======
+        Assert::assertNull($marketingConsent->accepted_at);
+>>>>>>> laraxot/dev
     }
 });
 
 it('saves gdpr consents with marketing accepted', function (): void {
+<<<<<<< HEAD
    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+=======
+    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+>>>>>>> laraxot/dev
         gdprSkipTest('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -232,7 +304,11 @@ it('saves gdpr consents with marketing accepted', function (): void {
         ->first();
 
     if ($marketingConsent) {
+<<<<<<< HEAD
        Assert::assertNotNull($marketingConsent->accepted_at);
+=======
+        Assert::assertNotNull($marketingConsent->accepted_at);
+>>>>>>> laraxot/dev
     }
 });
 
@@ -241,7 +317,11 @@ it('saves gdpr consents with marketing accepted', function (): void {
 // ---------------------------------------------------------------------------
 
 it('can create a user with customer_user type via CreateUserAction', function (): void {
+<<<<<<< HEAD
    $action = app(CreateUserAction::class);
+=======
+    $action = app(CreateUserAction::class);
+>>>>>>> laraxot/dev
 
     $data = [
         'first_name' => 'Pest',
@@ -255,7 +335,11 @@ it('can create a user with customer_user type via CreateUserAction', function ()
 
     $user = $action->execute($data);
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(User::class, $user);
+=======
+    Assert::assertInstanceOf(User::class, $user);
+>>>>>>> laraxot/dev
     Assert::assertSame('Pest', $user->first_name);
     Assert::assertSame('Tester', $user->last_name);
     Assert::assertSame('customer_user', $user->type);
@@ -270,7 +354,11 @@ it('can create a user with customer_user type via CreateUserAction', function ()
 });
 
 it('full registration pipeline works end to end', function (): void {
+<<<<<<< HEAD
    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+=======
+    if (! Schema::connection('gdpr')->hasTable('treatments')) {
+>>>>>>> laraxot/dev
         gdprSkipTest('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -286,7 +374,11 @@ it('full registration pipeline works end to end', function (): void {
     ];
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
+<<<<<<< HEAD
    Assert::assertSame('customer_user', $validatedData['type']);
+=======
+    Assert::assertSame('customer_user', $validatedData['type']);
+>>>>>>> laraxot/dev
     // 3. Create user
     $user = app(CreateUserAction::class)->execute($validatedData);
     Assert::assertInstanceOf(User::class, $user);
@@ -300,7 +392,11 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'privacy_policy'],
             ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
         );
+<<<<<<< HEAD
    } catch (\Exception) {
+=======
+    } catch (\Exception) {
+>>>>>>> laraxot/dev
         // Already exists
     }
     try {
@@ -308,7 +404,11 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'terms_conditions'],
             ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
         );
+<<<<<<< HEAD
    } catch (\Exception) {
+=======
+    } catch (\Exception) {
+>>>>>>> laraxot/dev
         // Already exists
     }
     try {
@@ -316,7 +416,11 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'marketing_consent'],
             ['description' => 'Marketing Consent', 'weight' => 3, 'active' => true, 'required' => false]
         );
+<<<<<<< HEAD
    } catch (\Exception) {
+=======
+    } catch (\Exception) {
+>>>>>>> laraxot/dev
         // Already exists
     }
 
@@ -324,14 +428,22 @@ it('full registration pipeline works end to end', function (): void {
 
     // Verify user exists
     /* @var TestCase $this */
+<<<<<<< HEAD
    assertGdprTableHas('users', [
+=======
+    assertGdprTableHas('users', [
+>>>>>>> laraxot/dev
         'id' => $user->id,
         'type' => 'customer_user',
     ], 'user');
 
     // Verify consents exist
     $savedConsents = Consent::where('subject_id', $user->id)->count();
+<<<<<<< HEAD
    Assert::assertGreaterThanOrEqual(2, $savedConsents);
+=======
+    Assert::assertGreaterThanOrEqual(2, $savedConsents);
+>>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -362,6 +474,10 @@ it('has all required translation keys for register page', function (): void {
     foreach ($requiredKeys as $key) {
         $translated = __($key);
         // Translation should not return the raw key
+<<<<<<< HEAD
        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+=======
+        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+>>>>>>> laraxot/dev
     }
 });

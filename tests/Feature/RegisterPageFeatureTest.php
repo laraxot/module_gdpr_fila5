@@ -10,7 +10,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 it('renders the English register page with hero and form texts', function (): void {
+<<<<<<< HEAD
    $response = gdprGet('/en/auth/register');
+=======
+    $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
 
     $response->assertStatus(200);
     $response->assertSee(__('gdpr::register.title'), false);
@@ -21,7 +25,11 @@ it('renders the English register page with hero and form texts', function (): vo
 });
 
 it('uses the localized login link on the register page', function (): void {
+<<<<<<< HEAD
    $response = gdprGet('/en/auth/register');
+=======
+    $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
 
     $response->assertStatus(200);
     $response->assertSee('/en/auth/login', false);
@@ -50,6 +58,10 @@ it('has all required translation keys used by the register page', function (): v
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
+<<<<<<< HEAD
        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+=======
+        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+>>>>>>> laraxot/dev
     }
 });

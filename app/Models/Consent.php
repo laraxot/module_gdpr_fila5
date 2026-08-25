@@ -29,7 +29,11 @@ use Modules\Xot\Datas\XotData;
  * @property string|null          $accepted_at
  * @property ProfileContract|null $creator
  * @property Treatment|null       $treatment
+<<<<<<< HEAD
 * @property string               $id
+=======
+ * @property string               $id
+>>>>>>> laraxot/dev
  * @property string|null          $treatment_id
  * @property string|null          $subject_id
  * @property Carbon|null          $created_at
@@ -71,7 +75,11 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder<static>|Consent                         whereIpAddress($value)
  * @method static Builder<static>|Consent                         whereUserAgent($value)
  *
+<<<<<<< HEAD
 * @property string|null $ip_address
+=======
+ * @property string|null $ip_address
+>>>>>>> laraxot/dev
  * @property string|null $user_agent
  *
  * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
@@ -84,7 +92,20 @@ class Consent extends BaseModel
 {
     use HasUuids;
 
+<<<<<<< HEAD
    public $incrementing = false;
+
+    protected static function booted(): void
+    {
+        static::creating(function (Consent $consent): void {
+            if (blank($consent->user_type)) {
+                $consent->user_type = XotData::make()->getUserClass();
+            }
+        });
+    }
+=======
+    public $incrementing = false;
+>>>>>>> laraxot/dev
 
     protected static function booted(): void
     {
@@ -107,7 +128,11 @@ class Consent extends BaseModel
         'updated_by',
         'ip_address',
         'user_agent',
+<<<<<<< HEAD
        'metadata',
+=======
+        'metadata',
+>>>>>>> laraxot/dev
         'revoked_at',
         'revoked_ip_address',
     ];

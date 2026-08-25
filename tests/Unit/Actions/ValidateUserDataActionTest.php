@@ -24,7 +24,11 @@ test('ValidateUserDataAction returns valid user data', function () {
 
     $result = $action->execute($formData);
 
+<<<<<<< HEAD
    Assert::assertArrayHasKey('first_name', $result);
+=======
+    Assert::assertArrayHasKey('first_name', $result);
+>>>>>>> laraxot/dev
     Assert::assertArrayHasKey('last_name', $result);
     Assert::assertArrayHasKey('email', $result);
     Assert::assertArrayHasKey('password', $result);
@@ -51,6 +55,10 @@ test('ValidateUserDataAction hashes password', function () {
 
     $result = $action->execute($formData);
 
+<<<<<<< HEAD
    Assert::assertIsString($result['password']);
+=======
+    Assert::assertIsString($result['password']);
+>>>>>>> laraxot/dev
     Assert::assertTrue(Hash::check('plainpassword', $result['password']));
 });

@@ -26,7 +26,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $created_by
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
+<<<<<<< HEAD
 * @property string               $id
+=======
+ * @property string               $id
+>>>>>>> laraxot/dev
  * @property int                  $active
  * @property int                  $required
  * @property string               $name
@@ -141,7 +145,29 @@ class Treatment extends BaseModel
 {
     use HasUuids;
 
+<<<<<<< HEAD
    public $incrementing = false;
+
+    protected static function booted(): void
+    {
+        if (! app()->environment('testing')) {
+            return;
+        }
+
+        static::creating(function (Treatment $treatment): void {
+            $name = $treatment->name;
+            if (! is_string($name) || '' === $name) {
+                return;
+            }
+
+            if (static::query()->where('name', $name)->exists()) {
+                $treatment->name = $name.'-'.uniqid('', true);
+            }
+        });
+    }
+=======
+    public $incrementing = false;
+>>>>>>> laraxot/dev
 
     protected static function booted(): void
     {

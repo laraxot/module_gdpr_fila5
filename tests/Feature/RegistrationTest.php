@@ -51,7 +51,11 @@ it('completes full registration with privacy and terms accepted', function (): v
     ];
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
+<<<<<<< HEAD
    Assert::assertSame('customer_user', $validatedData['type']);
+=======
+    Assert::assertSame('customer_user', $validatedData['type']);
+>>>>>>> laraxot/dev
     Assert::assertSame('active', $validatedData['state']);
     $hashed = is_string($validatedData['password'] ?? null) ? $validatedData['password'] : '';
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
@@ -84,7 +88,11 @@ it('completes full registration with privacy and terms accepted', function (): v
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '127.0.0.1', 'PestTest/1.0');
 
     // Verify user in DB
+<<<<<<< HEAD
    assertGdprTableHas('users', [
+=======
+    assertGdprTableHas('users', [
+>>>>>>> laraxot/dev
         'id' => $user->id,
         'email' => $formData['email'],
         'type' => 'customer_user',
@@ -92,7 +100,11 @@ it('completes full registration with privacy and terms accepted', function (): v
 
     // Verify consents saved
     $savedConsents = Consent::where('subject_id', $user->id)->get();
+<<<<<<< HEAD
    Assert::assertSame(3, $savedConsents->count());
+=======
+    Assert::assertSame(3, $savedConsents->count());
+>>>>>>> laraxot/dev
     // Privacy and terms should be accepted
     $acceptedConsents = $savedConsents->whereNotNull('accepted_at');
     Assert::assertSame(2, $acceptedConsents->count());
@@ -132,7 +144,11 @@ it('completes registration with all consents including marketing', function (): 
 
     // All 3 consents should be accepted
     $savedConsents = Consent::where('subject_id', $user->id)->get();
+<<<<<<< HEAD
    Assert::assertSame(3, $savedConsents->count());
+=======
+    Assert::assertSame(3, $savedConsents->count());
+>>>>>>> laraxot/dev
     Assert::assertSame(3, $savedConsents->whereNotNull('accepted_at')->count());
 });
 
@@ -141,7 +157,11 @@ it('completes registration with all consents including marketing', function (): 
 // ---------------------------------------------------------------------------
 
 it('fails registration when privacy not accepted', function (): void {
+<<<<<<< HEAD
    gdprAssertThrows(ValidationException::class, fn () => app(ValidateGdprConsentAction::class)->execute(false, true));
+=======
+    gdprAssertThrows(ValidationException::class, fn () => app(ValidateGdprConsentAction::class)->execute(false, true));
+>>>>>>> laraxot/dev
 });
 
 it('fails registration when terms not accepted', function (): void {
@@ -167,7 +187,11 @@ it('always sets customer_user type regardless of input', function (): void {
     $result = app(ValidateUserDataAction::class)->execute($formData);
 
     // Type must be customer_user — cannot be overridden
+<<<<<<< HEAD
    Assert::assertSame('customer_user', $result['type']);
+=======
+    Assert::assertSame('customer_user', $result['type']);
+>>>>>>> laraxot/dev
     Assert::assertSame('active', $result['state']);
     Assert::assertNotNull($result['email_verified_at']);
 });
@@ -183,7 +207,11 @@ it('hashes password during validation', function (): void {
     $result = app(ValidateUserDataAction::class)->execute($formData);
 
     // Password must be hashed
+<<<<<<< HEAD
    Assert::assertNotSame('MyP@ssword123!', $result['password']);
+=======
+    Assert::assertNotSame('MyP@ssword123!', $result['password']);
+>>>>>>> laraxot/dev
     $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
 });
@@ -193,7 +221,11 @@ it('hashes password during validation', function (): void {
 // ---------------------------------------------------------------------------
 
 it('saves consent with correct IP and user agent', function (): void {
+<<<<<<< HEAD
    $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+=======
+    $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+>>>>>>> laraxot/dev
 
     Treatment::firstOrCreate(
         ['name' => 'privacy_policy'],
@@ -217,7 +249,11 @@ it('saves consent with correct IP and user agent', function (): void {
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '192.168.1.42', 'TestBrowser/2.0');
 
     $savedConsents = Consent::where('subject_id', $user->id)->get();
+<<<<<<< HEAD
    Assert::assertGreaterThanOrEqual(2, $savedConsents->count());
+=======
+    Assert::assertGreaterThanOrEqual(2, $savedConsents->count());
+>>>>>>> laraxot/dev
 });
 
 it('does not create consents when treatments do not exist', function (): void {
@@ -239,7 +275,11 @@ it('does not create consents when treatments do not exist', function (): void {
     $countAfter = Consent::where('subject_id', $user->id)->count();
 
     // At minimum, consents are created for the treatments that exist in the DB
+<<<<<<< HEAD
    Assert::assertGreaterThanOrEqual($countBefore, $countAfter);
+=======
+    Assert::assertGreaterThanOrEqual($countBefore, $countAfter);
+>>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -268,5 +308,9 @@ it('prevents duplicate user registration with same email', function (): void {
     ];
     $validatedData2 = app(ValidateUserDataAction::class)->execute($formData2);
 
+<<<<<<< HEAD
    gdprAssertThrows(\Exception::class, static fn () => app(CreateUserAction::class)->execute($validatedData2));
+=======
+    gdprAssertThrows(\Exception::class, static fn () => app(CreateUserAction::class)->execute($validatedData2));
+>>>>>>> laraxot/dev
 });

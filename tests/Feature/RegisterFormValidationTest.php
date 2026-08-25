@@ -69,13 +69,21 @@ it('always sets type to customer_user regardless of input', function (): void {
     $formData = [
         'first_name' => 'Hacker',
         'last_name' => 'Attempt',
+<<<<<<< HEAD
+       'email' => 'admin-like-'.Str::random(8).'@example.com',
+=======
         'email' => 'admin-like-'.Str::random(8).'@example.com',
+>>>>>>> laraxot/dev
         'password' => 'SecureP@ss1!',
         'password_confirmation' => 'SecureP@ss1!',
     ];
 
     $result = app(ValidateUserDataAction::class)->execute($formData);
+<<<<<<< HEAD
+   Assert::assertSame('customer_user', $result['type']);
+=======
     Assert::assertSame('customer_user', $result['type']);
+>>>>>>> laraxot/dev
     Assert::assertNotSame('admin', $result['type']);
     Assert::assertNotSame('super_admin', $result['type']);
 });
@@ -90,7 +98,11 @@ it('always sets type to customer_user and lang', function (): void {
     ];
 
     $result = app(ValidateUserDataAction::class)->execute($formData);
+<<<<<<< HEAD
+   Assert::assertSame('customer_user', $result['type']);
+=======
     Assert::assertSame('customer_user', $result['type']);
+>>>>>>> laraxot/dev
     Assert::assertArrayHasKey('lang', $result);
 });
 
@@ -98,13 +110,21 @@ it('sets email_verified_at on registration', function (): void {
     $formData = [
         'first_name' => 'Mario',
         'last_name' => 'Rossi',
+<<<<<<< HEAD
+       'email' => 'verified-'.Str::random(8).'@example.com',
+=======
         'email' => 'verified-'.Str::random(8).'@example.com',
+>>>>>>> laraxot/dev
         'password' => 'SecureP@ss1!',
         'password_confirmation' => 'SecureP@ss1!',
     ];
 
     $result = app(ValidateUserDataAction::class)->execute($formData);
+<<<<<<< HEAD
+   Assert::assertNotNull($result['email_verified_at']);
+=======
     Assert::assertNotNull($result['email_verified_at']);
+>>>>>>> laraxot/dev
 });
 
 it('prevents duplicate email registration', function (): void {
@@ -126,7 +146,11 @@ it('prevents duplicate email registration', function (): void {
         'password_confirmation' => 'SecureP@ss2!',
     ];
 
+<<<<<<< HEAD
+   gdprAssertThrows(ValidationException::class, fn () => app(ValidateUserDataAction::class)->execute($formData));
+=======
     gdprAssertThrows(ValidationException::class, fn () => app(ValidateUserDataAction::class)->execute($formData));
+>>>>>>> laraxot/dev
 });
 
 it('validates first_name minimum length', function (): void {

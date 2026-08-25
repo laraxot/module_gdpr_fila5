@@ -30,37 +30,65 @@ uses(TestCase::class);
 // ---------------------------------------------------------------------------
 
 it('returns 200 for English registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('returns 200 for Italian registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('returns 200 for Spanish registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/es/auth/register');
+=======
     $response = gdprGet('/es/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('returns 200 for German registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/de/auth/register');
+=======
     $response = gdprGet('/de/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('returns 200 for French registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/fr/auth/register');
+=======
     $response = gdprGet('/fr/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('returns 200 for Russian registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/ru/auth/register');
+=======
     $response = gdprGet('/ru/auth/register');
+>>>>>>> laraxot/dev
     $response->assertStatus(200);
 });
 
 it('redirects authenticated users away from registration', function (): void {
+<<<<<<< HEAD
+   $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+=======
     $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+>>>>>>> laraxot/dev
 
     gdprActingAs($user);
     $response = gdprGet('/en/auth/register');
@@ -74,34 +102,58 @@ it('redirects authenticated users away from registration', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct English title on registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Start Your Pizza Journey', false);
 });
 
 it('displays English CTA title', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Create Your FREE Account', false);
 });
 
 it('displays English form trust notice', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('No credit card required', false);
 });
 
 it('displays English terms notice', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Terms and Privacy Policy', false);
 });
 
 it('displays English benefits section', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Developer Community', false);
     $response->assertSee('Tutorials', false);
     $response->assertSee('Networking', false);
 });
 
 it('displays English social proof', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Join', false);
     $response->assertSee('developers', false);
 });
@@ -111,27 +163,47 @@ it('displays English social proof', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct Italian title on registration page', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Pizza Revolution', false);
 });
 
 it('displays Italian CTA title', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('account gratuito', false);
 });
 
 it('displays Italian form trust notice', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Nessuna carta', false);
 });
 
 it('displays Italian terms notice', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Termini', false);
 });
 
 it('displays Italian benefits section', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Community', false);
 });
 
@@ -140,27 +212,47 @@ it('displays Italian benefits section', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays first name input field', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('first_name', false);
 });
 
 it('displays last name input field', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('last_name', false);
 });
 
 it('displays email input field', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('email', false);
 });
 
 it('displays password input field', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('password', false);
 });
 
 it('displays password confirmation input field', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('password_confirmation', false);
 });
 
@@ -169,24 +261,40 @@ it('displays password confirmation input field', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays privacy policy checkbox', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('privacy_accepted', false);
     $response->assertSee('Privacy', false);
 });
 
 it('displays terms checkbox', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('terms_accepted', false);
     $response->assertSee('Terms', false);
 });
 
 it('displays marketing consent checkbox', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('marketing_consent', false);
 });
 
 it('displays GDPR sections', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Personal Information', false);
     $response->assertSee('Required Consent', false);
 });
@@ -196,12 +304,20 @@ it('displays GDPR sections', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays submit button', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('submit', false);
 });
 
 it('has form with post method', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('<form', false);
 });
 
@@ -210,13 +326,21 @@ it('has form with post method', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays login link', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Already have an account', false);
     $response->assertSee('Sign in', false);
 });
 
 it('displays Italian login link', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('Hai già un account', false);
     $response->assertSee('Accedi', false);
 });
@@ -226,12 +350,20 @@ it('displays Italian login link', function (): void {
 // ---------------------------------------------------------------------------
 
 it('includes proper title tag', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('<title>', false);
 });
 
 it('includes csrf token in form', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('_token', false);
 });
 
@@ -240,17 +372,29 @@ it('includes csrf token in form', function (): void {
 // ---------------------------------------------------------------------------
 
 it('has proper language attribute', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('lang="en"', false);
 });
 
 it('has Italian language attribute', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/it/auth/register');
+=======
     $response = gdprGet('/it/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('lang="it"', false);
 });
 
 it('has form labels for accessibility', function (): void {
+<<<<<<< HEAD
+   $response = gdprGet('/en/auth/register');
+=======
     $response = gdprGet('/en/auth/register');
+>>>>>>> laraxot/dev
     $response->assertSee('label', false);
 });
 
@@ -297,7 +441,11 @@ it('has all required English translation keys', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
+<<<<<<< HEAD
+       Assert::assertNotSame($key, "Translation key [{$key}] is missing", $translated);
+=======
         Assert::assertNotSame($key, "Translation key [{$key}] is missing", $translated);
+>>>>>>> laraxot/dev
     }
 });
 
@@ -325,7 +473,11 @@ it('has all required Italian translation keys', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
+<<<<<<< HEAD
+       Assert::assertNotSame($key, "Italian translation key [{$key}] is missing", $translated);
+=======
         Assert::assertNotSame($key, "Italian translation key [{$key}] is missing", $translated);
+>>>>>>> laraxot/dev
     }
 });
 
@@ -334,7 +486,11 @@ it('has all required Italian translation keys', function (): void {
 // ---------------------------------------------------------------------------
 
 it('widget is not visible to authenticated users', function (): void {
+<<<<<<< HEAD
+   $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+=======
     $user = UserFactory::new()->createOne(['type' => 'customer_user']);
+>>>>>>> laraxot/dev
 
     gdprActingAs($user);
     $widget = new RegisterWidget();

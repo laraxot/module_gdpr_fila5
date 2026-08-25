@@ -32,8 +32,17 @@ function gdprTest(): TestCase
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, string> $headers
  *
+=======
+<<<<<<< HEAD
+ * @param  array<string, string>  $headers
+=======
+ * @param array<string, string> $headers
+ *
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  * @return TestResponse<Response>
  */
 function gdprGet(string $uri, array $headers = []): TestResponse
@@ -42,9 +51,20 @@ function gdprGet(string $uri, array $headers = []): TestResponse
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, mixed>  $data
  * @param array<string, string> $headers
  *
+=======
+<<<<<<< HEAD
+ * @param  array<string, mixed>  $data
+ * @param  array<string, string>  $headers
+=======
+ * @param array<string, mixed>  $data
+ * @param array<string, string> $headers
+ *
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  * @return TestResponse<Response>
  */
 function gdprPost(string $uri, array $data = [], array $headers = []): TestResponse
@@ -58,7 +78,15 @@ function gdprActingAs(Authenticatable $user, ?string $driver = null): TestCase
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, mixed> $parameters
+=======
+<<<<<<< HEAD
+ * @param  array<string, mixed>  $parameters
+=======
+ * @param array<string, mixed> $parameters
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function gdprArtisan(string $command, array $parameters = []): int
 {
@@ -71,7 +99,15 @@ function gdprSkipTest(string $message = ''): void
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, mixed> $where
+=======
+<<<<<<< HEAD
+ * @param  array<string, mixed>  $where
+=======
+ * @param array<string, mixed> $where
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function assertGdprTableHas(string $table, array $where, ?string $connection = 'gdpr'): void
 {
@@ -85,7 +121,15 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, mixed> $where
+=======
+<<<<<<< HEAD
+ * @param  array<string, mixed>  $where
+=======
+ * @param array<string, mixed> $where
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {
@@ -99,7 +143,15 @@ function assertGdprTableMissing(string $table, array $where, ?string $connection
 }
 
 /**
+<<<<<<< HEAD
  * @param array<string, mixed> $attributes
+=======
+<<<<<<< HEAD
+ * @param  array<string, mixed>  $attributes
+=======
+ * @param array<string, mixed> $attributes
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function createGdprConsent(array $attributes = []): Consent
 {
@@ -116,7 +168,15 @@ function gdprAssertDatabaseAvailable(): void
 }
 
 /**
+<<<<<<< HEAD
  * @param class-string<Throwable> $exceptionClass
+=======
+<<<<<<< HEAD
+ * @param  class-string<Throwable>  $exceptionClass
+=======
+ * @param class-string<Throwable> $exceptionClass
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function gdprAssertThrows(string $exceptionClass, callable $callback): void
 {
@@ -129,7 +189,15 @@ function gdprAssertThrows(string $exceptionClass, callable $callback): void
 }
 
 /**
+<<<<<<< HEAD
  * @param class-string<Throwable> $exceptionClass
+=======
+<<<<<<< HEAD
+ * @param  class-string<Throwable>  $exceptionClass
+=======
+ * @param class-string<Throwable> $exceptionClass
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): void
 {
@@ -145,8 +213,18 @@ function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): voi
 }
 
 /**
+<<<<<<< HEAD
  * @param list<string>  $fields
  * @param array<string> $fillable
+=======
+<<<<<<< HEAD
+ * @param  list<string>  $fields
+ * @param  array<string>  $fillable
+=======
+ * @param list<string>  $fields
+ * @param array<string> $fillable
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 function assertFillableContains(array $fields, array $fillable): void
 {

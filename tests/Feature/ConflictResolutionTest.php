@@ -8,7 +8,11 @@ use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 
+<<<<<<< HEAD
+ses(TestCase::class);
+=======
 uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     // `new X()` restituisce per costruzione un X: il fatto verificabile e' che i due

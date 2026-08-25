@@ -34,11 +34,7 @@ use function Safe\json_encode;
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
  * @property Consent|null         $consent
-<<<<<<< HEAD
-* @property string               $id
-=======
  * @property string               $id
->>>>>>> laraxot/dev
  * @property string|null          $treatment_id
  * @property string|null          $consent_id
  * @property string               $subject_id
@@ -158,11 +154,7 @@ class Event extends BaseModel
         'treatment_id',
         'consent_id',
         'subject_id',
-<<<<<<< HEAD
-       'ip',
-=======
         'ip',
->>>>>>> laraxot/dev
         'payload',
     ];
 

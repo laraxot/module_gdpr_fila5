@@ -17,11 +17,7 @@ use Modules\Xot\Traits\EnumTrait;
  */
 enum ConsentType: string implements HasColor, HasIcon, HasLabel
 {
-<<<<<<< HEAD
-   use EnumTrait;
-=======
     use EnumTrait;
->>>>>>> laraxot/dev
 
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';

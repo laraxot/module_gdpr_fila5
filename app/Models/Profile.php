@@ -58,11 +58,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property Collection<int, Device>                                   $mobileDevices
  * @property int|null                                                  $mobile_devices_count
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
-<<<<<<< HEAD
-* @property string                                                    $id
-=======
  * @property string                                                    $id
->>>>>>> laraxot/dev
  * @property string|null                                               $post_type
  * @property string|null                                               $bio
  * @property Carbon|null                                               $created_at
@@ -143,11 +139,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property ProfileContract|null $deleter
  * @property string|null          $fiscal_code
  * @property string|null          $notes
-<<<<<<< HEAD
-* @property string|null          $fiscal_code
-=======
  * @property string|null          $fiscal_code
->>>>>>> laraxot/dev
  * @property string|null          $notes
  *
  * @method static Builder<static>|Profile                         childrenWith(array<int|string, mixed> $relations)

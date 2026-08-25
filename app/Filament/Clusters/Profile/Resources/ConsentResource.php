@@ -17,11 +17,7 @@ class ConsentResource extends XotBaseResource
 
     protected static ?string $cluster = ProfileCluster::class;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Schema legacy del form: la sorgente di verità è ConsentForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>

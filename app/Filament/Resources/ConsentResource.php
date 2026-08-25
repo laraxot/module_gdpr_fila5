@@ -17,11 +17,7 @@ class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Schema legacy del form: la sorgente di verità è ConsentForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>
@@ -36,11 +32,7 @@ class ConsentResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<int|string, TextColumn>
      */
     public function getTableColumns(): array

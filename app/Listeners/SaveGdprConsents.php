@@ -67,11 +67,7 @@ class SaveGdprConsents
             if ($treatment) {
                 Consent::create([
                     'user_id' => $user->id,
-<<<<<<< HEAD
-                   'user_type' => $user::class,
-=======
                     'user_type' => $user::class,
->>>>>>> laraxot/dev
                     'treatment_id' => $treatment->id,
                     'type' => $treatmentName,
                     'accepted_at' => $isAccepted ? now() : null,

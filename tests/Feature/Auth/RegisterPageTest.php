@@ -18,11 +18,7 @@ beforeEach(function (): void {
     config(['app.locale' => 'en']);
 });
 
-<<<<<<< HEAD
-t('can render the registration page in English', function (): void {
-=======
 it('can render the registration page in English', function (): void {
->>>>>>> laraxot/dev
     gdprGet('/en/auth/register')
         ->assertStatus(200)
         ->assertSeeText(__('gdpr::register.title'));
@@ -40,33 +36,21 @@ it('displays the registration form elements in English', function (): void {
         ]);
 });
 
-<<<<<<< HEAD
-t('can register a new user', function (): void {
-=======
 it('can register a new user', function (): void {
->>>>>>> laraxot/dev
     Livewire::test(RegisterWidget::class)
         ->set('data.email', 'test@example.com')
         ->set('data.password', 'password123')
         ->set('data.password_confirmation', 'password123')
         ->set('data.terms', true)
         ->call('register')
-<<<<<<< HEAD
-       ->assertRedirect('/en/home');
-=======
         ->assertRedirect('/en/home');
->>>>>>> laraxot/dev
 
     gdprTest()->assertDatabaseHasRow('users', [
         'email' => 'test@example.com',
     ]);
 });
 
-<<<<<<< HEAD
-t('shows validation errors for invalid data', function (): void {
-=======
 it('shows validation errors for invalid data', function (): void {
->>>>>>> laraxot/dev
     Livewire::test(RegisterWidget::class)
         ->set('data.email', 'invalid-email')
         ->set('data.password', 'short')
@@ -81,11 +65,7 @@ it('shows validation errors for invalid data', function (): void {
         ]);
 });
 
-<<<<<<< HEAD
-t('does not display duplicated phrases on the registration page', function (): void {
-=======
 it('does not display duplicated phrases on the registration page', function (): void {
->>>>>>> laraxot/dev
     $response = gdprGet('/en/auth/register');
 
     $response->assertDontSeeText('Informazioni Generali', false);

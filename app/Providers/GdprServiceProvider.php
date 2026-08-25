@@ -25,11 +25,7 @@ class GdprServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
 
-<<<<<<< HEAD
-       // cookie-consent namespace: not covered by XotBaseServiceProvider (loads only module nameLower)
-=======
         // cookie-consent namespace: not covered by XotBaseServiceProvider (loads only module nameLower)
->>>>>>> laraxot/dev
         $cookieConsentLangPath = realpath(__DIR__.'/../../lang/cookie-consent');
         if ($cookieConsentLangPath && is_dir($cookieConsentLangPath)) {
             $this->loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent');

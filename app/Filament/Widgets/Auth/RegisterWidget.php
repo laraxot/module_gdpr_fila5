@@ -105,7 +105,11 @@ class RegisterWidget extends XotBaseWidget
         app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
     }
 
+<<<<<<< HEAD
+   /**
+=======
     /**
+>>>>>>> laraxot/dev
      * @param array<string, mixed> $formData
      */
     protected function logRegistrationAttempt(array $formData): void

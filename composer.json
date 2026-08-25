@@ -39,6 +39,10 @@
     "autoload-dev": {
         "psr-4": {
             "Modules\\Gdpr\\Tests\\": "tests/"
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
         },
         "files": [
             "tests/PestHelpers.php",

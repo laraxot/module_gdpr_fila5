@@ -17,11 +17,7 @@ class EventResource extends XotBaseResource
 {
     protected static ?string $model = Event::class;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Schema legacy del form: la sorgente di verità è EventForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>

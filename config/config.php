@@ -18,11 +18,7 @@ return [
      * | Configurazioni base per la gestione della privacy e protezione dati
      * |
      */
-<<<<<<< HEAD
-   'enabled' => true,
-=======
     'enabled' => true,
->>>>>>> laraxot/dev
     /*
      * |--------------------------------------------------------------------------
      * | Cookie Policy
@@ -32,11 +28,7 @@ return [
      * |
      */
     'cookie' => [
-<<<<<<< HEAD
-       'consent_lifetime' => 365, // giorni
-=======
         'consent_lifetime' => 365, // giorni
->>>>>>> laraxot/dev
         'categories' => [
             'necessary' => [
                 'name' => 'Necessari',
@@ -244,11 +236,7 @@ return [
      * |
      */
     'dpo' => [
-<<<<<<< HEAD
-       'name' => '',
-=======
         'name' => '',
->>>>>>> laraxot/dev
         'email' => '',
         'phone' => '',
     ],

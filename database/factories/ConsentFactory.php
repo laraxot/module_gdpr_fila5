@@ -25,11 +25,7 @@ class ConsentFactory extends Factory
     {
         return [
             'subject_id' => fake()->uuid(),
-<<<<<<< HEAD
-           'user_type' => XotData::make()->getUserClass(),
-=======
             'user_type' => XotData::make()->getUserClass(),
->>>>>>> laraxot/dev
             'user_id' => fake()->uuid(),
             'type' => 'privacy_policy',
             'accepted_at' => now()->toDateTimeString(),

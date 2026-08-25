@@ -42,11 +42,7 @@ use Spatie\LaravelData\Data;
  * @property string                                                          $color_hamburger
  * @property string                                                          $color_banner
  * @property string                                                          $favicon
-<<<<<<< HEAD
-* @property string                                                          $title
-=======
  * @property string                                                          $title
->>>>>>> laraxot/dev
  * @property string                                                          $sitename
  * @property string                                                          $subtitle
  * @property string|null                                                     $generator
@@ -248,11 +244,7 @@ class GdprData extends Data implements Wireable
     {
         if (! self::$instance) {
             /** @var array<string, mixed> $data */
-<<<<<<< HEAD
-           $data = app(GetTenantConfigArrayAction::class)->execute('gdpr');
-=======
             $data = app(GetTenantConfigArrayAction::class)->execute('gdpr');
->>>>>>> laraxot/dev
             self::$instance = self::from($data);
         }
 

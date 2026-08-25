@@ -19,7 +19,11 @@ it('renders the registration page successfully', function () {
 });
 
 it('displays all required form fields', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('First Name')
         ->assertSee('Last Name')
@@ -31,20 +35,32 @@ it('displays all required form fields', function () {
 });
 
 it('displays all required consent checkboxes', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('I have read and understood the Privacy Policy')
         ->assertSee('I have read and accept the Terms and Conditions');
 });
 
 it('displays optional marketing consent', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('I want to receive pizza tips and meetup invitations (optional)');
 });
 
 it('requires first name to be filled', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'last_name' => 'Doe',
         'email' => 'john@example.com',
         'password' => 'Password123!',
@@ -57,7 +73,11 @@ it('requires first name to be filled', function () {
 });
 
 it('requires last name to be filled', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'email' => 'john@example.com',
         'password' => 'Password123!',
@@ -70,7 +90,11 @@ it('requires last name to be filled', function () {
 });
 
 it('requires email to be filled', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'password' => 'Password123!',
@@ -83,7 +107,11 @@ it('requires email to be filled', function () {
 });
 
 it('requires email to be valid format', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'invalid-email',
@@ -97,7 +125,11 @@ it('requires email to be valid format', function () {
 });
 
 it('requires email to be unique', function () {
+<<<<<<< HEAD
+   UserFactory::new()->createOne(['email' => 'john@example.com']);
+=======
     UserFactory::new()->createOne(['email' => 'john@example.com']);
+>>>>>>> laraxot/dev
 
     gdprPost('/en/auth/register', [
         'first_name' => 'John',
@@ -113,7 +145,11 @@ it('requires email to be unique', function () {
 });
 
 it('requires password to be filled', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -126,7 +162,11 @@ it('requires password to be filled', function () {
 });
 
 it('requires password confirmation to match', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -140,7 +180,11 @@ it('requires password confirmation to match', function () {
 });
 
 it('requires password to be at least 12 characters', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -154,7 +198,11 @@ it('requires password to be at least 12 characters', function () {
 });
 
 it('requires password to contain uppercase letter', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -168,7 +216,11 @@ it('requires password to contain uppercase letter', function () {
 });
 
 it('requires password to contain lowercase letter', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -182,7 +234,11 @@ it('requires password to contain lowercase letter', function () {
 });
 
 it('requires password to contain number', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -196,7 +252,11 @@ it('requires password to contain number', function () {
 });
 
 it('requires password to contain special character', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -210,7 +270,11 @@ it('requires password to contain special character', function () {
 });
 
 it('requires privacy policy consent to be accepted', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -223,7 +287,11 @@ it('requires privacy policy consent to be accepted', function () {
 });
 
 it('requires terms consent to be accepted', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -236,7 +304,11 @@ it('requires terms consent to be accepted', function () {
 });
 
 it('allows registration with all required fields and consents', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john.doe@example.com',
@@ -249,7 +321,11 @@ it('allows registration with all required fields and consents', function () {
         ->assertStatus(302);
 
     // Verify user was created
+<<<<<<< HEAD
+   Assert::assertTrue(User::where('email', 'john.doe@example.com')->exists());
+=======
     Assert::assertTrue(User::where('email', 'john.doe@example.com')->exists());
+>>>>>>> laraxot/dev
 });
 
 it('allows registration with optional marketing consent', function () {
@@ -266,7 +342,11 @@ it('allows registration with optional marketing consent', function () {
         ->assertStatus(302);
 
     // Verify user was created
+<<<<<<< HEAD
+   Assert::assertTrue(User::where('email', 'jane.smith@example.com')->exists());
+=======
     Assert::assertTrue(User::where('email', 'jane.smith@example.com')->exists());
+>>>>>>> laraxot/dev
 });
 
 it('stores user data correctly after successful registration', function () {
@@ -283,7 +363,11 @@ it('stores user data correctly after successful registration', function () {
 
     $user = User::where('email', 'alice@example.com')->first();
 
+<<<<<<< HEAD
+   Assert::assertNotNull($user);
+=======
     Assert::assertNotNull($user);
+>>>>>>> laraxot/dev
     Assert::assertSame('Alice', $user->first_name);
     Assert::assertSame('Johnson', $user->last_name);
     Assert::assertSame('alice@example.com', $user->email);
@@ -293,7 +377,11 @@ it('stores user data correctly after successful registration', function () {
 it('hashes the password after registration', function () {
     $plainPassword = 'MySecurePassword123!';
 
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'Bob',
         'last_name' => 'Wilson',
         'email' => 'bob@example.com',
@@ -305,7 +393,11 @@ it('hashes the password after registration', function () {
         ->assertStatus(302);
 
     $user = User::where('email', 'bob@example.com')->first();
+<<<<<<< HEAD
+   Assert::assertNotNull($user);
+=======
     Assert::assertNotNull($user);
+>>>>>>> laraxot/dev
 
     Assert::assertNotSame($plainPassword, $user->password);
     Assert::assertNotEmpty($user->password);
@@ -326,7 +418,11 @@ it('redirects after successful registration', function () {
 });
 
 it('trims whitespace from input fields', function () {
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => '  John  ',
         'last_name' => '  Doe  ',
         'email' => '  john@example.com  ',
@@ -338,7 +434,11 @@ it('trims whitespace from input fields', function () {
         ->assertStatus(302);
 
     $user = User::where('email', 'john@example.com')->first();
+<<<<<<< HEAD
+   Assert::assertNotNull($user);
+=======
     Assert::assertNotNull($user);
+>>>>>>> laraxot/dev
 
     Assert::assertSame('John', $user->first_name);
     Assert::assertSame('Doe', $user->last_name);
@@ -357,7 +457,11 @@ it('prevents registration when already logged in', function () {
 it('handles very long input names correctly', function () {
     $longName = Str::random(250);
 
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => $longName,
         'last_name' => 'Doe',
         'email' => 'longname@example.com',
@@ -373,7 +477,11 @@ it('handles very long input names correctly', function () {
 it('handles very long email correctly', function () {
     $longEmail = Str::random(200).'@example.com';
 
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => $longEmail,
@@ -389,7 +497,11 @@ it('handles very long email correctly', function () {
 it('prevents SQL injection attempts in email', function () {
     $maliciousEmail = "john@example.com'; DROP TABLE users; --";
 
+<<<<<<< HEAD
+   gdprPost('/en/auth/register', [
+=======
     gdprPost('/en/auth/register', [
+>>>>>>> laraxot/dev
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => $maliciousEmail,
@@ -403,21 +515,33 @@ it('prevents SQL injection attempts in email', function () {
 });
 
 it('displays login link on registration page', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('Already have an account?')
         ->assertSee('Login now');
 });
 
 it('contains proper SEO meta tags', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('<title>', false)
         ->assertSee('<nome progetto> Community');
 });
 
 it('has proper accessibility attributes', function () {
+<<<<<<< HEAD
+   gdprGet('/en/auth/register')
+=======
     gdprGet('/en/auth/register')
+>>>>>>> laraxot/dev
         ->assertStatus(200)
         ->assertSee('aria-label');
 });

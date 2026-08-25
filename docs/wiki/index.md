@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 ---
 title: "Gdpr Module Wiki Index"
 type: index
@@ -81,3 +83,4 @@ Gestione conformità GDPR, privacy policy, consensi utente e cookie.
 | [.gitkeep](./concepts/.gitkeep) | Concept | Template iniziale |
 
 Aggiornato: 2026-04-28
+>>>>>>> laraxot/dev

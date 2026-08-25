@@ -12,6 +12,7 @@
 *.js linguist-vendored
 
 CHANGELOG.md export-ignore
+
 # Binary files (regular git blobs — NO git-lfs)
 # `binary` + `!filter` azzera eventuali filtri LFS ereditati
 *.png binary !filter

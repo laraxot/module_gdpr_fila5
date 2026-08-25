@@ -16,7 +16,11 @@ class ProfileResource extends XotBaseResource
 {
     protected static ?string $model = Profile::class;
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * Schema legacy del form: la sorgente di verità è ProfileForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>

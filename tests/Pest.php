@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 /**
+=======
+/*
+>>>>>>> laraxot/dev
  * Bootstrap Pest — modulo Gdpr.
  * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
  * Per estendere si usa l'API idiomatica di Pest — `pest()->extend(...)`, in fondo
@@ -15,4 +19,8 @@ declare(strict_types=1);
  * Vedi story XOT-5.41 e ROOT-17.6.
  */
 
+<<<<<<< HEAD
 pest()->extend(\Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
+=======
+pest()->extend(Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
+>>>>>>> laraxot/dev

@@ -21,7 +21,11 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
  *
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
+<<<<<<< HEAD
 *
+=======
+ *
+>>>>>>> laraxot/dev
  * @see HasGdprTraitTest
  */
 trait HasGdpr
@@ -65,7 +69,11 @@ trait HasGdpr
     public function hasGivenConsent(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
+<<<<<<< HEAD
        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+=======
+        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+>>>>>>> laraxot/dev
 
         if (Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
@@ -80,7 +88,11 @@ trait HasGdpr
     public function hasGivenConsentWithoutCache(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
+<<<<<<< HEAD
        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+=======
+        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+>>>>>>> laraxot/dev
 
         $hasConsent = $this->activeConsents()->where('type', $type)->exists();
 
@@ -93,7 +105,11 @@ trait HasGdpr
      * Give consent for a specific type.
      *
      * @param array<string, mixed> $metadata
+<<<<<<< HEAD
     * @param array<string, mixed> $metadata
+=======
+     * @param array<string, mixed> $metadata
+>>>>>>> laraxot/dev
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -141,12 +157,20 @@ trait HasGdpr
      *
      * @return array<string>
      */
+<<<<<<< HEAD
    /** @return array<string> */
+=======
+    /** @return array<string> */
+>>>>>>> laraxot/dev
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
+<<<<<<< HEAD
        /** @var array<string> $consentTypes */
+=======
+        /** @var array<string> $consentTypes */
+>>>>>>> laraxot/dev
         $consentTypes = ConsentType::getRequiredConsentTypes();
 
         /** @var array<string> $given */
@@ -168,7 +192,11 @@ trait HasGdpr
      */
     protected function clearConsentCache(string $type): void
     {
+<<<<<<< HEAD
        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+=======
+        $cacheKey = 'user_'.SafeStringCastAction::cast($this->getKey()).'_consent_'.$type;
+>>>>>>> laraxot/dev
         Cache::forget($cacheKey);
     }
 }

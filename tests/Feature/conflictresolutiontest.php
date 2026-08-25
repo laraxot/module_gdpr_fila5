@@ -8,7 +8,11 @@ use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 
+<<<<<<< HEAD
 ses(TestCase::class);
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     // `toBeInstanceOf()` sul risultato di `new` e' una tautologia: il tipo e' gia'
@@ -22,7 +26,11 @@ it('verifica che le proprietà delle classi siano accessibili', function (): voi
     $treatment = new Treatment();
     $profile = new Profile();
 
+<<<<<<< HEAD
    // `getFillable()` dichiara gia' `array` come tipo di ritorno: verificare che sia un
+=======
+    // `getFillable()` dichiara gia' `array` come tipo di ritorno: verificare che sia un
+>>>>>>> laraxot/dev
     // array non prova nulla. Serve sapere che sia stato popolato.
     expect($treatment->getFillable())->not->toBeEmpty();
     expect($profile->getFillable())->not->toBeEmpty();

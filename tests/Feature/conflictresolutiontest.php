@@ -11,17 +11,21 @@ use Modules\Gdpr\Tests\TestCase;
 uses(TestCase::class);
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
-    expect(new Treatment())->toBeInstanceOf(Treatment::class);
-    expect(new Profile())->toBeInstanceOf(Profile::class);
+    // `toBeInstanceOf()` sul risultato di `new` e' una tautologia: il tipo e' gia'
+    // garantito staticamente. Quello che vale la pena verificare e' che i due modelli
+    // finiscano sulla connessione del modulo, non su quella di default.
+    expect((new Treatment())->getConnectionName())->toBe('gdpr');
+    expect((new Profile())->getConnectionName())->toBe('gdpr');
 });
 
 it('verifica che le proprietà delle classi siano accessibili', function (): void {
     $treatment = new Treatment();
     $profile = new Profile();
 
-    // Verifica che le proprietà fillable siano definite
-    expect($treatment->getFillable())->toBeArray();
-    expect($profile->getFillable())->toBeArray();
+    // `getFillable()` dichiara gia' `array` come tipo di ritorno: verificare che sia un
+    // array non prova nulla. Serve sapere che sia stato popolato.
+    expect($treatment->getFillable())->not->toBeEmpty();
+    expect($profile->getFillable())->not->toBeEmpty();
 
     // Verifica che la connessione al database sia definita correttamente
     expect($profile->getConnectionName())->toBe('gdpr');

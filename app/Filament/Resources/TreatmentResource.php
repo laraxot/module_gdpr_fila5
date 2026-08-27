@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Component;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\EditTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
@@ -20,9 +21,9 @@ class TreatmentResource extends XotBaseResource
     /**
      * Schema legacy del form: la sorgente di verità è TreatmentForm::getFormSchema().
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
-    public static function getFormSchemaOld(): array
+    public static function getFormSchema(): array
     {
         return [
             'active' => Toggle::make('active')->required(),

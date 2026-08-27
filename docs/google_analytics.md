@@ -1,3 +1,5 @@
+# Google Analytics
+
 ---
 module: theme
 topic: google_analytics

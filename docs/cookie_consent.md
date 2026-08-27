@@ -1,3 +1,5 @@
+# Cookie Consent
+
 ---
 module: theme
 topic: cookie_consent

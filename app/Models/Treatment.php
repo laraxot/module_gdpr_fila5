@@ -7,13 +7,13 @@ namespace Modules\Gdpr\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Carbon;
-use Modules\TechPlanner\Models\Profile;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modules\Gdpr\Models\Treatment.
  *
- * @property-read Profile|null $creator
- * @property-read Profile|null $updater
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
  *
  * @method static Builder<static>|Treatment newModelQuery()
  * @method static Builder<static>|Treatment newQuery()

@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
-use Modules\TechPlanner\Models\Profile;
+use Modules\Xot\Contracts\ProfileContract;
 
 use function Safe\json_encode;
 
@@ -21,10 +21,10 @@ use function Safe\json_encode;
  * Modules\Gdpr\Models\Event.
  *
  * @property-read Consent|null $consent
- * @property-read Profile|null $creator
+ * @property-read ProfileContract|null $creator
  * @property string|null $ip
  * @property string|null $payload
- * @property-read Profile|null $updater
+ * @property-read ProfileContract|null $updater
  *
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()

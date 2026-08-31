@@ -16,6 +16,7 @@ use Modules\User\Models\DeviceUser;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
@@ -24,7 +25,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property SchemalessAttributes $extra
  * @property-read string $avatar
- * @property-read \Modules\TechPlanner\Models\Profile|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read Collection<int, DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
  * @property-read DeviceProfile|null $pivot
@@ -45,7 +46,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property-read int|null $permissions_count
  * @property-read Collection<int, Role> $roles
  * @property-read int|null $roles_count
- * @property-read \Modules\TechPlanner\Models\Profile|null $updater
+ * @property-read ProfileContract|null $updater
  * @property-read User|null $user
  * @property-read string|null $user_name
  *

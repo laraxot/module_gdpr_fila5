@@ -10,6 +10,7 @@ use Illuminate\Testing\TestResponse;
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
+use Pest\Support\HigherOrderTapProxy;
 use PHPUnit\Framework\Assert;
 
 /**
@@ -19,18 +20,21 @@ use PHPUnit\Framework\Assert;
  */
 function gdprTest(): TestCase
 {
-    if (TestCase::$currentTest !== null) {
-        return TestCase::$currentTest;
+    // @phpstan-ignore-next-line Pest's test() returns mixed in static analysis
+    $test = test();
+    // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
+    if ($test instanceof HigherOrderTapProxy) {
+        $test = $test->target;
     }
 
-    $test = test();
     Assert::assertInstanceOf(TestCase::class, $test);
 
     return $test;
 }
 
 /**
- * @param  array<string, string>  $headers
+ * @param array<string, string> $headers
+ *
  * @return TestResponse<Response>
  */
 function gdprGet(string $uri, array $headers = []): TestResponse
@@ -39,8 +43,9 @@ function gdprGet(string $uri, array $headers = []): TestResponse
 }
 
 /**
- * @param  array<string, mixed>  $data
- * @param  array<string, string>  $headers
+ * @param array<string, mixed>  $data
+ * @param array<string, string> $headers
+ *
  * @return TestResponse<Response>
  */
 function gdprPost(string $uri, array $data = [], array $headers = []): TestResponse
@@ -54,7 +59,7 @@ function gdprActingAs(Authenticatable $user, ?string $driver = null): TestCase
 }
 
 /**
- * @param  array<string, mixed>  $parameters
+ * @param array<string, mixed> $parameters
  */
 function gdprArtisan(string $command, array $parameters = []): int
 {
@@ -67,7 +72,7 @@ function gdprSkipTest(string $message = ''): void
 }
 
 /**
- * @param  array<string, mixed>  $where
+ * @param array<string, mixed> $where
  */
 function assertGdprTableHas(string $table, array $where, ?string $connection = 'gdpr'): void
 {
@@ -81,7 +86,7 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
- * @param  array<string, mixed>  $where
+ * @param array<string, mixed> $where
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {
@@ -95,7 +100,7 @@ function assertGdprTableMissing(string $table, array $where, ?string $connection
 }
 
 /**
- * @param  array<string, mixed>  $attributes
+ * @param array<string, mixed> $attributes
  */
 function createGdprConsent(array $attributes = []): Consent
 {
@@ -112,7 +117,7 @@ function gdprAssertDatabaseAvailable(): void
 }
 
 /**
- * @param  class-string<Throwable>  $exceptionClass
+ * @param class-string<Throwable> $exceptionClass
  */
 function gdprAssertThrows(string $exceptionClass, callable $callback): void
 {
@@ -125,7 +130,7 @@ function gdprAssertThrows(string $exceptionClass, callable $callback): void
 }
 
 /**
- * @param  class-string<Throwable>  $exceptionClass
+ * @param class-string<Throwable> $exceptionClass
  */
 function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): void
 {
@@ -141,8 +146,8 @@ function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): voi
 }
 
 /**
- * @param  list<string>  $fields
- * @param  array<string>  $fillable
+ * @param list<string>  $fields
+ * @param array<string> $fillable
  */
 function assertFillableContains(array $fields, array $fillable): void
 {

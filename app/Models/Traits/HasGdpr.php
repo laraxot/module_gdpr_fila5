@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Cache;
-use Stringable;
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
@@ -92,8 +91,8 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
-     * @param  array<string, mixed>  $metadata
+     * @param array<string, mixed> $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -175,7 +174,7 @@ trait HasGdpr
     {
         $key = $this->getKey();
 
-        if (! is_scalar($key) && ! $key instanceof Stringable) {
+        if (! is_scalar($key) && ! $key instanceof \Stringable) {
             throw new \LogicException('The model key must be scalar or stringable.');
         }
 

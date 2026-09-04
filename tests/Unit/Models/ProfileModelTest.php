@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Profile;
 use Modules\User\Models\BaseProfile;
 use PHPUnit\Framework\Assert;
-use Modules\User\Models\User;
 
 test('profile_extends_base_profile', function (): void {
     $profile = new Profile();

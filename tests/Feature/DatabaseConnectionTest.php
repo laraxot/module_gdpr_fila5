@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
-use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 
 beforeEach(function (): void {

@@ -14,32 +14,32 @@ use Modules\Xot\Datas\XotData;
 /**
  * Modules\Gdpr\Models\Consent.
  *
- * @property-read ProfileContract|null $creator
- * @property-read Treatment|null $treatment
- * @property-read ProfileContract|null $updater
+ * @property ProfileContract|null $creator
+ * @property Treatment|null       $treatment
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
  * @method static Builder<static>|Consent query()
  *
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $subject_id
- * @property string $user_type
- * @property int $user_id
- * @property string|null $type
- * @property Carbon|null $accepted_at
- * @property string|null $ip_address
- * @property string|null $user_agent
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_at
- * @property string|null $deleted_by
+ * @property string                       $id
+ * @property string|null                  $treatment_id
+ * @property string|null                  $subject_id
+ * @property string                       $user_type
+ * @property int                          $user_id
+ * @property string|null                  $type
+ * @property Carbon|null                  $accepted_at
+ * @property string|null                  $ip_address
+ * @property string|null                  $user_agent
+ * @property Carbon|null                  $created_at
+ * @property Carbon|null                  $updated_at
+ * @property string|null                  $updated_by
+ * @property string|null                  $created_by
+ * @property string|null                  $deleted_at
+ * @property string|null                  $deleted_by
  * @property array<array-key, mixed>|null $metadata
- * @property Carbon|null $revoked_at
- * @property string|null $revoked_ip_address
+ * @property Carbon|null                  $revoked_at
+ * @property string|null                  $revoked_ip_address
  *
  * @method static Builder<static>|Consent whereAcceptedAt($value)
  * @method static Builder<static>|Consent whereCreatedAt($value)

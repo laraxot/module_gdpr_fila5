@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
-use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 
 it('renders the registration page successfully', function () {

@@ -84,7 +84,7 @@ class Consent extends BaseModel
 {
     use HasUuids;
 
-   public $incrementing = false;
+    public $incrementing = false;
 
     protected static function booted(): void
     {

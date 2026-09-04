@@ -46,6 +46,7 @@ abstract class TestCase extends XotBaseTestCase
             GdprServiceProvider::class,
         ];
     }
+
     /**
      * @param array<string, mixed> $data
      */

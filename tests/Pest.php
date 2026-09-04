@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\Gdpr\Tests\TestCase;
 
-/**
+/*
  * Bootstrap Pest — modulo Gdpr.
  * `pest()->extend(TestCase::class)->in(...)` è la forma **consigliata** (XOT-5.41).
  * Non duplicare `uses(TestCase::class)` nei file: XOR → TestCaseAlreadyInUse.

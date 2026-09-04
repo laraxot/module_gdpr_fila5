@@ -7,7 +7,7 @@ namespace Modules\Gdpr\Actions;
 use Illuminate\Support\Facades\Log;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
 class SaveGdprConsentsAction
@@ -20,7 +20,7 @@ class SaveGdprConsentsAction
      * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
      * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
      */
-    public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
+    public function execute(UserContract $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {
         $ipAddress ??= request()->ip();
         $userAgent ??= request()->userAgent();

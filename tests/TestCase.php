@@ -8,10 +8,11 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Modules\Gdpr\Providers\GdprServiceProvider;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
+use Modules\User\Models\User;
 
 /**
  * Base test case for Gdpr module.

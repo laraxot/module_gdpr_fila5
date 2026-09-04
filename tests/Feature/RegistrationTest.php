@@ -14,8 +14,9 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
+use Modules\User\Models\User;
 
 /*
  * Registration Flow Integration Tests.

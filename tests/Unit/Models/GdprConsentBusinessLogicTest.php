@@ -10,6 +10,7 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
+use Modules\User\Models\User;
 
 describe('GDPR Consent Business Logic', function () {
     beforeEach(function (): void {

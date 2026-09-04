@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\User;
 
 // ---------------------------------------------------------------------------
 // Page rendering tests

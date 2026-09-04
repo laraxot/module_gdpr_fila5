@@ -8,6 +8,7 @@ use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Gdpr\Models\Consent;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
+use Modules\User\Models\User;
 
 /*
  * Comprehensive Registration Page Tests.

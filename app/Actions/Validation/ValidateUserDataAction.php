@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Actions\Validation;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -25,8 +26,6 @@ class ValidateUserDataAction
     {
         $email = app(SafeStringCastAction::class)->execute($formData['email']);
 
-        // Prevent duplicate email before hitting DB unique constraint.
-        // User model already uses 'user' connection via $connection property
         if (User::where('email', $email)->exists()) {
             throw ValidationException::withMessages(['email' => [__('validation.unique', ['attribute' => 'email'])]]);
         }

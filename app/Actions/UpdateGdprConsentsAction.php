@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions;
 
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -21,7 +21,7 @@ class UpdateGdprConsentsAction
      * @param array<string, bool> $consents
      * @param array<string, bool> $consents
      */
-    public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
+    public function execute(UserContract $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {
         app(SaveGdprConsentsAction::class)->execute($user, $consents, $ipAddress, $userAgent);
     }

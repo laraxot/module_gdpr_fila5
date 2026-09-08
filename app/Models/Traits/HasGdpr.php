@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Cache;
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use RuntimeException;
 
 /**
  * Trait HasGdpr.
@@ -90,7 +89,7 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -189,11 +188,7 @@ trait HasGdpr
         return match (true) {
             is_string($key) => $key,
             is_int($key) => (string) $key,
-            default => throw new RuntimeException(sprintf(
-                'Unsupported primary key type "%s" for GDPR cache key on %s.',
-                get_debug_type($key),
-                static::class,
-            )),
+            default => throw new \RuntimeException(sprintf('Unsupported primary key type "%s" for GDPR cache key on %s.', get_debug_type($key), static::class)),
         };
     }
 }

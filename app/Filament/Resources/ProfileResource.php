@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\EditProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\ListProfiles;

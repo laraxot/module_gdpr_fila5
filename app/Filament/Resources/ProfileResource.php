@@ -21,7 +21,7 @@ class ProfileResource extends XotBaseResource
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-    public static function getFormSchemaOld(): array
+    public function getFormSchemaOld(): array
     {
         return [
             'type' => TextInput::make('type')->maxLength(255)->default(null),

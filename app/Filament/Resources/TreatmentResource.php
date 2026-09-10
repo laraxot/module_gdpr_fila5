@@ -22,7 +22,7 @@ class TreatmentResource extends XotBaseResource
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-    public static function getFormSchemaOld(): array
+    public function getFormSchemaOld(): array
     {
         return [
             'active' => Toggle::make('active')->required(),

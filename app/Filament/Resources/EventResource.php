@@ -22,7 +22,7 @@ class EventResource extends XotBaseResource
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-    public static function getFormSchemaOld(): array
+    public function getFormSchemaOld(): array
     {
         return [
             'treatment_id' => TextInput::make('treatment_id')->maxLength(36)->default(null),

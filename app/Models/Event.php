@@ -20,21 +20,21 @@ use function Safe\json_encode;
 /**
  * Modules\Gdpr\Models\Event.
  *
- * @property-read Consent|null $consent
- * @property-read ProfileContract|null $creator
- * @property string|null $ip
- * @property string|null $payload
- * @property-read ProfileContract|null $updater
+ * @property Consent|null         $consent
+ * @property ProfileContract|null $creator
+ * @property string|null          $ip
+ * @property string|null          $payload
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
  *
- * @property string $id
+ * @property string      $id
  * @property string|null $treatment_id
  * @property string|null $consent_id
- * @property string $subject_id
- * @property string $action
+ * @property string      $subject_id
+ * @property string      $action
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -105,7 +105,7 @@ class Event extends BaseModel
 
     public function getIpAttribute(?string $value): ?string
     {
-        if ($value === null || $value === '') {
+        if (null === $value || '' === $value) {
             return $value;
         }
 
@@ -114,7 +114,7 @@ class Event extends BaseModel
 
     public function getPayloadAttribute(?string $value): ?string
     {
-        if ($value === null || $value === '') {
+        if (null === $value || '' === $value) {
             return $value;
         }
 

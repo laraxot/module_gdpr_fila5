@@ -16,9 +16,8 @@ use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\Xot\Contracts\UserContract;
-use PHPUnit\Framework\Assert;
 use Modules\User\Models\User;
+use PHPUnit\Framework\Assert;
 
 // ---------------------------------------------------------------------------
 // ValidateGdprConsentAction

@@ -12,21 +12,21 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\Gdpr\Models\Treatment.
  *
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $updater
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Treatment newModelQuery()
  * @method static Builder<static>|Treatment newQuery()
  * @method static Builder<static>|Treatment query()
  *
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
+ * @property string      $id
+ * @property int         $active
+ * @property int         $required
+ * @property string      $name
+ * @property string      $description
  * @property string|null $documentVersion
  * @property string|null $documentUrl
- * @property int $weight
+ * @property int         $weight
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -65,7 +65,7 @@ class Treatment extends BaseModel
 
         static::creating(function (Treatment $treatment): void {
             $name = $treatment->name;
-            if (! is_string($name) || $name === '') {
+            if (! is_string($name) || '' === $name) {
                 return;
             }
 

@@ -14,25 +14,17 @@ class TreatmentsTable extends XotBaseResourceTable
     /**
      * @return array<string, Column>
      */
-   public function getTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
-            // Tables\Columns\TextColumn::make('id')
-            //     ->searchable(),
-            'active' => IconColumn::make('active')->boolean(),
-            'required' => IconColumn::make('required')->boolean(),
-            'name' => TextColumn::make('name')->searchable(),
+            'name' => TextColumn::make('name')->searchable()->sortable()->wrap(),
+            'active' => IconColumn::make('active')->boolean()->sortable(),
+            'required' => IconColumn::make('required')->boolean()->sortable(),
             'documentVersion' => TextColumn::make('documentVersion')->searchable(),
-            'documentUrl' => TextColumn::make('documentUrl')->searchable(),
+            'documentUrl' => TextColumn::make('documentUrl')->wrap()->toggleable(isToggledHiddenByDefault: true),
             'weight' => TextColumn::make('weight')->numeric()->sortable(),
-            'created_at' => TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
-            'updated_at' => TextColumn::make('updated_at')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
+            'created_at' => TextColumn::make('created_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
     }
 }

@@ -6,10 +6,16 @@ namespace Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Table
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\Gdpr\Models\Consent;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class ConsentsTable extends XotBaseResourceTable
 {
+    /**
+     * @var class-string<Consent>
+     */
+    protected static string $model = Consent::class;
+
     /**
      * @return array<string, Column>
      */

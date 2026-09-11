@@ -6,10 +6,16 @@ namespace Modules\Gdpr\Filament\Resources\EventResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\Gdpr\Models\Event;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class EventsTable extends XotBaseResourceTable
 {
+    /**
+     * @var class-string<Event>
+     */
+    protected static string $model = Event::class;
+
     /**
      * @return array<string, Column>
      */

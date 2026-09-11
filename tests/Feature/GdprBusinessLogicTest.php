@@ -12,7 +12,6 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\json_decode;
 use function Safe\json_encode;
-use Modules\User\Models\User;
 
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */

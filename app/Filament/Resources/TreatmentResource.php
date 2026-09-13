@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Filament\Schemas\Components\Component;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\EditTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
@@ -17,6 +13,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class TreatmentResource extends XotBaseResource
 {
     protected static ?string $model = Treatment::class;
+
     public static function getPages(): array
     {
         return [

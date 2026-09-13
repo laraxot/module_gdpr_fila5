@@ -16,34 +16,23 @@ use PHPUnit\Framework\Assert;
 /**
  * Base test case for Gdpr module.
  *
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
- * prepareSharedFixcitySqliteForTesting() runs before transactions begin.
+ * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
+ * prepareSharedSqliteForTesting() runs before transactions begin.
  */
 abstract class TestCase extends XotBaseTestCase
 {
     use DatabaseTransactions;
-
-    public static ?self $currentTest = null;
 
     /** @var list<string> */
     protected $connectionsToTransact = ['sqlite'];
 
     protected function setUp(): void
     {
-        $this->prepareSharedFixcitySqliteForTesting();
+        $this->prepareSharedSqliteForTesting();
 
         parent::setUp();
 
-        self::$currentTest = $this;
-
         config(['auth.providers.users.model' => User::class]);
-    }
-
-    protected function tearDown(): void
-    {
-        self::$currentTest = null;
-
-        parent::tearDown();
     }
 
     /**

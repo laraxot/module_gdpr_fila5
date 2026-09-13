@@ -20,28 +20,110 @@ use function Safe\json_encode;
 /**
  * Modules\Gdpr\Models\Event.
  *
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
  * @property Consent|null         $consent
  * @property ProfileContract|null $creator
- * @property string|null          $ip
- * @property string|null          $payload
  * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
- *
- * @property string      $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string      $subject_id
- * @property string      $action
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_at
- * @property string|null $deleted_by
- *
  * @method static Builder<static>|Event whereAction($value)
  * @method static Builder<static>|Event whereConsentId($value)
  * @method static Builder<static>|Event whereCreatedAt($value)
@@ -55,6 +137,10 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereTreatmentId($value)
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
+ *
+ * @property ProfileContract|null $deleter
+ *
+ * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
@@ -75,10 +161,8 @@ class Event extends BaseModel
     protected static function booted(): void
     {
         static::creating(function (Event $event): void {
-            $attributes = $event->getAttributes();
-
-            if (! array_key_exists('ip', $attributes) || blank($attributes['ip'])) {
-                $event->setIpAttribute('127.0.0.1');
+            if (blank($event->ip)) {
+                $event->ip = '127.0.0.1';
             }
         });
     }
@@ -101,23 +185,5 @@ class Event extends BaseModel
     public function setIpAttribute(?string $value): void
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
-    }
-
-    public function getIpAttribute(?string $value): ?string
-    {
-        if (null === $value || '' === $value) {
-            return $value;
-        }
-
-        return Crypt::decryptString($value);
-    }
-
-    public function getPayloadAttribute(?string $value): ?string
-    {
-        if (null === $value || '' === $value) {
-            return $value;
-        }
-
-        return Crypt::decryptString($value);
     }
 }

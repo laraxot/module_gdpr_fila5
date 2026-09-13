@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Filament\Schemas\Components\Component;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\EditProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\ListProfiles;
@@ -16,10 +13,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class ProfileResource extends XotBaseResource
 {
     protected static ?string $model = Profile::class;
+
     public static function getRelations(): array
     {
         return [];
     }
+
     public static function getPages(): array
     {
         return [

@@ -39,10 +39,7 @@
     "autoload-dev": {
         "psr-4": {
             "Modules\\Gdpr\\Tests\\": "tests/"
-<<<<<<< .merge_file_Nu8p3R
-=======
 
->>>>>>> .merge_file_8VYbth
         },
         "files": [
             "tests/PestHelpers.php",

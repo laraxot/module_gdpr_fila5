@@ -1,3 +1,19 @@
+<<<<<<< .merge_file_z8q7mB
+=======
+---
+title: "Agent instructions"
+type: reference
+tags: [agents, coding-agent, llm-wiki]
+created: 2026-07-01
+updated: 2026-07-01
+qmd: "istruzioni agenti LLM wiki modulo"
+issues: []
+discussions: []
+related:
+  - ./coding-agent-manifests.md
+---
+
+>>>>>>> .merge_file_2NxD8j
 # Gdpr Module LLM Wiki Agent Instructions
 
 > **Module/Theme:** Gdpr

@@ -34,7 +34,11 @@ return [
         ],
         'label' => 'Texts',
         'sort' => 1,
+<<<<<<< .merge_file_F1lzfr
         'icon' => 'heroicon-o-collection',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> .merge_file_tffPXW
     ],
     'fields' => [
         'id' => [

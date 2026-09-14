@@ -139,8 +139,11 @@ agentdb.rvf
 .vscode/
 .windsurf/
 tests/AuditCoverage/
+<<<<<<< .merge_file_0j5hFn
 
 # Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
 phpinsights.php
 rector.php
 graphify-out
+=======
+>>>>>>> .merge_file_IWoTqj

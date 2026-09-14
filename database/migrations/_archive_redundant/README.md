@@ -1,5 +1,6 @@
 # Migration archiviate (Gdpr)
 
+<<<<<<< .merge_file_trDNC8
 [![Module](https://img.shields.io/badge/Module-Migration archiviate (Gdpr)-8B0000.svg)]()
 [![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
 [![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)
@@ -32,3 +33,15 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Gdpr` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+=======
+Migration storiche per `consents` — **non eseguire** su nuovo ambiente.
+
+## Tabella `consents`
+
+| Stato | File |
+|-------|------|
+| **Canonica** | `../2024_01_01_000005_create_consents_table.php` |
+| Archiviate | `2024_01_01_000001` (connection `gdpr` legacy), `2024_01_01_000002` (CREATE parziale) |
+
+La canonica referenzia `Consent::class`, morph `user`, `type`, `accepted_at`, `ip_address`, `user_agent`, soft delete.
+>>>>>>> .merge_file_TmlEvH

@@ -1,5 +1,6 @@
 # Coverage — Gdpr
 
+<<<<<<< .merge_file_FEd2Ya
 ## 2026-09-07 — Fix regressione PHPStan: attributo `#[Override]` malformato
 
 Storia: `docs/stories/02.Gdpr-phpstan-attribute-regression-fix.story.md`.
@@ -92,6 +93,8 @@ Test failures are pre-existing (database connection issues with SQLite test fixt
 
 ---
 
+=======
+>>>>>>> .merge_file_OriyhE
 ## 2026-09-04 — Riduzione uso di `mixed`
 
 Storia: `docs/stories/gdpr-mixed-type-reduction.story.md`.

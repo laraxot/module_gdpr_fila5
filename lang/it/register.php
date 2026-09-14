@@ -119,6 +119,10 @@ return [
         ],
         'label' => 'Register',
         'sort' => 1,
+<<<<<<< .merge_file_4KkiHV
         'icon' => 'heroicon-o-collection',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> .merge_file_sp1xFG
     ],
 ];

@@ -70,10 +70,6 @@ return [
         ],
         'label' => 'Register Widget',
         'sort' => 1,
-<<<<<<< .merge_file_ElV3IY
-        'icon' => 'heroicon-o-collection',
-=======
         'icon' => 'heroicon-o-rectangle-stack',
->>>>>>> .merge_file_BNefbn
     ],
 ];

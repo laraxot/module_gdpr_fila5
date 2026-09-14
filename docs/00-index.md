@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_az0Sxb
-=======
 ---
 title: "Gdpr — indice della documentazione"
 description: "Documentazione del modulo Gdpr: funzionalita del modulo."
@@ -15,7 +13,6 @@ issues: https://github.com/laraxot/module_gdpr_fila5/issues
 discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 ---
 
->>>>>>> .merge_file_YHQWTY
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -62,16 +59,10 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 | [USER_RESEARCH.md](./USER_RESEARCH.md) | User Research |
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< .merge_file_az0Sxb
-- [User](../../user/docs/readme.md) - Soggetti dei consensi.
-- [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
-- [Xot](../../xot/docs/readme.md) - Base framework e trait UUID.
-=======
 - [User](../../User/docs/README.md) - Soggetti dei consensi.
 - [Activity](../../Activity/docs/README.md) - Log di sistema integrato.
 - [Xot](../../Xot/docs/README.md) - Base framework e trait UUID.
 # Documentation Index
->>>>>>> .merge_file_YHQWTY
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
@@ -79,8 +70,4 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 
 ## Dependency Intelligence
 
-<<<<<<< .merge_file_az0Sxb
 - [Dependency intelligence](dependency-intelligence.md)
-=======
-- [Dependency intelligence](dependency-intelligence.md)
->>>>>>> .merge_file_YHQWTY

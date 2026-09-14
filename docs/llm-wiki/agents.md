@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_z8q7mB
-=======
 ---
 title: "Agent instructions"
 type: reference
@@ -13,7 +11,6 @@ related:
   - ./coding-agent-manifests.md
 ---
 
->>>>>>> .merge_file_2NxD8j
 # Gdpr Module LLM Wiki Agent Instructions
 
 > **Module/Theme:** Gdpr

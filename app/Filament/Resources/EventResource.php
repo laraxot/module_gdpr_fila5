@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\CreateEvent;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\EditEvent;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\ListEvents;
@@ -20,7 +21,7 @@ class EventResource extends XotBaseResource
     /**
      * Schema legacy del form: la sorgente di verità è EventForm::getFormSchema().
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public function getFormSchemaOld(): array
     {

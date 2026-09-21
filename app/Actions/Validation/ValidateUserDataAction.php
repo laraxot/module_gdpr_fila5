@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions\Validation;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
@@ -15,9 +16,16 @@ class ValidateUserDataAction
     use QueueableAction;
 
     /**
-     * @param array<string, string> $formData
-     *
-     * @return array<string, mixed>
+     * @param  array<string, string>  $formData
+     * @return array{
+     *     first_name: string,
+     *     last_name: string,
+     *     email: string,
+     *     password: string,
+     *     type: string,
+     *     lang: string,
+     *     email_verified_at: Carbon
+     * }
      */
     public function execute(array $formData): array
     {

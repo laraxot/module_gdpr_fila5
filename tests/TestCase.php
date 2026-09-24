@@ -17,14 +17,10 @@ use PHPUnit\Framework\Assert;
  * Base test case for Gdpr module.
  *
  * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
-<<<<<<< HEAD
  * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
  * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
  * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
  * prepareSharedSqliteForTesting() runs before transactions begin.
-=======
- * prepareSharedFixcitySqliteForTesting() runs before transactions begin.
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
  */
 abstract class TestCase extends XotBaseTestCase
 {
@@ -37,11 +33,7 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
-<<<<<<< HEAD
         $this->prepareSharedSqliteForTesting();
-=======
-        $this->prepareSharedFixcitySqliteForTesting();
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
         parent::setUp();
 

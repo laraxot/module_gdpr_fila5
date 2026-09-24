@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 // Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
 // claude-audit static: ≥5% comment lines on files >100 LOC.
 // Canon: Modules/Gdpr/docs/wiki — domain i18n only.
@@ -12,7 +10,6 @@ declare(strict_types=1);
 // Chiavi: navigation, fields, legal_bases, actions.
 // Canon: docs/wiki/concepts/treatment-translations.md
 
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 return [
     'navigation' => [
         'name' => 'Trattamenti',

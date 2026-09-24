@@ -107,7 +107,6 @@ class Consent extends BaseModel
         'updated_by',
         'ip_address',
         'user_agent',
-<<<<<<< HEAD
         'metadata',
         'revoked_at',
         'revoked_ip_address',
@@ -126,11 +125,6 @@ class Consent extends BaseModel
     }
 
     /**
-=======
-    ];
-
-    /**
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
      * @return BelongsTo<Treatment, $this>
      */
     public function treatment(): BelongsTo

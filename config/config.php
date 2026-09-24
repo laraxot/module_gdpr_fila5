@@ -5,10 +5,6 @@ declare(strict_types=1);
 return [
     'name' => 'Gdpr',
     'description' => 'Modulo per il Gdpr',
-<<<<<<< HEAD
-=======
-    // 'icon' => 'heroicon-o-clock',
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     'icon' => 'gdpr-icon',
     'navigation' => [
         'enabled' => true,

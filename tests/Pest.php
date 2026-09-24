@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 /**
  * Bootstrap Pest — modulo Gdpr.
  * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
@@ -16,10 +15,3 @@ declare(strict_types=1);
  * Vedi story XOT-5.41 e ROOT-17.6.
  */
 pest()->extend(Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
-=======
-/*
- * Bootstrap Pest — modulo Gdpr.
- * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
- * Vietato pest()->extend() / expect()->extend() / uses()->in() qui (PHPStan method.internalClass).
- */
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)

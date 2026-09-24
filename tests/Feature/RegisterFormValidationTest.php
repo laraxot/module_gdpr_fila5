@@ -13,11 +13,6 @@ use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-<<<<<<< HEAD
-=======
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
 /*
  * Form Validation Tests for Registration.

@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
-// Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Gdpr/docs/wiki — domain i18n only.
-// File: lang/it/new-keys.php
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 return [
     'Active Developers' => 'Sviluppatori Attivi',
     'Monthly Meetups' => 'Meetup Mensili',
@@ -38,11 +31,7 @@ return [
         ],
         'label' => 'New Keys',
         'sort' => 1,
-<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
-=======
-        'icon' => 'heroicon-o-collection',
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     ],
     'fields' => [
         'id' => [

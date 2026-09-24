@@ -10,6 +10,32 @@ use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
+<<<<<<< HEAD
+=======
+// Laraxot — see module docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
 it('renders the registration page successfully', function () {
     gdprGet('/en/auth/register')
@@ -291,7 +317,11 @@ it('stores user data correctly after successful registration', function () {
 });
 
 it('hashes the password after registration', function () {
+<<<<<<< HEAD
     $plainPassword = 'MySecurePassword123!';
+=======
+    $plainPassword = fake()->password(16, true, true, false, false);
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
     gdprPost('/en/auth/register', [
         'first_name' => 'Bob',

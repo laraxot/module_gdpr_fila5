@@ -14,7 +14,11 @@ class ProfileInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
+<<<<<<< HEAD
     public function getInfolistSchema(): array
+=======
+    public static function getInfolistSchema(): array
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     {
         return [
             'type' => TextEntry::make('type'),

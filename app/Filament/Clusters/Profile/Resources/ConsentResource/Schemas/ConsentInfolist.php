@@ -6,14 +6,23 @@ namespace Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Schem
 
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 
 class ConsentInfolist extends XotBaseResourceInfolist
+=======
+
+class ConsentInfolist
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 {
     /**
      * @return array<string, Component>
      */
+<<<<<<< HEAD
     public function getInfolistSchema(): array
+=======
+    public static function getInfolistSchema(): array
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     {
         return [
             'id' => TextEntry::make('id'),

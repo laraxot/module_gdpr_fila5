@@ -4,7 +4,11 @@
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
+<<<<<<< HEAD
 1. [README.md](./README.md) - Panoramica completa e Business Logic dei consensi.
+=======
+1. [README.md](./readme.md) - Panoramica completa e Business Logic dei consensi.
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 2. [roadmap.md](./roadmap.md) - Qualità del codice e obiettivi di conformità.
 3. [philosophy.md](./philosophy.md) - Privacy by Design e Commandment della compliance.
 
@@ -23,7 +27,11 @@
 - 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
 
 ## 📦 **Pacchetti Composer**
+<<<<<<< HEAD
 - [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
+=======
+- [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 - `statikbe/laravel-cookie-consent` - Banner cookie consent
 
 ## 📊 Documenti Product & Development

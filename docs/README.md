@@ -36,6 +36,10 @@ Gdpr/
 
 ## Collegamenti
 
+<<<<<<< HEAD
+=======
+- [Documentazione Root](../../../docs/GDPR_MODULE.md)
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
 ## Backlinks
 
@@ -49,4 +53,8 @@ Gdpr/
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
 - [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
+<<<<<<< HEAD
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+=======
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)

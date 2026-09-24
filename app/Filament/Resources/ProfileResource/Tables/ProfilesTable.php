@@ -4,14 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ProfileResource\Tables;
 
+<<<<<<< HEAD
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Models\Profile;
+=======
+use Filament\Tables\Columns\TextColumn;
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class ProfilesTable extends XotBaseResourceTable
 {
+<<<<<<< HEAD
     /**
      * @var class-string<Profile>
      */
@@ -32,6 +37,17 @@ class ProfilesTable extends XotBaseResourceTable
             'id' => TextColumn::make('id')->searchable()->toggleable(isToggledHiddenByDefault: true),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
+=======
+    public function getTableColumns(): array
+    {
+        /*
+         * @return array<int|string, \Filament\Tables\Columns\Column>
+         */
+        return [
+            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'created_at' => TextColumn::make('created_at')->dateTime(),
+            'updated_at' => TextColumn::make('updated_at')->dateTime(),
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
         ];
     }
 }

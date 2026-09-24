@@ -14,7 +14,11 @@ class ProfileForm extends XotBaseResourceForm
     /**
      * @return array<int|string, Component>
      */
+<<<<<<< HEAD
     public function getFormSchema(): array
+=======
+    public static function getFormSchema(): array
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     {
         return [
             Section::make([

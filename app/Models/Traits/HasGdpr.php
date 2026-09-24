@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Cache;
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
+<<<<<<< HEAD
 use Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest;
+=======
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
 /**
  * Trait HasGdpr.
@@ -21,7 +24,11 @@ use Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
+<<<<<<< HEAD
  * @see HasGdprTraitTest
+=======
+ * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
  */
 trait HasGdpr
 {
@@ -64,7 +71,11 @@ trait HasGdpr
     public function hasGivenConsent(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
+<<<<<<< HEAD
         $cacheKey = $this->consentCacheKey($type);
+=======
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
         if (Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
@@ -79,7 +90,11 @@ trait HasGdpr
     public function hasGivenConsentWithoutCache(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
+<<<<<<< HEAD
         $cacheKey = $this->consentCacheKey($type);
+=======
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
         $hasConsent = $this->activeConsents()->where('type', $type)->exists();
 
@@ -167,6 +182,7 @@ trait HasGdpr
      */
     protected function clearConsentCache(string $type): void
     {
+<<<<<<< HEAD
         Cache::forget($this->consentCacheKey($type));
     }
 
@@ -179,5 +195,9 @@ trait HasGdpr
         }
 
         return 'user_'.(string) $key.'_consent_'.$type;
+=======
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+        Cache::forget($cacheKey);
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     }
 }

@@ -4,10 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ConsentResource\Pages;
 
+<<<<<<< HEAD
+=======
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListConsents extends XotBaseListRecords
 {
     protected static string $resource = ConsentResource::class;
+<<<<<<< HEAD
+=======
+
+    /**
+     * @return array<string, TextColumn|IconColumn>
+     */
+    public function getTableColumns(): array
+    {
+        return [
+            'id' => TextColumn::make('id')->searchable(),
+            'treatment_name' => TextColumn::make('treatment.name')->searchable(),
+            'subject_id' => TextColumn::make('subject_id')->searchable(),
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            'updated_at' => TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ];
+    }
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 }

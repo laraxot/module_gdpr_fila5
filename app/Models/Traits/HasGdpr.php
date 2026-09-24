@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Cache;
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Stringable;
 
 /**
  * Trait HasGdpr.
@@ -91,7 +90,7 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -172,7 +171,7 @@ trait HasGdpr
     {
         $key = $this->getKey();
 
-        if (! is_scalar($key) && ! $key instanceof Stringable) {
+        if (! is_scalar($key) && ! $key instanceof \Stringable) {
             throw new \LogicException('The model key must be scalar or stringable.');
         }
 

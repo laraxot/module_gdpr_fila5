@@ -15,12 +15,24 @@ use PHPUnit\Framework\Assert;
 /**
  * Helper Pest/PHPStan — modulo Gdpr.
  *
- * HTTP via Pest\Laravel. Skip via Assert::markTestSkipped / gdprSkipTest.
- * assertDatabaseHasRow via gdprAssertDatabaseHas (delega a query DB).
+ * @see Modules/Media/tests/Feature/MediaBusinessLogicTest.php (assertMediaTableHas)
  */
+function gdprTest(): TestCase
+{
+    $test = test();
+    // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
+    if ($test instanceof HigherOrderTapProxy) {
+        $test = $test->target;
+    }
+
+    Assert::assertInstanceOf(TestCase::class, $test);
+
+    return $test;
+}
 
 /**
- * @param  array<string, string>  $headers
+ * @param array<string, string> $headers
+ *
  * @return TestResponse<Response>
  */
 function gdprGet(string $uri, array $headers = []): TestResponse

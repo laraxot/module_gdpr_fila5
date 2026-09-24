@@ -13,7 +13,7 @@ class ConsentInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public function getInfolistSchema(): array
+    public static function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

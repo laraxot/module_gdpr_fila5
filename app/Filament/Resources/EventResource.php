@@ -17,17 +17,12 @@ class EventResource extends XotBaseResource
 {
     protected static ?string $model = Event::class;
 
-<<<<<<< HEAD
     /**
      * Schema legacy del form: la sorgente di verità è EventForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
     public function getFormSchemaOld(): array
-=======
-    #[\Override]
-    public static function getFormSchema(): array
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     {
         return [
             'treatment_id' => TextInput::make('treatment_id')->maxLength(36)->default(null),

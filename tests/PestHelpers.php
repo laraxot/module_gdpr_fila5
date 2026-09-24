@@ -25,7 +25,7 @@ function gdprTest(): TestCase
         return TestCase::$currentTest;
     }
 
-    throw new \RuntimeException('gdprTest() richiede un test attivo (TestCase::$currentTest).');
+    throw new RuntimeException('gdprTest() richiede un test attivo (TestCase::$currentTest).');
 }
 
 /**
@@ -133,7 +133,7 @@ function gdprAssertThrows(string $exceptionClass, callable $callback): void
     try {
         $callback();
         Assert::fail('Expected '.$exceptionClass);
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         Assert::assertInstanceOf($exceptionClass, $e);
     }
 }
@@ -145,7 +145,7 @@ function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): voi
 {
     try {
         $callback();
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         if ($e instanceof $exceptionClass) {
             Assert::fail('Unexpected '.$exceptionClass.': '.$e->getMessage());
         }

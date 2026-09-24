@@ -23,13 +23,14 @@ use PHPUnit\Framework\Assert;
  * `XotData::make()->super_admin` con l'email utente invece di `hasRole('super-admin')`
  * come tutte le altre BasePolicy del monorepo: vedi nota nel prompt 35 stesso.
  *
- * @param  list<string>  $permissions
+ * @param list<string> $permissions
+ *
  * @return Mockery\MockInterface&UserContract
  */
 function gdprPolicyUser(array $permissions = []): UserContract
 {
     /** @var Mockery\MockInterface&UserContract $user */
-    $user = Mockery::mock(UserContract::class);
+    $user = \Mockery::mock(UserContract::class);
     $user->shouldReceive('hasPermissionTo')
         ->andReturnUsing(static fn (string $permission): bool => in_array($permission, $permissions, true));
 
@@ -37,7 +38,7 @@ function gdprPolicyUser(array $permissions = []): UserContract
 }
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 test('TreatmentPolicy nega senza permesso e concede con permesso puntuale', function (): void {

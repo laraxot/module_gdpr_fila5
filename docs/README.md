@@ -36,10 +36,7 @@ Gdpr/
 
 ## Collegamenti
 
-<<<<<<< HEAD
-=======
 - [Documentazione Root](../../../docs/GDPR_MODULE.md)
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 
 ## Backlinks
 
@@ -50,11 +47,13 @@ Gdpr/
 
 ## Documentation
 
+- [Getting Started](./getting-started.md) — Installazione e configurazione
+- [Architecture](./architecture.md) — Struttura e decisioni di design
+- [Contributing](./contributing.md) — Workflow di sviluppo e checklist
+- [Testing](./testing.md) — Linee guida e comandi di test
+- Link di ricerca (ex root): [cloudflare](./cloudflare.md), [consents](./consents.md), [cookie-consent](./cookie-consent.md), [filament](./filament.md), [google-analytics](./google-analytics.md), [links](./links.md), [repo](./repo.md)
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
 - [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-<<<<<<< HEAD
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
-=======
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)

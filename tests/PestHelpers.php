@@ -19,15 +19,13 @@ use PHPUnit\Framework\Assert;
  */
 function gdprTest(): TestCase
 {
-    $test = test();
-    // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
-    if ($test instanceof HigherOrderTapProxy) {
-        $test = $test->target;
+    // Stub Pest tipizzano test(): void → non usare il return value.
+    // Stesso pattern Cms: TestCase::$currentTest impostato in setUp().
+    if (TestCase::$currentTest instanceof TestCase) {
+        return TestCase::$currentTest;
     }
 
-    Assert::assertInstanceOf(TestCase::class, $test);
-
-    return $test;
+    throw new \RuntimeException('gdprTest() richiede un test attivo (TestCase::$currentTest).');
 }
 
 /**
@@ -134,7 +132,7 @@ function gdprAssertThrows(string $exceptionClass, callable $callback): void
     try {
         $callback();
         Assert::fail('Expected '.$exceptionClass);
-    } catch (Throwable $e) {
+    } catch (\Throwable $e) {
         Assert::assertInstanceOf($exceptionClass, $e);
     }
 }
@@ -146,7 +144,7 @@ function gdprAssertDoesNotThrow(string $exceptionClass, callable $callback): voi
 {
     try {
         $callback();
-    } catch (Throwable $e) {
+    } catch (\Throwable $e) {
         if ($e instanceof $exceptionClass) {
             Assert::fail('Unexpected '.$exceptionClass.': '.$e->getMessage());
         }

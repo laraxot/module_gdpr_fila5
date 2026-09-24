@@ -1,11 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @see https://github.com/foothing/laravel-gdpr-consent
  */
-
-declare(strict_types=1);
-
 return [
     'treatments' => [
         [

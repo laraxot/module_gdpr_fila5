@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_sRi8t4
 
+=======
+>>>>>>> .merge_file_9aAi3J
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Gdpr\Models\Consent;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -11,7 +14,12 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * (metadata, revoked_at, revoked_ip_address) but that no prior consents migration
  * ever created — calling those trait methods previously threw a SQL error.
  */
+<<<<<<< .merge_file_sRi8t4
 return new class extends XotBaseMigration {
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> .merge_file_9aAi3J
     protected ?string $model_class = Consent::class;
 
     public function up(): void

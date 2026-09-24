@@ -7,22 +7,20 @@ namespace Modules\Gdpr\Tests\Feature;
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
-    expect(new Treatment())->toBeInstanceOf(Treatment::class);
-    expect(new Profile())->toBeInstanceOf(Profile::class);
+    Assert::assertInstanceOf(Treatment::class, new Treatment());
+    Assert::assertInstanceOf(Profile::class, new Profile());
 });
 
 it('verifica che le proprietà delle classi siano accessibili', function (): void {
     $treatment = new Treatment();
     $profile = new Profile();
 
-    // Verifica che le proprietà fillable siano definite
-    expect($treatment->getFillable())->toBeArray();
-    expect($profile->getFillable())->toBeArray();
-
-    // Verifica che la connessione al database sia definita correttamente
-    expect($profile->getConnectionName())->toBe('gdpr');
+    Assert::assertIsArray($treatment->getFillable());
+    Assert::assertIsArray($profile->getFillable());
+    Assert::assertSame('gdpr', $profile->getConnectionName());
 });

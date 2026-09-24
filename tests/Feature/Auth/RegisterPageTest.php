@@ -45,7 +45,7 @@ it('can register a new user', function (): void {
         ->call('register')
         ->assertRedirect('/en/home');
 
-    gdprTest()->assertDatabaseHasRow('users', [
+    gdprAssertDatabaseHas('users', [
         'email' => 'test@example.com',
     ]);
 });

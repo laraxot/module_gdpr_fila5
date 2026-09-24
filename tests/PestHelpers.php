@@ -66,7 +66,7 @@ function gdprArtisan(string $command, array $parameters = []): int
 
 function gdprSkipTest(string $message = ''): void
 {
-    Assert::markTestSkipped($message !== '' ? $message : 'Skipped');
+    Assert::markTestSkipped('' !== $message ? $message : 'Skipped');
 }
 
 /**
@@ -84,7 +84,7 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
- * @param  array<string, mixed>  $data
+ * @param array<string, mixed> $data
  */
 function gdprAssertDatabaseHas(string $table, array $data, ?string $connection = null): void
 {
@@ -97,7 +97,7 @@ function gdprAssertDatabaseHas(string $table, array $data, ?string $connection =
 }
 
 /**
- * @param  array<string, mixed>  $where
+ * @param array<string, mixed> $where
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {

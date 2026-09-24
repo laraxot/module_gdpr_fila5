@@ -10,7 +10,6 @@ use Illuminate\Testing\TestResponse;
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
-use Pest\Support\HigherOrderTapProxy;
 use PHPUnit\Framework\Assert;
 
 /**
@@ -20,6 +19,7 @@ use PHPUnit\Framework\Assert;
  */
 function gdprTest(): TestCase
 {
+<<<<<<< .merge_file_UN4G9S
 <<<<<<< HEAD
 =======
     // @phpstan-ignore-next-line Pest's test() returns mixed in static analysis
@@ -28,11 +28,15 @@ function gdprTest(): TestCase
     // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
     if ($test instanceof HigherOrderTapProxy) {
         $test = $test->target;
+=======
+    // Stub Pest tipizzano test(): void → non usare il return value.
+    // Stesso pattern Cms: TestCase::$currentTest impostato in setUp().
+    if (TestCase::$currentTest instanceof TestCase) {
+        return TestCase::$currentTest;
+>>>>>>> .merge_file_KmxMLE
     }
 
-    Assert::assertInstanceOf(TestCase::class, $test);
-
-    return $test;
+    throw new RuntimeException('gdprTest() richiede un test attivo (TestCase::$currentTest).');
 }
 
 /**
@@ -42,7 +46,7 @@ function gdprTest(): TestCase
  */
 function gdprGet(string $uri, array $headers = []): TestResponse
 {
-    return gdprTest()->get($uri, $headers);
+    return \Pest\Laravel\get($uri, $headers);
 }
 
 /**
@@ -53,12 +57,12 @@ function gdprGet(string $uri, array $headers = []): TestResponse
  */
 function gdprPost(string $uri, array $data = [], array $headers = []): TestResponse
 {
-    return gdprTest()->post($uri, $data, $headers);
+    return \Pest\Laravel\post($uri, $data, $headers);
 }
 
-function gdprActingAs(Authenticatable $user, ?string $driver = null): TestCase
+function gdprActingAs(Authenticatable $user, ?string $driver = null): void
 {
-    return gdprTest()->actingAs($user, $driver);
+    \Pest\Laravel\actingAs($user, $driver);
 }
 
 /**
@@ -71,7 +75,7 @@ function gdprArtisan(string $command, array $parameters = []): int
 
 function gdprSkipTest(string $message = ''): void
 {
-    gdprTest()->markTestSkipped($message);
+    Assert::markTestSkipped('' !== $message ? $message : 'Skipped');
 }
 
 /**
@@ -86,6 +90,19 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
     }
 
     Assert::assertTrue($query->exists());
+}
+
+/**
+ * @param array<string, mixed> $data
+ */
+function gdprAssertDatabaseHas(string $table, array $data, ?string $connection = null): void
+{
+    $default = config('database.default');
+    if (! is_string($default)) {
+        $default = null;
+    }
+    $connection ??= $default;
+    assertGdprTableHas($table, $data, $connection);
 }
 
 /**

@@ -132,8 +132,10 @@ docs/archive/
 *~head
 
 agentdb.rvf
-audit-coverage/
-tests/AuditCoverage/
-.claude-audit
-.vscode/
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+.cursor/
 .devcontainer/
+.vscode/
+.windsurf/
+tests/AuditCoverage/

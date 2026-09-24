@@ -73,7 +73,6 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
-<<<<<<< .merge_file_BMwaBZ
  * @param  array<string, mixed>  $data
  */
 function gdprAssertDatabaseHas(string $table, array $data, ?string $connection = null): void
@@ -88,9 +87,6 @@ function gdprAssertDatabaseHas(string $table, array $data, ?string $connection =
 
 /**
  * @param  array<string, mixed>  $where
-=======
- * @param array<string, mixed> $where
->>>>>>> .merge_file_cCCUoU
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {

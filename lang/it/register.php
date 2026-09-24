@@ -7,14 +7,14 @@ declare(strict_types=1);
 // Canon: Modules/Gdpr/docs/wiki — domain i18n only.
 // File: lang/it/register.php
 return [
-// Laraxot — see module docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot — see module docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
     'title' => 'Unisciti alla Pizza Revolution 🍕',
     'subtitle' => 'Entra nella nostra community di sviluppatori e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
     'submit' => 'Crea il mio account gratis',

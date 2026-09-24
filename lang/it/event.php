@@ -7,8 +7,8 @@ declare(strict_types=1);
 // Canon: Modules/Gdpr/docs/wiki — domain i18n only.
 // File: lang/it/event.php
 return [
-// Gdpr — translation keys (no business logic).
-// Gdpr — translation keys (no business logic).
+    // Gdpr — translation keys (no business logic).
+    // Gdpr — translation keys (no business logic).
     'navigation' => [
         'name' => 'Eventi Privacy',
         'plural' => 'Eventi Privacy',

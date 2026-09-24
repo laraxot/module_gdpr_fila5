@@ -106,11 +106,20 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
+<<<<<<< .merge_file_ISC7zK
 <<<<<<< HEAD
      * @param array<string, string> $formData
 =======
      * @param array<string, mixed> $formData
 >>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
+=======
+     * <<<<<<< HEAD.
+     *
+     * @param array<string, string> $formData
+     *                                        =======
+     * @param array<string, mixed>  $formData
+     *                                        >>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
+>>>>>>> .merge_file_FFVk5n
      */
     protected function logRegistrationAttempt(array $formData): void
     {

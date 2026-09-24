@@ -19,10 +19,27 @@ use PHPUnit\Framework\Assert;
  */
 function gdprTest(): TestCase
 {
+<<<<<<< .merge_file_DQvgJs
+=======
+<<<<<<< .merge_file_UN4G9S
+<<<<<<< HEAD
+=======
+    // @phpstan-ignore-next-line Pest's test() returns mixed in static analysis
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
+    $test = test();
+    // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
+    if ($test instanceof HigherOrderTapProxy) {
+        $test = $test->target;
+=======
+>>>>>>> .merge_file_lBCLlz
     // Stub Pest tipizzano test(): void → non usare il return value.
     // Stesso pattern Cms: TestCase::$currentTest impostato in setUp().
     if (TestCase::$currentTest instanceof TestCase) {
         return TestCase::$currentTest;
+<<<<<<< .merge_file_DQvgJs
+=======
+>>>>>>> .merge_file_KmxMLE
+>>>>>>> .merge_file_lBCLlz
     }
 
     throw new RuntimeException('gdprTest() richiede un test attivo (TestCase::$currentTest).');

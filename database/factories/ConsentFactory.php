@@ -19,11 +19,20 @@ class ConsentFactory extends Factory
     protected $model = Consent::class;
 
     /**
+<<<<<<< .merge_file_yxKhW2
 <<<<<<< HEAD
      * @return array<string, string>
 =======
      * @return array<string, mixed>
 >>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
+=======
+     * <<<<<<< HEAD.
+     *
+     * @return array<string, string>
+     *                               =======
+     * @return array<string, mixed>
+     *                               >>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
+>>>>>>> .merge_file_Kluyr2
      */
     public function definition(): array
     {

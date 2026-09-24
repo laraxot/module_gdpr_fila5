@@ -18,8 +18,8 @@ it('verifica che le classi corrette siano istanziabili', function (): void {
 });
 
 it('verifica che le proprietà delle classi siano accessibili', function (): void {
-    $treatment = new Treatment;
-    $profile = new Profile;
+    $treatment = new Treatment();
+    $profile = new Profile();
 
     // `getFillable()` dichiara gia' array: cio' che conta e' che non sia vuoto,
     // altrimenti nessun attributo e' assegnabile in massa.

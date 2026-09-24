@@ -1,62 +1,56 @@
----
-id: module-gdpr-readme
-title: "GDPR — Consensi e Privacy Applicativa"
-type: module-readme
-category: module-documentation
-module: Gdpr
-status: active
-tags: [gdpr, privacy, consent, revocation]
-created: 2026-09-14
-updated: 2026-09-14
-qmd: "gdpr consent privacy policy revocation module documentation"
-issues:
-  - "https://github.com/laraxot/module_gdpr_fila5/issues/39"
-discussions:
-  - "https://github.com/laraxot/module_gdpr_fila5/discussions/40"
-related:
-  - "./docs/"
-sources: []
+# 🔒 Gdpr
+
+[![Domain-GDPR](https://img.shields.io/badge/Domain-GDPR%20Compliance-37474F.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
+
+> **Privacy non è un checkbox.** Consensi, diritti utente, policy — conformità che regge un audit PA.
+
 ---
 
-# 🔒 GDPR
+## Perché esiste
 
-> **Consensi e privacy applicativa.**
+Obbligatorio per servizi pubblici digitali e fiducia del cittadino.
 
-Centralizza consensi, revoche e tracciabilità delle preferenze.
+## Superpoteri
 
-## Cosa offre
+- Gestione consensi e revoche
+- Privacy policy e documentazione
+- Integrazione User/Activity
+- Filament per operatori
 
-- **Consensi** – gestione dinamica del consenso utente
-- **Policy utente** – regole di trattamento dei dati
-- **Audit** – tracciabilità delle operazioni
-- **Pannello Filament** – dashboard compliance
+## Certificazioni
 
-## Confini architetturali
+| Certificazione | Stato |
+|----------------|-------|
+| PHPStan livello 10 | Target progetto |
+| `declare(strict_types=1)` | Su nuovo codice PHP |
+| Filament 5 + XotBase | Admin enterprise |
+| Test PHPUnit / Pest | Suite modulo |
+| Documentazione wiki | Cartella `docs/` |
 
-This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
+## Vuoi entrare nel team?
 
-## Integrazione rapida
+Proteggi i dati **per davvero** — con codice e processi.
 
-```bash
-cd laravel
-php artisan module:list
-./vendor/bin/phpstan analyse Modules/Gdpr
-```
+Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
-Refer to local docs for implementation details.
+---
 
 ## Documentazione
 
-The technical map is in [docs/README.md](./docs/README.md).
-
-- [Story BMAD del modulo](./docs/stories/)
-- [Regole del progetto](../../../docs/wiki/)
-- [README del progetto](../../README.md)
-
-## Qualità e manutenzione
-
-Keep `declare(strict_types=1);` in PHP, respect project PHPStan config, and update docs when contracts evolve.
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
 ---
 
-**Modulo** `gdpr` · **Laraxot ecosystem** · **Project-agnostic**
+**Modulo** `gdpr` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

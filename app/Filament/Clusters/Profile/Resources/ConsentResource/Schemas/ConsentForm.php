@@ -14,7 +14,7 @@ class ConsentForm extends XotBaseResourceForm
     /**
      * @return array<int|string, Component>
      */
-    public function getFormSchema(): array
+    public static function getFormSchema(): array
     {
         return [
             Section::make([

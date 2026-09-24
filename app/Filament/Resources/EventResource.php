@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\CreateEvent;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\EditEvent;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\ListEvents;
@@ -17,8 +18,12 @@ class EventResource extends XotBaseResource
 {
     protected static ?string $model = Event::class;
 
-    #[\Override]
-    public static function getFormSchema(): array
+    /**
+     * Schema legacy del form: la sorgente di verità è EventForm::getFormSchema().
+     *
+     * @return array<string, Component>
+     */
+    public function getFormSchemaOld(): array
     {
         return [
             'treatment_id' => TextInput::make('treatment_id')->maxLength(36)->default(null),

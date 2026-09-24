@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 <div class="mt-6 text-center space-y-4">
     <p class="text-sm text-gray-500 dark:text-gray-400">
         {{ __('gdpr::register.already_have_account') }}

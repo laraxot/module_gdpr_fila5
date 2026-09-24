@@ -17,12 +17,17 @@ class TreatmentResource extends XotBaseResource
 {
     protected static ?string $model = Treatment::class;
 
+<<<<<<< HEAD
     /**
      * Schema legacy del form: la sorgente di verità è TreatmentForm::getFormSchema().
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
     public function getFormSchemaOld(): array
+=======
+    #[\Override]
+    public static function getFormSchema(): array
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     {
         return [
             'active' => Toggle::make('active')->required(),

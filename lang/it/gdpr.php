@@ -2,21 +2,7 @@
 
 declare(strict_types=1);
 
-// Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Gdpr/docs/wiki — domain i18n only.
-// File: lang/it/gdpr.php
 return [
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
-    // Laraxot module file — see docs/wiki for domain contract.
     'register' => [
         'title' => 'Crea il tuo account',
         'subtitle' => 'Unisciti alla community di sviluppatori Laravel più golosa d\'Italia!',

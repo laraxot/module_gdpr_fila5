@@ -29,7 +29,7 @@ uses(TestCase::class);
  *
  * Flow tested:
  * 1. ValidateGdprConsentAction  — validates privacy + terms acceptance
- * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type/state
+ * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type
  * 3. CreateUserAction           — persists user to DB
  * 4. CollectGdprConsentsAction  — collects consent booleans into array
  * 5. SaveGdprConsentsAction     — creates Consent records linked to Treatment records
@@ -52,9 +52,7 @@ it('completes full registration with privacy and terms accepted', function (): v
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
     Assert::assertSame('customer_user', $validatedData['type']);
-    Assert::assertSame('active', $validatedData['state']);
-    $hashed = is_string($validatedData['password'] ?? null) ? $validatedData['password'] : '';
-    Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
+    Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $validatedData['password']));
     // 3. Create user
     $user = app(CreateUserAction::class)->execute($validatedData);
     Assert::assertInstanceOf(User::class, $user);
@@ -168,7 +166,6 @@ it('always sets customer_user type regardless of input', function (): void {
 
     // Type must be customer_user — cannot be overridden
     Assert::assertSame('customer_user', $result['type']);
-    Assert::assertSame('active', $result['state']);
     Assert::assertNotNull($result['email_verified_at']);
 });
 
@@ -184,8 +181,7 @@ it('hashes password during validation', function (): void {
 
     // Password must be hashed
     Assert::assertNotSame('MyP@ssword123!', $result['password']);
-    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
-    Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
+    Assert::assertTrue(Hash::check('MyP@ssword123!', $result['password']));
 });
 
 // ---------------------------------------------------------------------------

@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Datas;
 
 use Livewire\Wireable;
+<<<<<<< HEAD
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
+=======
+use Modules\Tenant\Services\TenantService;
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 
@@ -244,7 +248,11 @@ class GdprData extends Data implements Wireable
     {
         if (! self::$instance) {
             /** @var array<string, mixed> $data */
+<<<<<<< HEAD
             $data = app(GetTenantConfigArrayAction::class)->execute('gdpr');
+=======
+            $data = TenantService::getConfig('gdpr');
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
             self::$instance = self::from($data);
         }
 

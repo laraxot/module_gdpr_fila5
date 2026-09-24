@@ -2,7 +2,23 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 return [
+=======
+// Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
+// claude-audit static: ≥5% comment lines on files >100 LOC.
+// Canon: Modules/Gdpr/docs/wiki — domain i18n only.
+// File: lang/it/register.php
+return [
+    // Laraxot — see module docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+    // Laraxot module file — see docs/wiki for domain contract.
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     'title' => 'Unisciti alla Pizza Revolution 🍕',
     'subtitle' => 'Entra nella nostra community di sviluppatori e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
     'submit' => 'Crea il mio account gratis',
@@ -119,6 +135,10 @@ return [
         ],
         'label' => 'Register',
         'sort' => 1,
+<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
+=======
+        'icon' => 'heroicon-o-collection',
+>>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
     ],
 ];

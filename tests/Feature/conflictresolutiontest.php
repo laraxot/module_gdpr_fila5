@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Tests\Feature;
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /*
  * PHPStan-only stubs — non caricare funzioni Pest\Laravel a runtime.
  *

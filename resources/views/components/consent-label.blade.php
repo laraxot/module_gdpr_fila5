@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 <div class="text-sm text-gray-600 dark:text-gray-400">
     {{ $label }}
     @foreach($links as $link)

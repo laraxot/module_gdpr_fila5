@@ -6,19 +6,11 @@ Questo piano copre il module **Gdpr** e le sue integrazioni principali.
 
 ## Files
 
-<<<<<<< .merge_file_1Q0d9N
 - [Current State](current-state.md)
 - [Goals](goals.md)
 - [Workstreams](workstreams.md)
 - [Milestones](milestones.md)
 - [Risks](risks.md)
-=======
-- [Current State](01-current-state.md)
-- [Goals](02-goals.md)
-- [Workstreams](03-workstreams.md)
-- [Milestones](04-milestones.md)
-- [Risks](05-risks.md)
->>>>>>> .merge_file_3N8lxR
 
 ## Note operative
 

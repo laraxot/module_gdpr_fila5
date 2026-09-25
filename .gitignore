@@ -73,7 +73,6 @@ cache/
 
 # Cache and temporary files
 *.cache
-*.lock
 *.phar
 *.log
 .php-cs-fixer.cache
@@ -97,7 +96,6 @@ cache/
 
 # Development tools
 .windsurf/
-.cursor/
 
 # PHPStan documentation
 docs/phpstan/
@@ -134,8 +132,25 @@ docs/archive/
 agentdb.rvf
 
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
-.cursor/
 .devcontainer/
 .vscode/
 .windsurf/
 tests/AuditCoverage/
+
+# Laraxot — local agent and quality tooling
+.rector.php
+.phpinsights.php
+
+# Root agent tooling and PHP quality configuration
+/.agents/
+/.codex/
+/.cursor/
+/.opencode/
+/.qwen/
+/rector.php
+/phpinsights.php
+/.php-cs-fixer.php
+/.php-cs-fixer.dist.php
+
+# Generated Claude audit coverage scaffold (never commit)
+/audit-coverage/

@@ -10,12 +10,6 @@ module: "Gdpr"
 
 # Gdpr - Wiki Activity Log
 
-## [2026-09-25] PHPStan and merge follow-up
-
-- Verified `./vendor/bin/phpstan analyse Modules/Gdpr --no-progress --error-format=table`: 0 errors.
-- Reconciled six unmerged PHP files by using specific PHPDoc types supported by their actual registration payloads and factory values; PHP syntax checks passed.
-- Other index conflicts remain under review; see repository status. The QMD and healthcheck wrappers were unavailable in this checkout.
-
 ## [2026-05-11] Wiki Structure Created
 
 - Created wiki structure: rules/, skills/, commands/, memories/, concepts/

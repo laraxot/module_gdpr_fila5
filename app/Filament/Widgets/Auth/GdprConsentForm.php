@@ -106,7 +106,11 @@ class GdprConsentForm extends XotBaseSchemaWidget
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, string>  $formData
+=======
+     * @param array<string, string> $formData
+>>>>>>> laraxot/dev
      */
     protected function logRegistrationAttempt(array $formData): void
     {

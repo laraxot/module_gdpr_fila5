@@ -29,7 +29,11 @@ uses(TestCase::class);
  *
  * Flow tested:
  * 1. ValidateGdprConsentAction  — validates privacy + terms acceptance
+<<<<<<< HEAD
  * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type
+=======
+ * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type/state
+>>>>>>> laraxot/dev
  * 3. CreateUserAction           — persists user to DB
  * 4. CollectGdprConsentsAction  — collects consent booleans into array
  * 5. SaveGdprConsentsAction     — creates Consent records linked to Treatment records
@@ -52,7 +56,13 @@ it('completes full registration with privacy and terms accepted', function (): v
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
     Assert::assertSame('customer_user', $validatedData['type']);
+<<<<<<< HEAD
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $validatedData['password']));
+=======
+    Assert::assertSame('active', $validatedData['state']);
+    $hashed = is_string($validatedData['password'] ?? null) ? $validatedData['password'] : '';
+    Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
+>>>>>>> laraxot/dev
     // 3. Create user
     $user = app(CreateUserAction::class)->execute($validatedData);
     Assert::assertInstanceOf(User::class, $user);
@@ -166,6 +176,10 @@ it('always sets customer_user type regardless of input', function (): void {
 
     // Type must be customer_user — cannot be overridden
     Assert::assertSame('customer_user', $result['type']);
+<<<<<<< HEAD
+=======
+    Assert::assertSame('active', $result['state']);
+>>>>>>> laraxot/dev
     Assert::assertNotNull($result['email_verified_at']);
 });
 
@@ -181,7 +195,12 @@ it('hashes password during validation', function (): void {
 
     // Password must be hashed
     Assert::assertNotSame('MyP@ssword123!', $result['password']);
+<<<<<<< HEAD
     Assert::assertTrue(Hash::check('MyP@ssword123!', $result['password']));
+=======
+    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
+>>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------

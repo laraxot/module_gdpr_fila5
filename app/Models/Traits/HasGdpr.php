@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Cache;
+<<<<<<< HEAD
 use LogicException;
+=======
+>>>>>>> laraxot/dev
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
@@ -92,10 +95,15 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
+<<<<<<< HEAD
      * Metadata is a polymorphic JSON audit payload: callers may attach
      * arbitrary keys, so mixed remains the last-resort type.
      *
      * @param  array<string, mixed>  $metadata
+=======
+     * @param array<string, mixed> $metadata
+     * @param array<string, mixed> $metadata
+>>>>>>> laraxot/dev
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -178,7 +186,11 @@ trait HasGdpr
         $key = $this->getKey();
 
         if (! is_scalar($key) && ! $key instanceof \Stringable) {
+<<<<<<< HEAD
             throw new LogicException('The model key must be scalar or stringable.');
+=======
+            throw new \LogicException('The model key must be scalar or stringable.');
+>>>>>>> laraxot/dev
         }
 
         return 'user_'.(string) $key.'_consent_'.$type;

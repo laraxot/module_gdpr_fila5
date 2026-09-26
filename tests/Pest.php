@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 use Modules\Gdpr\Tests\TestCase;
+=======
+>>>>>>> laraxot/dev
 
 /**
  * Bootstrap Pest — modulo Gdpr.
@@ -15,4 +18,8 @@ use Modules\Gdpr\Tests\TestCase;
  * `phpstan/extension-installer`, non reintrodurre il divieto.
  * Vedi story XOT-5.41 e ROOT-17.6.
  */
+<<<<<<< HEAD
 pest()->extend(TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
+=======
+pest()->extend(Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
+>>>>>>> laraxot/dev

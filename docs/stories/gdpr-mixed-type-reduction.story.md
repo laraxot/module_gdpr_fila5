@@ -1,5 +1,6 @@
 # Story: Reduce mixed type usage — Gdpr
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_rbfSF1
 =======
 <<<<<<< .merge_file_FB5k5l
@@ -7,6 +8,8 @@
 <<<<<<< .merge_file_abA7Il
 >>>>>>> .merge_file_vbEtW9
 >>>>>>> .merge_file_y8xwaP
+=======
+>>>>>>> laraxot/dev
 **Fase BMAD**: Qualita del codice (type-safety), nessuna modifica di comportamento applicativo.
 
 **Contesto**: convenzione di progetto ("cerchiamo di non usare mixed, quando lo troviamo cerchiamo di
@@ -70,6 +73,7 @@ stesso pattern gia' documentato e verificato in `Modules/Notify/phpunit.xml`.
 
 **Dettaglio numerico**: 21 occorrenze di `mixed` trovate in 11 file; 8 sostituite/ristrette in 6 file
 (1 param narrowing consolidato da 3 righe duplicate a 1); 13 lasciate invariate con motivazione in 5 file.
+<<<<<<< HEAD
 <<<<<<< .merge_file_rbfSF1
 =======
 <<<<<<< .merge_file_FB5k5l
@@ -115,3 +119,5 @@ l'unica descrizione onesta.
 >>>>>>> .merge_file_ovpdGz
 >>>>>>> .merge_file_vbEtW9
 >>>>>>> .merge_file_y8xwaP
+=======
+>>>>>>> laraxot/dev

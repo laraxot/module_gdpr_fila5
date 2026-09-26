@@ -12,7 +12,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('event_fillable_attributes', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
     $fillable = $event->getFillable();
 
     assertFillableContains([
@@ -26,38 +30,62 @@ test('event_fillable_attributes', function (): void {
 });
 
 test('event_has_consent_relationship_method', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('consent'));
 });
 
 test('event_table_name_is_gdpr_events', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
 
     Assert::assertSame('gdpr_events', $event->getTable());
 });
 
 test('event_is_not_incrementing', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
 
     Assert::assertFalse($event->getIncrementing());
 });
 
 test('event_is_uuid', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
     $traits = class_uses_recursive($event);
 
     Assert::assertArrayHasKey(HasUuids::class, $traits);
 });
 
 test('event_has_set_payload_attribute', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setPayloadAttribute'));
 });
 
 test('event_has_set_ip_attribute', function (): void {
+<<<<<<< HEAD
     $event = new Event;
+=======
+    $event = new Event();
+>>>>>>> laraxot/dev
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setIpAttribute'));
 });

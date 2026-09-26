@@ -107,7 +107,12 @@ it('validates and transforms user data correctly', function (): void {
     Assert::assertSame($email, $result['email']);
     Assert::assertSame('customer_user', $result['type']);
     Assert::assertNotNull($result['email_verified_at']);
+<<<<<<< HEAD
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $result['password']));
+=======
+    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
+>>>>>>> laraxot/dev
 });
 
 it('validates user data hashes the password', function (): void {
@@ -124,7 +129,12 @@ it('validates user data hashes the password', function (): void {
 
     // Password should be hashed, not plain text
     Assert::assertNotSame('MyP@ssword123!', $result['password']);
+<<<<<<< HEAD
     Assert::assertTrue(Hash::check('MyP@ssword123!', $result['password']));
+=======
+    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
+>>>>>>> laraxot/dev
 });
 
 it('validates user data always sets customer_user type', function (): void {

@@ -51,7 +51,11 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> laraxot/dev
      */
     public function assertDatabaseHasRow(string $table, array $data, ?string $connection = null): void
     {
@@ -59,7 +63,11 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> laraxot/dev
      */
     public function assertDatabaseMissingRow(string $table, array $data, ?string $connection = null): void
     {
@@ -73,12 +81,20 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+<<<<<<< HEAD
      * @param  class-string<\Throwable>  $exceptionClass
+=======
+     * @param class-string<\Throwable> $exceptionClass
+>>>>>>> laraxot/dev
      */
     public function expectApplicationException(string $exceptionClass, ?string $message = null): void
     {
         $this->expectException($exceptionClass);
+<<<<<<< HEAD
         if ($message !== null) {
+=======
+        if (null !== $message) {
+>>>>>>> laraxot/dev
             $this->expectThrowableMessage($message);
         }
     }

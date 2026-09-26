@@ -6,6 +6,7 @@ Questo piano copre il module **Gdpr** e le sue integrazioni principali.
 
 ## Files
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_v47rgU
 =======
 <<<<<<< .merge_file_hDRLi0
@@ -16,15 +17,20 @@ Questo piano copre il module **Gdpr** e le sue integrazioni principali.
 - [Risks](risks.md)
 =======
 >>>>>>> .merge_file_JsJMvR
+=======
+>>>>>>> laraxot/dev
 - [Current State](01-current-state.md)
 - [Goals](02-goals.md)
 - [Workstreams](03-workstreams.md)
 - [Milestones](04-milestones.md)
 - [Risks](05-risks.md)
+<<<<<<< HEAD
 <<<<<<< .merge_file_v47rgU
 =======
 >>>>>>> .merge_file_yjMAMU
 >>>>>>> .merge_file_JsJMvR
+=======
+>>>>>>> laraxot/dev
 
 ## Note operative
 

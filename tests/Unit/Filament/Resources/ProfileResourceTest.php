@@ -13,11 +13,19 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('profile_resource_extends_xot_base_resource', function (): void {
+<<<<<<< HEAD
     Assert::assertInstanceOf(XotBaseResource::class, new ProfileResource);
 });
 
 test('profile_resource_model_is_profile', function (): void {
     $resource = new ProfileResource;
+=======
+    Assert::assertInstanceOf(XotBaseResource::class, new ProfileResource());
+});
+
+test('profile_resource_model_is_profile', function (): void {
+    $resource = new ProfileResource();
+>>>>>>> laraxot/dev
 
     Assert::assertSame(Profile::class, $resource->getModel());
 });

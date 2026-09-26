@@ -337,11 +337,19 @@ it('widget is not visible to authenticated users', function (): void {
     $user = UserFactory::new()->createOne(['type' => 'customer_user']);
 
     gdprActingAs($user);
+<<<<<<< HEAD
     $widget = new RegisterWidget;
+=======
+    $widget = new RegisterWidget();
+>>>>>>> laraxot/dev
     Assert::assertFalse($widget->canView());
 });
 
 it('widget is visible to guest users', function (): void {
+<<<<<<< HEAD
     $widget = new RegisterWidget;
+=======
+    $widget = new RegisterWidget();
+>>>>>>> laraxot/dev
     Assert::assertTrue($widget->canView());
 });

@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Modules\Gdpr\Tests\TestCase;

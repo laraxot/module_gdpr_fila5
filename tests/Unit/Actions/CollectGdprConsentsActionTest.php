@@ -11,7 +11,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('CollectGdprConsentsAction returns correct array', function () {
+<<<<<<< HEAD
     $action = new CollectGdprConsentsAction;
+=======
+    $action = new CollectGdprConsentsAction();
+>>>>>>> laraxot/dev
     $result = $action->execute(true, true, false);
 
     Assert::assertArrayHasKey('privacy_accepted', $result);
@@ -23,7 +27,11 @@ test('CollectGdprConsentsAction returns correct array', function () {
 });
 
 test('CollectGdprConsentsAction handles all false', function () {
+<<<<<<< HEAD
     $action = new CollectGdprConsentsAction;
+=======
+    $action = new CollectGdprConsentsAction();
+>>>>>>> laraxot/dev
     $result = $action->execute(false, false, false);
 
     Assert::assertFalse($result['privacy_accepted']);
@@ -32,7 +40,11 @@ test('CollectGdprConsentsAction handles all false', function () {
 });
 
 test('CollectGdprConsentsAction handles all true', function () {
+<<<<<<< HEAD
     $action = new CollectGdprConsentsAction;
+=======
+    $action = new CollectGdprConsentsAction();
+>>>>>>> laraxot/dev
     $result = $action->execute(true, true, true);
 
     Assert::assertTrue($result['privacy_accepted']);

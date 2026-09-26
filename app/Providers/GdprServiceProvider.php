@@ -7,18 +7,11 @@ namespace Modules\Gdpr\Providers;
 use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Providers\XotBaseServiceProvider;
-<<<<<<< HEAD
-use Statikbe\CookieConsent\CookieConsentMiddleware;
-
-use function Safe\realpath;
-
-=======
 
 use function Safe\realpath;
 
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 
->>>>>>> laraxot/dev
 class GdprServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Gdpr';

@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions\Validation;
 
-<<<<<<< HEAD
-use Illuminate\Support\Carbon;
-=======
->>>>>>> laraxot/dev
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
@@ -19,22 +15,9 @@ class ValidateUserDataAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-     * @param  array<string, string>  $formData
-     * @return array{
-     *     first_name: string,
-     *     last_name: string,
-     *     email: string,
-     *     password: string,
-     *     type: string,
-     *     lang: string,
-     *     email_verified_at: Carbon
-     * }
-=======
      * @param array<string, string> $formData
      *
      * @return array<string, mixed>
->>>>>>> laraxot/dev
      */
     public function execute(array $formData): array
     {

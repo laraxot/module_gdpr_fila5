@@ -13,12 +13,7 @@ uses(TestCase::class);
 
 function makeGdprBaseModel(): BaseModel
 {
-<<<<<<< HEAD
-    return new class extends BaseModel
-    {
-=======
     return new class extends BaseModel {
->>>>>>> laraxot/dev
         protected $table = 'test_gdpr_table';
     };
 }

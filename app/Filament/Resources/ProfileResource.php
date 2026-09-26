@@ -6,10 +6,6 @@ namespace Modules\Gdpr\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-<<<<<<< HEAD
-use Filament\Schemas\Components\Component;
-=======
->>>>>>> laraxot/dev
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\EditProfile;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\ListProfiles;
@@ -23,11 +19,7 @@ class ProfileResource extends XotBaseResource
     /**
      * Schema legacy del form: la sorgente di verità è ProfileForm::getFormSchema().
      *
-<<<<<<< HEAD
-     * @return array<string, Component>
-=======
      * @return array<string, \Filament\Schemas\Components\Component>
->>>>>>> laraxot/dev
      */
     public function getFormSchemaOld(): array
     {

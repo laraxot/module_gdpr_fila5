@@ -17,13 +17,8 @@ class SaveGdprConsentsAction
     /**
      * Save all GDPR consents for a user.
      *
-<<<<<<< HEAD
-     * @param  array<string, bool>  $consents  Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
-     * @param  array<string, bool>  $consents  Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
-=======
      * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
      * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
->>>>>>> laraxot/dev
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {

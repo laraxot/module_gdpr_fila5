@@ -6,20 +6,12 @@ namespace Modules\Gdpr\Filament\Resources\ConsentResource\Schemas;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-use Filament\Schemas\Components\Component;
-=======
->>>>>>> laraxot/dev
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class ConsentForm extends XotBaseResourceForm
 {
     /**
-<<<<<<< HEAD
-     * @return array<int|string, Component>
-=======
      * @return array<int|string, \Filament\Schemas\Components\Component>
->>>>>>> laraxot/dev
      */
     public function getFormSchema(): array
     {

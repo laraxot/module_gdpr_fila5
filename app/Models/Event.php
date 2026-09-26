@@ -1,18 +1,11 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-=======
->>>>>>> laraxot/dev
 /**
  * @see https://github.com/foothing/laravel-gdpr-consent
  */
 
-<<<<<<< HEAD
-=======
 declare(strict_types=1);
 
->>>>>>> laraxot/dev
 namespace Modules\Gdpr\Models;
 
 use Illuminate\Database\Eloquent\Builder;
@@ -27,106 +20,6 @@ use function Safe\json_encode;
 /**
  * Modules\Gdpr\Models\Event.
  *
-<<<<<<< HEAD
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
-=======
  * @property string               $id
  * @property string|null          $treatment_id
  * @property string|null          $consent_id
@@ -225,7 +118,6 @@ use function Safe\json_encode;
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
  * @property Consent|null         $consent
->>>>>>> laraxot/dev
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *

@@ -18,13 +18,8 @@ class UpdateGdprConsentsAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-     * @param  array<string, bool>  $consents
-     * @param  array<string, bool>  $consents
-=======
      * @param array<string, bool> $consents
      * @param array<string, bool> $consents
->>>>>>> laraxot/dev
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {

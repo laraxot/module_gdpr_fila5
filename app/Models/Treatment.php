@@ -12,106 +12,6 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\Gdpr\Models\Treatment.
  *
-<<<<<<< HEAD
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $id
- * @property int $active
- * @property int $required
- * @property string $name
- * @property string $description
- * @property string|null $documentVersion
- * @property string|null $documentUrl
- * @property int $weight
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
-=======
  * @property string               $id
  * @property int                  $active
  * @property int                  $required
@@ -210,7 +110,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $created_by
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
->>>>>>> laraxot/dev
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
@@ -252,11 +151,7 @@ class Treatment extends BaseModel
 
         static::creating(function (Treatment $treatment): void {
             $name = $treatment->name;
-<<<<<<< HEAD
-            if (! is_string($name) || $name === '') {
-=======
             if (! is_string($name) || '' === $name) {
->>>>>>> laraxot/dev
                 return;
             }
 

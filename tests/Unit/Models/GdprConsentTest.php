@@ -30,31 +30,19 @@ test('gdpr consent can be created', function () {
 });
 
 test('gdpr consent has treatment relationship method', function () {
-<<<<<<< HEAD
-    $consent = new Consent;
-=======
     $consent = new Consent();
->>>>>>> laraxot/dev
 
     Assert::assertContains('treatment', get_class_methods($consent));
 });
 
 test('gdpr consent is not incrementing', function () {
-<<<<<<< HEAD
-    $consent = new Consent;
-=======
     $consent = new Consent();
->>>>>>> laraxot/dev
 
     Assert::assertFalse($consent->getIncrementing());
 });
 
 test('gdpr consent uses uuid trait', function () {
-<<<<<<< HEAD
-    $consent = new Consent;
-=======
     $consent = new Consent();
->>>>>>> laraxot/dev
     $traits = class_uses_recursive($consent);
 
     Assert::assertArrayHasKey('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);

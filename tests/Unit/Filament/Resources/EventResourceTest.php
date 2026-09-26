@@ -13,19 +13,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('event_resource_extends_xot_base_resource', function (): void {
-<<<<<<< HEAD
-    Assert::assertInstanceOf(XotBaseResource::class, new EventResource);
-});
-
-test('event_resource_model_is_event', function (): void {
-    $resource = new EventResource;
-=======
     Assert::assertInstanceOf(XotBaseResource::class, new EventResource());
 });
 
 test('event_resource_model_is_event', function (): void {
     $resource = new EventResource();
->>>>>>> laraxot/dev
 
     Assert::assertSame(Event::class, $resource->getModel());
 });

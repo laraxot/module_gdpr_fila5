@@ -1,19 +1,11 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-/**
- * @see https://github.com/foothing/laravel-gdpr-consent
- */
-=======
 /**
  * @see https://github.com/foothing/laravel-gdpr-consent
  */
 
 declare(strict_types=1);
 
->>>>>>> laraxot/dev
 return [
     'treatments' => [
         [

@@ -1,10 +1,7 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
 /*
  * PHPStan-only stubs — non caricare funzioni Pest\Laravel a runtime.
  *

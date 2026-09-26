@@ -13,11 +13,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('treatment_fillable_attributes', function (): void {
-<<<<<<< HEAD
-    $treatment = new Treatment;
-=======
     $treatment = new Treatment();
->>>>>>> laraxot/dev
     $fillable = $treatment->getFillable();
 
     assertFillableContains([
@@ -33,32 +29,20 @@ test('treatment_fillable_attributes', function (): void {
 });
 
 test('treatment_is_not_incrementing', function (): void {
-<<<<<<< HEAD
-    $treatment = new Treatment;
-=======
     $treatment = new Treatment();
->>>>>>> laraxot/dev
 
     Assert::assertFalse($treatment->getIncrementing());
 });
 
 test('treatment_is_uuid', function (): void {
-<<<<<<< HEAD
-    $treatment = new Treatment;
-=======
     $treatment = new Treatment();
->>>>>>> laraxot/dev
     $traits = class_uses_recursive($treatment);
 
     Assert::assertArrayHasKey(HasUuids::class, $traits);
 });
 
 test('treatment_extends_base_model', function (): void {
-<<<<<<< HEAD
-    $treatment = new Treatment;
-=======
     $treatment = new Treatment();
->>>>>>> laraxot/dev
 
     Assert::assertInstanceOf(BaseModel::class, $treatment);
 });

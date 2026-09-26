@@ -12,11 +12,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('ValidateUserDataAction returns valid user data', function () {
-<<<<<<< HEAD
-    $action = new ValidateUserDataAction;
-=======
     $action = new ValidateUserDataAction();
->>>>>>> laraxot/dev
     $uniqueEmail = 'test'.uniqid().'@example.com';
 
     $formData = [
@@ -43,11 +39,7 @@ test('ValidateUserDataAction returns valid user data', function () {
 });
 
 test('ValidateUserDataAction hashes password', function () {
-<<<<<<< HEAD
-    $action = new ValidateUserDataAction;
-=======
     $action = new ValidateUserDataAction();
->>>>>>> laraxot/dev
     $uniqueEmail = 'test'.uniqid().'@example.com';
 
     $formData = [

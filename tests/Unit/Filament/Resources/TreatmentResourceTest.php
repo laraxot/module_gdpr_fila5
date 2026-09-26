@@ -13,19 +13,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('treatment_resource_extends_xot_base_resource', function (): void {
-<<<<<<< HEAD
-    Assert::assertInstanceOf(XotBaseResource::class, new TreatmentResource);
-});
-
-test('treatment_resource_model_is_treatment', function (): void {
-    $resource = new TreatmentResource;
-=======
     Assert::assertInstanceOf(XotBaseResource::class, new TreatmentResource());
 });
 
 test('treatment_resource_model_is_treatment', function (): void {
     $resource = new TreatmentResource();
->>>>>>> laraxot/dev
 
     Assert::assertSame(Treatment::class, $resource->getModel());
 });

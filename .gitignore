@@ -101,3 +101,8 @@ vendor/
 .windsurf/
 yarn-error.log
 *:Zone.Identifier
+graphify-out/
+.claude/
+.claude-audit/
+test-results/
+gdpr.code-workspace

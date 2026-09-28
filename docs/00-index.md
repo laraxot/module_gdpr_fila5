@@ -1,4 +1,8 @@
 ---
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 index"
 title: "Gdpr — indice della documentazione"
 description: "Documentazione del modulo Gdpr: funzionalita del modulo."
 module: Gdpr

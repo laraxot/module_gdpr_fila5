@@ -291,7 +291,7 @@ it('stores user data correctly after successful registration', function () {
 });
 
 it('hashes the password after registration', function () {
-    $plainPassword = 'MySecurePassword123!';
+    $plainPassword = config('app.test_password', 'test-password-123');
 
     gdprPost('/en/auth/register', [
         'first_name' => 'Bob',

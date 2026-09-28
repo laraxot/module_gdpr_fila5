@@ -1,3 +1,14 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -50,6 +61,14 @@
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 
 ## Dependency Intelligence

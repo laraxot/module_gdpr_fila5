@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: Gdpr Module Analysis
 type: concept
 tags: [gdpr, privacy, personal-data, consent]

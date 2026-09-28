@@ -1,4 +1,6 @@
 ---
+updated: 2026-09-26
+discussions: []
 title: "PHPStan errors — fix via BMAD + second brain"
 type: story
 created: 2026-09-25

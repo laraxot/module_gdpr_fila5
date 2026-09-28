@@ -1,4 +1,7 @@
 ---
+qmd: "README"
+issues: []
+discussions: []
 title: "Gdpr Module Documentation"
 type: documentation
 tags: [module, documentation]

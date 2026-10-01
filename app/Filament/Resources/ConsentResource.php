@@ -17,7 +17,11 @@ class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
-    #[\Override]
+    /**
+     * Schema legacy del form: la sorgente di verità è ConsentForm::getFormSchema().
+     *
+     * @return array<string, \Filament\Schemas\Components\Component>
+     */
     public function getFormSchemaOld(): array
     {
         return [

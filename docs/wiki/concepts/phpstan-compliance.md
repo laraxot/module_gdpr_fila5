@@ -1,4 +1,7 @@
 ---
+qmd: "phpstan compliance"
+issues: []
+discussions: []
 title: "Gdpr Module - PHPStan Type Compliance"
 type: concept
 tags: [gdpr, phpstan, types, compliance, quality, static-analysis]

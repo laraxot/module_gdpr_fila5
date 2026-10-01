@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Cache;
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest;
 
 /**
  * Trait HasGdpr.
@@ -20,7 +21,7 @@ use Modules\Gdpr\Models\Treatment;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
- * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+ * @see HasGdprTraitTest
  */
 trait HasGdpr
 {
@@ -91,6 +92,7 @@ trait HasGdpr
      * Give consent for a specific type.
      *
      * @param array<string, mixed> $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -136,19 +138,20 @@ trait HasGdpr
     /**
      * Get all required consents that the user hasn't given yet.
      *
-     * @return list<string>
+     * @return array<string>
      */
+    /** @return array<string> */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /** @var list<string> $consentTypes */
+        /** @var array<string> $consentTypes */
         $consentTypes = ConsentType::getRequiredConsentTypes();
 
         /** @var array<string> $given */
         $given = $givenConsents;
 
-        return array_values(array_diff($consentTypes, $given));
+        return array_diff($consentTypes, $given);
     }
 
     /**

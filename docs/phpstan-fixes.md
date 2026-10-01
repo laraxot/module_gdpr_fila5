@@ -1,3 +1,14 @@
+---
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
+---
+
 # GDPR Module — PHPStan
 
 ## 2026-06-10 — STORY-306 · L10 · 0 errori codice
@@ -6,6 +17,14 @@
 
 ---
 
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
 ## Storico — Session 2025-10-01 · Level 9
 
 ## ✅ Stato: ZERO ERRORI - PHPStan Level 9 Compliance

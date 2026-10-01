@@ -1,3 +1,14 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+---
+
 # 📊 GDPR Charts - Privacy & Compliance Reporting
 
 **Modulo**: GDPR
@@ -5,6 +16,14 @@
 
 ---
 
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 📋 Overview
 
 Chart widgets per monitoraggio conformità GDPR, richieste privacy e metriche compliance.

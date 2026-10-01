@@ -1,3 +1,14 @@
+---
+title: "phpstan phpdoc migration errors roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan phpdoc migration errors roadmap"
+issues: []
+discussions: []
+---
+
 # Gdpr Module - PHPStan PHPDoc & Migration Errors Resolution Roadmap
 
 **Stato**: 🟡 In Attesa di Implementazione
@@ -7,6 +18,14 @@
 
 ---
 
+title: "phpstan phpdoc migration errors roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan phpdoc migration errors roadmap"
+issues: []
+discussions: []
 ## 🎯 Obiettivo
 
 Risolvere 19 errori PHPStan Level 10 nel modulo Gdpr, correggendo:

@@ -1,3 +1,14 @@
+---
+title: "data modification requests"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "data modification requests"
+issues: []
+discussions: []
+---
+
 # Data Modification Requests - Gdpr
 
 **Task ID**: GDPR-FEATURE-001

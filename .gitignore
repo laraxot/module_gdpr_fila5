@@ -106,3 +106,4 @@ graphify-out/
 .claude-audit/
 test-results/
 gdpr.code-workspace
+/.docs-archive/

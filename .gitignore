@@ -107,3 +107,17 @@ graphify-out/
 test-results/
 gdpr.code-workspace
 /.docs-archive/
+*~head
+
+agentdb.rvf
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+.cursor/
+.devcontainer/
+.vscode/
+.windsurf/
+tests/AuditCoverage/
+
+# Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
+audit-coverage/
+.claude-audit/

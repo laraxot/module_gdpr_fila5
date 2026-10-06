@@ -1,4 +1,12 @@
 ---
+qmd: "getting-started"
+issues: []
+discussions: []
+title: "Getting started"
+type: documentation
+tags: [gdpr, module]
+created: 2026-10-06
+updated: 2026-10-06
 title: "Gdpr — getting started"
 type: guide
 module: Gdpr
@@ -24,5 +32,5 @@ Configuration lives in `config/config.php` and `config/consent.php`.
 
 ## Basic Usage
 
-See the module [README](../README.md) for features and examples, and [contributing](./contributing.md)
+See the module [README](../readme.md) for features and examples, and [contributing](./contributing.md)
 for the development workflow.

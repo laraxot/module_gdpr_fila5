@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 type: note
 created: 2026-09-26
@@ -18,19 +17,13 @@ issues: https://github.com/laraxot/module_gdpr_fila5/issues
 discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 ---
 
-=======
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-<<<<<<< HEAD
-1. [README.md](./README.md) - Panoramica completa e Business Logic dei consensi.
-=======
 1. [README.md](./readme.md) - Panoramica completa e Business Logic dei consensi.
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 2. [roadmap.md](./roadmap.md) - Qualità del codice e obiettivi di conformità.
 3. [philosophy.md](./philosophy.md) - Privacy by Design e Commandment della compliance.
 
@@ -41,7 +34,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 
 ## 📊 **Filament & UI**
 - 🛡️ **[Gdpr Resources](./filament-resources-1.md)** - Gestione trattamenti e consensi nell'admin panel.
-- 🍪 **[Cookie Consent](./cookie-consent-1.md)** - Implementazione del banner e della preferenza cookie.
+- 🍪 **[Cookie Consent](./cookie-consent.md)** - Implementazione del banner e della preferenza cookie.
 
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-analysis-gdpr.md)** - Statistiche di conformità e fix.
@@ -49,11 +42,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 - 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
 
 ## 📦 **Pacchetti Composer**
-<<<<<<< HEAD
-- [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
-=======
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 - `statikbe/laravel-cookie-consent` - Banner cookie consent
 
 ## 📊 Documenti Product & Development
@@ -74,17 +63,9 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 | [USER_RESEARCH.md](./USER_RESEARCH.md) | User Research |
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< HEAD
-- [User](../../User/docs/README.md) - Soggetti dei consensi.
-- [Activity](../../Activity/docs/README.md) - Log di sistema integrato.
-- [Xot](../../Xot/docs/README.md) - Base framework e trait UUID.
-=======
 - [User](../../user/docs/readme.md) - Soggetti dei consensi.
 - [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
 - [Xot](../../xot/docs/readme.md) - Base framework e trait UUID.
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
-# Documentation Index
-- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

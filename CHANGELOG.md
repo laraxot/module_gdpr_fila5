@@ -11,7 +11,7 @@ discussions: []
 
 # Changelog
 
-All notable changes to the $MOD module.
+Tutte le variazioni importanti di Gdpr saranno generate automaticamente da semantic-release.
 
 ## [0.1.0] — 2026-09-05
 

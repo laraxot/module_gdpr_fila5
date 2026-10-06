@@ -1,3 +1,14 @@
+---
+qmd: "changelog"
+issues: []
+discussions: []
+title: "Changelog"
+type: documentation
+tags: [gdpr, module]
+created: 2026-10-06
+updated: 2026-10-06
+---
+
 <<<<<<< HEAD
 ---
 title: "changelog"

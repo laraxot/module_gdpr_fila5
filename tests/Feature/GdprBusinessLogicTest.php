@@ -14,8 +14,6 @@ use PHPUnit\Framework\Assert;
 use function Safe\json_decode;
 use function Safe\json_encode;
 
-uses(TestCase::class);
-
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */
     gdprAssertDatabaseAvailable();
@@ -123,11 +121,13 @@ it('can track gdpr audit trail', function (): void {
     $user = UserFactory::new()->createOne();
 
     // Act - Create multiple consents
-    Consent::create([        'subject_id' => $user->id,
+    Consent::create([
+        'subject_id' => $user->id,
         'treatment_id' => null,
     ]);
 
-    Consent::create([        'subject_id' => $user->id,
+    Consent::create([
+        'subject_id' => $user->id,
         'treatment_id' => null,
     ]);
 
@@ -268,15 +268,14 @@ it('can manage multiple consents per subject', function (): void {
     ]);
 
     // Act
-    [        Consent::create([
-            'subject_id' => $user->id,
-            'treatment_id' => $treatment1->id,
-        ]),
-        Consent::create([
-            'subject_id' => $user->id,
-            'treatment_id' => $treatment2->id,
-        ]),
-    ];
+    Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment1->id,
+    ]);
+    Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment2->id,
+    ]);
 
     // Assert
     $userConsents = Consent::where('subject_id', $user->id)->get();

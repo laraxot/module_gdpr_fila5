@@ -19,8 +19,6 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
-
 // ---------------------------------------------------------------------------
 // ValidateGdprConsentAction
 // ---------------------------------------------------------------------------
@@ -190,6 +188,12 @@ it('saves gdpr consents for a user when treatments exist', function (): void {
         Assert::assertNotNull($privacyConsent->accepted_at);
         Assert::assertSame('127.0.0.1', $privacyConsent->ip_address);
         Assert::assertSame('PestTest/1.0', $privacyConsent->user_agent);
+    }
+
+    // Terms consent should be accepted (terms_accepted => terms_conditions)
+    $termsConsent = $savedConsents->where('treatment_id', $termsTreatment->id)->first();
+    if ($termsConsent) {
+        Assert::assertNotNull($termsConsent->accepted_at);
     }
 
     // Marketing consent should NOT be accepted

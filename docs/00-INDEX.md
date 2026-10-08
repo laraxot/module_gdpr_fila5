@@ -1,14 +1,21 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-<<<<<<< HEAD
 1. [README.md](./README.md) - Panoramica completa e Business Logic dei consensi.
-=======
-1. [README.md](./readme.md) - Panoramica completa e Business Logic dei consensi.
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 2. [roadmap.md](./roadmap.md) - Qualità del codice e obiettivi di conformità.
 3. [philosophy.md](./philosophy.md) - Privacy by Design e Commandment della compliance.
 
@@ -27,11 +34,7 @@
 - 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
 
 ## 📦 **Pacchetti Composer**
-<<<<<<< HEAD
 - [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
-=======
-- [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
->>>>>>> 12e4ae8 (chore: remove obsolete configuration and documentation files)
 - `statikbe/laravel-cookie-consent` - Banner cookie consent
 
 ## 📊 Documenti Product & Development
@@ -58,6 +61,14 @@
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 
 ## Dependency Intelligence

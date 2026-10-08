@@ -1,3 +1,14 @@
+---
+title: "testcase sqlite to mysql fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testcase sqlite to mysql fix"
+issues: []
+discussions: []
+---
+
 # TestCase SQLite to MySQL Fix - Gdpr Module
 
 ## Problema Identificato
@@ -48,6 +59,14 @@ protected function setUp(): void
 
 ---
 
+title: "testcase sqlite to mysql fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testcase sqlite to mysql fix"
+issues: []
+discussions: []
 ## Soluzione
 
 ### Pattern Corretto

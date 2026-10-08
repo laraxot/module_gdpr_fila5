@@ -6,6 +6,7 @@ namespace Modules\Gdpr\Filament\Resources;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\EditConsent;
@@ -20,7 +21,7 @@ class ConsentResource extends XotBaseResource
     /**
      * Schema legacy del form: la sorgente di verità è ConsentForm::getFormSchema().
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public function getFormSchemaOld(): array
     {

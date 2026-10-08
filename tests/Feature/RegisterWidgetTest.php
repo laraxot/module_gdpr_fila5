@@ -161,8 +161,7 @@ it('saves gdpr consents for a user when treatments exist', function (): void {
         ['name' => 'privacy_policy'],
         ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
     );
-    $termsTreatment = Treatment::firstOrCreate(
-        ['name' => 'terms_conditions'],
+    Treatment::firstOrCreate(        ['name' => 'terms_conditions'],
         ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
     );
     $marketingTreatment = Treatment::firstOrCreate(

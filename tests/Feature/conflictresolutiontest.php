@@ -6,9 +6,6 @@ namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
-use Modules\Gdpr\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     expect(new Treatment())->not->toBeNull();

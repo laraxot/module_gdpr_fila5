@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "phpstan complete fixes"
 issues: []
 discussions: []
+status: draft
 ---
 
 # PHPStan Complete Fixes 2025 - Gdpr Module
@@ -67,14 +68,6 @@ Note: Using configuration file phpstan.neon.
 - Nessun warning o errore di tipo rimanente
 
 ---
-title: "phpstan complete fixes"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "phpstan complete fixes"
-issues: []
-discussions: []
 **Documento creato**: [DATE]
 **Stato**: ✅ COMPLETATO
 **Prossima revisione**: Con necessità

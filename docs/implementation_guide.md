@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: implementation_guide
 canonical: ../../../Themes/docs/shared-components/implementation-guide-1.md
+status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/implementation-guide-1.md

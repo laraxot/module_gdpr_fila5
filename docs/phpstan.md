@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: phpstan
 canonical: ../../../Themes/docs/shared-components/phpstan-report.txt
+status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-report.txt

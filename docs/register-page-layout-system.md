@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "register page layout system"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Register Page Layout System

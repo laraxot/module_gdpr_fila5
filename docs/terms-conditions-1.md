@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "terms conditions 1"
 issues: []
 discussions: []
+status: draft
 ---
 
 https://julienboyer.re/en/posts/how-to-add-terms-and-conditions-checkbox-on-filament-registration-page

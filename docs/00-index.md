@@ -7,7 +7,6 @@ title: "Gdpr — indice della documentazione"
 description: "Documentazione del modulo Gdpr: funzionalita del modulo."
 module: Gdpr
 tags: [gdpr, documentazione, modulo, laraxot]
-status: active
 repository: https://github.com/laraxot/module_gdpr_fila5
 related:
   - ./00-index.md
@@ -15,7 +14,10 @@ related:
   - ../../../../docs/wiki/audits/docs-redundancy-audit.md
 issues: https://github.com/laraxot/module_gdpr_fila5/issues
 discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Copia concorrente del vecchio 00-INDEX.md: indice canonico e' ora 00-INDEX.md (aggiornato 2026-10-14). Qui restano link a file inesistenti (consent-management.md, GSD_WORKFLOW.md, phpmd-report.txt) e l'etichetta 'PHPStan Level 10 Compliant' non riverificata. Contenuto non riscritto, verificare prima di usarlo.
 
 # 📚 **Indice Documentazione Modulo Gdpr**
 
@@ -28,7 +30,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 3. [philosophy.md](./philosophy.md) - Privacy by Design e Commandment della compliance.
 
 ## 🏗️ **Compliance & Consensi**
-- 🗳️ **[Consent Management](./consent-management.md)** - Gestione del ciclo di vita del consenso.
+- 🗳️ **Consent Management _(riferimento non presente nel repository, verificato 2026-10-14)_** - Gestione del ciclo di vita del consenso.
 - 📜 **[Treatments Definition](./gdpr-module-overview.md)** - Configurazione dei trattamenti dati.
 - 🕒 **[Audit Trail](./gdpr-pdf-reports.md)** - Generazione report e tracciabilità eventi.
 
@@ -39,7 +41,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-analysis-gdpr.md)** - Statistiche di conformità e fix.
 - 🔬 **[Testing Strategy](./testing.md)** - Approccio Pest per la verifica della compliance.
-- 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
+- 🧹 **PHPMD Analysis _(riferimento non presente nel repository, verificato 2026-10-14)_** - Risoluzione della complessità nei modelli di privacy.
 
 ## 📦 **Pacchetti Composer**
 - [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
@@ -50,7 +52,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 ### Product
 | File | Scopo |
 |------|-------|
-| [PRD.md](./PRD.md) | Product Requirements |
+| [PRD.md](./prd.md) | Product Requirements |
 | [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
 | [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
 | [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
@@ -58,7 +60,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 ### Development
 | File | Scopo |
 |------|-------|
-| [GSD_WORKFLOW.md](./GSD_WORKFLOW.md) | GSD Workflow |
+| GSD_WORKFLOW.md _(riferimento non presente nel repository, verificato 2026-10-14)_ | GSD Workflow |
 | [SPRINT_PLANNING.md](./SPRINT_PLANNING.md) | Sprint Planning |
 | [USER_RESEARCH.md](./USER_RESEARCH.md) | User Research |
 

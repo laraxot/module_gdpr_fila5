@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "gdpr pdf reports"
 issues: []
 discussions: []
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Descrive la generazione di report PDF di conformita' con HTML2PDF come funzione del modulo; app/ non contiene alcun uso di html2pdf (grep del 2026-10-14), il pacchetto e' solo nel vendor del progetto. E' un piano, non una funzione. Contenuto non riscritto, verificare prima di usarlo.
 
 # GDPR PDF Reports - HTML2PDF Integration
 
@@ -16,15 +19,6 @@ discussions: []
 Guida completa per generare report PDF di conformità GDPR utilizzando HTML2PDF con integrazione nativa nel modulo GDPR.
 
 ---
-
-title: "gdpr pdf reports"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "gdpr pdf reports"
-issues: []
-discussions: []
 ## 🎯 Funzionalità PDF GDPR
 
 ### 1. Report Conformità Completo

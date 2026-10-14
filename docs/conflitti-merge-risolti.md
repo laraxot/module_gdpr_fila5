@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "conflitti merge risolti"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Risoluzione Conflitti di Merge in Modulo GDPR

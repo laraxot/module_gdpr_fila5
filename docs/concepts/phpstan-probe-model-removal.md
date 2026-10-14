@@ -9,9 +9,10 @@ tags: [phpstan, trait, probe, no-phpstan-probe-models, quality]
 created: 2026-07-16
 updated: 2026-07-16
 related:
-  - ../../../../docs/wiki/rules/no-phpstan-probe-models.md
+  - ../../../../../docs/wiki/rules/no-phpstan-probe-models.md
   - ../../Xot/docs/wiki/concepts/phpstan-partial-scope-false-positives.md
   - ../roadmap/quality-fixes-log.md
+status: draft
 ---
 
 # Rimozione probe model PHPStan — GdprPhpstanTraitProbe
@@ -26,7 +27,7 @@ in contesto app (`/** Probe host so PHPStan analyses HasGdpr trait ... */`).
 
 1. **Viola una regola esplicita del progetto.** I file `*PhpstanTraitProbe.php`
    sono vietati dalla regola
-   [no-phpstan-probe-models](../../../../docs/wiki/rules/no-phpstan-probe-models.md):
+   [no-phpstan-probe-models](../../../../../docs/wiki/rules/no-phpstan-probe-models.md):
    non si creano classi finte solo per far passare PHPStan.
 2. **Era ridondante.** Il trait `HasGdpr` è realmente consumato da
    `Modules/Employee/app/Models/User.php` (`use HasGdpr;`) ed è già esercitato

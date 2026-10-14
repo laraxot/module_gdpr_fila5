@@ -7,7 +7,10 @@ type: documentation
 tags: [module, documentation]
 created: 2026-06-05
 updated: 2026-06-05
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Copia minuscola e vecchia del README.md (stesso modello generico, aggiornato solo il 2026-06-05). Il README.md e' stato riscritto il 2026-10-14 con identita', contenuto reale del codice e limiti: usare quello. Contenuto non riscritto, verificare prima di usarlo.
 
 # Modulo Gdpr
 
@@ -34,12 +37,12 @@ Gdpr/
 
 ## Dipendenze
 
-- [Xot Base](../Xot/docs/)
-- [User Module](../User/docs/)
+- [Xot Base](../../Xot/docs)
+- [User Module](../../User/docs)
 
 ## Collegamenti
 
-- [Documentazione Root](../../../docs/GDPR_MODULE.md)
+- Documentazione Root _(riferimento non presente nel repository, verificato 2026-10-14)_
 
 ## Backlinks
 

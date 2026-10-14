@@ -9,6 +9,7 @@ domain: gdpr
 tags: [gdpr, privacy, compliance, consent, philosophy]
 created: 2026-09-06
 updated: 2026-09-06
+status: draft
 ---
 
 # GDPR Module Philosophy

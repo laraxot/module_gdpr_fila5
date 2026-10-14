@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "multi language translation guidelines"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Multi-Language Translation Guidelines for Laravel Pizza

@@ -9,9 +9,10 @@ updated: 2026-09-05
 qmd: "gdpr module-analysis scopo religione filosofia politica zen"
 module: Gdpr
 related:
-  - ./docs/README.md
-  - ../User/docs/README.md
-  - ../Activity/docs/README.md
+  - ./README.md
+  - ../../User/docs/README.md
+  - ../../Activity/docs/README.md
+status: draft
 ---
 
 # Gdpr Module Analysis

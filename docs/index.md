@@ -3,15 +3,18 @@ title: "index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-14
 qmd: "index"
 issues: []
 discussions: []
+status: active
 ---
 
 # Gdpr — Indice documentazione
 
 Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/`. Nessun file esistente è stato rinominato o cancellato per generare questo indice.
+
+Indice operativo canonico del modulo: [00-INDEX.md](./00-INDEX.md) (ruolo delle directory, stato verificato delle promesse, documenti stale). Questo file resta l'elenco per argomento. Limiti e contenuto reale del codice: [README.md](./README.md).
 
 ## Panoramica del modulo
 
@@ -94,12 +97,8 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 
 ## Task e feature in corso
 
-- [tasks/tasks-index.md](tasks/tasks-index.md)
-- [tasks/cleanup-gdpr-docs.md](tasks/cleanup-gdpr-docs.md)
-- [tasks/gdpr-compliance-audit.md](tasks/gdpr-compliance-audit.md)
-- [tasks/gdpr-compliance-system.md](tasks/gdpr-compliance-system.md)
-- [tasks/gdpr-filament-v5.md](tasks/gdpr-filament-v5.md)
-- [tasks/features/data-modification-requests.md](tasks/features/data-modification-requests.md)
+- [tasks/001-gdpr-compliance-system.md](tasks/001-gdpr-compliance-system.md)
+- Le voci `tasks-index.md`, `cleanup-gdpr-docs.md`, `gdpr-compliance-audit.md`, `gdpr-compliance-system.md`, `gdpr-filament-v5.md` e `features/data-modification-requests.md`, elencate in una versione precedente di questo indice, non esistono in `tasks/` (verificato 2026-10-14).
 
 ## Prompt e automazioni
 
@@ -167,8 +166,8 @@ Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, 
 
 I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. Non sono stati toccati: restano collegati qui per tracciabilità, in attesa di una consolidazione esplicita.
 
-- **Indici concorrenti in root**: [00-index.md](00-index.md), [00-INDEX.md](00-INDEX.md), [INDEX.md](INDEX.md) contengono bozze di indice alternative a questo file (`index.md`), con contenuti diversi tra loro (una è uno stub auto-generato vuoto, un'altra un elenco "canoni/duplicati/deprecated", l'ultima un indice esteso con molti link a file oggi inesistenti nel modulo). Da valutare se unificare in questo `index.md`.
-- **README duplicato di contenuto**: [README.md](README.md) e [00-INDEX.md](00-INDEX.md) condividono lo stesso contenuto esteso (indice "Lettura essenziale" con link a file non presenti in `docs/`, es. `philosophy.md`, `consent-management.md`, `PRD.md`). Da verificare/pulire in futuro, non in questo task.
+- **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-INDEX.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
+- **README e 00-INDEX** (risolto 2026-10-14): il README descrive ora identita' e limiti del modulo e 00-INDEX.md e' l'indice; non condividono piu' contenuto. `consent-management.md` e `GSD_WORKFLOW.md` non esistono nel modulo.
 - **`changelog.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).
 - **`consents.md` / `consents.txt` / `root-md-files/consents.md` / `raw/root-import/consents.md` / `raw/root-import/consents-1.md`**: stesso argomento in più formati/import.

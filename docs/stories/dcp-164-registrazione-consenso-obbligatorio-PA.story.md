@@ -18,9 +18,9 @@ github:
   discussions: https://github.com/laraxot/module_gdpr_fila5/discussions/65
   issue_status: "aperta"
 related:
-  - ../docs/stories/2026-10-14-dcp-156-pagine-legali-complete-a-norma.story.md
-  - ../docs/stories/2026-10-14-dcp-157-cookie-policy-footer-link.story.md
-  - ../docs/stories/2026-10-14-dcp-161-verifica-disclaimer-a-norma.story.md
+  - ../docs/stories/dcp-156-pagine-legali-complete-a-norma.story.md
+  - ../docs/stories/dcp-157-cookie-policy-footer-link.story.md
+  - ../docs/stories/dcp-161-verifica-disclaimer-a-norma.story.md
 ---
 
 # 2026-10-14 DCP-164 Registrazione con consenso privacy/termini obbligatori (PA)

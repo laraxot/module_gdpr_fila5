@@ -40,12 +40,12 @@ marcati `superseded` o `stale`, non cancellati (regola BMAD).
 
 ## Storie correlate
 
-- [2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md](./stories/2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md)
-- [2026-10-14-dcp-156-pagine-legali-complete-a-norma.story.md](../../../Themes/Sixteen/docs/stories/2026-10-14-dcp-156-pagine-legali-complete-a-norma.story.md)
-- [2026-10-14-dcp-164-registrazione-consenso-obbligatorio-PA.story.md](./stories/2026-10-14-dcp-164-registrazione-consenso-obbligatorio-PA.story.md)
-- [2026-10-14-dcp-165-gdpr-docs-indice-canonico.story.md](./stories/2026-10-14-dcp-165-gdpr-docs-indice-canonico.story.md)
-- [2026-10-15-final-override-removal-gdpr-resources.story.md](./stories/2026-10-15-final-override-removal-gdpr-resources.story.md)
-- [2026-10-15-account-deletion-flash-translation.story.md](./stories/2026-10-15-account-deletion-flash-translation.story.md)
+- [2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md](./stories/dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md)
+- [2026-10-14-dcp-156-pagine-legali-complete-a-norma.story.md](../../../Themes/Sixteen/docs/stories/dcp-156-pagine-legali-complete-a-norma.story.md)
+- [2026-10-14-dcp-164-registrazione-consenso-obbligatorio-PA.story.md](./stories/dcp-164-registrazione-consenso-obbligatorio-PA.story.md)
+- [2026-10-14-dcp-165-gdpr-docs-indice-canonico.story.md](./stories/dcp-165-gdpr-docs-indice-canonico.story.md)
+- [2026-10-15-final-override-removal-gdpr-resources.story.md](./stories/final-override-removal-gdpr-resources.story.md)
+- [2026-10-15-account-deletion-flash-translation.story.md](./stories/account-deletion-flash-translation.story.md)
 - [dcp-178-registrazione-e-disiscrizione-a-norma.story.md](./stories/dcp-178-registrazione-e-disiscrizione-a-norma.story.md)
 
 ## Non toccare

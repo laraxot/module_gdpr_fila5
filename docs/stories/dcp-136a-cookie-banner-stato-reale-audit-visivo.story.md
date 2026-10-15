@@ -16,7 +16,7 @@ qmd: "cookie banner stato reale middleware CookieConsentMiddleware cookie_banner
 issues: []
 discussions: []
 related:
-  - ./2026-10-13-dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md
+  - ./dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md
 ---
 
 # DCP-136a: stato reale del banner cookie e audit visivo

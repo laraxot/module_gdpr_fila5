@@ -18,9 +18,9 @@ github:
   discussions: https://github.com/laraxot/module_gdpr_fila5/discussions/66
   issue_status: "aperta"
 related:
-  - ../docs/stories/2026-10-14-dcp-164-registrazione-consenso-obbligatorio-PA.story.md
-  - ../docs/stories/2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md
-  - ../docs/stories/2026-10-14-dcp-156-pagine-legali-complete-a-norma.story.md
+  - ../docs/stories/dcp-164-registrazione-consenso-obbligatorio-PA.story.md
+  - ../docs/stories/dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md
+  - ../docs/stories/dcp-156-pagine-legali-complete-a-norma.story.md
 ---
 
 # 2026-10-14 DCP-165 Docs Gdpr — indice canonico e consolidamento

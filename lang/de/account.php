@@ -14,4 +14,7 @@ return [
     'cancel' => 'Abbrechen',
     'submit' => 'Mein Konto löschen',
     'success' => 'Konto erfolgreich gelöscht.',
+    'flash' => [
+        'account_deleted' => 'Konto erfolgreich gelöscht. Einwilligungen wurden widerrufen und Daten gemäß Art. 17 DSGVO soft-deleted.',
+    ],
 ];

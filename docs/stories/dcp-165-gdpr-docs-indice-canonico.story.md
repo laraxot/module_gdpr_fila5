@@ -27,7 +27,7 @@ related:
 
 ## Perché
 
-La cartella `Modules/Gdpr/docs/` contiene **oltre 200 file .md**, molti dei quali duplicati (es. `cookie-consent.md` / `cookie-consent-1.md` / `cookie_consent.md`, `terms-conditions.md` / `terms-conditions-1.md`, `cookiebar-integration.md`). Un agente che cerca "cookie policy" trova 5 file diversi e non sa quale usare.
+La cartella `Modules/Gdpr/docs/` contiene **oltre 200 file .md**, molti dei quali duplicati (es. `cookie-consent.md` / `cookie-consent-1.md` / `cookie_consent.md`, `terms-conditions.md` / `terms-conditions-collegamenti-versioni.md`, `cookiebar-integration.md`). Un agente che cerca "cookie policy" trova 5 file diversi e non sa quale usare.
 
 ## Obiettivo
 

@@ -313,3 +313,7 @@ module.exports = {
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Tailwind Color Palette](https://tailwindcss.com/docs/customizing-colors)
 - [<nome progetto> Brand Guidelines](../../../themes/meetup/docs/color-palette.md)
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

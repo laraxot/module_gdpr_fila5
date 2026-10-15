@@ -211,3 +211,8 @@ Switch via `.env`: `GDPR_ENABLED=true`.
 
 ---
 *opencode (MiniMax-M3) · 2026-06-05 · Garante Privacy EU 2016/679 + D.Lgs 196/2003/101/2018*
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -118,3 +118,8 @@ public function test_user_can_withdraw_consent()
 - Regular policy reviews
 - Stay updated with regulations
 - Solicit user feedback
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

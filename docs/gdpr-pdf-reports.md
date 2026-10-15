@@ -849,3 +849,8 @@ public function generateWithErrorHandling(array $options = []): string
 **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅
 **GDPR Compliant:** ✅
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

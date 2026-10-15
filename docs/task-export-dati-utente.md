@@ -33,3 +33,8 @@ status: stale
 - [ ] Export include dati da tutti i moduli rilevanti
 - [ ] ZIP generato con struttura chiara
 - [ ] Notifica email funzionante
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

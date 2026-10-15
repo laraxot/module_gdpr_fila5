@@ -428,3 +428,7 @@ system-ui → -apple-system → BlinkMacSystemFont → 'Segoe UI' → Roboto →
 - [Typography in CSS](https://web.dev/typography/)
 - [WCAG 2.1 Visual Presentation](https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation)
 - [Responsive Typography](https://www.smashingmagazine.com/2016/05/fluid-typography/)
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

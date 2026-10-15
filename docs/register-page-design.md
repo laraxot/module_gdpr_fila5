@@ -327,3 +327,7 @@ This document compiles the latest design patterns, UX best practices, and modern
 - Colorlib Registration: https://colorlib.com/wp/cat/registration-forms/
 - JavaScript Login Pages: https://javascript.plainenglish.io/13-super-beautiful-login-pages-with-source-code-0dd1402b3c21
 - UXPin Signup Examples: https://www.uxpin.com/studio/blog/best-signup-page-examples/
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

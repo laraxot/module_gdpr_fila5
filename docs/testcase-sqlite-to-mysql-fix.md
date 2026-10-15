@@ -148,3 +148,8 @@ Tutte queste devono essere migrate prima dei test nel setUp() come fatto sopra.
 **Stato:** Pronto per implementazione
 **Righe:** 100 → ~40 (-60%)
 **Filosofia:** MySQL Production = MySQL Tests ✅
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

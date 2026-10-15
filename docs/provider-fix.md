@@ -57,3 +57,8 @@ This error blocked `composer dump-autoload` from completing successfully via its
 ## Files modified
 
 - `app/Providers/GdprServiceProvider.php` - removed duplicate `use function Safe\realpath;` lines
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

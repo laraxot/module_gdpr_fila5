@@ -179,3 +179,8 @@ Xot, User, Activity, Tenant
 | Data Subject | Persona fisica |
 | Controller | Titolare del trattamento |
 | Processor | Responsabile del trattamento |
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

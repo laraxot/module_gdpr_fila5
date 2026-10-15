@@ -19,3 +19,8 @@ Develop the Gdpr Module as a high-performance, specialized component of the Lara
 ### Q1 2026: Foundation
 - Standardize Gdpr Module Documentation - *Status: Shipped*
 - PHPStan Level 10 Audit - *Status: In Progress*
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

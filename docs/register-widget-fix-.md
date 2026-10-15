@@ -273,3 +273,7 @@ Quando si sovrascrive un metodo dalla classe padre, mantenere sempre lo stesso a
 - Widget: `/laravel/Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php`
 - View: `/laravel/Themes/Meetup/resources/views/filament/widgets/auth/register.blade.php`
 - Page: `/laravel/Themes/Meetup/resources/views/pages/auth/register.blade.php`
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

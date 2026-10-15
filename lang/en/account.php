@@ -14,4 +14,7 @@ return [
     'cancel' => 'Cancel',
     'submit' => 'Delete my account',
     'success' => 'Account deleted successfully.',
+    'flash' => [
+        'account_deleted' => 'Account deleted successfully. Consents have been revoked and data soft-deleted per art. 17 GDPR.',
+    ],
 ];

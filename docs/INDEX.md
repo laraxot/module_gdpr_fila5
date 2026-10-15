@@ -32,10 +32,10 @@ marcati `superseded` o `stale`, non cancellati (regola BMAD).
 
 ## Duplicati da consolidare (non cancellare)
 
-- `cookie-consent-1.md` → `cookie-consent.md`
+- `cookie-consent.md` → `cookie-consent.md`
 - `cookie_consent.md` → `cookie-consent.md`
-- `terms-and-conditions.md`, `terms-and-conditions-1.md`, `terms-conditions-1.md` → `terms-conditions.md`
-- `consent-packages-research-1.md` → `consent-packages-research.md`
+- `terms-and-conditions.md`, `terms-and-conditions-1.md`, `terms-conditions-collegamenti-versioni.md` → `terms-conditions.md`
+- `consent-packages-research-gdpr-legal.md` → `consent-packages-research.md`
 - `cookiebar-integration.md` → `cookie-banner.md` (gia' segnata stale)
 
 ## Storie correlate

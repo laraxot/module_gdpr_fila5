@@ -92,8 +92,11 @@ This document analyzes two popular Laravel consent packages, capturing technical
 ---
 
 *Generated: 2025-06-06*
+<<<<<<< .merge_file_xOhlVd
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_SM09af

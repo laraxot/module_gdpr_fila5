@@ -19,8 +19,11 @@ https://julienboyer.re/plugins/filament-terms-guard/readme
 ## Collegamenti tra versioni di terms_conditions.md
 * [terms_conditions.md](laravel/modules/gdpr/docs/terms_conditions.md)
 * [terms_conditions.md](laravel/modules/user/docs/terms_conditions.md)
+<<<<<<< .merge_file_6XNiUj
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_rBFMQi

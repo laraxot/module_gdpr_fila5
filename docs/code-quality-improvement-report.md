@@ -90,8 +90,11 @@ Dalla cartella laravel/:
     ./vendor/bin/pest Modules/Gdpr/tests
 
 Limite deliberato: niente coverage, mutation score o metriche di complessità finché PHPStan, Pest e review mirata bastano a decidere.
+<<<<<<< .merge_file_oD2wZm
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_xVc1RY

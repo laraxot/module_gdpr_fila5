@@ -10,7 +10,7 @@ qmd: "blueprint filament registro richieste interessato data subject request acc
 issues: []
 discussions: []
 related:
-  - ../stories/2026-10-13-dcp-140-diritti-dellinteressato-procedura-e-strumenti.story.md
+  - ../stories/dcp-140-diritti-dellinteressato-procedura-e-strumenti.story.md
   - ../stories/dcp-178-registrazione-e-disiscrizione-a-norma.story.md
   - ../register-widget.md
 ---

@@ -124,7 +124,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/skills/index.md](wiki/skills/index.md)
 - [wiki/memories/index.md](wiki/memories/index.md)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
-- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md)
+- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
 - [wiki/_templates/concept.md](wiki/_templates/concept.md)
 - [wiki/_templates/entity.md](wiki/_templates/entity.md)
 - [wiki/_templates/source.md](wiki/_templates/source.md)
@@ -160,7 +160,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [raw/root-import/links.md](raw/root-import/links.md)
 - [raw/root-import/repo.md](raw/root-import/repo.md)
 
-Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, `cookie-consent-1.md`, `filament-1.md`, `google-analytics-1.md`, `links-1.md`, `repo-1.md`) sono duplicati byte-per-byte dei rispettivi file senza suffisso: vedi sezione "Storico / da consolidare".
+Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, `cookie-consent.md`, `filament-1.md`, `google-analytics.md`, `links-1.md`, `repo-1.md`) sono duplicati byte-per-byte dei rispettivi file senza suffisso: vedi sezione "Storico / da consolidare".
 
 ## Storico / da consolidare (duplicati — non cancellati)
 

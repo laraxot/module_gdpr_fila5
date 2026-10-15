@@ -35,11 +35,11 @@ module: "Gdpr"
 - Fatti verificati: `Treatment` 0 righe e `Consent` 0 righe nel DB di sviluppo (tinker, sola lettura); `routes/web.php` e `routes/api.php` vuoti; nessun dispatch di `UserRegistered`; `cookie_banner_on` falso per il tenant Fixcity; `config/config.php` contiene dati di un altro progetto (assicurazioni) e chiavi che nessun codice legge.
 - Pest su DB usa-e-getta (`bashscripts/tools/pest-scratch-db.sh`, con `DB_DATABASE_LIMESURVEY=` perche' lo script va in errore se la variabile manca): 68 passati e 186 falliti, i Feature con `A facade root has not been set`. Non e' una prova di regressione.
 - Non toccati su richiesta del coordinatore: file con `cookie` o `privacy` nel nome o nel percorso, cartella `stories/`. Nessuna story di questa sessione e' stata scritta in `stories/`.
-- Link rotti negli ingressi (criterio audit: file indice a profondita' 0 e 1): 22 prima, vedi la nota di memoria `bashscripts/ai/wiki/memories/2026-10-14-docs-gdpr-rating-comment-blog-ai-studio.md` per il dopo.
+- Link rotti negli ingressi (criterio audit: file indice a profondita' 0 e 1): 22 prima, vedi la nota di memoria `bashscripts/ai/wiki/memories/docs-gdpr-rating-comment-blog-ai-studio.md` per il dopo.
 
 ## [2026-10-14] DCP-153 | cookiebar integrata nel modulo
 
-- Una sola cookiebar nel modulo (vista `cookie-consent`, middleware `InjectCookieBanner`, inventario `GetCookieInventoryAction`, testi in it, en, de, es). Riferimento: `docs/cookie-banner.md`. Story: `stories/2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md`.
+- Una sola cookiebar nel modulo (vista `cookie-consent`, middleware `InjectCookieBanner`, inventario `GetCookieInventoryAction`, testi in it, en, de, es). Riferimento: `docs/cookie-banner.md`. Story: `stories/dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md`.
 - Verifica: 17 test nel browser, 59 test Pest (modulo Fixcity, perche' i test del modulo Gdpr non avviano l'applicazione: 186 su 254 falliscono con «A facade root has not been set»), axe senza violazioni.
 - Trappole: namespace delle traduzioni sovrascritto dal pacchetto, `lang/vendor/cookie-consent` che sovrascrive il modulo, configurazione sotto `gdpr.config.*`, flag del tenant valutato all'avvio, push del middleware perso.
 - Segnati `stale`: `cookiebar-integration.md`, `second-brain/cookiebar-bootstrap-italia.md`, `cookie_consent.md`, `cookie-consent.md`, `cookie-consent-1.md`, `packages/cookie-consent.md`, `roadmap/cookie-consent.md`, `development/roadmap/cookie-consent.md`, `consent/cookie-consent.md`, `root-md-files/cookie-consent.md`, `_integration/cookie-consent.md`. Nessun file cancellato.

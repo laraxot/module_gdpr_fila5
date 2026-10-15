@@ -126,8 +126,11 @@ dell'inventario reale prima della messa in produzione.
 - [Spatie Laravel Cookie Consent](https://github.com/spatie/laravel-cookie-consent)
 - [Statikbe Laravel Cookie Consent](https://github.com/statikbe/laravel-cookie-consent)
 - `Modules/Gdpr/docs/cookie-consent.md`
+<<<<<<< .merge_file_lqRrvZ
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_EsJtnh

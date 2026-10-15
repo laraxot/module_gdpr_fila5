@@ -73,6 +73,7 @@ class SaveGdprConsentsAction
                 'metadata' => [
                     'document_version' => app(SafeStringCastAction::class)->execute($treatment->getAttribute('documentVersion')),
                     'document_url' => $documentUrl,
+                    'document_url' => $treatment->getAttribute('documentUrl'),
                     'locale' => app()->getLocale(),
                 ],
             ]);

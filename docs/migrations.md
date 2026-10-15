@@ -274,8 +274,11 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ## Collegamenti tra versioni di migrations.md
 * [migrations.md](../../Notify/docs/migrations.md)
 * [migrations.md](../../Activity/docs/database/migrations.md)
+<<<<<<< .merge_file_a78QCq
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_PCzrXP

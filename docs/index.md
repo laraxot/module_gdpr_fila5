@@ -190,8 +190,11 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - `.gitignore` — regole di ignore locali a `docs/`
 - `root-code-workspace-files/_gdpr.code-workspace` — file di workspace VS Code
 - `screenshots/*.png`, cartelle `raw/*/.gitkeep`, `schema/.gitkeep` — placeholder/asset non testuali
+<<<<<<< .merge_file_AEeWbP
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_qfpySZ

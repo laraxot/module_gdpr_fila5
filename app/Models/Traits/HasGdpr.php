@@ -92,6 +92,10 @@ trait HasGdpr
      * Give consent for a specific type.
      *
      * @param  array<string, mixed>  $metadata
+<<<<<<< .merge_file_KsEET7
+=======
+     * @param  array<string, mixed>  $metadata
+>>>>>>> .merge_file_BCThNG
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {

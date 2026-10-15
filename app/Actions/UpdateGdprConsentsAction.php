@@ -19,6 +19,10 @@ class UpdateGdprConsentsAction
 
     /**
      * @param  array<string, bool>  $consents
+<<<<<<< .merge_file_srejWl
+=======
+     * @param  array<string, bool>  $consents
+>>>>>>> .merge_file_nzva4m
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {

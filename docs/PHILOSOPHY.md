@@ -818,8 +818,11 @@ That is the philosophy.
 **PHPStan Level**: 10  
 **Last Updated**: 2026-09-06  
 **Maintained By**: FixCity GDPR Team
+<<<<<<< .merge_file_DTQrer
 
 --- BMAD + Second Brain ---
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_Jtf3Ox

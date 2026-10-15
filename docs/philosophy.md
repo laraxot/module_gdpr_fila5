@@ -68,6 +68,7 @@ Fire analytics/tracking only if granted
 ❌ Ignoring withdrawal (user unchecks, still track)
 
 ---
+<<<<<<< .merge_file_jzl7sI
 
 ## Compliance Checklist
 
@@ -108,3 +109,40 @@ Fire analytics/tracking only if granted
 - Scopo: documentazione tecnica del modulo.
 - Utilità: riferimento sviluppatori/audit.
 - Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+
+## Compliance Checklist
+
+✓ GDPR Art. 7 (consent proof)
+✓ GDPR Art. 17 (right to deletion)
+✓ GDPR Art. 20 (data portability)
+✓ CCPA (opt-out default in CA)
+❌ Not yet: erasure timeline (30-day queue)
+
+---
+
+## Roadmap
+
+- Erasure jobs (User deletion scheduled, not instant)
+- Consent analytics dashboard
+- Auto-banner language detection
+
+---
+
+```
+┌──────────────────────────┐
+│ Gdpr (Privacy)           │
+├──────────────────────────┤
+│ Models: 7                │
+│ Migrations: 4            │
+│ Status: Stable           │
+│ Compliance: GDPR, CCPA   │
+└──────────────────────────┘
+```
+
+---
+
+- **Generated**: 2026-09-06
+- **Last Verified**: 2026-09-06 (module closure merge + quality baseline established)
+
+>>>>>>> .merge_file_cksIKC

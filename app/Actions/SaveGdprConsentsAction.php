@@ -55,6 +55,9 @@ class SaveGdprConsentsAction
             }
             $treatment = Treatment::query()->firstOrCreate(['name' => $treatmentName], $defaults);
 
+            $documentUrl = $treatment->getAttribute('documentUrl');
+            $documentUrl = is_string($documentUrl) ? $documentUrl : null;
+
             Consent::query()->create([
                 'user_id' => $user->id,
                 'user_type' => $user::class,
@@ -69,7 +72,7 @@ class SaveGdprConsentsAction
                 // quale testo ha accettato: senza versione non si dimostra cosa e' stato accettato
                 'metadata' => [
                     'document_version' => app(SafeStringCastAction::class)->execute($treatment->getAttribute('documentVersion')),
-                    'document_url' => $treatment->getAttribute('documentUrl'),
+                    'document_url' => $documentUrl,
                     'locale' => app()->getLocale(),
                 ],
             ]);

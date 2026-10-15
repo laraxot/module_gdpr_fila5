@@ -17,3 +17,8 @@ Specialized requirement for Gdpr within the Public Administration sector.
 
 ## 💎 Unique Value Proposition
 Agnostic, modular, and type-safe implementation of Gdpr logic.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

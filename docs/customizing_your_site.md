@@ -94,3 +94,8 @@ class Foo extends bar
 * [customizing-your-site.md](customizing-your-site.md)
 * [customizing-your-site.md](customizing-your-site.md)
 
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -66,3 +66,8 @@ To maintain PHPStan compliance:
 - [Privacy Policy Management](privacy-policy-management.md)
 - [Data Export Patterns](data-export-patterns.md)
 - [Consent Management](consent-management.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -115,3 +115,11 @@ composer test
 ## Documentation
 
 For more details, refer to the [official documentation](https://github.com/maize-tech/laravel-legal-consent).
+<<<<<<< .merge_file_4Q4zcT
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_goIKT7

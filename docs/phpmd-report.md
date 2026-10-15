@@ -13,3 +13,11 @@ status: draft
 # Phpmd Report
 
 ./laravel/Modules/Gdpr/tests/TestCase.php:37  UnusedFormalParameter  Avoid unused parameters such as '$app'.
+<<<<<<< .merge_file_1co7W9
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_llqSKR

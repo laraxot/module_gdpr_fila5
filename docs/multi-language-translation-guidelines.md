@@ -407,3 +407,7 @@ php artisan trans:missing
 - Supported Languages: 6 (it, en, de, fr, es, ru)
 - Translation Philosophy: No hardcoded strings, consistent structure
 - Quality Assurance: Automated checks and manual review
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

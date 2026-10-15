@@ -13,3 +13,8 @@ status: draft
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

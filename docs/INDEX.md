@@ -34,7 +34,7 @@ marcati `superseded` o `stale`, non cancellati (regola BMAD).
 
 - `cookie-consent.md` → `cookie-consent.md`
 - `cookie_consent.md` → `cookie-consent.md`
-- `terms-and-conditions.md`, `terms-and-conditions-1.md`, `terms-conditions-collegamenti-versioni.md` → `terms-conditions.md`
+- `terms-and-conditions.md`, `terms-and-conditions-documentation-themes.md`, `terms-conditions-collegamenti-versioni.md` → `terms-conditions.md`
 - `consent-packages-research-gdpr-legal.md` → `consent-packages-research.md`
 - `cookiebar-integration.md` → `cookie-banner.md` (gia' segnata stale)
 

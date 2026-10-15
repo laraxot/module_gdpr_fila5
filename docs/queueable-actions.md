@@ -64,3 +64,11 @@ cd laravel
 php -d memory_limit=2048M vendor/bin/phpstan analyse Modules/Gdpr --no-progress
 vendor/bin/pint Modules/Gdpr/app/Actions
 ```
+<<<<<<< .merge_file_ST50jG
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_u8jh85

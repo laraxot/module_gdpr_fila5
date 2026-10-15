@@ -63,3 +63,11 @@ Gdpr/
 - [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+<<<<<<< .merge_file_ZrEpfB
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_b5RXaM

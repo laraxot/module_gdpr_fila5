@@ -35,6 +35,7 @@ Ingresso della documentazione del modulo. Ogni affermazione qui sotto e' stata c
 | Test | 256 chiamate `it()`/`test()` in 37 file; Pest ne ha eseguiti 254 il 2026-10-14 | `tests/` |
 
 Tenant Fixcity: `laravel/config/local/fixcity/gdpr.php` e `Modules/Fixcity/config/gdpr.php` impostano `cookie_banner_on => false`, quindi il banner cookie e' spento.
+<<<<<<< .merge_file_vTZJt0
 
 ## Cosa NON fornisce (limiti verificati)
 
@@ -62,6 +63,35 @@ Esito del secondo comando il 2026-10-14: 68 passati, 186 falliti; i Feature fall
 
 ## Mappa della documentazione
 
+=======
+
+## Cosa NON fornisce (limiti verificati)
+
+1. Nessuna rotta applicativa e nessuna pagina pubblica: `routes/web.php` e `routes/api.php` sono vuoti e `php artisan route:list --json` (461 rotte totali) mostra 24 rotte del modulo, tutte del pannello Filament `gdpr/admin`. L'informativa privacy (art. 13) non e' servita da questo modulo: il testo del tenant e' letto da `Modules\Fixcity\Actions\GetPublishedPrivacyPolicyAction` e valutato da `AssessPrivacyPolicyAction` (DCP-130). La story `stories/12.1.gdpr-owns-legal-pages.story.md` prevede che Gdpr possieda Privacy e Termini, ma dice di non implementarlo.
+2. I consensi di registrazione possono non essere salvati. `SaveGdprConsentsAction` e `SaveRegistrationConsentsAction` creano un `Consent` solo se esiste la riga `Treatment` con nome `privacy_policy`, `terms_conditions` o `marketing_consent`. Quelle righe nascono solo da `database/seeders/TreatmentsTableSeeder.php`, che `GdprDatabaseSeeder` non richiama. Misura del 2026-10-14 sul DB di sviluppo (tinker, sola lettura): `Treatment` 0, `Consent` 0. Tracciato in DCP-135.
+3. Nessun export dei dati dell'utente, nessuna procedura per i diritti dell'interessato, nessun job di conservazione o anonimizzazione, nessun registro dei trattamenti utilizzabile (la tabella e' vuota). `app/Actions/` non contiene nulla di simile. `spatie/laravel-personal-data-export` e `spipu/html2pdf` sono nel `vendor/` del progetto ma nessun file di `app/` li usa. Vedi DCP-140, DCP-141, DCP-142.
+4. `config/config.php` dichiara chiavi (`retention`, `processing_register`, `data_subject_rights`, `security_measures`, `dpo`) che nessun codice legge: `GdprData` legge solo `cookie_banner_on`. Contiene inoltre dati di un altro progetto (`insurance_consents` e `privacy_documents` con file di compagnie assicurative: `Informativa_Privacy_Generali.pdf`, `Informativa_Privacy_Oris_Broker.pdf`): non vanno usati per Fixcity.
+5. `config/consent.php` usa nomi di trattamento (`gdpr.privacy`, `gdpr.marketing`) diversi da quelli letti dalle Actions; nessun file di `app/` legge `consent.treatments`.
+6. `app/Filament/Widgets/Auth/RegisterWidget.php` ha nel docblock marcatori di merge irrisolti (`<<<<<<< HEAD`, `>>>>>>> 12e4ae8`): non e' un errore funzionale, ma il file va ripulito (DCP-135).
+
+## Quick start
+
+Sempre da `laravel/`.
+
+```bash
+# stato dei dati di consenso (sola lettura, verificato il 2026-10-14)
+php artisan tinker --execute='echo \Modules\Gdpr\Models\Treatment::query()->count()." ".\Modules\Gdpr\Models\Consent::query()->count();'
+
+# test su database usa-e-getta (mai sul DB di sviluppo); la variabile vuota serve perche' lo script
+# fallisce con `unbound variable` se .env non definisce DB_DATABASE_LIMESURVEY
+DB_DATABASE_LIMESURVEY= bash ../bashscripts/tools/pest-scratch-db.sh Modules/Gdpr/tests
+```
+
+Esito del secondo comando il 2026-10-14: 68 passati, 186 falliti; i Feature falliscono con `A facade root has not been set` (app Laravel non avviata nel test), quindi la suite non e' oggi una prova di regressione. Causa non indagata. Il seeder dei trattamenti non e' stato eseguito: scrive sul DB di sviluppo e la decisione e' in DCP-135. Registro della verifica: [wiki/log.md](./wiki/log.md).
+
+## Mappa della documentazione
+
+>>>>>>> .merge_file_sDyKKM
 L'indice operativo e' [00-INDEX.md](./00-INDEX.md); l'indice per argomento e' [index.md](./index.md). Le decisioni sono in [decision-log.md](./decision-log.md), il lavoro in corso nelle story di [stories/](./stories/), la memoria locale in [wiki/](./wiki/).
 
 ## AI Workflows
@@ -73,3 +103,11 @@ L'indice operativo e' [00-INDEX.md](./00-INDEX.md); l'indice per argomento e' [i
 - [QMD Setup](./QMD-SETUP.md): Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md): Metriche e best practice
 - [Project Structure](./PROJECT-STRUCTURE.md): Directory layout
+<<<<<<< .merge_file_vTZJt0
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_sDyKKM

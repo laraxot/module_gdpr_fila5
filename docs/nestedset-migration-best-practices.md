@@ -428,3 +428,8 @@ public function getComplianceReport()
 - [Documentazione principale](/docs/migration/nestedset-best-practices.md)
 - [GDPR Module Architecture](/docs/architecture/gdpr-module.md)
 - [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

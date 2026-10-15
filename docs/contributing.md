@@ -35,3 +35,11 @@ composer dev
 - [ ] Documentation updated
 
 See [architecture](./architecture.md) for design decisions and [testing](./testing.md) for test patterns.
+<<<<<<< .merge_file_r56q0t
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
+=======
+>>>>>>> .merge_file_7SKlKJ

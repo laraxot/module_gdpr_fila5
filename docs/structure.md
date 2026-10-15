@@ -371,3 +371,8 @@ tests/Unit
 * [structure.md](laravel/modules/cms/docs/structure.md)
 * [structure.md](laravel/modules/cms/docs/themes/structure.md)
 * [structure.md](laravel/modules/cms/docs/components/structure.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

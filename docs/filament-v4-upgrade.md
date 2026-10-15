@@ -94,3 +94,8 @@ If issues arise with privacy-critical functions:
 
 ---
 **Priority**: HIGH - Privacy compliance cannot be compromised during upgrade
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

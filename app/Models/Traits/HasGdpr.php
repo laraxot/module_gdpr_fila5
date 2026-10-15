@@ -98,14 +98,14 @@ trait HasGdpr
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
 
-        /** @var Consent $consent */
-        $consent = $this->consents()->create([
+        $consent = new Consent([
             'type' => $type,
             'metadata' => $metadata,
             'ip_address' => request()->ip(),
             'user_agent' => request()->userAgent(),
             'accepted_at' => now(),
         ]);
+        $this->consents()->save($consent);
 
         $this->clearConsentCache($type);
 
@@ -140,16 +140,18 @@ trait HasGdpr
      *
      * @return array<string>
      */
-    /** @return array<string> */
     public function getMissingRequiredConsents(): array
     {
-        $givenConsents = $this->activeConsents()->pluck('type')->toArray();
+        $plucked = $this->activeConsents()->pluck('type')->all();
 
-        /** @var array<string> $consentTypes */
         $consentTypes = ConsentType::getRequiredConsentTypes();
 
-        /** @var array<string> $given */
-        $given = $givenConsents;
+        $given = [];
+        foreach ($plucked as $value) {
+            if (is_string($value)) {
+                $given[] = $value;
+            }
+        }
 
         return array_diff($consentTypes, $given);
     }

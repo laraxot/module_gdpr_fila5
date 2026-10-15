@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 ?>
-<x-layouts.marketing :title="__('account.delete.title')">
+<x-layouts.app :title="__('account.delete.title')">
     <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md">
             <div class="bg-white dark:bg-gray-900 shadow-xl rounded-lg p-8">
@@ -60,4 +60,4 @@ declare(strict_types=1);
             </div>
         </div>
     </div>
-</x-layouts.marketing>
+</x-layouts.app>

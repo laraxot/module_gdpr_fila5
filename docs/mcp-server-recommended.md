@@ -1,3 +1,15 @@
+---
+title: "mcp server recommended"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp server recommended"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Server Consigliati per il Modulo Gdpr
 
 ## Scopo del Modulo
@@ -19,3 +31,8 @@ Gestione privacy, consensi e compliance GDPR.
 
 ## Note
 - Adatta la configurazione a seconda dei requisiti di compliance e audit.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

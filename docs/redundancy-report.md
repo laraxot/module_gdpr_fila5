@@ -1,3 +1,15 @@
+---
+title: "redundancy report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "redundancy report"
+issues: []
+discussions: []
+status: draft
+---
+
 - Inventario [ridondanze cross-modulo](../docs/redundancy-report.md)
 - Concetti [ridondanze cross-cutting](../Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md)
 
@@ -60,3 +72,8 @@ La duplicazione Cluster vs Standalone genera circa **14 file PHP duplicati** sol
 | 🔴 | ConsentResource duplicato (Cluster vs Standalone) | ~7 file |
 | 🔴 | ProfileResource duplicato (Cluster vs Standalone + cross-modulo) | ~7+14 file |
 | 🟢 | EventServiceProvider conforme | 0 |
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

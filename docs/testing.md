@@ -1,3 +1,15 @@
+---
+title: "testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing"
+issues: []
+discussions: []
+status: draft
+---
+
 # Testing Documentation
 
 ## Overview
@@ -263,7 +275,7 @@ protected function createApplication()
 
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../docs/troubleshooting.md)
+- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
 
 ## Testing Examples
 
@@ -368,5 +380,8 @@ Following these guidelines will ensure your GDPR module tests are:
 Remember: Good tests are the foundation of reliable software development.
 
 ---
-
 *
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -1,3 +1,15 @@
+---
+title: "register page seo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register page seo"
+issues: []
+discussions: []
+status: draft
+---
+
 # Register Page SEO
 
 ## Overview
@@ -430,3 +442,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 - [Open Graph Protocol](https://ogp.me)
 - [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards)
 - [Core Web Vitals](https://web.dev/vitals/)
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

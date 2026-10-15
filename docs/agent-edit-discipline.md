@@ -1,7 +1,13 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "agent edit discipline"
+issues: []
+discussions: []
 title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-19
+status: draft
 ---
 
 # Disciplina edit e qualità (puntatore)
@@ -17,3 +23,8 @@ Stub **DRY**: policy nella wiki di progetto; discussione e ragionamenti in GitHu
 ## Perché questo file
 
 Chi lavora solo nel subtree del modulo/tema trova subito la policy globale senza copiare contenuti lunghi.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

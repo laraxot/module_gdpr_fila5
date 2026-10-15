@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\EditConsent;
@@ -16,17 +14,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
-
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'treatment_id' => Select::make('treatment_id')
-                ->relationship('treatment', 'name')
-                ->required(),
-            'subject_id' => TextInput::make('subject_id')->required()->maxLength(191),
-        ];
-    }
 
     /**
      * @return array<int|string, TextColumn>

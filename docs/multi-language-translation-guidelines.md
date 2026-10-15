@@ -1,3 +1,15 @@
+---
+title: "multi language translation guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multi language translation guidelines"
+issues: []
+discussions: []
+status: draft
+---
+
 # Multi-Language Translation Guidelines for Laravel Pizza
 
 ## Overview
@@ -395,3 +407,7 @@ php artisan trans:missing
 - Supported Languages: 6 (it, en, de, fr, es, ru)
 - Translation Philosophy: No hardcoded strings, consistent structure
 - Quality Assurance: Automated checks and manual review
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

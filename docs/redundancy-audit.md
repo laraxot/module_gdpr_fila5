@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "redundancy audit"
+issues: []
+discussions: []
 title: "Gdpr redundancy audit 2026-05-21"
 type: audit
 module: Gdpr
@@ -6,6 +10,7 @@ tags: [redundancy, duplicate-code, docs]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
+status: draft
 ---
 
 # Gdpr redundancy audit 2026-05-21
@@ -30,3 +35,8 @@ Suggested cleanup order:
 Evidence commands:
 - Per-owner static scan for case-only paths, byte-identical files, and duplicate FQCN.
 - GitHub tracker: issue #89.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -1,3 +1,15 @@
+---
+title: "conflitti merge risolti"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflitti merge risolti"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti di Merge in Modulo GDPR
 
 ## Problema
@@ -99,3 +111,8 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 1. L'assenza di marcatori di conflitto nei file corretti
 2. L'istanziazione corretta delle classi
 3. L'accesso alle proprietà delle classi
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

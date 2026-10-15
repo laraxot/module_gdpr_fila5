@@ -3,7 +3,7 @@ title: "Registration and Account Lifecycle Boundary"
 type: concept
 module: Gdpr
 sources:
-  - "../../../../../../bmad-output/registration-compliance-audit-2026-10-14.md"
+  - "../../../../../../bmad-output/registration-compliance-audit.md"
   - "../../../../../../bmad-output/stories/5.3.registration-consent-evidence.story.md"
   - "../../../../../../bmad-output/stories/5.5.subject-rights-account-lifecycle.story.md"
 confidence: high
@@ -51,5 +51,5 @@ before the release gate can pass.
 
 - [User authentication lifecycle](../../../../User/docs/wiki/concepts/auth-registration-verification-lifecycle.md)
 - [Sixteen legal-consent UI boundary](../../../../../Themes/Sixteen/docs/wiki/concepts/legal-consent-ui-boundary.md)
-- [BMAD registration audit](../../../../../../bmad-output/registration-compliance-audit-2026-10-14.md)
+- [BMAD registration audit](../../../../../../bmad-output/registration-compliance-audit.md)
 

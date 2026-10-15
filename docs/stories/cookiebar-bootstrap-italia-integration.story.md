@@ -37,4 +37,4 @@ description: "Integrate the Bootstrap Italia cookiebar component into the Gdpr m
 - Second Brain: kp-xxx
 
 ## Nota di verifica del 2026-10-14 (aggiunta, righe sopra non toccate)
-Questa story e' stata superata da [DCP-153](./2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md). Nessuno dei criteri di accettazione era spuntato; l'integrazione e' stata fatta nel modulo Gdpr con `statikbe/laravel-cookie-consent` (middleware e chiave del cookie) e una vista propria, senza Bootstrap, con il contratto di markup di Bootstrap Italia. Lo `status` del frontmatter non e' stato modificato (la story e' di un'altra sessione): vale `superseded`.
+Questa story e' stata superata da [DCP-153](./dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md). Nessuno dei criteri di accettazione era spuntato; l'integrazione e' stata fatta nel modulo Gdpr con `statikbe/laravel-cookie-consent` (middleware e chiave del cookie) e una vista propria, senza Bootstrap, con il contratto di markup di Bootstrap Italia. Lo `status` del frontmatter non e' stato modificato (la story e' di un'altra sessione): vale `superseded`.

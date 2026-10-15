@@ -76,7 +76,7 @@ Documenti generati da modello, senza contenuto specifico verificato: [prd.md](./
 ## Collegamenti fuori dal modulo
 
 - Matrice di conformita' normativa del progetto: [Fixcity compliance](../../Fixcity/docs/compliance/01-matrice-conformita-normativa.md).
-- Informativa privacy del tenant: [DCP-130](../../Fixcity/docs/stories/2026-10-13-dcp-130-informativa-privacy-art13-e-pagina-servita.story.md).
+- Informativa privacy del tenant: [DCP-130](../../Fixcity/docs/stories/dcp-130-informativa-privacy-art13-e-pagina-servita.story.md).
 - [User docs](../../User/docs/README.md): soggetti dei consensi e widget di registrazione.
 - [Xot docs](../../Xot/docs/README.md): classi base e provider.
 - Dipendenze: [dependency-intelligence.md](./dependency-intelligence.md).

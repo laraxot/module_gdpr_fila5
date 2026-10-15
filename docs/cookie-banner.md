@@ -6,8 +6,8 @@ updated: 2026-10-14
 tags: [gdpr, cookie, banner, garante, statikbe, multilingua, accessibilita]
 qmd: "banner cookie cookiebar gdpr statikbe laravel-cookie-consent inventario cookie policy garante linee guida 2021 consenso InjectCookieBanner GetCookieInventoryAction gdpr.config.cookie.extra __cookie_consent"
 related:
-  - ./stories/2026-10-14-dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md
-  - ./stories/2026-10-13-dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md
+  - ./stories/dcp-153-cookiebar-integrata-nel-modulo-gdpr.story.md
+  - ./stories/dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md
 ---
 
 # Banner dei cookie del modulo Gdpr

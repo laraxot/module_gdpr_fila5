@@ -11,7 +11,7 @@ created: 2026-10-14
 updated: 2026-10-14
 qmd: "dcp-153 cookiebar bootstrap italia statikbe spatie laravel-cookie-consent gdpr banner cookie policy inventario InjectCookieBanner consenso garante linee guida 2021 multilingua it en de es axe playwright"
 related: [dcp-112, dcp-136, dcp-161, cookiebar-bootstrap-italia-integration]
-supersedes_claim_of: ../../../../Themes/Sixteen/docs/bmad/stories/2026-10-14-dcp-cookiebar-gdpr-compliance.story.md
+supersedes_claim_of: ../../../../Themes/Sixteen/docs/bmad/stories/dcp-cookiebar-gdpr-compliance.story.md
 ---
 
 # DCP-153: cookiebar integrata nel modulo Gdpr

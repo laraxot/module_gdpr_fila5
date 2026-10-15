@@ -1,4 +1,7 @@
 ---
+qmd: "agent confidence protocol"
+issues: []
+discussions: []
 title: "Massima confidenza agente"
 type: reference
 status: approved
@@ -14,3 +17,8 @@ related:
 Stub DRY. Regola canonica: [../../../../docs/wiki/rules/agent-confidence-protocol.md](../../../../docs/wiki/rules/agent-confidence-protocol.md).
 
 Checklist locale: issue GitHub, wiki owner, file letti a chunk, gate eseguiti, log aggiornato, limiti dichiarati.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

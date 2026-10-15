@@ -1,3 +1,15 @@
+---
+title: "product launch plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product launch plan"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gdpr - Product Launch Plan
 
 > Piano di lancio. Modulo.
@@ -54,3 +66,8 @@ Rilasciare **Gdpr** in modo controllato, misurabile e coerente con il suo ruolo:
 - [PRD](prd.md)
 - [User Research](user-research.md)
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

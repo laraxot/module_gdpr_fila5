@@ -1,4 +1,7 @@
 ---
+qmd: "phpstan analysis"
+issues: []
+discussions: []
 title: analisi phpstan modulo gdpr
 type: memory
 tags: [phpstan, gdpr, fixes]
@@ -31,3 +34,8 @@ related:
 ## Storico (16 errori al primo scan)
 
 Dettaglio pre-fix: issue #9 e inventario wiki. Listener attivo: `app/Listeners/SaveGdprConsents.php`.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -1,3 +1,15 @@
+---
+title: "laravel 13 upgrade"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel 13 upgrade"
+issues: []
+discussions: []
+status: draft
+---
+
 # Upgrade Laravel 13 - Gdpr 🐄✨
 
 ## 🎯 Visione Architetturale
@@ -24,3 +36,8 @@ L'aggiornamento richiede l'esecuzione di `composer go` dalla root per consolidar
 
 ---
 **Status**: Purificato e Pronto per il Futuro.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

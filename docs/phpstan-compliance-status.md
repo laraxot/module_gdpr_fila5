@@ -1,3 +1,15 @@
+---
+title: "phpstan compliance status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan compliance status"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Compliance Status
 
 
@@ -54,3 +66,8 @@ To maintain PHPStan compliance:
 - [Privacy Policy Management](privacy-policy-management.md)
 - [Data Export Patterns](data-export-patterns.md)
 - [Consent Management](consent-management.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

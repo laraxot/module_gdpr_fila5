@@ -1,3 +1,15 @@
+---
+title: "PRODUCT ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PRODUCT ROADMAP"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gdpr Module - Product Roadmap
 
 **Module:** Gdpr  
@@ -7,7 +19,6 @@
 **Status:** In Development
 
 ---
-
 ## Vision Statement
 
 To ensure **complete GDPR compliance** across the platform, protecting user privacy rights while maintaining operational efficiency and building user trust through transparent data practices.
@@ -102,3 +113,8 @@ To ensure **complete GDPR compliance** across the platform, protecting user priv
 ---
 
 *Last Updated: March 12, 2026*
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

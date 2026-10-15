@@ -1,3 +1,15 @@
+---
+title: "register page layout system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register page layout system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Register Page Layout System
 
 ## Overview
@@ -254,3 +266,7 @@ button, input[type="submit"] {
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 - [Mobile Web Best Practices](https://web.dev/mobile/)
 - [Lighthouse Performance](https://developer.chrome.com/docs/lighthouse/)
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

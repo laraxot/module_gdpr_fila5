@@ -1,3 +1,15 @@
+---
+title: "sprint planning meeting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sprint planning meeting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gdpr - Sprint Planning Meeting
 
 > Documento operativo per sprint planning. Modulo.
@@ -47,3 +59,8 @@ Spostare **Gdpr** in avanti sui gap P0/P1 piu' vicini al valore, evitando lavoro
 - [Product Strategy](product-strategy.md)
 - [Product Launch Plan](product-launch-plan.md)
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

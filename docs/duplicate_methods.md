@@ -1,3 +1,15 @@
+---
+title: "duplicate methods"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods"
+issues: []
+discussions: []
+status: draft
+---
+
 # Metodi duplicati — Gdpr
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.
@@ -40,3 +52,8 @@ Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambi
 - Per i metodi di tipo accessor/mutator, la duplicazione è spesso legata a pattern Eloquent ricorrenti.
 
 > Documento generato il 2026-06-15 da Claude Code.
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

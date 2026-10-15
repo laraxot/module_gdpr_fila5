@@ -1,3 +1,15 @@
+---
+title: "best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # GDPR Best Practices
 
 ## Table of Contents
@@ -106,3 +118,8 @@ public function test_user_can_withdraw_consent()
 - Regular policy reviews
 - Stay updated with regulations
 - Solicit user feedback
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -1,3 +1,15 @@
+---
+title: "task aumentare copertura test"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task aumentare copertura test"
+issues: []
+discussions: []
+status: draft
+---
+
 # Task: Aumentare Copertura Test - Gdpr
 
 **Modulo**: Gdpr
@@ -5,7 +17,6 @@
 **Completamento**: 20%
 
 ---
-
 ## Test da Implementare
 
 - [ ] Cookie consent: salvataggio, revoca, expiry
@@ -17,3 +28,8 @@
 
 - [ ] 8+ nuovi test
 - [ ] Copertura al 50%
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

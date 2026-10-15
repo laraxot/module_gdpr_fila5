@@ -1,3 +1,15 @@
+---
+title: "product requirements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product requirements"
+issues: []
+discussions: []
+status: draft
+---
+
 # Product Requirements Document (PRD)
 
 ## Metadata
@@ -12,7 +24,6 @@
 | **Repository** | laraxot/module_gdpr_fila5 |
 
 ---
-
 ## 1. Panoramica del Prodotto
 
 ### Descrizione Breve
@@ -168,3 +179,8 @@ Xot, User, Activity, Tenant
 | Data Subject | Persona fisica |
 | Controller | Titolare del trattamento |
 | Processor | Responsabile del trattamento |
+
+--- BMAD + Second Brain ---
+- Scopo: documentazione tecnica del modulo.
+- Utilità: riferimento sviluppatori/audit.
+- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

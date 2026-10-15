@@ -106,7 +106,8 @@ class GdprConsentForm extends XotBaseSchemaWidget
     }
 
     /**
-     *      */
+     * @param  array<string, mixed>  $formData
+     */
     protected function logRegistrationAttempt(array $formData): void
     {
         $email = app(SafeStringCastAction::class)->execute($formData['email']);

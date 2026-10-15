@@ -47,6 +47,7 @@ marcati `superseded` o `stale`, non cancellati (regola BMAD).
 - [2026-10-15-final-override-removal-gdpr-resources.story.md](./stories/final-override-removal-gdpr-resources.story.md)
 - [2026-10-15-account-deletion-flash-translation.story.md](./stories/account-deletion-flash-translation.story.md)
 - [dcp-178-registrazione-e-disiscrizione-a-norma.story.md](./stories/dcp-178-registrazione-e-disiscrizione-a-norma.story.md)
+- [dcp-204-richieste-dell-interessato-cancellazione-dell-account-e-consensi.story.md](./stories/dcp-204-richieste-dell-interessato-cancellazione-dell-account-e-consensi.story.md)
 
 ## Non toccare
 

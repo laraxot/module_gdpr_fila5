@@ -13,8 +13,3 @@ status: draft
 https://coderflex.com/blog/mastering-filament-turnstile-enhancing-web-security-with-cloudflare-integration
 https://github.com/coderflexx/filament-turnstile
 
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

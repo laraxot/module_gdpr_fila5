@@ -33,8 +33,3 @@ app(SaveGdprConsentsAction::class)->execute($user, $consents);
 #### Parameters
 - `$user`: The `User` model instance.
 - `$consents`: An associative array of consent flags (e.g., `['privacy_accepted' => true, ...]`).
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -595,7 +595,3 @@ test('user registration saves gdpr consents', function () {
 
 **Responsible**: GDPR Compliance Team  
 **Approved by**: Legal Department
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -13,3 +13,5 @@ status: draft
 # concepts Index — Gdpr
 
 Concetti specifici del modulo Gdpr. Carica on-demand via `qmd search` o consulta il [trigger map root](/docs/wiki/rules/00-TRIGGER_MAP.md).
+
+- [Sostenibilità privacy](../../project-sustainability-privacy.md) — CTA/contributi senza ad-tech (BMAD)

@@ -260,8 +260,3 @@ $consent->delete();
 ---
 
 *"Privacy by design, security by default."*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

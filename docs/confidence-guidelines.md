@@ -19,11 +19,3 @@ status: draft
 5. **Monitoraggio in produzione**: New Relic / Sentry per errori e performance.
 6. **Documentazione**: mantieni aggiornati doc e changelog.
 7. **Rollback rapido**: feature flags e versioni per tornare indietro.
-<<<<<<< .merge_file_Q9QAK0
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_0zwzxL

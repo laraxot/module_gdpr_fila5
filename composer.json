@@ -36,6 +36,11 @@
             "Modules\\Gdpr\\Database\\Seeders\\": "database/seeders/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Gdpr\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "statikbe/laravel-cookie-consent": "^1.0"
     },

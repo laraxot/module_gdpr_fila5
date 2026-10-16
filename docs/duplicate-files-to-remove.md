@@ -57,8 +57,3 @@ bashscripts/fix/cleanup-case-duplicates.sh
 **Riferimenti**:
 - [Xot File Naming Rules](../../xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../xot/docs/bashscripts-location-policy.md)
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

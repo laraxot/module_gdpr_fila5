@@ -297,8 +297,3 @@ Il modulo GDPR gestisce:
 **Status**: ✅ COMPLETATO
 **PHPStan Level**: 9
 **Maintenance**: Nessuna azione richiesta
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

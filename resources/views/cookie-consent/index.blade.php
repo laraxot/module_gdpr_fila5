@@ -28,6 +28,8 @@
     .gdpr-cookiebar, .gdpr-cookiedialog { font-family: inherit; font-size: 1rem; line-height: 1.5; color: #1a1a1a; }
     .gdpr-cookiebar { position: fixed; z-index: 2147483000; left: 0; right: 0; bottom: 0; background: #fff; border-top: 3px solid var(--bs-primary, #0066cc); box-shadow: 0 -2px 12px rgba(0, 0, 0, .15); padding: 1rem; }
     .gdpr-cookiebar[hidden] { display: none; }
+    /* Il testo della pagina non deve restare sotto la barra fissa (bug FO blog dettaglio). */
+    body:has(.gdpr-cookiebar:not([hidden])) { padding-bottom: 11rem; }
     .gdpr-cookiebar__inner { position: relative; max-width: 72rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding-right: 2rem; }
     .gdpr-cookiebar__text { flex: 1 1 24rem; min-width: 0; }
     .gdpr-cookiebar__title { margin: 0 0 .25rem; font-weight: 700; }

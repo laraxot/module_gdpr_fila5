@@ -380,12 +380,4 @@ Following these guidelines will ensure your GDPR module tests are:
 Remember: Good tests are the foundation of reliable software development.
 
 ---
-<<<<<<< .merge_file_qRGTue
 *
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
-*
->>>>>>> .merge_file_wleiBO

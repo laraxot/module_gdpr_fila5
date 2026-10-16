@@ -13,8 +13,3 @@ status: draft
 https://github.com/maize-tech/laravel-legal-consent
 https://github.com/foothing/laravel-gdpr-consent
 
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

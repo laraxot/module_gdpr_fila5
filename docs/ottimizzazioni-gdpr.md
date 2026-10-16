@@ -254,8 +254,3 @@ touch implementation/compliance-template.md
 - [ ] Audit readiness: documentazione sufficient per audit
 
 Questa ottimizzazione trasforma la documentazione GDPR da **labirinto inutilizzabile di duplicati** a **guida pratica e actionable per compliance reale**, eliminando noise e focusing su implementation patterns utilizzabili.
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

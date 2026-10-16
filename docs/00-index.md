@@ -77,7 +77,3 @@ status: stale
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

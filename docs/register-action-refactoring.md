@@ -59,7 +59,3 @@ After implementation, ensure that:
 ## Next Steps
 
 The `RegisterWidget.php` within the `Gdpr` module has been fully refactored to utilize Queueable Actions. Further refactoring efforts will extend to other modules and themes as identified.
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

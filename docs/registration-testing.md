@@ -50,8 +50,3 @@ Upon execution, these tests provide a comprehensive check of the registration fe
 ## Location of Tests
 
 `laravel/Modules/Gdpr/tests/Feature/RegistrationTest.php`
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

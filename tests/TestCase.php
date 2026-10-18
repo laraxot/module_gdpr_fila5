@@ -5,86 +5,41 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Gdpr\Providers\GdprServiceProvider;
-use Modules\User\Models\User;
-use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Tests\XotBaseTestCase;
-use PHPUnit\Framework\Assert;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
- * Base test case for Gdpr module.
- *
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
- * prepareSharedSqliteForTesting() runs before transactions begin.
+ * Base test case for Gdpr module tests.
  */
-abstract class TestCase extends XotBaseTestCase
+abstract class TestCase extends BaseTestCase
 {
-    use DatabaseTransactions;
+    use CreatesApplication;
 
-    /** @var list<string> */
-    protected $connectionsToTransact = ['sqlite'];
-
+    /**
+     * Setup the test environment.
+     */
     protected function setUp(): void
     {
-        $this->prepareSharedSqliteForTesting();
-
         parent::setUp();
 
-        config(['auth.providers.users.model' => User::class]);
+        // Load Gdpr module specific configurations
+        $this->loadLaravelMigrations();
+
+        // Seed any required data for Gdpr tests
+        $this->artisan('module:seed', ['module' => 'Gdpr']);
     }
 
     /**
+     * Get package providers.
+     *
+     * @param  Application  $app
      * @return array<int, class-string>
      */
-    protected function getPackageProviders(Application $app): array
+    protected function getPackageProviders($app): array
     {
         return [
-            ...parent::getPackageProviders($app),
-            UserServiceProvider::class,
             GdprServiceProvider::class,
         ];
-    }
-
-    /**
-     * @param array<string, mixed> $data
-     */
-    public function assertDatabaseHasRow(string $table, array $data, ?string $connection = null): void
-    {
-        $this->assertDatabaseHas($table, $data, $connection);
-    }
-
-    /**
-     * @param array<string, mixed> $data
-     */
-    public function assertDatabaseMissingRow(string $table, array $data, ?string $connection = null): void
-    {
-        $query = DB::connection($connection)->table($table);
-
-        foreach ($data as $column => $value) {
-            $query->where((string) $column, $value);
-        }
-
-        Assert::assertFalse($query->exists());
-    }
-
-    /**
-     * @param class-string<\Throwable> $exceptionClass
-     */
-    public function expectApplicationException(string $exceptionClass, ?string $message = null): void
-    {
-        $this->expectException($exceptionClass);
-        if (null !== $message) {
-            $this->expectThrowableMessage($message);
-        }
-    }
-
-    protected static function uniqueTreatmentName(string $prefix = 'treatment'): string
-    {
-        return $prefix.'-'.uniqid('', true);
     }
 }

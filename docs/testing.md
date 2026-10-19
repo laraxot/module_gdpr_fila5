@@ -381,3 +381,8 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 *
+
+## consent business logic test (2026-10)
+
+`GdprConsentBusinessLogicTest` verifica il model reale `Consent` (non la classe fantasma `GdprConsent`) con asserzioni PHPUnit pure e factory tipizzate (`createOne`).
+

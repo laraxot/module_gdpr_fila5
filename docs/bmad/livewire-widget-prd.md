@@ -10,6 +10,7 @@ type: prd
 module: Gdpr
 related:
   - ./livewire-inventory.md
+status: draft
 ---
 
 # PRD Gdpr

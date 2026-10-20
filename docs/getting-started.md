@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "getting started"
 issues: []
 discussions: []
+status: draft
 ---
 
 # GDPR Module - Getting Started

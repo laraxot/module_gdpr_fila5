@@ -7,6 +7,7 @@ namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Tables;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Str;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
@@ -27,7 +28,7 @@ class TreatmentsTable extends XotBaseResourceTable
             'active' => IconColumn::make('active')->boolean()->sortable(),
             'required' => IconColumn::make('required')->boolean()->sortable(),
             'documentVersion' => TextColumn::make('documentVersion')->searchable()->sortable(),
-            'documentUrl' => TextColumn::make('documentUrl')->wrap()->url(fn (Treatment $record): ?string => $record->documentUrl)->openUrlInNewTab()->toggleable(isToggledHiddenByDefault: true),
+            'documentUrl' => TextColumn::make('documentUrl')->wrap()->url(fn (Treatment $record): ?string => filled($record->documentUrl) ? Str::sanitizeUrl((string) $record->documentUrl) : null)->openUrlInNewTab()->toggleable(isToggledHiddenByDefault: true),
             'weight' => TextColumn::make('weight')->numeric()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),

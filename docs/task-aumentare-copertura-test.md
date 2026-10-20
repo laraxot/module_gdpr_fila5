@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "task aumentare copertura test"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Task: Aumentare Copertura Test - Gdpr
@@ -16,15 +17,6 @@ discussions: []
 **Completamento**: 20%
 
 ---
-
-title: "task aumentare copertura test"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "task aumentare copertura test"
-issues: []
-discussions: []
 ## Test da Implementare
 
 - [ ] Cookie consent: salvataggio, revoca, expiry

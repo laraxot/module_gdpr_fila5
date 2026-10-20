@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "gdpr module overview"
 issues: []
 discussions: []
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Presenta come obiettivi raggiunti audit trail completo, diritti dell'interessato (accesso, cancellazione, portabilita'), automazione dell'informativa e gestione cookie; nel codice di Modules/Gdpr non esistono (app/Actions ha solo registrazione e validazione consensi, routes/web.php e api.php vuoti, verificato 2026-10-14). Il dato 'PHPStan 82 file, 0 errori' e' del 16 dicembre 2025 e non e' stato riverificato. Contenuto non riscritto, verificare prima di usarlo.
 
 # GDPR Module - Overview e Business Logic
 
@@ -15,15 +18,6 @@ discussions: []
 **Data Verifica**: 16 Dicembre 2025
 
 ---
-
-title: "gdpr module overview"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "gdpr module overview"
-issues: []
-discussions: []
 ## 🎯 Scopo Business
 
 Il modulo **GDPR** fornisce gestione completa della conformità al Regolamento Generale sulla Protezione dei Dati (GDPR/RGPD).

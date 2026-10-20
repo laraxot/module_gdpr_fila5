@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: activity-log
 canonical: ../../../../Themes/docs/shared-components/.gitkeep
+status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/.gitkeep

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "ottimizzazioni gdpr"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Ottimizzazioni Modulo Gdpr

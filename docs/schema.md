@@ -8,6 +8,7 @@ discussions: []
 title: "Module Schema"
 module: "Gdpr"
 created: "2026-04-15T08:28:42Z"
+status: draft
 ---
 
 # Gdpr Module Schema

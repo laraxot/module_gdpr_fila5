@@ -26,4 +26,4 @@ Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026
 - `lang/` — Translations
 
 See the module [README](../readme.md) for overview, [contributing](../contributing.md) for the
-development workflow, and [architecture/structure](./architecture/structure.md) for details.
+development workflow, and [architecture/structure](./structure.md) for details.

@@ -100,3 +100,20 @@ Il run completo e' sul solo modulo, non su `Modules`: `typeCoverage.*` si misura
 - `tests/Feature/conflictresolutiontest.php`: duplicato per maiuscole di `ConflictResolutionTest.php`, con asserzioni piu' deboli (`expect(new Treatment())->not->toBeNull()`). Non cancellato; decide l'utente.
 - Link rotti in `00-INDEX.md` verso `../../Fixcity/docs/...`: il modulo Fixcity non esiste in questo progetto (i moduli sono condivisi fra progetti). Non toccati.
 - Nessun `*Service` ne' componente Livewire toccato in questa lane.
+
+## Esito della lane gdpr-lang-ai
+
+| Momento | Errori sui 9 file del bucket |
+|---|---|
+| Baseline delle 09:00 | 240 |
+| Dopo i ripristini e i due `BaseUser` (09:41) | 0 |
+| Ri-misura dopo la ripresa (12:39, PHPStan mirato a batch da 8 file, `tests/` 43 file e `app/` 83 file) | 0 |
+
+Gli ultimi due controlli sono su file che altre sessioni della stessa ondata hanno toccato nel frattempo (`TestCase.php`,
+`PestHelpers.php`, probe cancellato): lo 0 vale per lo stato del disco a quell'ora, non per i blob scritti da questa lane.
+`tests/Pest.php`, `GdprBusinessLogicTest.php` e `GdprConsentTest.php` sono ancora byte per byte quelli di `cb7ded6`.
+Quanto al gate: nessun file di questa lane e' stato saltato; le due Action sono state scritte dopo `check.sh` e mtime oltre 120 s.
+Il `phpstan-baseline.neon` del modulo non e' stato usato ne' toccato; non e' stata creata nessuna configurazione alternativa.
+I due link di `00-INDEX.md` verso `../../Fixcity/docs/` restano rotti (il modulo Fixcity non e' in questo progetto).
+
+Misura ripetuta fra le 12:49 e le 12:59, dietro il gate `flock` condiviso, su `app/` e `tests/` dei tre moduli (Gdpr 83+43 file, AI 64+15, Lang 59+45): 0 errori in tutti i batch, nessun messaggio anomalo (PHPStan lanciato solo su file, mai `analyse Modules`, senza `-c` ne' `--level`).

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "register page seo"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Register Page SEO

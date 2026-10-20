@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "testcase sqlite to mysql fix"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TestCase SQLite to MySQL Fix - Gdpr Module
@@ -58,15 +59,6 @@ protected function setUp(): void
 5. **Viola indicazioni utente** - Opposto di ciò che richiesto
 
 ---
-
-title: "testcase sqlite to mysql fix"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "testcase sqlite to mysql fix"
-issues: []
-discussions: []
 ## Soluzione
 
 ### Pattern Corretto

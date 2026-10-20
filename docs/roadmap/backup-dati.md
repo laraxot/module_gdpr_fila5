@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "backup dati"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Backup Dati

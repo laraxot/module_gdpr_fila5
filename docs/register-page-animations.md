@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "register page animations"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Register Page Animations System

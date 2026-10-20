@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "duplicate methods analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Metodi Duplicati - Modulo Gdpr
@@ -165,16 +166,6 @@ protected function casts(): array
 
 **Analisi manuale richiesta** - Le differenze tra le implementazioni potrebbero essere significative.
 
----
-
-title: "duplicate methods analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "duplicate methods analysis"
-issues: []
-discussions: []
 ---
 
 ## Legenda

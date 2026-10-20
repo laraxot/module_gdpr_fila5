@@ -117,3 +117,24 @@ Il `phpstan-baseline.neon` del modulo non e' stato usato ne' toccato; non e' sta
 I due link di `00-INDEX.md` verso `../../Fixcity/docs/` restano rotti (il modulo Fixcity non e' in questo progetto).
 
 Misura ripetuta fra le 12:49 e le 12:59, dietro il gate `flock` condiviso, su `app/` e `tests/` dei tre moduli (Gdpr 83+43 file, AI 64+15, Lang 59+45): 0 errori in tutti i batch, nessun messaggio anomalo (PHPStan lanciato solo su file, mai `analyse Modules`, senza `-c` ne' `--level`).
+
+## Wave swarm Media/Gdpr/UI (lane Gdpr)
+
+TSV: `.cursor-scratch/phpstan-wave/Gdpr.tsv` — **17** errori iniziali (`variable.unused` su `$action`/`$baseModel`/`$provider`/`$profile`/`$treatment`/`$consent`, `pest.test.emptyClosure` sulle Resource che dovevano estendere `XotBaseResource`).
+
+### Scopo (1 frase)
+
+I test Gdpr devono verificare il contratto delle Action di registrazione/consenso (`execute` pubblico) e che Resource/Provider/Model ereditino le basi Xot/User, non `new` senza lettura della variabile.
+
+### Causa → fix
+
+| Famiglia | Causa | Fix |
+|---|---|---|
+| `variable.unused` `$action` | Istanziazione senza assert sul contratto | Un solo test: `new` + `ReflectionMethod::execute` (pubblico, arity) |
+| `pest.test.emptyClosure` Resource | Closure vuota «extends XotBase» | `Safe\class_parents` + `assertArrayHasKey(XotBaseResource::class, …)` |
+| `variable.unused` model/provider | `new` senza assert | `class_parents` Safe, `getTable`/`getConnectionName`/`module` property |
+| `is_a` always true | PHPStan conosce gia' la gerarchia | Solo `Safe\class_parents` (niente `is_a` ridondante) |
+
+### Misura finale lane
+
+Path TSV Gdpr (+ Media/UI nella stessa verifica flock): **0** `file_errors`, exit **0**. Nessun ignore/baseline/neon.

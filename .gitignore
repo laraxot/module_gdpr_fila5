@@ -101,6 +101,7 @@ vendor/
 .windsurf/
 yarn-error.log
 *:Zone.Identifier
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
 graphify-out/
 .claude/
 .claude-audit/

@@ -12,6 +12,15 @@ status: draft
 
 # GDPR Module — PHPStan
 
+## 2026-10-20 — wave r3 · gate modulo
+
+```bash
+cd laravel && php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules/Gdpr
+# [OK] No errors
+```
+
+Test: ereditarietà verificata con `Safe\class_parents` + `assertArrayHasKey` (niente `is_a`/`is_subclass_of` ridondanti); variabili fixture usate in asserzioni comportamentali.
+
 ## 2026-06-10 — STORY-306 · L10 · 0 errori codice
 
 `./vendor/bin/phpstan analyse Modules/Gdpr` — 728→0 (test Assert, TestCase wrappers). Issue [#334](https://github.com/laraxot/base_fixcity_fila5/issues/334).

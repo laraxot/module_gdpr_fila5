@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: models-factory-seeder-analysis
 canonical: ../../../Themes/docs/shared-components/.gitkeep
+status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep

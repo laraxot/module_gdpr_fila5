@@ -2,46 +2,49 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Unit\Models;
-
-use Modules\Gdpr\Database\Factories\ConsentFactory;
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
-use PHPUnit\Framework\Assert;
-
-beforeEach(function (): void {
-    /* @var \Modules\Gdpr\Tests\TestCase $this */
-    gdprAssertDatabaseAvailable();
-});
+use Modules\Gdpr\Models\GdprConsent;
+use Modules\User\Models\User;
 
 test('gdpr consent can be created', function () {
-    $consent = ConsentFactory::new()->createOne([
-        'type' => 'privacy_policy',
-        'accepted_at' => now()->toDateTimeString(),
+    $user = User::factory()->create();
+
+    $consent = createGdprConsent([
+        'user_id' => $user->id,
+        'consent_type' => 'privacy_policy',
+        'consented_at' => now(),
         'ip_address' => '192.168.1.1',
     ]);
 
-    Assert::assertInstanceOf(Consent::class, $consent);
-    Assert::assertSame('privacy_policy', $consent->type);
-    Assert::assertSame('192.168.1.1', $consent->ip_address);
-    Assert::assertNotNull($consent->accepted_at);
+    expect($consent)
+        ->toBeGdprConsent()
+        ->and($consent->consent_type)
+        ->toBe('privacy_policy')
+        ->and($consent->ip_address)
+        ->toBe('192.168.1.1')
+        ->and($consent->consented_at)
+        ->not->toBeNull();
 });
 
-test('gdpr consent has treatment relationship method', function () {
-    $consent = new Consent();
+test('gdpr consent belongs to user', function () {
+    $user = User::factory()->create();
+    $consent = createGdprConsent(['user_id' => $user->id]);
 
-    Assert::assertContains('treatment', get_class_methods($consent));
+    expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
 });
 
-test('gdpr consent is not incrementing', function () {
-    $consent = new Consent();
+test('gdpr consent can be withdrawn', function () {
+    $consent = createGdprConsent(['withdrawn_at' => null]);
 
-    Assert::assertFalse($consent->getIncrementing());
+    $consent->withdraw();
+
+    expect($consent->fresh()->withdrawn_at)->not->toBeNull();
 });
 
-test('gdpr consent uses uuid trait', function () {
-    $consent = new Consent();
-    $traits = class_uses_recursive($consent);
+test('gdpr consent scope active works', function () {
+    createGdprConsent(['withdrawn_at' => null]); // Active
+    createGdprConsent(['withdrawn_at' => now()]); // Withdrawn
 
-    Assert::assertArrayHasKey('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);
+    $activeCount = GdprConsent::active()->count();
+
+    expect($activeCount)->toBe(1);
 });

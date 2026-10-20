@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "translations"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Traduzioni del Modulo Gdpr

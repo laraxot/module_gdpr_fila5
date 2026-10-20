@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "register action refactoring"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Architectural Refactoring: Implementing Spatie Queueable Actions

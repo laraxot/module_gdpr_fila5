@@ -2,6 +2,10 @@
 type: investigation
 title: "Investigation Data Subject Requests Automation"
 links: {github_issue: #XXX}
+status: draft
+updated: 2026-10-08
+tags: [docs, gdpr, investigation]
+qmd: "investigation: data subject requests automation gdpr"
 ---
 # Investigation: Data Subject Requests Automation
 

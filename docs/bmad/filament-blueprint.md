@@ -4,7 +4,7 @@ type: filament-blueprint
 status: active
 module: Gdpr
 created: 2026-10-16
-updated: 2026-10-16
+updated: 2026-10-19
 tags: [bmad, filament, blueprint, gdpr]
 qmd: "filament blueprint gdpr xotbase resource widget"
 related:
@@ -28,6 +28,11 @@ i confini di dominio.
 
 - `ConsentResource`
 - `TreatmentResource`
+- `Filament\Widgets\Auth\RegisterWidget` — form pubblico di registrazione. Lo monta
+  il tema (`components/pages/auth-register.blade.php`), non una pagina meetup del modulo User.
+  I consensi si vedono solo se la spunta è visibile: il vestito Sixteen usa il checkbox nativo,
+  perché Flowbite fuori da Design Comuni la disegnava bianca su bianco.
+  Vedi [register-ux-audit.md](../../../../Themes/Sixteen/docs/auth/register-ux-audit.md).
 
 ## Form / Table / Infolist
 

@@ -16,14 +16,14 @@ related:
   - ./livewire-widget-decision-log.md
   - ./livewire-widget-epics.md
   - ../stories/12.1.gdpr-owns-legal-pages.story.md
-  - ../../User/docs/bmad/livewire-inventory.md
+  - ../../../User/docs/bmad/livewire-inventory.md
 ---
 
 # Inventario: Livewire HTTP → Filament — modulo Gdpr
 
 **Solo documentazione. Nessun PHP toccato in questo audit.**
 
-Questo file è la SSoT del modulo Gdpr per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../Cms/docs/bmad/livewire-inventory.md) e [Modules/User/docs/bmad/livewire-inventory.md](../../User/docs/bmad/livewire-inventory.md).
+Questo file è la SSoT del modulo Gdpr per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../../Cms/docs/bmad/livewire-inventory.md) e [Modules/User/docs/bmad/livewire-inventory.md](../../../User/docs/bmad/livewire-inventory.md).
 
 ## Metodo (codice, non assunzione)
 

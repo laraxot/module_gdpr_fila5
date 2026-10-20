@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Modules\User\Models\User;
+use Modules\User\Models\BaseUser;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -57,7 +57,7 @@ class DeleteAccountAction
     /**
      * Esecuzione atomica della cancellazione (usabile anche fuori dal controller).
      */
-    public function execute(User $user, string $reason = ''): void
+    public function execute(BaseUser $user, string $reason = ''): void
     {
         $cast = app(SafeStringCastAction::class);
 
@@ -86,7 +86,7 @@ class DeleteAccountAction
         session()->regenerateToken();
     }
 
-    private function recordDeletionConsent(User $user, string $reason): void
+    private function recordDeletionConsent(BaseUser $user, string $reason): void
     {
         $treatment = Treatment::firstOrCreate(
             ['name' => 'account_deletion'],

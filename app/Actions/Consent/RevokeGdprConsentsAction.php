@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Modules\User\Models\User;
+use Modules\User\Models\BaseUser;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -22,7 +22,7 @@ class RevokeGdprConsentsAction
 {
     use QueueableAction;
 
-    public function execute(User $user): void
+    public function execute(BaseUser $user): void
     {
         $ip = request()->ip();
         $userAgent = request()->userAgent();

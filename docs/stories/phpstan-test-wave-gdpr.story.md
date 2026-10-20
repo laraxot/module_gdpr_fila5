@@ -67,3 +67,36 @@ Sorgenti toccati, perche' il resto (1 errore) nasceva li:
 - `TestCase` verificato dell'8 ottobre usa `prepareSharedSqliteForTesting()` di `XotBaseTestCase` e `$connectionsToTransact = ['sqlite']`, in tensione con la regola di progetto "test su MySQL, mai sqlite". E' lo stato verificato e non e' stato cambiato; la decisione e' del modulo Xot.
 - `tests/Feature/conflictresolutiontest.php` e `ConflictResolutionTest.php` sono la stessa specifica con nomi che differiscono solo per le maiuscole, entrambi tracciati. Su un filesystem insensibile alle maiuscole collidono. Segnalato, non cancellato.
 - `ConflictResolutionTest.php` ripristinato verifica che i costruttori dei model reali non abbiano parametri obbligatori e che `getFillable()` non sia vuoto. La versione del pull asseriva `toBeInstanceOf` su `new X` e `toBeArray` su un valore gia' tipizzato `array`: asserzioni che per costruzione non possono fallire, e che Pest segnala come ridondanti.
+
+## Seconda passata: ignore, probe e helper dei test
+
+Fase BMAD: implementazione e quality gate. Sessione parallela della stessa lane, aperta mentre la prima ripristinava i blob; la ri-misura ha confermato 0 errori sui file gia' sistemati (PHPStan mirato su `tests/Feature/GdprBusinessLogicTest.php`, `tests/Pest.php`, `tests/PestHelpers.php`, `tests/TestCase.php`, `tests/Unit/Models`, `tests/Feature/Auth/RegisterPageTest.php`, `app/Actions` e i due `ConflictResolution`: esito 0). Il lavoro gia' fatto non e' stato rifatto. Restavano due scorciatoie sul codice del modulo, non segnalate come errori ma vietate dalle regole di lane.
+
+### Scopo e causa
+
+- `tests/PestHelpers.php`, `gdprTest()`: le funzioni `gdprGet()`, `gdprPost()`, `gdprActingAs()`, `gdprSkipTest()` vivono fuori dalla closure Pest e non hanno `$this`. Per ottenere il test in corso la funzione usava `test()` di Pest, che restituisce `HigherOrderTapProxy`, classe `@internal`: per aprirla serviva un `@phpstan-ignore-next-line`. La storia [01.Gdpr-phpstan-fix.story.md](./01.Gdpr-phpstan-fix.story.md) lo dichiarava "ancora necessario". Era un silenziatore di una dipendenza da un'API interna di Pest, non un falso positivo.
+- `app/Models/GdprPhpstanTraitProbe.php`: modello finto che ospitava `HasGdpr` solo perche' PHPStan lo analizzasse. Vietato da `bashscripts/ai/wiki/rules/phpstan-no-probes-rule.md`. Era stato cancellato il 2026-09-24 (`6b72891`), poi riportato da `a02dd4c` (re-import dell'8 ottobre). Nessun file di `Modules`, `Themes`, `app`, `config`, `database` lo cita; il trait resta in scope grazie a `tests/Fixtures/HasGdprDummy.php`.
+
+### Correzione
+
+- `tests/TestCase.php`: `public static ?self $currentTest`, impostato in `setUp()` dopo `parent::setUp()` e azzerato in `tearDown()`. Il docblock aveva quattro righe duplicate dai merge ("Uses shared fixcity_data.sqlite" e "Uses shared sqlite" ripetute due volte): ridotte a una riga vera e a una nota su `$currentTest`.
+- `tests/PestHelpers.php`: `gdprTest()` restituisce `TestCase::$currentTest` oppure lancia `LogicException` se chiamata fuori da un test. Tolti l'import di `Pest\Support\HigherOrderTapProxy`, l'`instanceof`, l'`assertInstanceOf` e l'ignore. Equivalenza a runtime: Pest chiama `TestCase::setUp()` prima dei `beforeEach`, e `test()` restituiva comunque la stessa istanza.
+- `app/Models/GdprPhpstanTraitProbe.php` cancellato (resta in `a02dd4c`). Nota in [phpstan-probe-model-removal.md](../concepts/phpstan-probe-model-removal.md) e in 01.Gdpr-phpstan-fix.
+
+### Verifica
+
+| Prova | Esito |
+|---|---|
+| `php -l tests/PestHelpers.php tests/TestCase.php` | nessun errore |
+| `rg 'phpstan-ignore\|HigherOrderTapProxy' laravel/Modules/Gdpr -g '*.php'` (solo `tests/TestCase.php` cita la classe, nel docblock) | nessun ignore attivo |
+| `phpstan analyse Modules/Gdpr --memory-limit=2G --no-progress --error-format=raw` (cwd `laravel/`, dopo i due edit e dopo il sync del modulo) | exit 0, nessun errore |
+
+Il run completo e' sul solo modulo, non su `Modules`: `typeCoverage.*` si misura solo con `analyse Modules`, a cura del coordinatore.
+
+### Cosa resta
+
+- Pest non eseguito: serve il DB di test. `gdprTest()` non e' stato provato a runtime; la verifica e' statica. Se un test chiamasse un helper `gdpr*` senza estendere `Modules\Gdpr\Tests\TestCase`, ora fallisce con `LogicException` invece di restituire il proxy.
+- `TestCase` usa ancora `prepareSharedSqliteForTesting()` e `$connectionsToTransact = ['sqlite']`: decisione di Xot (vedi sopra).
+- `tests/Feature/conflictresolutiontest.php`: duplicato per maiuscole di `ConflictResolutionTest.php`, con asserzioni piu' deboli (`expect(new Treatment())->not->toBeNull()`). Non cancellato; decide l'utente.
+- Link rotti in `00-INDEX.md` verso `../../Fixcity/docs/...`: il modulo Fixcity non esiste in questo progetto (i moduli sono condivisi fra progetti). Non toccati.
+- Nessun `*Service` ne' componente Livewire toccato in questa lane.

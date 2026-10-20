@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Database\Factories\TreatmentFactory;
 use Modules\Gdpr\Models\Consent;
@@ -51,7 +50,7 @@ final class GdprConsentBusinessLogicTest extends TestCase
     {
         $consent = new Consent;
 
-        Assert::assertInstanceOf(BelongsTo::class, $consent->treatment());
+        Assert::assertSame('treatment_id', $consent->treatment()->getForeignKeyName());
     }
 
     public function test_defaults_user_type_to_configured_user_class_when_missing(): void

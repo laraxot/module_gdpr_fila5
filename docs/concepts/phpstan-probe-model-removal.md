@@ -61,3 +61,7 @@ Il test del trait `tests/Unit/Traits/HasGdprTraitTest.php` usava assert statici
 idiomatico (`expect()->toBeTrue()` / `->toContain()`). Altri file di test del
 modulo usano ancora la facade `Assert::` (convenzione diffusa): candidato a
 un refactor separato, non incluso qui per non allargare lo scope.
+
+## Aggiornamento del 2026-10-20
+
+`app/Models/GdprPhpstanTraitProbe.php` era ricomparso: il commit `7cedc3b` lo aveva aggiunto, `6b72891` (2026-09-24) lo aveva cancellato e `a02dd4c` (2026-10-08, re-import) lo ha riportato. Nessun file del modulo, ne' di altri moduli o temi, lo cita (`rg` su `Modules`, `Themes`, `app`, `config`, `database`). E' stato cancellato di nuovo, con la stessa motivazione. Il trait `HasGdpr` resta in scope tramite `tests/Fixtures/HasGdprDummy.php`. Se un merge futuro lo riporta, e' un'altra riapparizione del file, non una scelta del modulo.

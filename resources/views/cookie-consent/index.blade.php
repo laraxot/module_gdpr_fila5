@@ -17,7 +17,7 @@
 
     $inventory = app(GetCookieInventoryAction::class)->execute();
     $withConsent = $inventory->requiresConsent();
-    $policyUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeURL('/cookie-policy');
+    $policyUrl = \Themes\Sixteen\Infrastructure\Url\FrontofficeUrl::fromStoredUrl('/cookie-policy');
     $t = static fn (string $key): string => (string) trans('cookie-consent::texts.'.$key);
     $categories = [
         ['id' => 'analytics', 'case' => CookieCategory::Analytics, 'label' => 'setting_analytics', 'text' => 'setting_analytics_text'],

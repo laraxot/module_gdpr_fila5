@@ -30,6 +30,15 @@
     .gdpr-cookiebar[hidden] { display: none; }
     /* Il testo della pagina non deve restare sotto la barra fissa (bug FO blog dettaglio). */
     body:has(.gdpr-cookiebar:not([hidden])) { padding-bottom: 11rem; }
+    /* WCAG 2.4.11 (DCP-291): il campo che prende il focus viene portato sopra la barra, non lasciato sotto. Valore esatto aggiornato da pad(). */
+    html:has(.gdpr-cookiebar:not([hidden])) { scroll-padding-bottom: 11rem; }
+    @media print { .gdpr-cookiebar { display: none; } }
+    /* A 400% di zoom (320x256) la barra alta 255 px riempiva lo schermo: su viewport bassi sta nel flusso, in cima alla pagina, e scorre via. */
+    @media (max-height: 30rem) {
+        .gdpr-cookiebar { position: static; }
+        body:has(.gdpr-cookiebar:not([hidden])) { padding-bottom: 0; }
+        html:has(.gdpr-cookiebar:not([hidden])) { scroll-padding-bottom: 0; }
+    }
     .gdpr-cookiebar__inner { position: relative; max-width: 72rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding-right: 2rem; }
     .gdpr-cookiebar__text { flex: 1 1 24rem; min-width: 0; }
     .gdpr-cookiebar__title { margin: 0 0 .25rem; font-weight: 700; }
@@ -128,6 +137,7 @@
     const read = () => { const m = document.cookie.match(new RegExp('(?:^|; )' + encodeURIComponent(d.cookieKey) + '=([^;]*)')); return m ? decodeURIComponent(m[1]) : null; };
     const boxes = [...dialog.querySelectorAll('[data-cookie-category]')];
     const write = (value) => {
+        const hadFocus = [bar, dialog].some((root) => root.contains(document.activeElement)) && document.activeElement.matches(':focus-visible');
         const expires = new Date(Date.now() + d.cookieDays * 864e5).toUTCString();
         document.cookie = `${encodeURIComponent(d.cookieKey)}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax${d.cookieSecure ? '; Secure' : ''}`;
         const granted = { analytics: value === d.cookieValueBoth || value === d.cookieValueAnalytics, marketing: value === d.cookieValueBoth || value === d.cookieValueMarketing };
@@ -135,9 +145,21 @@
         document.dispatchEvent(new CustomEvent('cookie-consent:changed', { detail: { value, ...granted } }));
         bar.hidden = true;
         pad();
+        leave(hadFocus);
     };
-    // la barra e' fissa in basso: finche' e' visibile lascia sotto il contenuto lo spazio che occupa, cosi' il footer resta raggiungibile
-    const pad = () => { document.body.style.paddingBottom = bar.hidden ? '' : `${bar.offsetHeight}px`; };
+    // la barra e' fissa in basso: finche' e' visibile lascia sotto il contenuto lo spazio che occupa, cosi' il footer resta raggiungibile e il
+    // browser porta il campo con il focus sopra la barra (scroll-padding). Nel flusso (viewport basso) non serve nessuno dei due.
+    const pad = () => {
+        const space = !bar.hidden && getComputedStyle(bar).position === 'fixed' ? `${bar.offsetHeight}px` : '';
+        document.body.style.paddingBottom = space;
+        document.documentElement.style.scrollPaddingBottom = space;
+    };
+    // chi stava con la tastiera sulla barra (o nel suo dialogo) passa al prossimo stop della pagina invece di cadere sul body
+    const leave = (hadFocus) => {
+        if (!hadFocus) return;
+        const next = () => (document.querySelector('.skiplink a') ?? document.getElementById('main-container'))?.focus();
+        dialog.open ? dialog.addEventListener('close', next, { once: true }) : next();
+    };
     window.addEventListener('resize', pad);
     const valueFor = (a, m) => (a && m ? d.cookieValueBoth : a ? d.cookieValueAnalytics : m ? d.cookieValueMarketing : d.cookieValueNone);
     const sync = () => { const v = read(); boxes.forEach((b) => { b.checked = !b.disabled && (v === d.cookieValueBoth || v === (b.dataset.cookieCategory === 'analytics' ? d.cookieValueAnalytics : d.cookieValueMarketing)); }); };

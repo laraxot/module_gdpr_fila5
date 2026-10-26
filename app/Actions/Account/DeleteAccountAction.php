@@ -4,14 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions\Account;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+use Modules\Activity\Models\Activity;
 use Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\BaseUser;
+use Modules\User\Models\Policies\UserPolicy;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -28,14 +31,16 @@ class DeleteAccountAction
 {
     use QueueableAction;
 
-    public function __invoke(Request $request): \Illuminate\Http\RedirectResponse
+    public function __invoke(Request $request): RedirectResponse
     {
         $user = Auth::user();
         if ($user === null) {
             abort(401);
         }
 
-        Gate::authorize('delete', $user);
+        // Not `Gate::authorize('delete', $user)`: the configured user class (e.g. `Modules\Fixcity\Models\User`) has no
+        // policy the Gate can guess, so that check denied every owner with a 403. Ask the User module policy directly.
+        Gate::allowIf(app(UserPolicy::class)->delete($user, $user));
 
         if ($request->isMethod('get')) {
             return redirect('/'.app()->getLocale());
@@ -74,8 +79,8 @@ class DeleteAccountAction
             $user->save();
 
             // 4. Soft-delete dei log di activity dell'utente (se il modulo Activity e' installato).
-            if (class_exists(\Modules\Activity\Models\Activity::class)) {
-                \Modules\Activity\Models\Activity::where('subject_id', $user->id)
+            if (class_exists(Activity::class)) {
+                Activity::where('subject_id', $user->id)
                     ->where('subject_type', $user->getMorphClass())
                     ->update(['deleted_at' => now()]);
             }

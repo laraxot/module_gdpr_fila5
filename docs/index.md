@@ -19,7 +19,7 @@ Indice operativo canonico del modulo: [00-INDEX.md](./00-INDEX.md) (ruolo delle 
 ## Panoramica del modulo
 
 - [README.md](README.md) — panoramica, business logic dei consensi, link a documenti correlati
-- [CHANGELOG.md](CHANGELOG.md) — storico versioni
+- [CHANGELOG.md](changelog.md) — storico versioni
 - [architecture/structure.md](architecture/structure.md) — struttura architetturale del modulo
 
 ## Conformità GDPR e consensi
@@ -118,7 +118,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/schema.md](wiki/schema.md)
 - [wiki/log.md](wiki/log.md)
 - [wiki/bmad-method.md](wiki/bmad-method.md)
-- [wiki/agents.md](wiki/agents.md)
+- [wiki/agents.md](wiki/AGENTS.md)
 - [wiki/commands/index.md](wiki/commands/index.md)
 - [wiki/rules/index.md](wiki/rules/index.md)
 - [wiki/skills/index.md](wiki/skills/index.md)
@@ -145,7 +145,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 
 ### Agenti LLM (llm-wiki/)
 
-- [llm-wiki/agents.md](llm-wiki/agents.md)
+- [llm-wiki/agents.md](llm-wiki/AGENTS.md)
 
 ## Import grezzi (raw/)
 
@@ -181,7 +181,7 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - **`code-quality-report.md` vs `code-quality-improvement-report.md`**: possibile sovrapposizione di ambito, da verificare.
 - **Roadmap frammentata**: `roadmap/backup-dati.md` vs `development/roadmap/backup-dati.md`; `roadmap/cookie-consent.md` vs `development/roadmap/cookie-consent.md`; `roadmap/log-attivita.md` vs `development/roadmap/log-attivita.md`; inoltre `roadmap/roadmap.md`, `roadmap/roadmap-q4.md`, `roadmap/-q4-roadmap.md` e `roadmap/legacy-roadmap.md` sembrano variazioni/superseded dello stesso tema roadmap trimestrale.
 - **Indici `index.md` / `INDEX.md` duplicati per-cartella** (stesso contenuto, stessa dimensione, entrambi presenti sul filesystem case-sensitive): `wiki/commands/`, `wiki/concepts/`, `wiki/rules/`, `wiki/skills/`, `wiki/memories/`. Il nome canonico minuscolo è `index.md`.
-- **Agenti duplicati**: [wiki/agents.md](wiki/agents.md), [llm-wiki/agents.md](llm-wiki/agents.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
+- **Agenti duplicati**: [wiki/agents.md](wiki/AGENTS.md), [llm-wiki/agents.md](llm-wiki/AGENTS.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
 - **`raw/root-import/*.md` vs le sue varianti `*-1.md`**: file duplicati byte-per-byte (stesso import eseguito due volte), elencati sopra.
 
 ## Fuori ambito indice (non `.md`)

@@ -8,6 +8,8 @@ updated: 2026-10-26
 tags: [bmad, gdpr, module, stories, remaining-work]
 related:
   - ../../docs/second-brain/project/bmad-architecture.md
+status: draft
+qmd: "gdpr module   bmad stories & remaining work gdpr"
 ---
 
 # Gdpr Module — BMAD Stories & Remaining Work

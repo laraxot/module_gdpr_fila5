@@ -264,10 +264,10 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ### Collegamenti ad Altri Moduli
 - [Migrazioni User](../../User/docs/migrations.md)
 - [Migrazioni Activity](../../Activity/docs/migrations.md)
-- [Migrazioni Xot](../xot/docs/migrations.md)
+- [Migrazioni Xot](../../Xot/docs/migrations.md)
 
 ### Collegamenti Interni
-- [README Principale](./readme.md)
+- [README Principale](./README.md)
 - [Implementazione](./implementation.md)
 - [Configurazione](./configuration.md)
 - [Testing](./testing.md)

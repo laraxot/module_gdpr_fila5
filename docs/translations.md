@@ -15,7 +15,7 @@ status: draft
 ## Collegamenti
 
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
-- [Regole Generali Traduzioni](../../xot/docs/translations.md)
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 
 ## Struttura
 

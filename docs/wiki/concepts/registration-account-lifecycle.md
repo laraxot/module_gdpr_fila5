@@ -13,6 +13,8 @@ tags: [gdpr, registration, consent, account-lifecycle, pa]
 related:
   - "../../../../User/docs/wiki/concepts/auth-registration-verification-lifecycle.md"
   - "../../../../../Themes/Sixteen/docs/wiki/concepts/legal-consent-ui-boundary.md"
+status: draft
+qmd: "registration and account lifecycle boundary gdpr"
 ---
 
 # Registration and account lifecycle boundary

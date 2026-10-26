@@ -82,6 +82,22 @@ class RegisterWidget extends XotBaseWidget
         ];
     }
 
+    /**
+     * Nome del campo nei messaggi di errore: la stessa etichetta che si vede sopra il campo, nella lingua della pagina
+     * ("Il campo Nome e' obbligatorio"), non l'attributo tecnico ("first name"), DCP-290 (FO-5-11).
+     *
+     * @return array<string, string>
+     */
+    protected function validationAttributes(): array
+    {
+        $attributes = [];
+        foreach (['first_name', 'last_name', 'email', 'password', 'password_confirmation'] as $field) {
+            $attributes[$field] = __('gdpr::register.fields.'.$field.'.label');
+        }
+
+        return $attributes;
+    }
+
     public static function canView(): bool
     {
         return ! Auth::check();

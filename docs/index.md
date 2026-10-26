@@ -14,7 +14,7 @@ status: active
 
 Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/`. Nessun file esistente è stato rinominato o cancellato per generare questo indice.
 
-Indice operativo canonico del modulo: [00-INDEX.md](./00-INDEX.md) (ruolo delle directory, stato verificato delle promesse, documenti stale). Questo file resta l'elenco per argomento. Limiti e contenuto reale del codice: [README.md](./README.md).
+Indice operativo canonico del modulo: [00-INDEX.md](./00-index.md) (ruolo delle directory, stato verificato delle promesse, documenti stale). Questo file resta l'elenco per argomento. Limiti e contenuto reale del codice: [README.md](./README.md).
 
 ## Panoramica del modulo
 
@@ -166,7 +166,7 @@ Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, 
 
 I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. Non sono stati toccati: restano collegati qui per tracciabilità, in attesa di una consolidazione esplicita.
 
-- **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-INDEX.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
+- **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-index.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
 - **README e 00-INDEX** (risolto 2026-10-14): il README descrive ora identita' e limiti del modulo e 00-INDEX.md e' l'indice; non condividono piu' contenuto. `consent-management.md` e `GSD_WORKFLOW.md` non esistono nel modulo.
 - **`changelog.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).

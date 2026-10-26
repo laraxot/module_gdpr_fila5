@@ -10,7 +10,8 @@ discussions: []
 module: theme
 topic: implementation-guide
 canonical: ../../../Themes/docs/shared-components/implementation-guide-gdpr-consent.md
-status: stub
+status: superseded
+superseded_by: implementation.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/implementation-guide-gdpr-consent.md

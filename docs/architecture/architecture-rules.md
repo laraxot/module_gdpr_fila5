@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "architecture rules"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../architecture-rules.md
 ---
 
 # Architectural Rules & Guidelines

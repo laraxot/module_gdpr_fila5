@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "consent packages research 1"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../consent-packages-research-gdpr-legal.md
 ---
 
 # Research: GDPR & Legal Consent Packages

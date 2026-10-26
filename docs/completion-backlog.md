@@ -1,3 +1,11 @@
+---
+title: "Gdpr — completion backlog"
+type: note
+status: draft
+updated: 2026-10-26
+tags: [docs, gdpr]
+qmd: "gdpr   completion backlog gdpr"
+---
 # Gdpr — completion backlog
 
 Status: partial and evidence-driven. This file is the canonical owner-local list for future work.

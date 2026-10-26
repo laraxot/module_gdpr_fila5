@@ -23,4 +23,4 @@ status: draft
 This folder contains BMAD method documentation for the Gdpr module.
 
 - [Consenso eventi](../stories/inbound-event-consent.story.md)
-- [Dossier coordinatore](../../Fixcity/docs/bmad/inbound-marketing/README.md)
+- [Dossier coordinatore](../../../Fixcity/docs/bmad/inbound-marketing/README.md)

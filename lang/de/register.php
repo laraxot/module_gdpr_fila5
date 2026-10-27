@@ -96,7 +96,7 @@ return [
         'terms_hint' => 'Dienstleistungsvertrag gemäß Art. 6(1)(b) der Verordnung (EU) 2016/679 (DSGVO)',
         'terms_required' => 'Sie müssen die Nutzungsbedingungen akzeptieren, um mit der Registrierung fortzufahren.',
         'terms_checkbox_html' => 'Ich akzeptiere die <a href=":terms_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Nutzungsbedingungen</a>',
-        'marketing_label' => 'Ich möchte Pizza-Tipps und Meetup-Einladungen erhalten (optional)',
+        'marketing_label' => 'Ich möchte Neuigkeiten und Einladungen erhalten (optional)',
         'marketing_hint' => 'Die Zustimmung ist freiwillig und kann jederzeit ohne Folgen widerrufen werden.',
         'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
     ],
@@ -112,7 +112,7 @@ return [
     'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
     'success' => 'Registrierung erfolgreich abgeschlossen! Ihr Konto wurde DSGVO-konform erstellt.',
     'throttle' => 'Zu viele Registrierungsversuche. Versuchen Sie es in :seconds Sekunden erneut.',
-    'success_message' => 'Willkommen bei <nome progetto> Meetups! Ihre Registrierung ist abgeschlossen und alle Ihre Zustimmungen wurden korrekt erfasst.',
+    'success_message' => 'Ihr Konto ist bereit',
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
     'clickbait' => [

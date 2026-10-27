@@ -15,6 +15,6 @@ return [
     'submit' => 'Cancella il mio account',
     'success' => 'Account cancellato correttamente.',
     'flash' => [
-        'account_deleted' => 'Account cancellato correttamente. I consensi sono stati revocati e i dati sono stati soft-deleted secondo l\'art. 17 GDPR.',
+        'account_deleted' => 'Il tuo account è stato disattivato e sei uscito dal servizio. I tuoi dati saranno cancellati quando le tue segnalazioni aperte saranno chiuse.',
     ],
 ];

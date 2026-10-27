@@ -41,6 +41,7 @@ return [
     'purpose_session' => 'Keeps your session and protects access.',
     'purpose_xsrf' => 'Protects forms from unwanted submissions coming from other sites.',
     'purpose_consent' => 'Remembers the choice made on the cookie banner.',
+    'purpose_remember' => 'Keeps you signed in on this device, only if you choose to stay signed in when you log in.',
     'duration_minutes' => 'Up to :minutes minutes',
     'duration_days' => ':days days',
     'policy_how_title' => 'How to change or withdraw your choice',

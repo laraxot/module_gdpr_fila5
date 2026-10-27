@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "2025 q4 roadmap"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: roadmap-q4.md
 ---
 
 # GDPR Module Roadmap (2025 Q4)

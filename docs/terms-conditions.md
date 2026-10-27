@@ -27,11 +27,3 @@ La registrazione fa accettare le condizioni d'uso (`terms_accepted`, trattamento
 
 ## Da fornire dall'ente
 Titolare, oggetto del servizio, regole di uso e contenuti inviati (cfr. note legali, DCP-162), limiti di responsabilita', legge applicabile e foro, modifiche, contatti. La formula con cui il cittadino accetta (presa visione dell'informativa piu' accettazione delle condizioni, senza consenso al trattamento come base giuridica) e' una decisione del DPO: vedi la story DCP-178.
-<<<<<<< .merge_file_yF8t19
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_qF8G33

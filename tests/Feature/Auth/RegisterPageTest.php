@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Feature\Auth;
+namespace Modules\Gdpr\Tests\Feature\Auth;
 
 use Livewire\Livewire;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
-use Tests\Modules\Gdpr\TestCase;
+use Modules\Gdpr\Tests\TestCase;
 
 beforeEach(function (): void {
-    /* @var \Tests\Modules\Gdpr\TestCase $this */
+    /* @var \Modules\Gdpr\Tests\TestCase $this */
     LaravelLocalization::setLocale('en');
     app()->setLocale('en');
     config(['app.locale' => 'en']);

@@ -2,19 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Filament\Resources;
+namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
 use Modules\Gdpr\Filament\Resources\TreatmentResource;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
+use function Safe\class_parents;
+
 test('treatment_resource_extends_xot_base_resource', function (): void {
-    Assert::assertInstanceOf(XotBaseResource::class, new TreatmentResource());
+    Assert::assertArrayHasKey(XotBaseResource::class, class_parents(TreatmentResource::class));
 });
 
 test('treatment_resource_model_is_treatment', function (): void {
-    $resource = new TreatmentResource();
+    $resource = new TreatmentResource;
 
     Assert::assertSame(Treatment::class, $resource->getModel());
 });

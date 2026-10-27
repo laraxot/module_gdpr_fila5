@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Traits;
+namespace Modules\Gdpr\Tests\Unit\Traits;
 
 use Modules\Gdpr\Models\Traits\HasGdpr;
 use PHPUnit\Framework\Assert;

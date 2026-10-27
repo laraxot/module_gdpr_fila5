@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Policies;
+namespace Modules\Gdpr\Tests\Unit\Policies;
 
 use Mockery;
 use Modules\Gdpr\Models\Consent;

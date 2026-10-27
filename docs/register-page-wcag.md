@@ -462,7 +462,3 @@ axe https://127.0.0.1:8000/it/auth/register --tags wcag2a,wcag2aa,wcag2.1a,wcag2
 - [WebAIM WCAG Checklist](https://webaim.org/standards/wcag/checklist)
 - [A11Y Project](https://www.a11yproject.com/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

@@ -17,7 +17,7 @@ Questo e' il documento di riferimento. Sostituisce `cookiebar-integration.md`, `
 ## Che cosa fa
 Una barra in fondo alla pagina, non bloccante, e una finestra delle preferenze, in italiano, inglese, tedesco e spagnolo. Segue il contratto di markup della cookiebar di Bootstrap Italia (regione con `aria-label`, due controlli) senza usare Bootstrap: stile incorporato, nessuna dipendenza.
 
-**Due modi, scelti dall'inventario e non da un flag.** Oggi il sito imposta solo cookie tecnici (`fixcity_session`, `XSRF-TOKEN`, `__cookie_consent`): la barra informa e ha un solo comando, «Ho capito». Appena un modulo dichiara un cookie non tecnico, la stessa barra passa a «Accetta tutti», «Rifiuta tutti» (stesso peso), «Personalizza» e la X di chiusura, che equivale a rifiutare.
+**Due modi, scelti dall'inventario e non da un flag.** Oggi il sito imposta solo cookie tecnici (`fixcity_session`, `XSRF-TOKEN`, `__cookie_consent` e, solo se si spunta «Ricordami» al login, `remember_web_*` per 400 giorni; inventario in `GetCookieInventoryAction`, misurato con `Set-Cookie` il 2026-10-26): la barra informa e ha un solo comando, «Ho capito». Appena un modulo dichiara un cookie non tecnico, la stessa barra passa a «Accetta tutti», «Rifiuta tutti» (stesso peso), «Personalizza» e la X di chiusura, che equivale a rifiutare.
 
 ## Come e' fatto
 | Pezzo | Dove |
@@ -60,11 +60,3 @@ La pagina di Bootstrap Italia rimanda al provvedimento dell'8 maggio 2014. Il re
 - Browser: `Themes/Sixteen/tests/browser/cookie-banner.spec.mjs` (17 test: 4 lingue, cookie, tastiera, axe, modo consenso).
 - Pest (modulo Fixcity, che avvia l'applicazione): `tests/Unit/Cookie/*`, `tests/Feature/Pages/CookieBannerPagesTest.php`, `tests/Feature/Pages/PublicPagesStructureTest.php`.
 - Guardia: ogni cookie impostato a un ospite deve essere nell'inventario (`sets no cookie that the inventory does not declare`).
-<<<<<<< .merge_file_SWmipH
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_0GMHic

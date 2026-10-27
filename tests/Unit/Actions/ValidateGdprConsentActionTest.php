@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Actions;
+namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Illuminate\Validation\ValidationException;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Feature;
+namespace Modules\Gdpr\Tests\Feature;
 
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;

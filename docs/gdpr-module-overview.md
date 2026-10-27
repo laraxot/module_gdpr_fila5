@@ -215,7 +215,7 @@ $consent->delete();
 
 ### Guide Principali
 
-- [README.md](./readme.md) - Overview modulo
+- [README.md](./README.md) - Overview modulo
 - [implementation-guide.md](./implementation-guide.md) - Guida implementazione
 - [api.md](./api.md) - API reference
 - [testing.md](./testing.md) - Testing guide
@@ -260,8 +260,3 @@ $consent->delete();
 ---
 
 *"Privacy by design, security by default."*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

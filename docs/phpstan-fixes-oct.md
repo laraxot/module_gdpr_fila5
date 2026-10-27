@@ -166,8 +166,3 @@ expect($consent->property)->toBe($value);
 *Last Updated: 2025-10-13*
 *Progress: 68% complete (18 errors remaining)*
 *Module Status: Substantial progress - main model issues resolved*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

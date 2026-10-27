@@ -14,8 +14,3 @@ status: draft
 
 ## 🔬 Research Goals
 Identify user needs for Gdpr functionality.
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

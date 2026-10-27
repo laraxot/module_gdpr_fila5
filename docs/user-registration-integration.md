@@ -580,7 +580,7 @@ test('user registration saves gdpr consents', function () {
 ## Collegamenti
 
 ### Documentazione Intera
-- [README Modulo Gdpr](./readme.md)
+- [README Modulo Gdpr](./README.md)
 - [Consent Management System](./consents.md)
 - [GDPR Compliance Guide](./gdpr-compliance.md)
 - [Testing Guidelines](./testing-guidelines.md)
@@ -595,7 +595,3 @@ test('user registration saves gdpr consents', function () {
 
 **Responsible**: GDPR Compliance Team  
 **Approved by**: Legal Department
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

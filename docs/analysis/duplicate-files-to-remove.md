@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "duplicate files to remove"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../duplicate-files-to-remove.md
 ---
 
 # File Duplicati da Eliminare - Modulo Gdpr

@@ -15,6 +15,6 @@ return [
     'submit' => 'Delete my account',
     'success' => 'Account deleted successfully.',
     'flash' => [
-        'account_deleted' => 'Account deleted successfully. Consents have been revoked and data soft-deleted per art. 17 GDPR.',
+        'account_deleted' => 'Your account has been deactivated and you have been signed out. Your data will be deleted once your open reports are closed.',
     ],
 ];

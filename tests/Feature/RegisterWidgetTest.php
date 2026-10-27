@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Feature;
+namespace Modules\Gdpr\Tests\Feature;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
@@ -13,7 +13,7 @@ use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Tests\Modules\Gdpr\TestCase;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
@@ -105,7 +105,7 @@ it('validates and transforms user data correctly', function (): void {
     Assert::assertSame($email, $result['email']);
     Assert::assertSame('customer_user', $result['type']);
     Assert::assertNotNull($result['email_verified_at']);
-    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    $hashed = is_string($result['password']) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
 });
 
@@ -123,7 +123,7 @@ it('validates user data hashes the password', function (): void {
 
     // Password should be hashed, not plain text
     Assert::assertNotSame('MyP@ssword123!', $result['password']);
-    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    $hashed = is_string($result['password']) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
 });
 
@@ -366,6 +366,6 @@ it('has all required translation keys for register page', function (): void {
     foreach ($requiredKeys as $key) {
         $translated = __($key);
         // Translation should not return the raw key
-        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+        Assert::assertNotSame($key, $translated, "Translation key [{$key}] is missing or returns raw key");
     }
 });

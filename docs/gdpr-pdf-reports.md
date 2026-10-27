@@ -838,7 +838,7 @@ public function generateWithErrorHandling(array $options = []): string
 ## 📚 References
 
 - [HTML2PDF Best Practices](../../xot/docs/html2pdf-best-practices.md)
-- [GDPR Module README](./readme.md)
+- [GDPR Module README](./README.md)
 - [Filament Actions Documentation](https://filamentphp.com/docs/3.x/actions/overview)
 - [GDPR Regulation](https://gdpr.eu/)
 
@@ -849,8 +849,3 @@ public function generateWithErrorHandling(array $options = []): string
 **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅
 **GDPR Compliant:** ✅
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

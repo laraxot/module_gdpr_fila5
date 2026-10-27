@@ -58,15 +58,7 @@ Gestisce le richieste di accesso, modifica o cancellazione dei dati personali.
 
 ## Collegamenti
 
-- [Documentazione Generale GDPR](./readme.md)
-- [Documentazione Generale GDPR](./readme.md)
+- [Documentazione Generale GDPR](./README.md)
+- [Documentazione Generale GDPR](./README.md)
 - [Configurazione del Modulo](./configuration.md)
 - [Gestione dei Consensi](./consent-management.md)
-<<<<<<< .merge_file_8FLpCJ
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_D4bnav

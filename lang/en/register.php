@@ -99,7 +99,7 @@ return [
         'terms_hint' => 'Service contract pursuant to Article 6(1)(b) of Regulation (EU) 2016/679 (GDPR)',
         'terms_required' => 'Please accept the terms and conditions.',
         'terms_checkbox_html' => 'I accept the <a href=":terms_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Terms & Conditions</a>',
-        'marketing_label' => 'Send me pizza tips and meetup invites (Optional)',
+        'marketing_label' => 'Send me updates and invitations (optional)',
         'marketing_hint' => 'The consent is optional and you can withdraw it at any time without consequences.',
         'required_consent_missing' => 'You must accept all required consents to proceed.',
     ],
@@ -115,7 +115,7 @@ return [
     'required_consent_missing' => 'You must accept all required consents to proceed.',
     'success' => 'Registration completed successfully! Your account has been created GDPR compliant.',
     'throttle' => 'Too many registration attempts. Try again in :seconds seconds.',
-    'success_message' => 'Welcome to <nome progetto> Meetups! Your registration is complete and all your consents have been correctly recorded.',
+    'success_message' => 'Your account is ready',
     'error' => 'Registration error',
     'error_message' => 'An error occurred during registration. Please try again later. If the problem persists, contact our support.',
     'clickbait' => [

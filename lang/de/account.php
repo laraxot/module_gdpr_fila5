@@ -15,6 +15,6 @@ return [
     'submit' => 'Mein Konto löschen',
     'success' => 'Konto erfolgreich gelöscht.',
     'flash' => [
-        'account_deleted' => 'Konto erfolgreich gelöscht. Einwilligungen wurden widerrufen und Daten gemäß Art. 17 DSGVO soft-deleted.',
+        'account_deleted' => 'Dein Konto wurde deaktiviert und du wurdest abgemeldet. Deine Daten werden gelöscht, sobald deine offenen Meldungen abgeschlossen sind.',
     ],
 ];

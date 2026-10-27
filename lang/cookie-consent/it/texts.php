@@ -41,6 +41,7 @@ return [
     'purpose_session' => 'Mantiene la sessione e protegge l\'accesso.',
     'purpose_xsrf' => 'Protegge i moduli da invii non voluti provenienti da altri siti.',
     'purpose_consent' => 'Ricorda la scelta fatta sul banner dei cookie.',
+    'purpose_remember' => 'Ti mantiene collegato su questo dispositivo, solo se scegli di restare collegato al momento dell\'accesso.',
     'duration_minutes' => 'Fino a :minutes minuti',
     'duration_days' => ':days giorni',
     'policy_how_title' => 'Come cambiare o revocare la scelta',

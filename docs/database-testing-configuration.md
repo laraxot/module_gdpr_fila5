@@ -193,7 +193,3 @@ protected function setUp(): void
 ### Problem: Migrations running on wrong database
 
 **Solution**: Check that `.env.testing` is not pointing to production database. Verify `APP_ENV=testing`.
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

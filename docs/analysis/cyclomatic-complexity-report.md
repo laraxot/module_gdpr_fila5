@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "cyclomatic complexity report"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../cyclomatic-complexity-report.md
 ---
 
 # Cyclomatic Complexity Report - Module: Gdpr

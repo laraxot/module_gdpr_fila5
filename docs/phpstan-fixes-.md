@@ -288,7 +288,7 @@ Il modulo GDPR gestisce:
 
 ## 🔗 Collegamenti
 
-- [← GDPR Module README](./readme.md)
+- [← GDPR Module README](./README.md)
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Root Documentation](../../../../docs/index.md)
 
@@ -297,8 +297,3 @@ Il modulo GDPR gestisce:
 **Status**: ✅ COMPLETATO
 **PHPStan Level**: 9
 **Maintenance**: Nessuna azione richiesta
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

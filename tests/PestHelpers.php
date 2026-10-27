@@ -9,26 +9,17 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Testing\TestResponse;
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
-use Tests\Modules\Gdpr\TestCase;
-use Pest\Support\HigherOrderTapProxy;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /**
  * Helper Pest/PHPStan — modulo Gdpr.
  *
- * @see tests/Modules/Media/Feature/MediaBusinessLogicTest.php (assertMediaTableHas)
+ * @see Modules/Media/tests/Feature/MediaBusinessLogicTest.php (assertMediaTableHas)
  */
 function gdprTest(): TestCase
 {
-    $test = test();
-    /* @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class */
-    if ($test instanceof HigherOrderTapProxy) {
-        $test = $test->target;
-    }
-
-    Assert::assertInstanceOf(TestCase::class, $test);
-
-    return $test;
+    return TestCase::$currentTest ?? throw new LogicException('gdprTest() va chiamato durante un test che estende Modules\Gdpr\Tests\TestCase.');
 }
 
 /**

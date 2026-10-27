@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Feature;
+namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Event;
 use Modules\Gdpr\Models\Treatment;
-use Tests\Modules\Gdpr\TestCase;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 
@@ -15,7 +15,7 @@ use function Safe\json_decode;
 use function Safe\json_encode;
 
 beforeEach(function (): void {
-    /* @var \Tests\Modules\Gdpr\TestCase $this */
+    /* @var \Modules\Gdpr\Tests\TestCase $this */
     gdprAssertDatabaseAvailable();
 });
 

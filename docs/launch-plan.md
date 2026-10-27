@@ -18,8 +18,3 @@ status: draft
 
 ## 🎯 Launch Goals
 - Deploy stable version of Gdpr Module.
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

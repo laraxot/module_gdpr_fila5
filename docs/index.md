@@ -14,12 +14,12 @@ status: active
 
 Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/`. Nessun file esistente è stato rinominato o cancellato per generare questo indice.
 
-Indice operativo canonico del modulo: [00-INDEX.md](./00-INDEX.md) (ruolo delle directory, stato verificato delle promesse, documenti stale). Questo file resta l'elenco per argomento. Limiti e contenuto reale del codice: [README.md](./README.md).
+Indice operativo canonico del modulo: [00-INDEX.md](./00-index.md) (ruolo delle directory, stato verificato delle promesse, documenti stale). Questo file resta l'elenco per argomento. Limiti e contenuto reale del codice: [README.md](./README.md).
 
 ## Panoramica del modulo
 
 - [README.md](README.md) — panoramica, business logic dei consensi, link a documenti correlati
-- [CHANGELOG.md](CHANGELOG.md) — storico versioni
+- [CHANGELOG.md](changelog.md) — storico versioni
 - [architecture/structure.md](architecture/structure.md) — struttura architetturale del modulo
 
 ## Conformità GDPR e consensi
@@ -118,7 +118,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/schema.md](wiki/schema.md)
 - [wiki/log.md](wiki/log.md)
 - [wiki/bmad-method.md](wiki/bmad-method.md)
-- [wiki/agents.md](wiki/agents.md)
+- [wiki/agents.md](wiki/AGENTS.md)
 - [wiki/commands/index.md](wiki/commands/index.md)
 - [wiki/rules/index.md](wiki/rules/index.md)
 - [wiki/skills/index.md](wiki/skills/index.md)
@@ -145,7 +145,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 
 ### Agenti LLM (llm-wiki/)
 
-- [llm-wiki/agents.md](llm-wiki/agents.md)
+- [llm-wiki/agents.md](llm-wiki/AGENTS.md)
 
 ## Import grezzi (raw/)
 
@@ -166,7 +166,7 @@ Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, 
 
 I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. Non sono stati toccati: restano collegati qui per tracciabilità, in attesa di una consolidazione esplicita.
 
-- **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-INDEX.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
+- **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-index.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
 - **README e 00-INDEX** (risolto 2026-10-14): il README descrive ora identita' e limiti del modulo e 00-INDEX.md e' l'indice; non condividono piu' contenuto. `consent-management.md` e `GSD_WORKFLOW.md` non esistono nel modulo.
 - **`changelog.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).
@@ -181,7 +181,7 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - **`code-quality-report.md` vs `code-quality-improvement-report.md`**: possibile sovrapposizione di ambito, da verificare.
 - **Roadmap frammentata**: `roadmap/backup-dati.md` vs `development/roadmap/backup-dati.md`; `roadmap/cookie-consent.md` vs `development/roadmap/cookie-consent.md`; `roadmap/log-attivita.md` vs `development/roadmap/log-attivita.md`; inoltre `roadmap/roadmap.md`, `roadmap/roadmap-q4.md`, `roadmap/-q4-roadmap.md` e `roadmap/legacy-roadmap.md` sembrano variazioni/superseded dello stesso tema roadmap trimestrale.
 - **Indici `index.md` / `INDEX.md` duplicati per-cartella** (stesso contenuto, stessa dimensione, entrambi presenti sul filesystem case-sensitive): `wiki/commands/`, `wiki/concepts/`, `wiki/rules/`, `wiki/skills/`, `wiki/memories/`. Il nome canonico minuscolo è `index.md`.
-- **Agenti duplicati**: [wiki/agents.md](wiki/agents.md), [llm-wiki/agents.md](llm-wiki/agents.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
+- **Agenti duplicati**: [wiki/agents.md](wiki/AGENTS.md), [llm-wiki/agents.md](llm-wiki/AGENTS.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
 - **`raw/root-import/*.md` vs le sue varianti `*-1.md`**: file duplicati byte-per-byte (stesso import eseguito due volte), elencati sopra.
 
 ## Fuori ambito indice (non `.md`)
@@ -190,11 +190,3 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - `.gitignore` — regole di ignore locali a `docs/`
 - `root-code-workspace-files/_gdpr.code-workspace` — file di workspace VS Code
 - `screenshots/*.png`, cartelle `raw/*/.gitkeep`, `schema/.gitkeep` — placeholder/asset non testuali
-<<<<<<< .merge_file_AEeWbP
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_qfpySZ

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Actions;
+namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
 use PHPUnit\Framework\Assert;

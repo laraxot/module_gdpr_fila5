@@ -264,21 +264,13 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ### Collegamenti ad Altri Moduli
 - [Migrazioni User](../../User/docs/migrations.md)
 - [Migrazioni Activity](../../Activity/docs/migrations.md)
-- [Migrazioni Xot](../xot/docs/migrations.md)
+- [Migrazioni Xot](../../Xot/docs/migrations.md)
 
 ### Collegamenti Interni
-- [README Principale](./readme.md)
+- [README Principale](./README.md)
 - [Implementazione](./implementation.md)
 - [Configurazione](./configuration.md)
 - [Testing](./testing.md)
 ## Collegamenti tra versioni di migrations.md
 * [migrations.md](../../Notify/docs/migrations.md)
 * [migrations.md](../../Activity/docs/database/migrations.md)
-<<<<<<< .merge_file_a78QCq
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
->>>>>>> .merge_file_PCzrXP

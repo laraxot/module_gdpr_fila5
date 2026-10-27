@@ -72,8 +72,3 @@ I seguenti file sono stati refactorati per estendere le classi base di `Modules\
 - [x] BaseModel connection fix
 - [ ] Resources audit
 - [ ] Pages audit
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

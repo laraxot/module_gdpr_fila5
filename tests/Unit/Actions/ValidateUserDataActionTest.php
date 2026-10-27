@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Actions;
+namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Illuminate\Support\Facades\Hash;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;

@@ -97,8 +97,3 @@ More users know about data rights.
 ---
 
 *Last Updated: March 12, 2026*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

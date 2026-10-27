@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Models;
+namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Consent;

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Providers;
+namespace Modules\Gdpr\Tests\Unit\Providers;
 
 use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use PHPUnit\Framework\Assert;
 
-test('gdpr_service_provider_extends_xot_base_service_provider', function (): void {
-    $provider = new GdprServiceProvider(app());
+use function Safe\class_parents;
 
-    Assert::assertInstanceOf(XotBaseServiceProvider::class, $provider);
+test('gdpr_service_provider_extends_xot_base_service_provider', function (): void {
+    Assert::assertArrayHasKey(XotBaseServiceProvider::class, class_parents(GdprServiceProvider::class));
 });
 
 test('gdpr_service_provider_has_name', function (): void {

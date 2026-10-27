@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Fixtures;
+namespace Modules\Gdpr\Tests\Fixtures;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Traits\HasGdpr;

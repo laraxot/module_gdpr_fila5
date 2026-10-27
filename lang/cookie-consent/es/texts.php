@@ -41,6 +41,7 @@ return [
     'purpose_session' => 'Mantiene su sesión y protege el acceso.',
     'purpose_xsrf' => 'Protege los formularios de envíos no deseados procedentes de otros sitios.',
     'purpose_consent' => 'Recuerda la elección hecha en el aviso de cookies.',
+    'purpose_remember' => 'Mantiene su sesión iniciada en este dispositivo, solo si elige seguir conectado al iniciar sesión.',
     'duration_minutes' => 'Hasta :minutes minutos',
     'duration_days' => ':days días',
     'policy_how_title' => 'Cómo cambiar o retirar su elección',

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Bootstrap Pest — modulo Gdpr.
- * Il binding a \Tests\Modules\Gdpr\TestCase e' fatto solo qui sotto: i file test NON devono
+ * Il binding a \Modules\Gdpr\Tests\TestCase e' fatto solo qui sotto: i file test NON devono
  * dichiarare uses(TestCase::class) (altrimenti Pest\Exceptions\TestCaseAlreadyInUse).
  * Per estendere si usa l'API idiomatica di Pest — `pest()->extend(...)`, in fondo
  * a questo file — senza nessuna annotazione di soppressione: con
@@ -18,4 +18,4 @@ declare(strict_types=1);
 require_once __DIR__.'/PestHelpers.php';
 require_once __DIR__.'/PestStubs.php';
 
-pest()->extend(Tests\Modules\Gdpr\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
+pest()->extend(Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');

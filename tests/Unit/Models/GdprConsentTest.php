@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Unit\Models;
+namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
-use Tests\Modules\Gdpr\TestCase;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 beforeEach(function (): void {
-    /* @var \Tests\Modules\Gdpr\TestCase $this */
+    /* @var \Modules\Gdpr\Tests\TestCase $this */
     gdprAssertDatabaseAvailable();
 });
 

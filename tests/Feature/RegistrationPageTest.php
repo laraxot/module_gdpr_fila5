@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr\Feature;
+namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\User\Database\Factories\UserFactory;
 

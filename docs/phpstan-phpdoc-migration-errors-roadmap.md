@@ -450,8 +450,3 @@ _Questa sezione sarà aggiornata dopo l'implementazione dei fix._
 ---
 
 *Roadmap creata seguendo la metodologia "Super Mucca" - Dubbio, Litiga, Ragiona, Agisci*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

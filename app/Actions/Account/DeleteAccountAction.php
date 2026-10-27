@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions\Account;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+use Modules\Activity\Models\Activity;
 use Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
-use Modules\User\Models\User;
+use Modules\User\Models\BaseUser;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -28,14 +30,15 @@ class DeleteAccountAction
 {
     use QueueableAction;
 
-    public function __invoke(Request $request): \Illuminate\Http\RedirectResponse
+    public function __invoke(Request $request): RedirectResponse
     {
         $user = Auth::user();
         if ($user === null) {
             abort(401);
         }
 
-        Gate::authorize('delete', $user);
+        // `delete` is the back-office ability (admins remove other users): the owner uses `deleteOwnAccount`.
+        Gate::authorize('deleteOwnAccount', $user);
 
         if ($request->isMethod('get')) {
             return redirect('/'.app()->getLocale());
@@ -51,13 +54,13 @@ class DeleteAccountAction
         $this->execute($user, $reason);
 
         return redirect('/'.app()->getLocale())
-            ->with('status', 'account_deleted');
+            ->with('status', 'gdpr::account.flash.account_deleted');
     }
 
     /**
      * Esecuzione atomica della cancellazione (usabile anche fuori dal controller).
      */
-    public function execute(User $user, string $reason = ''): void
+    public function execute(BaseUser $user, string $reason = ''): void
     {
         $cast = app(SafeStringCastAction::class);
 
@@ -74,8 +77,8 @@ class DeleteAccountAction
             $user->save();
 
             // 4. Soft-delete dei log di activity dell'utente (se il modulo Activity e' installato).
-            if (class_exists(\Modules\Activity\Models\Activity::class)) {
-                \Modules\Activity\Models\Activity::where('subject_id', $user->id)
+            if (class_exists(Activity::class)) {
+                Activity::where('subject_id', $user->id)
                     ->where('subject_type', $user->getMorphClass())
                     ->update(['deleted_at' => now()]);
             }
@@ -86,7 +89,7 @@ class DeleteAccountAction
         session()->regenerateToken();
     }
 
-    private function recordDeletionConsent(User $user, string $reason): void
+    private function recordDeletionConsent(BaseUser $user, string $reason): void
     {
         $treatment = Treatment::firstOrCreate(
             ['name' => 'account_deletion'],
@@ -99,15 +102,15 @@ class DeleteAccountAction
             ]
         );
 
+        // `consents` has no `subject_type`: the user is keyed by `user_id` + `user_type`, as in RevokeGdprConsentsAction.
         Consent::updateOrCreate(
-            [
-                'subject_id' => $user->id,
-                'subject_type' => $user->getMorphClass(),
-                'treatment_id' => $treatment->id,
-            ],
             [
                 'user_id' => $user->id,
                 'user_type' => $user->getMorphClass(),
+                'treatment_id' => $treatment->id,
+            ],
+            [
+                'subject_id' => $user->id,
                 'type' => 'account_deletion',
                 'accepted_at' => now(),
                 'revoked_at' => null,

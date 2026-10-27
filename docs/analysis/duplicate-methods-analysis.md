@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "duplicate methods analysis"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../duplicate-methods-analysis.md
 ---
 
 # Analisi Metodi Duplicati - Modulo Gdpr

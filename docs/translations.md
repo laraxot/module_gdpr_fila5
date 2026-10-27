@@ -15,7 +15,7 @@ status: draft
 ## Collegamenti
 
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
-- [Regole Generali Traduzioni](../../xot/docs/translations.md)
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 
 ## Struttura
 
@@ -82,8 +82,3 @@ return [
 * [translations.md](laravel/modules/activity/docs/translations.md)
 * [translations.md](laravel/modules/patient/docs/translations.md)
 * [translations.md](laravel/modules/cms/docs/translations.md)
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

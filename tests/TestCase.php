@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Gdpr;
+namespace Modules\Gdpr\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -10,21 +10,24 @@ use Illuminate\Support\Facades\DB;
 use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;
-use Tests\Modules\Xot\XotBaseTestCase;
+use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 
 /**
  * Base test case for Gdpr module.
  *
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
- * Uses shared sqlite (no RefreshDatabase / migrate:fresh).
+ * Uses the shared sqlite file of XotBaseTestCase::sharedSqlitePath() (no RefreshDatabase / migrate:fresh).
  * prepareSharedSqliteForTesting() runs before transactions begin.
+ *
+ * `$currentTest` espone il test in esecuzione alle funzioni helper di `tests/PestHelpers.php`
+ * (`gdprGet()`, `gdprPost()`, ...), che vivono fuori dalla closure Pest e quindi senza `$this`.
+ * Sostituisce `test()` di Pest, che restituisce la classe `@internal` `HigherOrderTapProxy`.
  */
 abstract class TestCase extends XotBaseTestCase
 {
     use DatabaseTransactions;
+
+    public static ?self $currentTest = null;
 
     /** @var list<string> */
     protected $connectionsToTransact = ['sqlite'];
@@ -35,7 +38,16 @@ abstract class TestCase extends XotBaseTestCase
 
         parent::setUp();
 
+        self::$currentTest = $this;
+
         config(['auth.providers.users.model' => User::class]);
+    }
+
+    protected function tearDown(): void
+    {
+        self::$currentTest = null;
+
+        parent::tearDown();
     }
 
     /**

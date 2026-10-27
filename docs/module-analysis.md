@@ -67,12 +67,4 @@ Il consenso dato, il consenso revocato, il dato cancellato - tutto tracciato, nu
 ## Divisione o Unione
 - **Mantieni separato**: GDPR è compliance, non business logic
 - **Potenziale integrazione**: dovrebbe avere hooks in ogni modulo che tratta dati personali
-<<<<<<< .merge_file_feAG7s
 - **Conflitto**: con Activity (audit trail), con User (gestione consensi), con Compliance (norme regolatorie)
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).
-=======
-- **Conflitto**: con Activity (audit trail), con User (gestione consensi), con Compliance (norme regolatorie)
->>>>>>> .merge_file_6UBdl9

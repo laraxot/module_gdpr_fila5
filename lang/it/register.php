@@ -55,16 +55,16 @@ return [
             'description' => '',
         ],
         'email' => [
-            'label' => 'La tua migliore Email',
+            'label' => 'Indirizzo email',
             'placeholder' => 'mario.rossi@esempio.com',
             'helper_text' => 'Ti invieremo un\'email di conferma',
             'tooltip' => '',
             'description' => '',
         ],
         'password' => [
-            'label' => 'Password sicura',
+            'label' => 'Password',
             'placeholder' => '••••••••••••',
-            'helper_text' => 'Minimo 12 caratteri, maiuscola, minuscola, numero e simbolo',
+            'helper_text' => 'Minimo 8 caratteri, maiuscola, minuscola, numero e simbolo',
             'tooltip' => '',
             'description' => '',
         ],
@@ -77,7 +77,7 @@ return [
         ],
     ],
     'sections' => [
-        'user_info' => 'Informazioni Personali',
+        'user_info' => 'Dati personali',
         'user_info_description' => 'Inserisci i tuoi dati personali',
         'required_consents' => 'Consensi Obbligatori',
         'required_consents_description' => 'Devi accettare le seguenti condizioni',
@@ -88,7 +88,7 @@ return [
         'benefits' => 'Vantaggi',
     ],
     'consents' => [
-        'title' => 'Consensi Privacy',
+        'title' => 'Consensi',
         'privacy_policy_label' => 'Ho letto e accetto l\'Informativa Privacy',
         'privacy_policy_hint' => 'Ai sensi degli artt. 13 e 14 GDPR',
         'privacy_policy_required' => 'Devi accettare la privacy policy',

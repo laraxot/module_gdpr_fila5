@@ -8,6 +8,7 @@ use Illuminate\Contracts\Http\Kernel as HttpKernel;
 use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\View;
+use Illuminate\Translation\Translator;
 use Modules\Gdpr\Http\Middleware\InjectCookieBanner;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
@@ -31,7 +32,22 @@ class GdprServiceProvider extends XotBaseServiceProvider
         // questo provider: a boot concluso il namespace del modulo (it, en, de, es) torna a prevalere. Senza, in /it il banner mostrava le chiavi.
         $cookieConsentLangPath = realpath(__DIR__.'/../../lang/cookie-consent');
         if ($cookieConsentLangPath && is_dir($cookieConsentLangPath)) {
-            $this->app->booted(fn () => $this->loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent'));
+            $this->app->booted(function () use ($cookieConsentLangPath): void {
+                $this->loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent');
+                $translator = $this->app->make(Translator::class);
+                foreach (['it', 'en', 'de', 'es'] as $locale) {
+                    $file = $cookieConsentLangPath.'/'.$locale.'/texts.php';
+                    if (is_file($file)) {
+                        /** @var array<string, string> $lines */
+                        $lines = require $file;
+                        $translator->addLines(
+                            array_combine(array_map(static fn (string $key): string => 'texts.'.$key, array_keys($lines)), array_values($lines)),
+                            $locale,
+                            'cookie-consent',
+                        );
+                    }
+                }
+            });
         }
 
         // La vista del banner e' del modulo (DCP-153): prependNamespace la fa prevalere su quella di statikbe/laravel-cookie-consent.

@@ -15,6 +15,6 @@ return [
     'submit' => 'Eliminar mi cuenta',
     'success' => 'Cuenta eliminada correctamente.',
     'flash' => [
-        'account_deleted' => 'Cuenta eliminada correctamente. Se revocaron los consentimientos y los datos se soft-deleted según el art. 17 RGPD.',
+        'account_deleted' => 'Tu cuenta se ha desactivado y se ha cerrado tu sesión. Tus datos se eliminarán cuando se cierren tus avisos abiertos.',
     ],
 ];

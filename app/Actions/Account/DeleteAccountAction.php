@@ -14,7 +14,6 @@ use Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\BaseUser;
-use Modules\User\Models\Policies\UserPolicy;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -38,9 +37,8 @@ class DeleteAccountAction
             abort(401);
         }
 
-        // Not `Gate::authorize('delete', $user)`: the configured user class (e.g. `Modules\Fixcity\Models\User`) has no
-        // policy the Gate can guess, so that check denied every owner with a 403. Ask the User module policy directly.
-        Gate::allowIf(app(UserPolicy::class)->delete($user, $user));
+        // `delete` is the back-office ability (admins remove other users): the owner uses `deleteOwnAccount`.
+        Gate::authorize('deleteOwnAccount', $user);
 
         if ($request->isMethod('get')) {
             return redirect('/'.app()->getLocale());
@@ -56,7 +54,7 @@ class DeleteAccountAction
         $this->execute($user, $reason);
 
         return redirect('/'.app()->getLocale())
-            ->with('status', 'account_deleted');
+            ->with('status', 'gdpr::account.flash.account_deleted');
     }
 
     /**
@@ -104,15 +102,15 @@ class DeleteAccountAction
             ]
         );
 
+        // `consents` has no `subject_type`: the user is keyed by `user_id` + `user_type`, as in RevokeGdprConsentsAction.
         Consent::updateOrCreate(
-            [
-                'subject_id' => $user->id,
-                'subject_type' => $user->getMorphClass(),
-                'treatment_id' => $treatment->id,
-            ],
             [
                 'user_id' => $user->id,
                 'user_type' => $user->getMorphClass(),
+                'treatment_id' => $treatment->id,
+            ],
+            [
+                'subject_id' => $user->id,
                 'type' => 'account_deletion',
                 'accepted_at' => now(),
                 'revoked_at' => null,

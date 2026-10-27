@@ -41,6 +41,7 @@ return [
     'purpose_session' => 'Hält Ihre Sitzung aufrecht und schützt den Zugang.',
     'purpose_xsrf' => 'Schützt Formulare vor ungewollten Übermittlungen von anderen Websites.',
     'purpose_consent' => 'Merkt sich die Auswahl im Cookie-Banner.',
+    'purpose_remember' => 'Hält Sie auf diesem Gerät angemeldet, nur wenn Sie bei der Anmeldung wählen, angemeldet zu bleiben.',
     'duration_minutes' => 'Bis zu :minutes Minuten',
     'duration_days' => ':days Tage',
     'policy_how_title' => 'Auswahl ändern oder widerrufen',

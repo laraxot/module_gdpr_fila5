@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "phpstan complete fixes"
 type: note
@@ -10,6 +11,8 @@ discussions: []
 status: draft
 ---
 
+=======
+>>>>>>> f5025bb (.)
 # PHPStan Complete Fixes 2025 - Gdpr Module
 
 **Status**: ✅ **COMPLETATO CON SUCCESSO**

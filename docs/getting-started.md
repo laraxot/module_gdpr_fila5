@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "getting started"
 type: note
@@ -10,6 +11,8 @@ discussions: []
 status: draft
 ---
 
+=======
+>>>>>>> f5025bb (.)
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.

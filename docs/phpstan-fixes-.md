@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "phpstan fixes "
 type: note
@@ -10,6 +11,8 @@ discussions: []
 status: draft
 ---
 
+=======
+>>>>>>> f5025bb (.)
 # PHPStan Fixes - Gdpr Module - 2025-10-13
 
 ## Summary
@@ -163,6 +166,10 @@ expect($consent->property)->toBe($value);
 3. Move to next module
 
 ---
+<<<<<<< HEAD
+=======
+
+>>>>>>> f5025bb (.)
 *Last Updated: 2025-10-13*
 *Progress: 68% complete (18 errors remaining)*
 *Module Status: Substantial progress - main model issues resolved*
@@ -288,7 +295,11 @@ Il modulo GDPR gestisce:
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [← GDPR Module README](./README.md)
+=======
+- [← GDPR Module README](./readme.md)
+>>>>>>> f5025bb (.)
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Root Documentation](../../../../docs/index.md)
 

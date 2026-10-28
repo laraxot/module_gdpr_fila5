@@ -1,7 +1,10 @@
 ---
+<<<<<<< HEAD
 qmd: "phpstan analysis"
 issues: []
 discussions: []
+=======
+>>>>>>> f5025bb (.)
 title: analisi phpstan modulo gdpr
 type: memory
 tags: [phpstan, gdpr, fixes]

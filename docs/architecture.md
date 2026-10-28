@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "architecture"
 type: note
 tags: [documentation]
@@ -11,6 +12,11 @@ module: theme
 topic: architecture
 canonical: ../../../Themes/docs/shared-components/.gitkeep
 status: stub
+=======
+module: theme
+topic: architecture
+canonical: ../../../Themes/docs/shared-components/.gitkeep
+>>>>>>> f5025bb (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep

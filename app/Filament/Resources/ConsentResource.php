@@ -15,6 +15,20 @@ class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+    public function getFormSchemaOld(): array
+    {
+        return [
+            'treatment_id' => Select::make('treatment_id')
+                ->relationship('treatment', 'name')
+                ->required(),
+            'subject_id' => TextInput::make('subject_id')->required()->maxLength(191),
+        ];
+    }
+
+>>>>>>> f5025bb (.)
     /**
      * @return array<int|string, TextColumn>
      */

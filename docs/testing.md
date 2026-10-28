@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "testing"
 type: note
@@ -10,6 +11,8 @@ discussions: []
 status: draft
 ---
 
+=======
+>>>>>>> f5025bb (.)
 # Testing Documentation
 
 ## Overview
@@ -380,9 +383,14 @@ Following these guidelines will ensure your GDPR module tests are:
 Remember: Good tests are the foundation of reliable software development.
 
 ---
+<<<<<<< HEAD
 *
 
 ## consent business logic test (2026-10)
 
 `GdprConsentBusinessLogicTest` verifica il model reale `Consent` (non la classe fantasma `GdprConsent`) con asserzioni PHPUnit pure e factory tipizzate (`createOne`).
 
+=======
+
+*
+>>>>>>> f5025bb (.)

@@ -163,7 +163,11 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, mixed>  $formData
+=======
+     * @param array<string, mixed> $formData
+>>>>>>> f5025bb (.)
      */
     protected function logRegistrationAttempt(array $formData): void
     {

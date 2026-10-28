@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "changelog"
 type: note
@@ -14,3 +15,10 @@ status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/CHANGELOG.md
+=======
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+>>>>>>> f5025bb (.)

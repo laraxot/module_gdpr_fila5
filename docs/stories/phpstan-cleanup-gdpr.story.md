@@ -41,7 +41,7 @@ registrazione mappando `privacy_accepted -> privacy_policy`, `terms_accepted -> 
 - Discussion: TODO
 
 <<<<<<< .merge_file_G8ih73
-Dev story: [2026-10-06-phpstan-cleanup-gdpr.dev.md](./phpstan-cleanup-gdpr.dev.md)
+Dev story: [phpstan-cleanup-gdpr.dev.md](./phpstan-cleanup-gdpr.dev.md)
 =======
 Dev story: [phpstan-cleanup-gdpr.dev.md](./phpstan-cleanup-gdpr.dev.md)
 >>>>>>> .merge_file_YarjaY

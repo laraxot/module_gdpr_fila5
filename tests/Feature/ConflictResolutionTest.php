@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
+use PHPUnit\Framework\Assert;
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     Assert::assertInstanceOf(Treatment::class, new Treatment());

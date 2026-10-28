@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "phpstan merge conflicts roadmap"
 type: note
@@ -11,8 +10,6 @@ discussions: []
 status: draft
 ---
 
-=======
->>>>>>> f5025bb (.)
 # Roadmap: Risoluzione Merge Conflicts e PHPStan Errors - Modulo GDPR
 
 **Status**: 🔴 Bloccante - Merge Conflicts da Risolvere
@@ -20,8 +17,4 @@ status: draft
 **Metodologia**: Super Mucca - La Litigata Interna
 
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> f5025bb (.)
 ## 🔴 Problema Critico Identificato

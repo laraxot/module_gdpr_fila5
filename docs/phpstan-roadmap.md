@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "phpstan roadmap"
 type: note
@@ -11,8 +10,6 @@ discussions: []
 status: draft
 ---
 
-=======
->>>>>>> f5025bb (.)
 # PHPStan Roadmap - Gdpr Module
 
 > **Date**: [DATE]

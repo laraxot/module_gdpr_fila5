@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: "phpstan"
 type: note
 tags: [documentation]
@@ -12,11 +11,6 @@ module: theme
 topic: phpstan
 canonical: ../../../Themes/docs/shared-components/phpstan-report.txt
 status: stub
-=======
-module: theme
-topic: phpstan
-canonical: ../../../Themes/docs/shared-components/phpstan-report.txt
->>>>>>> f5025bb (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-report.txt

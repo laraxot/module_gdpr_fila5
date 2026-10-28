@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "phpstan analysis gdpr"
 type: note
@@ -11,8 +10,6 @@ discussions: []
 status: draft
 ---
 
-=======
->>>>>>> f5025bb (.)
 # PHPStan Analysis - Gdpr Module
 
 ## 📊 Status
@@ -166,10 +163,6 @@ function createConsent(array $attributes = []): Consent
 - [ ] Document GDPR best practices for other modules
 
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> f5025bb (.)
 **Analysis Date**: [DATE]
 **PHPStan Version**: 2.1.2
 **Laravel Version**: 12.31.1

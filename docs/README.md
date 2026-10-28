@@ -69,14 +69,7 @@ L'indice operativo e' [00-INDEX.md](./00-index.md); l'indice per argomento e' [i
 
 ## Documentation
 
-<<<<<<< HEAD
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md): Pattern per caricamento efficiente
 - [QMD Setup](./QMD-SETUP.md): Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md): Metriche e best practice
 - [Project Structure](./PROJECT-STRUCTURE.md): Directory layout
-=======
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
-- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
-- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
->>>>>>> f5025bb (.)

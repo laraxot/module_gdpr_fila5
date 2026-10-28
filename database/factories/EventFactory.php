@@ -15,8 +15,11 @@ class EventFactory extends Factory
     protected $model = Event::class;
 
     /**
+<<<<<<< HEAD
      *
      * @return array<string, string>
+=======
+>>>>>>> f5025bb (.)
      * @return array<string, mixed>
      */
     public function definition(): array

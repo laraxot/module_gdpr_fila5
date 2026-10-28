@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "phpstan compliance"
 type: note
@@ -10,6 +11,8 @@ discussions: []
 status: draft
 ---
 
+=======
+>>>>>>> f5025bb (.)
 # PHPStan Compliance - GDPR Module
 
 ## Status: ✅ FULLY COMPLIANT

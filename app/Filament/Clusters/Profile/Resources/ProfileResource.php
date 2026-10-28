@@ -17,6 +17,15 @@ class ProfileResource extends XotBaseResource
 
     protected static ?string $cluster = ProfileCluster::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+    public function getFormSchemaOld(): array
+    {
+        return [];
+    }
+
+>>>>>>> f5025bb (.)
     #[\Override]
     public static function getPages(): array
     {

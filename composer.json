@@ -39,15 +39,7 @@
     "autoload-dev": {
         "psr-4": {
             "Modules\\Gdpr\\Tests\\": "tests/"
-<<<<<<< HEAD
         }
-=======
-        },
-        "files": [
-            "tests/PestHelpers.php",
-            "tests/PestStubs.php"
-        ]
->>>>>>> f5025bb (.)
     },
     "require": {
         "statikbe/laravel-cookie-consent": "^1.0"

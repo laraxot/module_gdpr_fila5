@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 /*
  * Bootstrap Pest — modulo Gdpr.
-<<<<<<< HEAD
  * Il binding a \Modules\Gdpr\Tests\TestCase e' fatto solo qui sotto: i file test NON devono
  * dichiarare uses(TestCase::class) (altrimenti Pest\Exceptions\TestCaseAlreadyInUse).
  * Per estendere si usa l'API idiomatica di Pest — `pest()->extend(...)`, in fondo
@@ -20,8 +19,3 @@ require_once __DIR__.'/PestHelpers.php';
 require_once __DIR__.'/PestStubs.php';
 
 pest()->extend(Modules\Gdpr\Tests\TestCase::class)->in(__DIR__.'/Unit', __DIR__.'/Feature');
-=======
- * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
- * Vietato pest()->extend() / expect()->extend() / uses()->in() qui (PHPStan method.internalClass).
- */
->>>>>>> f5025bb (.)

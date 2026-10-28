@@ -16,11 +16,7 @@ use PHPUnit\Framework\Assert;
 /**
  * Base test case for Gdpr module.
  *
-<<<<<<< HEAD
  * Uses the shared sqlite file of XotBaseTestCase::sharedSqlitePath() (no RefreshDatabase / migrate:fresh).
-=======
- * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
->>>>>>> f5025bb (.)
  * prepareSharedSqliteForTesting() runs before transactions begin.
  *
  * `$currentTest` espone il test in esecuzione alle funzioni helper di `tests/PestHelpers.php`

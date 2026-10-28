@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "phpstan fixes"
 type: note
@@ -22,19 +21,11 @@ cd laravel && php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules/Gdp
 
 Test: ereditarietà verificata con `Safe\class_parents` + `assertArrayHasKey` (niente `is_a`/`is_subclass_of` ridondanti); variabili fixture usate in asserzioni comportamentali.
 
-=======
-# GDPR Module — PHPStan
-
->>>>>>> f5025bb (.)
 ## 2026-06-10 — STORY-306 · L10 · 0 errori codice
 
 `./vendor/bin/phpstan analyse Modules/Gdpr` — 728→0 (test Assert, TestCase wrappers). Issue [#334](https://github.com/laraxot/base_fixcity_fila5/issues/334).
 
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> f5025bb (.)
 ## Storico — Session 2025-10-01 · Level 9
 
 ## ✅ Stato: ZERO ERRORI - PHPStan Level 9 Compliance
@@ -158,18 +149,11 @@ Il modulo GDPR gestisce:
 ## 🔗 Collegamenti
 
 - [← GDPR Module README](./README.md)
-<<<<<<< HEAD
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Root Documentation](../../../../docs/index.md)
-=======
-- [← PHPStan Session Report](../../../docs/phpstan/filament-v4-fixes-session.md)
-- [← Root Documentation](../../../docs/index.md)
->>>>>>> f5025bb (.)
 
 ---
 
 **Status**: ✅ COMPLETATO  
 **PHPStan Level**: 9  
 **Maintenance**: Nessuna azione richiesta
-
-

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Tables;
 
 use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Str;
 use Modules\Gdpr\Models\Treatment;

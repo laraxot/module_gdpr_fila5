@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "phpstan compliance status"
 type: note
@@ -11,8 +10,6 @@ discussions: []
 status: draft
 ---
 
-=======
->>>>>>> f5025bb (.)
 # PHPStan Level 10 Compliance Status
 
 

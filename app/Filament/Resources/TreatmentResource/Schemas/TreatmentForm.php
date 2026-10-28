@@ -6,10 +6,7 @@ namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Schemas;
 
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
 use Filament\Forms\Components\Toggle;
-=======
->>>>>>> f5025bb (.)
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;

@@ -20,19 +20,7 @@ use PHPUnit\Framework\Assert;
  */
 function gdprTest(): TestCase
 {
-<<<<<<< HEAD
     return TestCase::$currentTest ?? throw new LogicException('gdprTest() va chiamato durante un test che estende Modules\Gdpr\Tests\TestCase.');
-=======
-    $test = test();
-    // @phpstan-ignore-next-line HigherOrderTapProxy is a Pest internal class
-    if ($test instanceof HigherOrderTapProxy) {
-        $test = $test->target;
-    }
-
-    Assert::assertInstanceOf(TestCase::class, $test);
-
-    return $test;
->>>>>>> f5025bb (.)
 }
 
 /**
@@ -87,11 +75,7 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
-<<<<<<< HEAD
  * @param array<string, mixed> $where
-=======
- * @param  array<string, mixed>  $where
->>>>>>> f5025bb (.)
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {

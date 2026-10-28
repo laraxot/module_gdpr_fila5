@@ -15,12 +15,8 @@ class TreatmentFactory extends Factory
     protected $model = Treatment::class;
 
     /**
-<<<<<<< HEAD
      *
      * @return array<string, bool|int|string>
-=======
-     * @return array<string, mixed>
->>>>>>> f5025bb (.)
      */
     public function definition(): array
     {

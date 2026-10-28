@@ -15,14 +15,7 @@ class ValidateUserDataAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
      * @param  array<string, mixed>  $formData
-=======
-     * @param array<string, mixed> $formData
-     * @param array<string, mixed> $formData
-     * @param array<string, mixed> $formData
-     *
->>>>>>> f5025bb (.)
      * @return array<string, mixed>
      */
     public function execute(array $formData): array

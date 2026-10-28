@@ -10,4 +10,8 @@ discussions: []
 status: stale
 ---
 
+<<<<<<< .merge_file_sxXc4w
 > Nota 2026-10-14 (docs-audit): Superato da cookie-banner.md (DCP-153, 2026-10-14): non descrive il banner che gira. Il contenuto e' conservato come cronologia. Contenuto non riscritto, verificare prima di usarlo.
+=======
+> Nota 2026-10-14 (docs-audit): Superato da cookie-banner.md (DCP-153, 2026-10-14): non descrive il banner che gira. Il contenuto e' conservato come cronologia. Contenuto non riscritto, verificare prima di usarlo.
+>>>>>>> .merge_file_GAGjBH

@@ -40,8 +40,9 @@ docs/phpstan/
 /docs/vendor/
 # Documentation and cache
 .DS_Store
--e
 .env
+.env.*
+!.env.example
 error_log
 *.exe
 *.fila2

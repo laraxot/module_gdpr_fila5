@@ -12,8 +12,4 @@ tags: [docs, gdpr]
 
 # Alias — indice Gdpr
 
-<<<<<<< .merge_file_bIMGJd
 Canonico: [00-INDEX.md](./00-INDEX.md). Scopo: [wiki/scopo.md](./wiki/scopo.md).
-=======
-Canonico: [00-INDEX.md](./00-INDEX.md). Scopo: [wiki/scopo.md](./wiki/scopo.md).
->>>>>>> .merge_file_J6LWvf

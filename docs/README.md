@@ -72,8 +72,4 @@ L'indice operativo e' [00-INDEX.md](./00-index.md); l'indice per argomento e' [i
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md): Pattern per caricamento efficiente
 - [QMD Setup](./QMD-SETUP.md): Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md): Metriche e best practice
-<<<<<<< .merge_file_VkvJ98
 - [Project Structure](./PROJECT-STRUCTURE.md): Directory layout
-=======
-- [Project Structure](./PROJECT-STRUCTURE.md): Directory layout
->>>>>>> .merge_file_rIkr4f

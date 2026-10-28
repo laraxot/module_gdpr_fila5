@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
-<<<<<<< .merge_file_ivd3HF
-=======
 use PHPUnit\Framework\Assert;
->>>>>>> .merge_file_DoU87Y
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     Assert::assertInstanceOf(Treatment::class, new Treatment());

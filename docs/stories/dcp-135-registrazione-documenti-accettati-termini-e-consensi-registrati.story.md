@@ -39,4 +39,8 @@ GDPR art. 7 par. 1 (onere di dimostrare) e art. 7 par. 4 (consenso separato e no
 - [ ] `terms.md` del tenant non contiene la frase segnaposto, oppure la casella e' assente.
 
 ## Dipendenze e priorita'
+<<<<<<< .merge_file_JtrCL7
 DCP-130, DCP-134 (se la base cambia, cambiano anche i testi). P1.
+=======
+DCP-130, DCP-134 (se la base cambia, cambiano anche i testi). P1.
+>>>>>>> .merge_file_vavJZm

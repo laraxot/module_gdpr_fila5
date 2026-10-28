@@ -85,4 +85,8 @@ La registrazione per la PA deve soddisfare GDPR art.7 (consenso libero, specific
 - `lary/app/Actions/Consent/SaveRegistrationConsentsAction.php` (se esiste)
 - `resources/views/auth/register.blade.php`
 - `tests/Playwright/auth-register-e2e.spec.js`
+<<<<<<< .merge_file_JyG2Fu
 - `docs/bmad/DCP-135-registration-consent-terms.story.md`
+=======
+- `docs/bmad/DCP-135-registration-consent-terms.story.md`
+>>>>>>> .merge_file_PF9drY

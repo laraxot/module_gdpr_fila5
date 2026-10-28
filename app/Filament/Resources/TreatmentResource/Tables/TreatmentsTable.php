@@ -14,15 +14,13 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class TreatmentsTable extends XotBaseResourceTable
 {
     /**
-     * @var class-string<Treatment>
-     */
-    protected static string $model = Treatment::class;
-
-    /**
      * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
+        /*
+         * @return array<int|string, \Filament\Tables\Columns\Column>
+         */
         return [
             'name' => TextColumn::make('name')->searchable()->sortable()->wrap(),
             'active' => IconColumn::make('active')->boolean()->sortable(),

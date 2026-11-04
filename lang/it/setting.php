@@ -10,6 +10,22 @@ return [
         'sort' => 99,
     ],
     'title' => 'Impostazioni',
+    'fields' => [
+        'consent_lifetime' => [
+            'label' => 'Validita della scelta sui cookie (giorni)',
+            'placeholder' => '180',
+            'helper_text' => 'Prima di questo periodo il banner non viene riproposto. Il Garante non ammette meno di 6 mesi: minimo 180.',
+            'tooltip' => '',
+            'description' => '',
+        ],
+        'policy_path' => [
+            'label' => 'Pagina della cookie policy',
+            'placeholder' => '/cookies',
+            'helper_text' => 'Percorso senza lingua (es. /cookies): il prefisso della lingua lo aggiunge il sito.',
+            'tooltip' => '',
+            'description' => '',
+        ],
+    ],
     'actions' => [
         'save' => [
             'label' => 'Salva',

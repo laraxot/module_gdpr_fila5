@@ -20,6 +20,14 @@ return [
         'cta_title' => 'Crea il tuo account gratuito',
         'cta_subtitle' => 'Nessuna carta di credito richiesta',
         'terms_notice' => 'Registrandoti accetti i nostri Termini e Privacy Policy',
+        'first_name' => 'Nome',
+        'last_name' => 'Cognome',
+        'email' => 'Email',
+        'password' => 'Password',
+        'hide_password' => 'Nascondi password',
+        'show_password' => 'Mostra password',
+        'password_confirmation' => 'Conferma password',
+        'submit' => 'Crea account',
     ],
     'benefits' => [
         'community' => [
@@ -55,16 +63,16 @@ return [
             'description' => '',
         ],
         'email' => [
-            'label' => 'La tua migliore Email',
+            'label' => 'Indirizzo email',
             'placeholder' => 'mario.rossi@esempio.com',
             'helper_text' => 'Ti invieremo un\'email di conferma',
             'tooltip' => '',
             'description' => '',
         ],
         'password' => [
-            'label' => 'Password sicura',
+            'label' => 'Password',
             'placeholder' => '••••••••••••',
-            'helper_text' => 'Minimo 12 caratteri, maiuscola, minuscola, numero e simbolo',
+            'helper_text' => 'Minimo 8 caratteri, maiuscola, minuscola, numero e simbolo',
             'tooltip' => '',
             'description' => '',
         ],
@@ -77,7 +85,7 @@ return [
         ],
     ],
     'sections' => [
-        'user_info' => 'Informazioni Personali',
+        'user_info' => 'Dati personali',
         'user_info_description' => 'Inserisci i tuoi dati personali',
         'required_consents' => 'Consensi Obbligatori',
         'required_consents_description' => 'Devi accettare le seguenti condizioni',
@@ -88,7 +96,7 @@ return [
         'benefits' => 'Vantaggi',
     ],
     'consents' => [
-        'title' => 'Consensi Privacy',
+        'title' => 'Consensi',
         'privacy_policy_label' => 'Ho letto e accetto l\'Informativa Privacy',
         'privacy_policy_hint' => 'Ai sensi degli artt. 13 e 14 GDPR',
         'privacy_policy_required' => 'Devi accettare la privacy policy',
@@ -100,6 +108,9 @@ return [
         'terms_required' => 'Devi accettare i termini e condizioni',
         'marketing_label' => 'Voglio ricevere aggiornamenti e inviti (facoltativo)',
         'marketing_hint' => 'Puoi revocarlo in qualsiasi momento',
+        'privacy_policy' => 'Ho letto e accetto l\'informativa sulla privacy',
+        'terms' => 'Accetto i termini e le condizioni d\'uso',
+        'marketing' => 'Desidero ricevere comunicazioni di marketing (facoltativo)',
     ],
     'actions' => [
         'read_privacy_policy' => 'Leggi privacy policy',
@@ -123,6 +134,10 @@ return [
         ],
         'label' => 'Register',
         'sort' => 1,
-        'icon' => 'heroicon-o-rectangle-stack',
+        'icon' => 'heroicon-o-collection',
+    ],
+    'already_have_account' => 'Hai già un account?',
+    'links' => [
+        'and' => 'e',
     ],
 ];

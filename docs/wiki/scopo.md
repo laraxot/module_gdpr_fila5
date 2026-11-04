@@ -21,4 +21,4 @@ In una riga:
 
 > **Gdpr e' il posto dei consensi e del banner cookie; non e' ancora il posto di export dati, DPIA o informativa art. 13 (oggi parzialmente fuori modulo — vedi README).**
 
-Dettaglio e limiti verificati: [../README.md](../README.md). Indice: [../00-INDEX.md](../00-INDEX.md). Wave: [../stories/phpstan-wave-coord.story.md](../stories/phpstan-wave-coord.story.md). Wave2 rector: [../stories/phpstan-wave2-rector-config.story.md](../stories/phpstan-wave2-rector-config.story.md) (`analyse Modules/Gdpr` → 0).
+Dettaglio e limiti verificati: [../README.md](../README.md). Indice: [../00-INDEX.md](../00-index.md). Wave: [../stories/phpstan-wave-coord.story.md](../stories/phpstan-wave-coord.story.md). Wave2 rector: [../stories/phpstan-wave2-rector-config.story.md](../stories/phpstan-wave2-rector-config.story.md) (`analyse Modules/Gdpr` → 0).

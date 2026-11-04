@@ -40,8 +40,9 @@ docs/phpstan/
 /docs/vendor/
 # Documentation and cache
 .DS_Store
--e
 .env
+.env.*
+!.env.example
 error_log
 *.exe
 *.fila2
@@ -101,6 +102,7 @@ vendor/
 .windsurf/
 yarn-error.log
 *:Zone.Identifier
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
 graphify-out/
 .claude/
 .claude-audit/

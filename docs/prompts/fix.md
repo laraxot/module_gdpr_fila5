@@ -18,7 +18,7 @@ aggiungere
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE_GDPR', 'laravel_gdpr'),
             'username' => env('DB_USERNAME_GDPR', env('DB_USERNAME', 'marco')),
-            'password' => env('DB_PASSWORD_GDPR', env('DB_PASSWORD', 'marco')),
+            'password' => env('DB_PASSWORD_GDPR', env('DB_PASSWORD')),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',

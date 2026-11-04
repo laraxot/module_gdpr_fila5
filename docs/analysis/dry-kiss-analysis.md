@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: ../dry-kiss-analysis.md
 ---
 
 # DRY & KISS Analysis - Modulo Gdpr

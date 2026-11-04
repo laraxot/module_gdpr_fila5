@@ -36,7 +36,7 @@ test('without a saved value the cookie settings keep the values the code used be
     $data = GdprConfigData::from([]);
 
     expect($data->consent_lifetime)->toBe(180)
-        ->and($data->policy_path)->toBe('/cookies');
+        ->and($data->policy_path)->toBe('/cookie-policy');
 });
 
 test('values from the tenant file override the defaults', function (): void {

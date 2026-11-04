@@ -15,11 +15,16 @@
 --}}
 @php
     use Modules\Gdpr\Actions\Cookie\GetCookieInventoryAction;
+    use Modules\Gdpr\Datas\GdprConfigData;
     use Modules\Gdpr\Enums\CookieCategory;
 
     $inventory = app(GetCookieInventoryAction::class)->execute();
     $withConsent = $inventory->requiresConsent();
+<<<<<<< .merge_file_o08ujd
     $policyUrl = \Themes\Sixteen\Infrastructure\Url\FrontofficeUrl::fromStoredUrl((string) config('gdpr.config.cookie.policy_path', '/cookie-policy'));
+=======
+    $policyUrl = \Themes\Sixteen\Infrastructure\Url\FrontofficeUrl::fromStoredUrl(GdprConfigData::make()->policy_path);
+>>>>>>> .merge_file_yIrWgW
     $t = static fn (string $key): string => (string) trans('cookie-consent::texts.'.$key);
     $categories = [
         ['id' => 'analytics', 'case' => CookieCategory::Analytics, 'label' => 'setting_analytics', 'text' => 'setting_analytics_text'],
@@ -86,7 +91,7 @@
     data-cookie-value-marketing="{{ config('cookie-consent.cookie_value_marketing') }}"
     data-cookie-value-both="{{ config('cookie-consent.cookie_value_both') }}"
     data-cookie-value-none="{{ config('cookie-consent.cookie_value_none') }}"
-    data-cookie-days="{{ config('gdpr.config.cookie.consent_lifetime', 180) }}"
+    data-cookie-days="{{ GdprConfigData::make()->consent_lifetime }}"
     data-cookie-secure="{{ request()->isSecure() ? '1' : '' }}">
     <div class="gdpr-cookiebar__inner">
         <div class="gdpr-cookiebar__text">

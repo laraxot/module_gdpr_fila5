@@ -35,5 +35,4 @@ class GdprConfigData extends Data
 
     /** Pagina della cookie policy linkata dal banner: path senza prefisso lingua (lo aggiunge FrontofficeUrl). */
     public string $policy_path = '/cookies';
- 
 }

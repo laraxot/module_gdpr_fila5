@@ -20,7 +20,11 @@
 
     $inventory = app(GetCookieInventoryAction::class)->execute();
     $withConsent = $inventory->requiresConsent();
+<<<<<<< .merge_file_o08ujd
+    $policyUrl = \Themes\Sixteen\Infrastructure\Url\FrontofficeUrl::fromStoredUrl((string) config('gdpr.config.cookie.policy_path', '/cookie-policy'));
+=======
     $policyUrl = \Themes\Sixteen\Infrastructure\Url\FrontofficeUrl::fromStoredUrl(GdprConfigData::make()->policy_path);
+>>>>>>> .merge_file_yIrWgW
     $t = static fn (string $key): string => (string) trans('cookie-consent::texts.'.$key);
     $categories = [
         ['id' => 'analytics', 'case' => CookieCategory::Analytics, 'label' => 'setting_analytics', 'text' => 'setting_analytics_text'],

@@ -27,6 +27,7 @@ class GdprConfigData extends Data
     use MakesFromTenantConfig;
 
     public bool $enabled = true;
+
     /**
      * Giorni di validita' della scelta sui cookie. Il Garante (provv. 10.6.2021 n. 231) non ammette di riproporre il
      * banner prima di 6 mesi: la pagina non accetta meno di 180.

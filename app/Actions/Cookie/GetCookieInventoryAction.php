@@ -6,6 +6,7 @@ namespace Modules\Gdpr\Actions\Cookie;
 
 use Modules\Gdpr\Datas\CookieData;
 use Modules\Gdpr\Datas\CookieInventoryData;
+use Modules\Gdpr\Datas\GdprConfigData;
 use Modules\Gdpr\Enums\CookieCategory;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -25,8 +26,7 @@ final class GetCookieInventoryAction
     {
         $sessionMinutes = config('session.lifetime');
         Assert::numeric($sessionMinutes);
-        $consentDays = config('gdpr.config.cookie.consent_lifetime', 180);
-        Assert::numeric($consentDays);
+        $consentDays = GdprConfigData::make()->consent_lifetime;
         $sessionName = config('session.cookie');
         Assert::string($sessionName);
         $consentName = config('cookie-consent.cookie_key', '__cookie_consent');
@@ -36,7 +36,7 @@ final class GetCookieInventoryAction
         $cookies = [
             new CookieData($sessionName, CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_session'), $sessionDuration),
             new CookieData('XSRF-TOKEN', CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_xsrf'), $sessionDuration),
-            new CookieData($consentName, CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_consent'), (string) trans('cookie-consent::texts.duration_days', ['days' => (int) $consentDays])),
+            new CookieData($consentName, CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_consent'), (string) trans('cookie-consent::texts.duration_days', ['days' => $consentDays])),
         ];
 
         $extra = config('gdpr.config.cookie.extra', []);

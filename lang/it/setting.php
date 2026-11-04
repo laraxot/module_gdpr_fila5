@@ -20,8 +20,8 @@ return [
         ],
         'policy_path' => [
             'label' => 'Pagina della cookie policy',
-            'placeholder' => '/cookies',
-            'helper_text' => 'Percorso senza lingua (es. /cookies): il prefisso della lingua lo aggiunge il sito.',
+            'placeholder' => '/cookie-policy',
+            'helper_text' => 'Percorso senza lingua (es. /cookie-policy): il prefisso della lingua lo aggiunge il sito.',
             'tooltip' => '',
             'description' => '',
         ],

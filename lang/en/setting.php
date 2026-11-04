@@ -20,8 +20,8 @@ return [
         ],
         'policy_path' => [
             'label' => 'Cookie policy page',
-            'placeholder' => '/cookies',
-            'helper_text' => 'Path without the language (e.g. /cookies): the site adds the language prefix.',
+            'placeholder' => '/cookie-policy',
+            'helper_text' => 'Path without the language (e.g. /cookie-policy): the site adds the language prefix.',
             'tooltip' => '',
             'description' => '',
         ],

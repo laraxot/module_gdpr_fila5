@@ -52,7 +52,11 @@ final class GetCookieInventoryAction
         }
         $cookies = [
             ...$cookies,
+<<<<<<< .merge_file_LcWJph
+            new CookieData($consentName, CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_consent'), (string) trans('cookie-consent::texts.duration_days', ['days' => (int) $consentDays])),
+=======
             new CookieData($consentName, CookieCategory::Necessary, (string) trans('cookie-consent::texts.purpose_consent'), (string) trans('cookie-consent::texts.duration_days', ['days' => $consentDays])),
+>>>>>>> .merge_file_Eq0O5m
         ];
 
         $extra = config('gdpr.config.cookie.extra', []);

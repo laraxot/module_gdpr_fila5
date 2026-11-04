@@ -15,19 +15,13 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
  */
 class SettingPage extends BaseSettingPage
 {
-    /**
-<<<<<<< HEAD
+/**
      * @return array<string, object>
      */
     protected function getFormSchema(): array
     {
-        return parent::getFormSchema();
-=======
-     * @return array<string, TextInput>
-     */
-    protected function getFormSchema(): array
-    {
         return [
+            'enabled' => Toggle::make('enabled')->default(true)->required(),
             'consent_lifetime' => TextInput::make('consent_lifetime')
                 ->numeric()
                 ->integer()
@@ -38,6 +32,5 @@ class SettingPage extends BaseSettingPage
                 ->startsWith('/')
                 ->maxLength(255),
         ];
->>>>>>> 9844c0f560b1e7a237626699975161a93ed739b0
     }
 }

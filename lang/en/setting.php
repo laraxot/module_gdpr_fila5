@@ -10,6 +10,22 @@ return [
         'sort' => 99,
     ],
     'title' => 'Settings',
+    'fields' => [
+        'consent_lifetime' => [
+            'label' => 'Cookie choice validity (days)',
+            'placeholder' => '180',
+            'helper_text' => 'The banner is not shown again before this period. The Italian regulator does not allow less than 6 months: minimum 180.',
+            'tooltip' => '',
+            'description' => '',
+        ],
+        'policy_path' => [
+            'label' => 'Cookie policy page',
+            'placeholder' => '/cookies',
+            'helper_text' => 'Path without the language (e.g. /cookies): the site adds the language prefix.',
+            'tooltip' => '',
+            'description' => '',
+        ],
+    ],
     'actions' => [
         'save' => [
             'label' => 'Save',

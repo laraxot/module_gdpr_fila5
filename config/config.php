@@ -5,6 +5,7 @@ declare(strict_types=1);
 return [
     'name' => 'Gdpr',
     'description' => 'Modulo per il Gdpr',
+    // 'icon' => 'heroicon-o-clock',
     'icon' => 'gdpr-icon',
     'navigation' => [
         'enabled' => true,
@@ -33,6 +34,9 @@ return [
         // Cookie NON tecnici (analitici, marketing) impostati da un modulo: [name, category (analytics|marketing), purpose, duration]
         // purpose e duration sono chiavi di traduzione o testi. Vuoto = solo cookie tecnici: il banner informa e non chiede consenso.
         'extra' => [],
+        // Pagina della cookie policy linkata dal banner: path senza prefisso lingua (lo aggiunge FrontofficeUrl, quindi resta multilingua).
+        // In questo progetto la pagina CMS ha slug `cookies`; un tema con altra pagina imposta qui il suo path.
+        'policy_path' => '/cookies',
     ],
     /*
      * |--------------------------------------------------------------------------

@@ -5,6 +5,7 @@ module: Gdpr
 status: decision-input
 updated: 2026-10-15
 tags: [sustainability, gdpr, privacy, bmad]
+qmd: "privacy (ownership gdpr) gdpr"
 ---
 
 # Privacy (ownership Gdpr)

@@ -62,7 +62,7 @@ Esito del secondo comando il 2026-10-14: 68 passati, 186 falliti; i Feature fall
 
 ## Mappa della documentazione
 
-L'indice operativo e' [00-INDEX.md](./00-INDEX.md); l'indice per argomento e' [index.md](./index.md). Le decisioni sono in [decision-log.md](./decision-log.md), il lavoro in corso nelle story di [stories/](./stories/), la memoria locale in [wiki/](./wiki/).
+L'indice operativo e' [00-INDEX.md](./00-index.md); l'indice per argomento e' [index.md](./index.md). Le decisioni sono in [decision-log.md](./decision-log.md), il lavoro in corso nelle story di [stories/](./stories/), la memoria locale in [wiki/](./wiki/).
 
 ## AI Workflows
 - [AI Methodologies](./ai-methodologies.md)

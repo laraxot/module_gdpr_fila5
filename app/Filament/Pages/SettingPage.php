@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Pages;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Modules\Gdpr\Datas\GdprConfigData;
 use Modules\Xot\Filament\Pages\BaseSettingPage;
 
@@ -16,11 +17,12 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
-     * @return array<string, TextInput>
+     * @return array<string, TextInput|Toggle>
      */
     protected function getFormSchema(): array
     {
         return [
+            'enabled' => Toggle::make('enabled')->default(true)->required(),
             'consent_lifetime' => TextInput::make('consent_lifetime')
                 ->numeric()
                 ->integer()

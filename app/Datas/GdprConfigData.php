@@ -34,6 +34,6 @@ class GdprConfigData extends Data
      */
     public int $consent_lifetime = 180;
 
-    /** Pagina della cookie policy linkata dal banner: path senza prefisso lingua (lo aggiunge FrontofficeUrl). */
+    /** Pagina della cookie policy linkata dal banner: path senza prefisso lingua (lo aggiunge LaravelLocalization::localizeURL). */
     public string $policy_path = '/cookies';
 }

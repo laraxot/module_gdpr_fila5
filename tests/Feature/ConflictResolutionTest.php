@@ -9,6 +9,8 @@ use PHPUnit\Framework\Assert;
 it('verifica che le classi corrette siano istanziabili', function (): void {
     Assert::assertInstanceOf(Treatment::class, new Treatment());
     Assert::assertInstanceOf(Profile::class, new Profile());
+    Assert::assertSame('treatments', (new Treatment())->getTable());
+    Assert::assertSame('profiles', (new Profile())->getTable());
 });
 
 it('verifica che le proprietà delle classi siano accessibili', function (): void {

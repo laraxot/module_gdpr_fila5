@@ -157,5 +157,3 @@ Il modulo GDPR gestisce:
 **Status**: ✅ COMPLETATO  
 **PHPStan Level**: 9  
 **Maintenance**: Nessuna azione richiesta
-
-

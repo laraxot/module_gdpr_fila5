@@ -35,6 +35,7 @@ Indice operativo canonico del modulo: [00-INDEX.md](./00-index.md) (ruolo delle 
 - [_integration/cookie-consent.md](_integration/cookie-consent.md) — integrazione cookie consent con altri moduli
 - [concepts/xotbase-never-extend-filament.md](concepts/xotbase-never-extend-filament.md) — regola XotBase applicata al modulo
 - [concepts/phpstan-probe-model-removal.md](concepts/phpstan-probe-model-removal.md) — nota tecnica su rimozione probe model
+- [stories/blade-i18n-no-hardcoded-text.story.md](stories/blade-i18n-no-hardcoded-text.story.md) — niente testi fissi nelle Blade: chiavi `gdpr::` in it, en, de, es
 
 ## Pacchetti integrati (packages/)
 
@@ -124,7 +125,6 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/skills/index.md](wiki/skills/index.md)
 - [wiki/memories/index.md](wiki/memories/index.md)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
-- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
 - [wiki/_templates/concept.md](wiki/_templates/concept.md)
 - [wiki/_templates/entity.md](wiki/_templates/entity.md)
 - [wiki/_templates/source.md](wiki/_templates/source.md)
@@ -167,7 +167,7 @@ Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, 
 I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. Non sono stati toccati: restano collegati qui per tracciabilità, in attesa di una consolidazione esplicita.
 
 - **Indici concorrenti in root** (aggiornato 2026-10-14): l'indice canonico e' [00-INDEX.md](00-index.md), riscritto con link verificati. [00-index.md](00-index.md) (copia del vecchio 00-INDEX.md) e [INDEX.md](INDEX.md) (stub vuoto) sono segnati `stale` e restano per storia; questo `index.md` e' l'elenco per argomento.
-- **README e 00-INDEX** (risolto 2026-10-14): il README descrive ora identita' e limiti del modulo e 00-INDEX.md e' l'indice; non condividono piu' contenuto. `consent-management.md` e `GSD_WORKFLOW.md` non esistono nel modulo.
+- **README e 00-INDEX** (risolto 2026-10-14): il README descrive ora identita' e limiti del modulo e 00-INDEX.md e' l'indice; non condividono piu' contenuto. `consent-management.md` e `gsd-workflow.md` non esistono nel modulo.
 - **`changelog.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).
 - **`consents.md` / `consents.txt` / `root-md-files/consents.md` / `raw/root-import/consents.md` / `raw/root-import/consents-1.md`**: stesso argomento in più formati/import.

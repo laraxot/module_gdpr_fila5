@@ -5,13 +5,19 @@ declare(strict_types=1);
 return [
     'fields' => [
         'id' => [
-            'label' => 'id',
+            'label' => 'ID',
         ],
         'name' => [
-            'label' => 'name',
+            'label' => 'Nome',
         ],
         'created_at' => [
-            'label' => 'created_at',
+            'label' => 'Creato il',
+        ],
+    ],
+    'actions' => [
+        'delete' => [
+            'tooltip' => '',
+            'icon' => 'delete',
         ],
     ],
 ];

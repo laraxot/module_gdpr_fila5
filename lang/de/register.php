@@ -16,6 +16,14 @@ return [
         'cta_title' => 'Erstelle dein KOSTENLOSES Konto',
         'cta_subtitle' => 'Keine Kreditkarte erforderlich - 100% KOSTENLOS!',
         'terms_notice' => 'Mit der Registrierung akzeptierst du unsere AGB und Datenschutzerklärung',
+        'first_name' => 'Vorname',
+        'last_name' => 'Nachname',
+        'email' => 'E-Mail',
+        'password' => 'Passwort',
+        'hide_password' => 'Passwort verbergen',
+        'show_password' => 'Passwort anzeigen',
+        'password_confirmation' => 'Passwort bestätigen',
+        'submit' => 'Konto erstellen',
     ],
     'benefits' => [
         'community' => [
@@ -99,6 +107,9 @@ return [
         'marketing_label' => 'Ich möchte Neuigkeiten und Einladungen erhalten (optional)',
         'marketing_hint' => 'Die Zustimmung ist freiwillig und kann jederzeit ohne Folgen widerrufen werden.',
         'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
+        'privacy_policy' => 'Ich habe die Datenschutzerklärung gelesen und akzeptiere sie',
+        'terms' => 'Ich akzeptiere die Nutzungsbedingungen',
+        'marketing' => 'Ich möchte Marketing-Mitteilungen erhalten (optional)',
     ],
     'actions' => [
         'read_privacy_policy' => 'Datenschutzerklärung lesen',
@@ -112,7 +123,7 @@ return [
     'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
     'success' => 'Registrierung erfolgreich abgeschlossen! Ihr Konto wurde DSGVO-konform erstellt.',
     'throttle' => 'Zu viele Registrierungsversuche. Versuchen Sie es in :seconds Sekunden erneut.',
-    'success_message' => 'Ihr Konto ist bereit',
+    'success_message' => 'Ihr Konto ist bereit. Wir haben Ihnen eine E-Mail gesendet: Öffnen Sie den Link, um Ihre Adresse zu bestätigen, bevor Sie eine Meldung senden.',
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
     'clickbait' => [
@@ -146,4 +157,8 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'already_have_account' => 'Sie haben bereits ein Konto?',
+    'links' => [
+        'and' => 'und',
+    ],
 ];

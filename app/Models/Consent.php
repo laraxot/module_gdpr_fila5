@@ -113,15 +113,18 @@ class Consent extends BaseModel
     ];
 
     /**
+     * `metadata` conserva la prova di cosa e' stato accettato (versione e URL del documento, lingua): senza cast ad array
+     * e senza fillable veniva scartato in silenzio (regressione del mirror becb0d58bd, ripristinata il 2026-11-11).
+     *
      * @return array<string, string>
      */
     protected function casts(): array
     {
-        return [
+        return array_merge(parent::casts(), [
             'metadata' => 'array',
             'accepted_at' => 'datetime',
             'revoked_at' => 'datetime',
-        ];
+        ]);
     }
 
     /**

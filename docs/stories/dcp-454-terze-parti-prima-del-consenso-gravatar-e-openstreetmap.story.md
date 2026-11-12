@@ -14,8 +14,8 @@ related:
   - ./dcp-136a-cookie-banner-stato-reale-audit-visivo.story.md
   - ../../../Fixcity/docs/stories/dcp-200-registro-unico-delle-decisioni-aperte.story.md
   - ../../../../Themes/Sixteen/docs/stories/front-office-production-readiness-audit.story.md
-issues: []
-discussions: ["https://github.com/laraxot/theme_sixteen_fila5/discussions/94"]
+issues: ["https://github.com/laraxot/theme_sixteen_fila5/issues/106"]
+discussions: ["https://github.com/laraxot/theme_sixteen_fila5/discussions/94", "https://github.com/laraxot/theme_sixteen_fila5/discussions/107"]
 ---
 
 # DCP-454: terze parti caricate prima del consenso

@@ -13,6 +13,20 @@ return [
         'updated_at' => [
             'label' => 'Aggiornato il',
         ],
+        'treatment' => [
+            'name' => [
+                'label' => 'Trattamento',
+            ],
+        ],
+        'subject_id' => [
+            'label' => 'Soggetto',
+        ],
+        'accepted_at' => [
+            'label' => 'Accettato il',
+        ],
+        'revoked_at' => [
+            'label' => 'Revocato il',
+        ],
     ],
     'actions' => [
         'delete' => [

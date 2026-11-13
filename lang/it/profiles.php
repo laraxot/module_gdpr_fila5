@@ -13,6 +13,24 @@ return [
         'updated_at' => [
             'label' => 'Aggiornato il',
         ],
+        'first_name' => [
+            'label' => 'Nome',
+        ],
+        'last_name' => [
+            'label' => 'Cognome',
+        ],
+        'email' => [
+            'label' => 'Email',
+        ],
+        'phone' => [
+            'label' => 'Telefono',
+        ],
+        'is_active' => [
+            'label' => 'Attivo',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+        ],
     ],
     'actions' => [
         'delete' => [

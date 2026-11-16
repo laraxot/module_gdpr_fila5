@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_ic8cio
 ---
 title: "00 INDEX"
 type: note
@@ -9,6 +10,8 @@ issues: []
 discussions: []
 ---
 
+=======
+>>>>>>> .merge_file_1vvVW6
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -61,6 +64,7 @@ discussions: []
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
+<<<<<<< .merge_file_ic8cio
 title: "00 INDEX"
 type: note
 tags: [documentation]
@@ -69,6 +73,8 @@ updated: 2026-09-26
 qmd: "00 INDEX"
 issues: []
 discussions: []
+=======
+>>>>>>> .merge_file_1vvVW6
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 
 ## Dependency Intelligence

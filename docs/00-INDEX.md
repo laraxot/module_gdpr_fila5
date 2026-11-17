@@ -1,3 +1,14 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
 # 📚 **Indice Documentazione Modulo Gdpr**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -31,7 +42,7 @@
 ### Product
 | File | Scopo |
 |------|-------|
-| [PRD.md](./PRD.md) | Product Requirements |
+| [PRD.md](prd.md) | Product Requirements |
 | [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
 | [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
 | [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
@@ -50,6 +61,14 @@
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 
 ## Dependency Intelligence

@@ -218,7 +218,7 @@ it('displays submit button', function (): void {
 
 it('has form with post method', function (): void {
     $response = gdprGet('/en/auth/register');
-    $response->assertSee('wire:click="submit"', false);
+    $response->assertSee('wire:submit="submit"', false);
 });
 
 // ---------------------------------------------------------------------------

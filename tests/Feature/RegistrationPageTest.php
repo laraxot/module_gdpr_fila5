@@ -124,7 +124,7 @@ it('contains Livewire registration form', function (): void {
     $response = gdprGet('/en/auth/register');
 
     // Should have wire:submit or Livewire component
-    $response->assertSee('wire:click="submit"', false);
+    $response->assertSee('wire:submit="submit"', false);
     $response->assertSee('wire:model="privacy_accepted"', false);
 });
 
@@ -136,7 +136,7 @@ it('has submit button with correct text', function (): void {
     $response = gdprGet('/en/auth/register');
 
     // Submit button should be present
-    $response->assertSee('wire:click="submit"', false);
+    $response->assertSee('wire:submit="submit"', false);
 });
 
 // ---------------------------------------------------------------------------

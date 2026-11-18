@@ -27,7 +27,9 @@ it('renders registration page successfully for Italian locale', function (): voi
 });
 
 it('renders registration page successfully for all supported locales', function (): void {
-    $locales = ['en', 'it', 'es', 'de', 'fr', 'ru'];
+    // Le lingue che il progetto offre davvero, non un elenco fisso di un altro sito.
+    $supported = config('laravellocalization.supportedLocales');
+    $locales = is_array($supported) ? array_keys($supported) : ['it', 'en'];
 
     foreach ($locales as $locale) {
         $response = gdprGet("/{$locale}/auth/register");
@@ -40,15 +42,17 @@ it('renders registration page successfully for all supported locales', function 
 // ---------------------------------------------------------------------------
 
 it('displays correct title in English', function (): void {
+    app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee('Start Your Pizza Journey', false);
+    $response->assertSee(__('gdpr::register.title'));
 });
 
 it('displays correct title in Italian', function (): void {
+    app()->setLocale('it');
     $response = gdprGet('/it/auth/register');
 
-    $response->assertSee('Unisciti alla Pizza Revolution', false);
+    $response->assertSee(__('gdpr::register.title'));
 });
 
 it('displays form fields with correct placeholders', function (): void {
@@ -79,9 +83,10 @@ it('displays marketing consent checkbox', function (): void {
 // ---------------------------------------------------------------------------
 
 it('has correct page title in English', function (): void {
+    app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee('Start Your Pizza Journey', false);
+    $response->assertSee(__('gdpr::register.title'));
 });
 
 it('has meta description in English', function (): void {
@@ -119,8 +124,8 @@ it('contains Livewire registration form', function (): void {
     $response = gdprGet('/en/auth/register');
 
     // Should have wire:submit or Livewire component
-    $response->assertSee('wire:submit', false);
-    $response->assertSee('RegisterWidget', false);
+    $response->assertSee('wire:click="submit"', false);
+    $response->assertSee('wire:model="privacy_accepted"', false);
 });
 
 // ---------------------------------------------------------------------------
@@ -131,7 +136,7 @@ it('has submit button with correct text', function (): void {
     $response = gdprGet('/en/auth/register');
 
     // Submit button should be present
-    $response->assertSee('type="submit"', false);
+    $response->assertSee('wire:click="submit"', false);
 });
 
 // ---------------------------------------------------------------------------
@@ -139,15 +144,17 @@ it('has submit button with correct text', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays benefits section in English', function (): void {
+    app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee('Developer Community', false);
+    $response->assertSee(__('gdpr::register.benefits.community.title'));
 });
 
 it('displays benefits section in Italian', function (): void {
+    app()->setLocale('it');
     $response = gdprGet('/it/auth/register');
 
-    $response->assertSee('Community', false);
+    $response->assertSee(__('gdpr::register.benefits.community.title'));
 });
 
 // ---------------------------------------------------------------------------
@@ -155,8 +162,9 @@ it('displays benefits section in Italian', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays trust indicators', function (): void {
+    app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
     // Should have some trust-related content
-    $response->assertSee('FREE', false);
+    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
 });

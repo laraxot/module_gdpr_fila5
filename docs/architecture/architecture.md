@@ -24,5 +24,9 @@ Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026
 - `database/migrations/` — Database schema
 - `lang/` — Translations
 
+<<<<<<< HEAD
 See the module [README](../readme.md) for overview, [contributing](./contributing.md) for the
+=======
+See the module [README](../readme.md) for overview, [contributing](../contributing.md) for the
+>>>>>>> laraxot/dev
 development workflow, and [architecture/structure](./architecture/structure.md) for details.

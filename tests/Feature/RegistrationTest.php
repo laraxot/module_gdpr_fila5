@@ -29,7 +29,11 @@ uses(TestCase::class);
  *
  * Flow tested:
  * 1. ValidateGdprConsentAction  — validates privacy + terms acceptance
+<<<<<<< HEAD
  * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type/state
+=======
+ * 2. ValidateUserDataAction     — sanitizes & hashes password, sets type (email non verificata)
+>>>>>>> laraxot/dev
  * 3. CreateUserAction           — persists user to DB
  * 4. CollectGdprConsentsAction  — collects consent booleans into array
  * 5. SaveGdprConsentsAction     — creates Consent records linked to Treatment records
@@ -52,7 +56,10 @@ it('completes full registration with privacy and terms accepted', function (): v
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
     Assert::assertSame('customer_user', $validatedData['type']);
+<<<<<<< HEAD
     Assert::assertSame('active', $validatedData['state']);
+=======
+>>>>>>> laraxot/dev
     $hashed = is_string($validatedData['password'] ?? null) ? $validatedData['password'] : '';
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
     // 3. Create user
@@ -168,7 +175,10 @@ it('always sets customer_user type regardless of input', function (): void {
 
     // Type must be customer_user — cannot be overridden
     Assert::assertSame('customer_user', $result['type']);
+<<<<<<< HEAD
     Assert::assertSame('active', $result['state']);
+=======
+>>>>>>> laraxot/dev
     Assert::assertNull($result['email_verified_at']);
 });
 
@@ -266,7 +276,12 @@ it('prevents duplicate user registration with same email', function (): void {
         'email' => $email,
         'password' => 'SecureP@ss2!',
     ];
+<<<<<<< HEAD
     $validatedData2 = app(ValidateUserDataAction::class)->execute($formData2);
 
     gdprAssertThrows(\Exception::class, static fn () => app(CreateUserAction::class)->execute($validatedData2));
+=======
+    // Il doppione si ferma gia' nella validazione, con un messaggio sul campo email (prima dell'errore del database).
+    gdprAssertThrows(ValidationException::class, static fn () => app(ValidateUserDataAction::class)->execute($formData2));
+>>>>>>> laraxot/dev
 });

@@ -64,6 +64,7 @@ return [
 ];
 ```
 ## Collegamenti tra versioni di translations.md
+<<<<<<< HEAD
 * [translations.md](laravel/modules/chart/docs/translations.md)
 * [translations.md](laravel/modules/reporting/docs/translations.md)
 * [translations.md](laravel/modules/gdpr/docs/translations.md)
@@ -81,3 +82,22 @@ return [
 * [translations.md](laravel/modules/activity/docs/translations.md)
 * [translations.md](laravel/modules/patient/docs/translations.md)
 * [translations.md](laravel/modules/cms/docs/translations.md)
+=======
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+* [translations.md](translations.md)
+>>>>>>> laraxot/dev

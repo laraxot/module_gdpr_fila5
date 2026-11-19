@@ -10,7 +10,12 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * Colonne di revoca dei consensi. RevokeGdprConsentsAction (chiamata da "Elimina il mio account") e HasGdpr le scrivono e
  * le leggono, ma nessuna migrazione le creava: la cancellazione dell'account rispondeva 500. Additiva e idempotente.
  */
+<<<<<<< HEAD
 return new class extends XotBaseMigration {
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> laraxot/dev
     protected ?string $model_class = Consent::class;
 
     public function up(): void

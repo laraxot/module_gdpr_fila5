@@ -15,6 +15,10 @@ related:
 
 # Context Gdpr
 
+<<<<<<< HEAD
 Costituzione piattaforma: [Xot](../../Xot/docs/bmad/livewire-widget-project-context.md). Gdpr possiede consenso e testi legali; User non deve tenere Privacy/Terms Livewire. Vincoli ereditati: estendere `XotBaseWidget`, mai `Filament\Widgets\Widget` diretto; chrome con `$isDiscovered = false` + FQCN; FO/legal ≠ widget forzato.
+=======
+Costituzione piattaforma: [Xot](livewire-widget-project-context.md). Gdpr possiede consenso e testi legali; User non deve tenere Privacy/Terms Livewire. Vincoli ereditati: estendere `XotBaseWidget`, mai `Filament\Widgets\Widget` diretto; chrome con `$isDiscovered = false` + FQCN; FO/legal ≠ widget forzato.
+>>>>>>> laraxot/dev
 
 Stato verificato del modulo: [livewire-inventory.md](./livewire-inventory.md) (zero `Http\Livewire`, 2 widget auth già Filament).

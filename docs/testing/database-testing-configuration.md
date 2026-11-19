@@ -175,8 +175,13 @@ protected function setUp(): void
 
 ## Related Documentation
 
+<<<<<<< HEAD
 - [Testing Guidelines](./testing-guidelines.md)
 - [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md)
+=======
+- [Testing Guidelines](../testing-guidelines.md)
+- [Multi-Language Translation Guidelines](../multi-language-translation-guidelines.md)
+>>>>>>> laraxot/dev
 - [TenantServiceProvider Architecture](../Tenant/app/Providers/TenantServiceProvider.php)
 
 ## Troubleshooting

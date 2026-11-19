@@ -28,6 +28,7 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
 ## Collegamenti tra versioni di lang-link.md
+<<<<<<< HEAD
 * [lang-link.md](laravel/modules/chart/docs/lang-link.md)
 * [lang-link.md](laravel/modules/reporting/docs/lang-link.md)
 * [lang-link.md](laravel/modules/gdpr/docs/lang-link.md)
@@ -42,3 +43,19 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/modules/activity/docs/lang-link.md)
 * [lang-link.md](laravel/modules/patient/docs/lang-link.md)
 * [lang-link.md](laravel/modules/cms/docs/lang-link.md)
+=======
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+>>>>>>> laraxot/dev

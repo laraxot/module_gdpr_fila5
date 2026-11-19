@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Pages;
 
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
+=======
+use Filament\Forms\Components\Toggle;
+>>>>>>> laraxot/dev
 use Modules\Gdpr\Datas\GdprConfigData;
 use Modules\Xot\Filament\Pages\BaseSettingPage;
 
@@ -19,7 +23,11 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
+<<<<<<< HEAD
      * @return array<string, TextInput>
+=======
+     * @return array<string, TextInput|Toggle>
+>>>>>>> laraxot/dev
      */
     protected function getFormSchema(): array
     {
@@ -30,6 +38,11 @@ class SettingPage extends BaseSettingPage
                 ->minValue(180)
                 ->required(),
 
+<<<<<<< HEAD
+=======
+            'info_banner' => Toggle::make('info_banner'),
+
+>>>>>>> laraxot/dev
             'policy_path' => TextInput::make('policy_path')
                 ->required()
                 ->prefix('/')

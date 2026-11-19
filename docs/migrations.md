@@ -261,9 +261,15 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
+<<<<<<< HEAD
 - [Migrazioni User](../user/docs/migrations.md)
 - [Migrazioni Activity](../activity/docs/migrations.md)
 - [Migrazioni Xot](../xot/docs/migrations.md)
+=======
+- [Migrazioni User](migrations.md)
+- [Migrazioni Activity](migrations.md)
+- [Migrazioni Xot](migrations.md)
+>>>>>>> laraxot/dev
 
 ### Collegamenti Interni
 - [README Principale](./readme.md)

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 module.exports = {
   content: [],
   theme: {
@@ -7,3 +8,17 @@ module.exports = {
   plugins: [],
 }
 
+=======
+export default {
+    content: [
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './app/**/*.php',
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+>>>>>>> laraxot/dev

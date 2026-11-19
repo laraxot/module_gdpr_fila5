@@ -22,7 +22,11 @@ use Stringable;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
+<<<<<<< HEAD
  * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+=======
+ * Test: tests/Unit/Traits/HasGdprTraitTest.php
+>>>>>>> laraxot/dev
  */
 trait HasGdpr
 {

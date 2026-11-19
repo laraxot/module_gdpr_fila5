@@ -4,17 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
-<<<<<<< HEAD
 use Modules\Xot\Traits\EnumTrait;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
-=======
-use Filament\Support\Contracts\HasColor;
-use Filament\Support\Contracts\HasIcon;
-use Filament\Support\Contracts\HasLabel;
-use Modules\Xot\Traits\EnumTrait;
->>>>>>> laraxot/dev
 
 /**
  * Enum ConsentType.

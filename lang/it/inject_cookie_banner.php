@@ -12,10 +12,6 @@ return [
         ],
         'authenticate' => [
             'icon' => 'authenticate',
-<<<<<<< HEAD
-=======
-            'label' => 'Accedi',
->>>>>>> laraxot/dev
         ],
     ],
 ];

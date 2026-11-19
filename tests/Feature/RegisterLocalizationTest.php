@@ -193,40 +193,24 @@ it('detects English locale from URL', function (): void {
 });
 
 it('detects Spanish locale from URL', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('es');
->>>>>>> laraxot/dev
     $response = gdprGet('/es/auth/register');
     $response->assertSee('lang="es"', false);
     $response->assertStatus(200);
 });
 
 it('detects German locale from URL', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('de');
->>>>>>> laraxot/dev
     $response = gdprGet('/de/auth/register');
     $response->assertSee('lang="de"', false);
     $response->assertStatus(200);
 });
 
 it('detects French locale from URL', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('fr');
->>>>>>> laraxot/dev
     $response = gdprGet('/fr/auth/register');
     $response->assertSee('lang="fr"', false);
     $response->assertStatus(200);
 });
 
 it('detects Russian locale from URL', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('ru');
->>>>>>> laraxot/dev
     $response = gdprGet('/ru/auth/register');
     $response->assertSee('lang="ru"', false);
     $response->assertStatus(200);
@@ -235,7 +219,6 @@ it('detects Russian locale from URL', function (): void {
 // ---------------------------------------------------------------------------
 // Translation Content Tests
 // ---------------------------------------------------------------------------
-<<<<<<< HEAD
 
 it('Italian title contains pizza reference', function (): void {
     app()->setLocale('it');
@@ -260,5 +243,3 @@ it('English CTA is action-oriented', function (): void {
     $cta = __('gdpr::register.form.cta_title');
     Assert::assertStringContainsString((string) 'FREE', (string) $cta);
 });
-=======
->>>>>>> laraxot/dev

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 {{-- GDPR Register Widget View --}}
 <div class="space-y-4">
-=======
-{{-- GDPR Register Widget View. Un <form> vero: Invio da tastiera invia, i lettori di schermo lo annunciano come modulo. --}}
-<form wire:submit="submit" class="space-y-4" novalidate>
->>>>>>> laraxot/dev
     {{-- Nome --}}
     <div>
         <label for="first_name" class="block text-sm font-medium text-white mb-1">
@@ -176,14 +171,9 @@
     {{-- Submit --}}
     <div class="pt-4">
         <button
-<<<<<<< HEAD
             wire:click="submit"
             wire:loading.attr="disabled"
             type="button"
-=======
-            wire:loading.attr="disabled"
-            type="submit"
->>>>>>> laraxot/dev
             class="w-full py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
             {{ __('gdpr::register.form.submit') }}
@@ -200,8 +190,4 @@
             </ul>
         </div>
     @endif
-<<<<<<< HEAD
 </div>
-=======
-</form>
->>>>>>> laraxot/dev

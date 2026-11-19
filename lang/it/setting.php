@@ -18,16 +18,6 @@ return [
             'tooltip' => '',
             'description' => '',
         ],
-<<<<<<< HEAD
-=======
-        'info_banner' => [
-            'label' => 'Barra informativa sui cookie tecnici',
-            'placeholder' => '',
-            'helper_text' => "Con soli cookie tecnici la barra non e' obbligatoria: basta l'informativa nella cookie policy. Se spenta, il sito si apre senza barra. Con cookie di analisi o marketing la barra del consenso compare sempre.",
-            'tooltip' => '',
-            'description' => '',
-        ],
->>>>>>> laraxot/dev
         'policy_path' => [
             'label' => 'Pagina della cookie policy',
             'placeholder' => '/cookie-policy',

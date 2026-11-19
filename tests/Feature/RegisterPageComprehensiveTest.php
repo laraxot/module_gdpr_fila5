@@ -40,37 +40,21 @@ it('returns 200 for Italian registration page', function (): void {
 });
 
 it('returns 200 for Spanish registration page', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('es');
->>>>>>> laraxot/dev
     $response = gdprGet('/es/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for German registration page', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('de');
->>>>>>> laraxot/dev
     $response = gdprGet('/de/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for French registration page', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('fr');
->>>>>>> laraxot/dev
     $response = gdprGet('/fr/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for Russian registration page', function (): void {
-<<<<<<< HEAD
-=======
-    gdprSkipUnlessLocaleSupported('ru');
->>>>>>> laraxot/dev
     $response = gdprGet('/ru/auth/register');
     $response->assertStatus(200);
 });
@@ -90,7 +74,6 @@ it('redirects authenticated users away from registration', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct English title on registration page', function (): void {
-<<<<<<< HEAD
     $response = gdprGet('/en/auth/register');
     $response->assertSee('Start Your Pizza Journey', false);
 });
@@ -121,44 +104,6 @@ it('displays English social proof', function (): void {
     $response = gdprGet('/en/auth/register');
     $response->assertSee('Join', false);
     $response->assertSee('developers', false);
-=======
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.title'));
-});
-
-it('displays English CTA title', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_title'));
-});
-
-it('displays English form trust notice', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
-});
-
-it('displays English terms notice', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.terms_notice'));
-});
-
-it('displays English benefits section', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
-    $response->assertSee(__('gdpr::register.benefits.tutorials.title'));
-    $response->assertSee(__('gdpr::register.benefits.networking.title'));
-});
-
-it('displays English social proof', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.subtitle'));
-    $response->assertSee(__('gdpr::register.subtitle'));
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -166,7 +111,6 @@ it('displays English social proof', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct Italian title on registration page', function (): void {
-<<<<<<< HEAD
     $response = gdprGet('/it/auth/register');
     $response->assertSee('Pizza Revolution', false);
 });
@@ -189,35 +133,6 @@ it('displays Italian terms notice', function (): void {
 it('displays Italian benefits section', function (): void {
     $response = gdprGet('/it/auth/register');
     $response->assertSee('Community', false);
-=======
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.title'));
-});
-
-it('displays Italian CTA title', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_title'));
-});
-
-it('displays Italian form trust notice', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
-});
-
-it('displays Italian terms notice', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.terms_notice'));
-});
-
-it('displays Italian benefits section', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -271,16 +186,9 @@ it('displays marketing consent checkbox', function (): void {
 });
 
 it('displays GDPR sections', function (): void {
-<<<<<<< HEAD
     $response = gdprGet('/en/auth/register');
     $response->assertSee('Personal Information', false);
     $response->assertSee('Required Consent', false);
-=======
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.first_name'));
-    $response->assertSee(__('gdpr::register.form.email'));
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -294,11 +202,7 @@ it('displays submit button', function (): void {
 
 it('has form with post method', function (): void {
     $response = gdprGet('/en/auth/register');
-<<<<<<< HEAD
     $response->assertSee('<form', false);
-=======
-    $response->assertSee('wire:submit="submit"', false);
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -306,7 +210,6 @@ it('has form with post method', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays login link', function (): void {
-<<<<<<< HEAD
     $response = gdprGet('/en/auth/register');
     $response->assertSee('Already have an account', false);
     $response->assertSee('Sign in', false);
@@ -316,19 +219,6 @@ it('displays Italian login link', function (): void {
     $response = gdprGet('/it/auth/register');
     $response->assertSee('Hai già un account', false);
     $response->assertSee('Accedi', false);
-=======
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.already_registered'));
-    $response->assertSee(__('gdpr::register.login'));
-});
-
-it('displays Italian login link', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.already_registered'));
-    $response->assertSee(__('gdpr::register.login'));
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------
@@ -342,11 +232,7 @@ it('includes proper title tag', function (): void {
 
 it('includes csrf token in form', function (): void {
     $response = gdprGet('/en/auth/register');
-<<<<<<< HEAD
     $response->assertSee('_token', false);
-=======
-    $response->assertSee('csrf-token', false);
->>>>>>> laraxot/dev
 });
 
 // ---------------------------------------------------------------------------

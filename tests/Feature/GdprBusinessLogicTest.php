@@ -110,14 +110,8 @@ it('can manage gdpr events', function (): void {
         'id' => $event->id,
         'subject_id' => $user->id,
         'action' => 'consent_given',
-<<<<<<< HEAD
         'ip' => '192.168.1.1',
     ]);
-=======
-    ]);
-    // Nel database l'indirizzo e' cifrato; il modello lo restituisce in chiaro.
-    Assert::assertNotSame('192.168.1.1', $event->getRawOriginal('ip') ?? $event->getAttributes()['ip']);
->>>>>>> laraxot/dev
 
     Assert::assertSame($user->id, $event->subject_id);
     Assert::assertSame('consent_given', $event->action);
@@ -316,13 +310,8 @@ it('can create events with detailed payloads', function (): void {
         'id' => $event->id,
         'subject_id' => $user->id,
         'action' => 'data_access_request',
-<<<<<<< HEAD
         'ip' => '203.0.113.1',
     ]);
-=======
-    ]);
-    Assert::assertSame('203.0.113.1', $event->ip);
->>>>>>> laraxot/dev
 
     $payload = json_decode((string) $event->payload, true);
     Assert::assertIsArray($payload);
@@ -401,10 +390,6 @@ it('can manage consent timestamps', function (): void {
     Assert::assertNotNull($consent->created_at);
     Assert::assertNotNull($consent->updated_at);
     // Created and updated should be close to now
-<<<<<<< HEAD
     $now = now();
     Assert::assertTrue($consent->created_at->between($now->subMinute(), $now->addMinute()));
-=======
-    Assert::assertTrue($consent->created_at->between(now()->subMinute(), now()->addMinute()));
->>>>>>> laraxot/dev
 });

@@ -11,12 +11,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * (metadata, revoked_at, revoked_ip_address) but that no prior consents migration
  * ever created — calling those trait methods previously threw a SQL error.
  */
-<<<<<<< HEAD
 return new class extends XotBaseMigration {
-=======
-return new class extends XotBaseMigration
-{
->>>>>>> laraxot/dev
     protected ?string $model_class = Consent::class;
 
     public function up(): void

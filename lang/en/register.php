@@ -106,6 +106,7 @@ return [
         'opens_new_tab' => 'opens in a new tab',
         'terms_hint' => 'Service contract pursuant to Article 6(1)(b) of Regulation (EU) 2016/679 (GDPR)',
         'terms_required' => 'Please accept the terms and conditions.',
+        'privacy_policy_required' => 'Please accept the privacy policy to continue.',
         'terms_checkbox_html' => 'I accept the <a href=":terms_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Terms & Conditions</a>',
         'marketing_label' => 'Send me updates and invitations (optional)',
         'marketing_hint' => 'The consent is optional and you can withdraw it at any time without consequences.',

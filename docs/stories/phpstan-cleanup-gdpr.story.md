@@ -7,6 +7,7 @@ priority: medium
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, gdpr]
+date_originale_nome_file: 2026-10-06
 ---
 
 # [STORY] PHPStan cleanup — Gdpr
@@ -40,4 +41,4 @@ registrazione mappando `privacy_accepted -> privacy_policy`, `terms_accepted -> 
 - Issue: TODO (gh non installato su questa macchina)
 - Discussion: TODO
 
-Dev story: [2026-10-06-phpstan-cleanup-gdpr.dev.md](./phpstan-cleanup-gdpr.dev.md)
+Dev story: [phpstan-cleanup-gdpr.dev.md](./phpstan-cleanup-gdpr.dev.md)

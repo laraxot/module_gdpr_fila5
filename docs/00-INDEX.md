@@ -43,21 +43,21 @@ discussions: []
 | File | Scopo |
 |------|-------|
 | [prd.md](./prd.md) | Product Requirements |
-| [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
-| [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
-| [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
+| [product_roadmap.md](./PRODUCT_ROADMAP.md) | Roadmap |
+| [product_strategy.md](./PRODUCT_STRATEGY.md) | Strategy |
+| [product_launch_plan.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
 
 ### Development
 | File | Scopo |
 |------|-------|
-| [GSD_WORKFLOW.md](./GSD_WORKFLOW.md) | GSD Workflow |
-| [SPRINT_PLANNING.md](./SPRINT_PLANNING.md) | Sprint Planning |
-| [USER_RESEARCH.md](./USER_RESEARCH.md) | User Research |
+| [gsd_workflow.md](./gsd_workflow.md) | GSD Workflow |
+| [sprint_planning.md](./SPRINT_PLANNING.md) | Sprint Planning |
+| [user_research.md](./USER_RESEARCH.md) | User Research |
 
 ## 🔗 **Moduli Correlati**
-- [User](../../user/docs/readme.md) - Soggetti dei consensi.
-- [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
-- [Xot](../../xot/docs/readme.md) - Base framework e trait UUID.
+- [User](../../User/docs/readme.md) - Soggetti dei consensi.
+- [Activity](../../activity/docs/README.md) - Log di sistema integrato.
+- [Xot](../../Xot/docs/README.md) - Base framework e trait UUID.
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---

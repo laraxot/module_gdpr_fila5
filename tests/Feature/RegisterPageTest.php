@@ -48,21 +48,21 @@ function gdprRegisterForm(array $overrides = []): Testable
 }
 
 it('renders the registration page with the translated texts', function (string $locale): void {
+    gdprSkipUnlessLocaleSupported($locale);
     app()->setLocale($locale);
 
     gdprGet('/'.$locale.'/auth/register')
         ->assertOk()
         ->assertSee('lang="'.$locale.'"', false)
-        ->assertSee(__('gdpr::register.form.cta_title'), false)
-        ->assertSee(__('gdpr::register.form.first_name'), false)
-        ->assertSee(__('gdpr::register.form.last_name'), false)
-        ->assertSee(__('gdpr::register.form.email'), false)
-        ->assertSee(__('gdpr::register.form.password_confirmation'), false)
-        ->assertSee(__('gdpr::register.form.submit'), false)
+        ->assertSee(e(__('gdpr::register.fields.first_name.label')), false)
+        ->assertSee(e(__('gdpr::register.fields.last_name.label')), false)
+        ->assertSee(e(__('gdpr::register.fields.email.label')), false)
+        ->assertSee(e(__('gdpr::register.fields.password_confirmation.label')), false)
+        ->assertSee(e(__('gdpr::register.consents.privacy_policy_label')), false)
         ->assertSee('wire:model="privacy_accepted"', false)
         ->assertSee('wire:model="terms_accepted"', false)
         ->assertSee('wire:model="marketing_consent"', false);
-})->with(['it', 'en']);
+})->with(['it', 'en', 'de', 'es']);
 
 it('never shows a raw translation key on the registration page', function (string $locale): void {
     app()->setLocale($locale);

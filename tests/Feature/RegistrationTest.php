@@ -87,7 +87,7 @@ it('completes full registration with privacy and terms accepted', function (): v
         'id' => $user->id,
         'email' => $formData['email'],
         'type' => 'customer_user',
-    ]);
+    ], 'user');
 
     // Verify consents saved
     $savedConsents = Consent::where('subject_id', $user->id)->get();
@@ -174,7 +174,8 @@ it('hashes password during validation', function (): void {
     $formData = [
         'first_name' => 'Test',
         'last_name' => 'User',
-        'email' => 'test@example.com',
+        // Indirizzo unico: un test@example.com lasciato da un altro test fa scattare la regola `unique`.
+        'email' => 'hash-'.uniqid().'@example.com',
         'password' => 'MyP@ssword123!',
     ];
 

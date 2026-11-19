@@ -41,18 +41,19 @@ it('renders registration page successfully for all supported locales', function 
 // Page content tests (translations)
 // ---------------------------------------------------------------------------
 
-it('displays correct title in English', function (): void {
+// Il titolo della pagina e' del tema ospite: del modulo e' il form (docs/register-widget-copy-ownership.md).
+it('displays the first field label in English', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee(__('gdpr::register.title'));
+    $response->assertSee(__('gdpr::register.fields.first_name.label'));
 });
 
-it('displays correct title in Italian', function (): void {
+it('displays the first field label in Italian', function (): void {
     app()->setLocale('it');
     $response = gdprGet('/it/auth/register');
 
-    $response->assertSee(__('gdpr::register.title'));
+    $response->assertSee(__('gdpr::register.fields.first_name.label'));
 });
 
 it('displays form fields with correct placeholders', function (): void {
@@ -82,11 +83,13 @@ it('displays marketing consent checkbox', function (): void {
 // Page SEO tests
 // ---------------------------------------------------------------------------
 
-it('has correct page title in English', function (): void {
+it('has a page title without raw module translation keys', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee(__('gdpr::register.title'));
+    // Il testo del <title> lo sceglie il tema; il modulo garantisce solo di non lasciare chiavi grezze.
+    $response->assertSee('<title>', false);
+    $response->assertDontSee('gdpr::register.', false);
 });
 
 it('has meta description in English', function (): void {
@@ -140,21 +143,21 @@ it('has submit button with correct text', function (): void {
 });
 
 // ---------------------------------------------------------------------------
-// Benefits section
+// Consents section (i "vantaggi" della pagina sono del tema ospite)
 // ---------------------------------------------------------------------------
 
-it('displays benefits section in English', function (): void {
+it('displays consents section in English', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_label'));
 });
 
-it('displays benefits section in Italian', function (): void {
+it('displays consents section in Italian', function (): void {
     app()->setLocale('it');
     $response = gdprGet('/it/auth/register');
 
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_label'));
 });
 
 // ---------------------------------------------------------------------------
@@ -165,6 +168,7 @@ it('displays trust indicators', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
 
-    // Should have some trust-related content
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
+    // La fiducia che il modulo offre: il link all'informativa e la nota per i lettori di schermo che si apre altrove.
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_link'));
+    $response->assertSee(__('gdpr::register.consents.opens_new_tab'));
 });

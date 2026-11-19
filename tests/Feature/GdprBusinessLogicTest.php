@@ -214,7 +214,8 @@ it('can manage treatment weights', function (): void {
     Assert::assertSame(1, $treatmentLow->weight);
     Assert::assertSame(100, $treatmentHigh->weight);
     // Check ordering by weight
-    $treatments = Treatment::orderBy('weight', 'asc')->get();
+    // Solo i due trattamenti creati qui: il database puo' contenere quelli di sistema (privacy_policy, ...).
+    $treatments = Treatment::query()->whereKey([$treatmentLow->getKey(), $treatmentHigh->getKey()])->orderBy('weight', 'asc')->get();
     $first = $treatments->first();
     $last = $treatments->last();
     Assert::assertNotNull($first);

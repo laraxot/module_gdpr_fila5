@@ -21,7 +21,8 @@ beforeEach(function (): void {
 it('can render the registration page in English', function (): void {
     gdprGet('/en/auth/register')
         ->assertStatus(200)
-        ->assertSeeText(__('gdpr::register.title'));
+        // Il titolo della pagina e' del tema ospite: del modulo e' il form, quindi si cerca la sua prima etichetta.
+        ->assertSeeText(__('gdpr::register.fields.first_name.label'));
 
     Livewire::test(RegisterWidget::class)->assertStatus(200);
 });
@@ -29,12 +30,11 @@ it('can render the registration page in English', function (): void {
 it('displays the registration form elements in English', function (): void {
     gdprGet('/en/auth/register')
         ->assertSeeInOrder([
-            __('gdpr::register.form.first_name'),
-            __('gdpr::register.form.last_name'),
-            __('gdpr::register.form.email'),
-            __('gdpr::register.form.password'),
-            __('gdpr::register.form.password_confirmation'),
-            __('gdpr::register.form.submit'),
+            __('gdpr::register.fields.first_name.label'),
+            __('gdpr::register.fields.last_name.label'),
+            __('gdpr::register.fields.email.label'),
+            __('gdpr::register.fields.password.label'),
+            __('gdpr::register.fields.password_confirmation.label'),
         ]);
 });
 
@@ -52,9 +52,10 @@ it('can register a new user', function (): void {
         ->call('submit')
         ->assertHasNoErrors();
 
+    // `users` sta sulla connessione `user`, non su quella di default.
     gdprTest()->assertDatabaseHasRow('users', [
         'email' => $email,
-    ]);
+    ], 'user');
 });
 
 it('shows validation errors for invalid data', function (): void {
@@ -82,14 +83,11 @@ it('does not display duplicated phrases on the registration page', function (): 
     $response->assertDontSeeText('Hai gia un account?', false);
 });
 
-it('uses correct English translations for benefits section', function (): void {
+it('shows the consents in English in the order privacy, terms, marketing', function (): void {
     gdprGet('/en/auth/register')
         ->assertSeeTextInOrder([
-            __('gdpr::register.benefits.community.title'),
-            __('gdpr::register.benefits.community.cta'),
-            __('gdpr::register.benefits.tutorials.title'),
-            __('gdpr::register.benefits.tutorials.cta'),
-            __('gdpr::register.benefits.networking.title'),
-            __('gdpr::register.benefits.networking.cta'),
+            __('gdpr::register.consents.privacy_policy_label'),
+            __('gdpr::register.consents.terms_label'),
+            __('gdpr::register.consents.marketing_label'),
         ]);
 });

@@ -74,81 +74,30 @@ it('redirects authenticated users away from registration', function (): void {
 });
 
 // ---------------------------------------------------------------------------
-// English Page Content Tests
+// Page Content Tests: solo i testi del form, che il modulo possiede.
+// Titolo, sottotitolo, vantaggi e "social proof" sono della pagina del tema ospite
+// (Modules/Gdpr/docs/register-widget-copy-ownership.md).
 // ---------------------------------------------------------------------------
 
-it('displays correct English title on registration page', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.title'));
-});
+it('displays the field labels of the registration form', function (string $locale): void {
+    gdprSkipUnlessLocaleSupported($locale);
+    app()->setLocale($locale);
+    $response = gdprGet('/'.$locale.'/auth/register');
+    $response->assertSee(__('gdpr::register.fields.first_name.label'));
+    $response->assertSee(__('gdpr::register.fields.last_name.label'));
+    $response->assertSee(__('gdpr::register.fields.email.label'));
+    $response->assertSee(__('gdpr::register.fields.password.label'));
+    $response->assertSee(__('gdpr::register.fields.password_confirmation.label'));
+})->with(['en', 'it', 'de', 'es']);
 
-it('displays English CTA title', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_title'));
-});
-
-it('displays English form trust notice', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
-});
-
-it('displays English terms notice', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.terms_notice'));
-});
-
-it('displays English benefits section', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
-    $response->assertSee(__('gdpr::register.benefits.tutorials.title'));
-    $response->assertSee(__('gdpr::register.benefits.networking.title'));
-});
-
-it('displays English social proof', function (): void {
-    app()->setLocale('en');
-    $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.subtitle'));
-    $response->assertSee(__('gdpr::register.subtitle'));
-});
-
-// ---------------------------------------------------------------------------
-// Italian Page Content Tests
-// ---------------------------------------------------------------------------
-
-it('displays correct Italian title on registration page', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.title'));
-});
-
-it('displays Italian CTA title', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_title'));
-});
-
-it('displays Italian form trust notice', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'));
-});
-
-it('displays Italian terms notice', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.form.terms_notice'));
-});
-
-it('displays Italian benefits section', function (): void {
-    app()->setLocale('it');
-    $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.benefits.community.title'));
-});
+it('displays the consent texts of the registration form', function (string $locale): void {
+    gdprSkipUnlessLocaleSupported($locale);
+    app()->setLocale($locale);
+    $response = gdprGet('/'.$locale.'/auth/register');
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_label'));
+    $response->assertSee(__('gdpr::register.consents.terms_label'));
+    $response->assertSee(__('gdpr::register.consents.marketing_label'));
+})->with(['en', 'it', 'de', 'es']);
 
 // ---------------------------------------------------------------------------
 // Form Fields Tests
@@ -203,8 +152,8 @@ it('displays marketing consent checkbox', function (): void {
 it('displays GDPR sections', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.form.first_name'));
-    $response->assertSee(__('gdpr::register.form.email'));
+    $response->assertSee(__('gdpr::register.fields.first_name.label'));
+    $response->assertSee(__('gdpr::register.fields.email.label'));
 });
 
 // ---------------------------------------------------------------------------
@@ -222,21 +171,22 @@ it('has form with post method', function (): void {
 });
 
 // ---------------------------------------------------------------------------
-// Login Link Tests
+// Legal Document Links Tests
+// Il link al login e' della pagina ospite; del widget sono i link a informativa e condizioni.
 // ---------------------------------------------------------------------------
 
-it('displays login link', function (): void {
+it('displays the links to privacy notice and terms', function (): void {
     app()->setLocale('en');
     $response = gdprGet('/en/auth/register');
-    $response->assertSee(__('gdpr::register.already_registered'));
-    $response->assertSee(__('gdpr::register.login'));
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_link'));
+    $response->assertSee(__('gdpr::register.consents.terms_link'));
 });
 
-it('displays Italian login link', function (): void {
+it('displays the Italian links to privacy notice and terms', function (): void {
     app()->setLocale('it');
     $response = gdprGet('/it/auth/register');
-    $response->assertSee(__('gdpr::register.already_registered'));
-    $response->assertSee(__('gdpr::register.login'));
+    $response->assertSee(__('gdpr::register.consents.privacy_policy_link'));
+    $response->assertSee(__('gdpr::register.consents.terms_link'));
 });
 
 // ---------------------------------------------------------------------------
@@ -285,13 +235,6 @@ it('has all required English translation keys', function (): void {
         'gdpr::register.form.cta_title',
         'gdpr::register.form.cta_subtitle',
         'gdpr::register.form.terms_notice',
-        'gdpr::register.benefits.community.title',
-        'gdpr::register.benefits.community.description',
-        'gdpr::register.benefits.tutorials.title',
-        'gdpr::register.benefits.tutorials.description',
-        'gdpr::register.benefits.networking.title',
-        'gdpr::register.benefits.networking.description',
-        'gdpr::register.social_proof',
         'gdpr::register.fields.first_name.label',
         'gdpr::register.fields.first_name.placeholder',
         'gdpr::register.fields.last_name.label',
@@ -328,9 +271,6 @@ it('has all required Italian translation keys', function (): void {
         'gdpr::register.form.cta_title',
         'gdpr::register.form.cta_subtitle',
         'gdpr::register.form.terms_notice',
-        'gdpr::register.benefits.community.title',
-        'gdpr::register.benefits.tutorials.title',
-        'gdpr::register.benefits.networking.title',
         'gdpr::register.fields.first_name.label',
         'gdpr::register.fields.email.label',
         'gdpr::register.fields.password.label',

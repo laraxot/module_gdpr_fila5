@@ -12,7 +12,7 @@ return [
         ],
         'authenticate' => [
             'icon' => 'authenticate',
-            'label' => 'authenticate',
+            'label' => 'Accedi',
         ],
     ],
 ];

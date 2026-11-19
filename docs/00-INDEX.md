@@ -26,7 +26,7 @@ discussions: []
 
 ## 📊 **Filament & UI**
 - 🛡️ **[Gdpr Resources](./filament-resources-1.md)** - Gestione trattamenti e consensi nell'admin panel.
-- 🍪 **[Cookie Consent](./cookie-consent-1.md)** - Implementazione del banner e della preferenza cookie.
+- 🍪 **[Cookie Consent](./cookie-consent.md)** - Implementazione del banner e della preferenza cookie.
 
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-analysis-gdpr.md)** - Statistiche di conformità e fix.

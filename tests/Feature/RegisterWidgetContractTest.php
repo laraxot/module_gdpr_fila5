@@ -33,6 +33,8 @@ const GDPR_REGISTER_MODELS = [
  * Chiavi che ogni vista del widget (tema o modulo) deve rendere.
  *
  * @return list<string>
+ *
+ * @see Modules/Gdpr/docs/register-widget-copy-ownership.md
  */
 function gdprRegisterContractKeys(): array
 {
@@ -50,6 +52,9 @@ function gdprRegisterContractKeys(): array
     ];
 }
 
+/**
+ * @see Modules/Gdpr/docs/register-widget-copy-ownership.md
+ */
 function gdprAssertRegisterContract(string $html): void
 {
     Assert::assertStringContainsString('wire:submit="submit"', $html);
@@ -68,6 +73,8 @@ function gdprAssertRegisterContract(string $html): void
 /**
  * @param  array<array-key, mixed>  $values
  * @return array<string, mixed>
+ *
+ * @see Modules/Gdpr/docs/register-widget-copy-ownership.md
  */
 function gdprFlattenLang(array $values, string $prefix = ''): array
 {

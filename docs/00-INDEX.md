@@ -42,11 +42,7 @@ discussions: []
 ### Product
 | File | Scopo |
 |------|-------|
-<<<<<<< HEAD
-| [PRD.md](./PRD.md) | Product Requirements |
-=======
-| [PRD.md](prd.md) | Product Requirements |
->>>>>>> laraxot/dev
+| [prd.md](./prd.md) | Product Requirements |
 | [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
 | [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
 | [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |

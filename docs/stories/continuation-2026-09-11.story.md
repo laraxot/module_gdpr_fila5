@@ -1,10 +1,13 @@
 ---
+<<<<<<< .merge_file_9UUqeU
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "continuation 2026 09 11.story"
 issues: []
 discussions: []
+=======
+>>>>>>> .merge_file_g2fNOI
 id: story-continuation-gdpr-module
 title: "Gdpr Module — Table Audit and $model Property"
 type: continuation

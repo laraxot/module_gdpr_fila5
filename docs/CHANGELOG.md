@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_63xfoT
 title: "CHANGELOG"
 type: note
 tags: [documentation]
@@ -7,6 +8,8 @@ updated: 2026-09-26
 qmd: "CHANGELOG"
 issues: []
 discussions: []
+=======
+>>>>>>> .merge_file_NXuNA7
 module: theme
 topic: CHANGELOG
 canonical: ../../../Themes/docs/shared-components/CHANGELOG.md

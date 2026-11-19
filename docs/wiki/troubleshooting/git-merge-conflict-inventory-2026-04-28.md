@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_2Ef7Ae
 ---
 title: "git merge conflict inventory 2026 04 28"
 type: note
@@ -9,6 +10,8 @@ issues: []
 discussions: []
 ---
 
+=======
+>>>>>>> .merge_file_Ra3034
 # Git Conflict Inventory
 
 - Date: 2026-04-28

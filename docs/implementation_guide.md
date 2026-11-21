@@ -9,9 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: implementation_guide
-canonical: ../../../Themes/docs/shared-components/implementation-guide-gdpr-consent.md
-status: superseded
-superseded_by: implementation.md
+canonical: ../../../Themes/docs/shared-components/implementation-guide.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/implementation-guide-gdpr-consent.md
+See canonical documentation: ../../../Themes/docs/shared-components/implementation-guide.md

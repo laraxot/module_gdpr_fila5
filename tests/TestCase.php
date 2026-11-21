@@ -29,8 +29,44 @@ abstract class TestCase extends XotBaseTestCase
 
     public static ?self $currentTest = null;
 
-    /** @var list<string> */
-    protected $connectionsToTransact = ['sqlite'];
+    /**
+     * Le connessioni che la transazione di test deve coprire.
+     *
+     * Qui c'era `['sqlite']`, cioe' **la transazione si apriva dove il modulo
+     * non scrive**. I modelli di Gdpr stanno sulla connessione `gdpr`
+     * (`Modules\Gdpr\Models\BaseModel`), gli utenti su `user`, e la connessione
+     * `sqlite` la riscrive `XotBaseTestCase::prepareSharedSqliteForTesting()`
+     * su un file che questi test non usano. Risultato: **niente veniva
+     * annullato**, e ogni corsa lasciava le sue righe nel database.
+     *
+     * Le conseguenze misurate, prima di questa correzione:
+     *
+     * - 18 righe in `treatments`, 55 in `consents`, 8 in `gdpr_events`, con i
+     *   nomi letterali usati dai test (`Email Marketing`, `Data Analytics`,
+     *   `Treatment 1`, ...) — e `treatments.name` ha un indice unico, quindi
+     *   **8 test di questo modulo** fallivano con
+     *   `UniqueConstraintViolationException` su righe scritte dalla corsa
+     *   precedente;
+     * - una riga `test@example.com` in `quaeris_user_test.users`, scritta da
+     *   `Feature/DatabaseConnectionTest`, che faceva fallire **8 test del
+     *   modulo Notify** nel loro `beforeEach`. Un modulo che rompe la suite di
+     *   un altro, attraverso il database, e' il modo piu' costoso di scoprire
+     *   che una transazione non c'era.
+     *
+     * Le quattro connessioni sono quelle su cui il modulo scrive davvero, non
+     * tutte le 27 configurate: avvolgerle tutte vorrebbe dire 27 transazioni
+     * sulle stesse righe. E' lo stesso elenco che usano gia' Chart, Media,
+     * CloudStorage, Limesurvey e DbForge (STORY-154,
+     * `docs/stories/15-4-testcase-sqlite-to-mysql-test-replicas.md`, AC2).
+     *
+     * @var list<string>
+     */
+    protected $connectionsToTransact = [
+        'mysql',
+        'gdpr',
+        'user',
+        'quaeris_data',
+    ];
 
     protected function setUp(): void
     {

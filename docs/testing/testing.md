@@ -386,7 +386,7 @@ Remember: Good tests are the foundation of reliable software development.
 
 *
 
-## Quick reference (migrato da `TESTING.md` in root, 2026-09-24)
+## Quick reference (migrato da `testing.md` in root, 2026-09-24)
 
 ```bash
 ./vendor/bin/pest Modules/Gdpr/tests --filter="TestName"

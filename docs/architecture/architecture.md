@@ -12,7 +12,7 @@ discussions: []
 
 # Gdpr Architecture
 
-Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026-09-24).
+Core components and design decisions (migrato da `architecture.md` in root, 2026-09-24).
 
 ## Structure
 
@@ -24,5 +24,9 @@ Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026
 - `database/migrations/` — Database schema
 - `lang/` — Translations
 
+<<<<<<< .merge_file_1jtwh0
 See the module [README](../readme.md) for overview, [contributing](./contributing.md) for the
+=======
+See the module [README](../README.md) for overview, [contributing](./CONTRIBUTING.md) for the
+>>>>>>> .merge_file_I3TNgs
 development workflow, and [architecture/structure](./architecture/structure.md) for details.

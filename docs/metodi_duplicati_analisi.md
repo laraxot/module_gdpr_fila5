@@ -1,15 +1,20 @@
 ---
-title: "metodi duplicati analisi"
+title: "Metodi Duplicati Analisi"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "metodi duplicati analisi"
+qmd: "Metodi Duplicati Analisi"
 issues: []
 discussions: []
 module: theme
+<<<<<<< .merge_file_I9C72S
 topic: metodi_duplicati_analisi
 canonical: ../../../Themes/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+=======
+topic: METODI_DUPLICATI_ANALISI
+canonical: ../../../Themes/docs/shared-components/metodi_duplicati_analisi.md
+>>>>>>> .merge_file_1RxRi0
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+See canonical documentation: ../../../Themes/docs/shared-components/metodi_duplicati_analisi.md

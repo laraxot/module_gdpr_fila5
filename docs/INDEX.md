@@ -1,7 +1,3 @@
-<<<<<<< .merge_file_4h0AOS
-=======
-<<<<<<< .merge_file_uYZSKY
->>>>>>> .merge_file_mQu8dQ
 ---
 title: "INDEX"
 type: note
@@ -13,11 +9,6 @@ issues: []
 discussions: []
 ---
 
-<<<<<<< .merge_file_4h0AOS
-=======
-=======
->>>>>>> .merge_file_HXV5pl
->>>>>>> .merge_file_mQu8dQ
 # Documentation Index
 
 Modulo: Gdpr

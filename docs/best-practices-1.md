@@ -1,7 +1,3 @@
-<<<<<<< .merge_file_YbKkJY
-=======
-<<<<<<< .merge_file_hNwkIo
->>>>>>> .merge_file_NMD9d5
 ---
 title: "best practices 1"
 type: note
@@ -13,11 +9,6 @@ issues: []
 discussions: []
 ---
 
-<<<<<<< .merge_file_YbKkJY
-=======
-=======
->>>>>>> .merge_file_pnTrXR
->>>>>>> .merge_file_NMD9d5
 # GDPR Best Practices
 
 ## Table of Contents

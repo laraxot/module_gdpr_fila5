@@ -24,9 +24,17 @@ Core components and design decisions (migrato da `architecture.md` in root, 2026
 - `database/migrations/` — Database schema
 - `lang/` — Translations
 
+<<<<<<< .merge_file_QOEtT8
 <<<<<<< .merge_file_GSfkYb
 See the module [README](../readme.md) for overview, [contributing](./contributing.md) for the
 =======
 See the module [README](../README.md) for overview, [contributing](./CONTRIBUTING.md) for the
 >>>>>>> .merge_file_Y4HCgz
+=======
+<<<<<<< .merge_file_1jtwh0
+See the module [README](../readme.md) for overview, [contributing](./contributing.md) for the
+=======
+See the module [README](../README.md) for overview, [contributing](./CONTRIBUTING.md) for the
+>>>>>>> .merge_file_I3TNgs
+>>>>>>> .merge_file_BYWQWP
 development workflow, and [architecture/structure](./architecture/structure.md) for details.

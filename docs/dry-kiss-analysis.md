@@ -49,9 +49,17 @@ updated: 2026-09-26
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
+<<<<<<< .merge_file_n1Gxkz
 <<<<<<< .merge_file_ExBipQ
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 >>>>>>> .merge_file_cj26qY
+=======
+<<<<<<< .merge_file_NIn1QN
+[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+=======
+[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+>>>>>>> .merge_file_T27Rhy
+>>>>>>> .merge_file_65TjO1
 

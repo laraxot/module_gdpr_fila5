@@ -43,7 +43,11 @@ discussions: []
 | File | Scopo |
 |------|-------|
 | [prd.md](./prd.md) | Product Requirements |
+<<<<<<< .merge_file_TvfRlp
 <<<<<<< .merge_file_iEekDR
+=======
+<<<<<<< .merge_file_9i6sM3
+>>>>>>> .merge_file_2B8jNH
 | [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
 | [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
 | [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
@@ -51,7 +55,11 @@ discussions: []
 | [product_roadmap.md](./PRODUCT_ROADMAP.md) | Roadmap |
 | [product_strategy.md](./PRODUCT_STRATEGY.md) | Strategy |
 | [product_launch_plan.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
+<<<<<<< .merge_file_TvfRlp
 >>>>>>> .merge_file_k7TyIe
+=======
+>>>>>>> .merge_file_LUob3J
+>>>>>>> .merge_file_2B8jNH
 
 ### Development
 | File | Scopo |

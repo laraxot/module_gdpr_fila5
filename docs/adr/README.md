@@ -3,7 +3,7 @@ title: "Architecture Decision Records"
 type: index
 tags: [adr, decisioni]
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-23
 ---
 
 # Architecture Decision Records
@@ -39,4 +39,6 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 ```
 
 ## Decisioni
+
+- [Asset GDPR pubblicati nella document root](front-office-assets-publication.md)
 

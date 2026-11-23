@@ -57,7 +57,12 @@ Gestisce le richieste di accesso, modifica o cancellazione dei dati personali.
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ewpRUy
 - [Documentazione Generale GDPR](./readme.md)
 - [Documentazione Generale GDPR](./readme.md)
+=======
+- [Documentazione Generale GDPR](./README.md)
+- [Documentazione Generale GDPR](./README.md)
+>>>>>>> .merge_file_XR62Ld
 - [Configurazione del Modulo](./configuration.md)
 - [Gestione dei Consensi](./consent-management.md)

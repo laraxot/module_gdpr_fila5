@@ -7,6 +7,9 @@ updated: 2026-09-26
 qmd: "module gdpr"
 issues: []
 discussions: []
+module: theme
+topic: module-gdpr
+canonical: ../../../Themes/docs/shared-components/.gitkeep
 ---
 
 # Modulo GDPR

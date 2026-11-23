@@ -7,6 +7,9 @@ updated: 2026-09-26
 qmd: "consent packages research"
 issues: []
 discussions: []
+module: theme
+topic: consent-packages-research
+canonical: ../../../Themes/docs/shared-components/algolia-docsearch-Modules.md
 ---
 
 # Research: GDPR & Legal Consent Packages

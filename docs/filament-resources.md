@@ -7,6 +7,9 @@ updated: 2026-09-26
 qmd: "filament resources"
 issues: []
 discussions: []
+module: theme
+topic: filament-resources
+canonical: ../../../Themes/docs/shared-components/algolia-docsearch-Modules.md
 ---
 
 # Filament Resources - Modulo GDPR

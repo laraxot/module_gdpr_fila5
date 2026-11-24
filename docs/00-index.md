@@ -33,7 +33,7 @@ discussions: https://github.com/laraxot/module_gdpr_fila5/discussions
 - 🕒 **[Audit Trail](./gdpr-pdf-reports.md)** - Generazione report e tracciabilità eventi.
 
 ## 📊 **Filament & UI**
-- 🛡️ **[Gdpr Resources](./filament-resources.md)** - Gestione trattamenti e consensi nell'admin panel.
+- 🛡️ **[Gdpr Resources](./filament-resources-1.md)** - Gestione trattamenti e consensi nell'admin panel.
 - 🍪 **[Cookie Consent](./cookie-consent.md)** - Implementazione del banner e della preferenza cookie.
 
 ## 🧪 **Qualità e Sviluppo**

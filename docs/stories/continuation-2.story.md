@@ -11,6 +11,9 @@ type: continuation
 scope: module:Gdpr
 github: {issues: "https://github.com/laraxot/module_xot_fila5/issues/115", discussions: "https://github.com/laraxot/module_xot_fila5/discussions/117"}
 ---
+
+> Date (from original filename): 2026-09-11
+
 # Gdpr Module — Continuation Task
 
 ## Stato

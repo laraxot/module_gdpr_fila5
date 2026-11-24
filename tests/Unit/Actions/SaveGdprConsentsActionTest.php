@@ -18,7 +18,7 @@ use function Safe\json_decode;
 uses(TestCase::class);
 
 test('SaveGdprConsentsAction exposes execute for persisting registration consents', function (): void {
-    $action = new SaveGdprConsentsAction();
+    $action = new SaveGdprConsentsAction;
     $method = new ReflectionMethod($action, 'execute');
 
     Assert::assertSame(SaveGdprConsentsAction::class, $action::class);
@@ -32,7 +32,7 @@ test('SaveGdprConsentsAction exposes execute for persisting registration consent
  */
 function gdprSaveProofUser(): User
 {
-    $user = new User();
+    $user = new User;
     $user->forceFill(['id' => (string) Str::uuid()]);
 
     return $user;
@@ -48,7 +48,7 @@ function gdprSaveProofUser(): User
 function gdprCaptureConsentInserts(): \ArrayObject
 {
     /** @var \ArrayObject<int, array<string, mixed>> $rows */
-    $rows = new \ArrayObject();
+    $rows = new \ArrayObject;
     Consent::creating(static function (Consent $consent) use ($rows): bool {
         $rows->append($consent->getAttributes());
 
@@ -73,13 +73,16 @@ test('writes one proof row per treatment, accepted or refused, with document ver
     $rows = collect($inserted->getArrayCopy())->keyBy('type');
     Assert::assertSame(['marketing_consent', 'privacy_policy', 'terms_conditions'], $rows->keys()->sort()->values()->all());
     foreach ($rows as $type => $row) {
-        $metadata = json_decode((string) ($row['metadata'] ?? ''), true);
+        $json = $row['metadata'] ?? null;
+        Assert::assertIsString($json, "metadata mancante per {$type}");
+        $metadata = json_decode($json, true);
         Assert::assertIsArray($metadata, "metadata mancante per {$type}");
-        Assert::assertNotSame('', (string) ($metadata['document_version'] ?? ''), "versione mancante per {$type}");
+        Assert::assertIsString($metadata['document_version'] ?? null);
+        Assert::assertNotSame('', $metadata['document_version'], "versione mancante per {$type}");
         Assert::assertSame(app()->getLocale(), $metadata['locale'] ?? null);
         Assert::assertSame('203.0.113.5', $row['ip_address'] ?? null);
         Assert::assertSame('Pest/GDPR-SAVE', $row['user_agent'] ?? null);
-        Assert::assertSame((string) $user->id, (string) ($row['user_id'] ?? ''));
+        Assert::assertSame($user->id, $row['user_id'] ?? null);
     }
     Assert::assertNotNull($rows['privacy_policy']['accepted_at'] ?? null);
     Assert::assertNotNull($rows['terms_conditions']['accepted_at'] ?? null);
@@ -94,7 +97,7 @@ test('creates a missing treatment and gives a version to one without, instead of
     app(SaveGdprConsentsAction::class)->execute(gdprSaveProofUser(), ['privacy_accepted' => true, 'terms_accepted' => true], '203.0.113.5', 'Pest');
 
     Assert::assertNotNull(Treatment::query()->where('name', 'terms_conditions')->first(), 'trattamento mancante non creato');
-    Assert::assertSame('1.0', (string) Treatment::query()->where('name', 'privacy_policy')->value('documentVersion'));
+    Assert::assertSame('1.0', Treatment::query()->where('name', 'privacy_policy')->value('documentVersion'));
     Assert::assertCount(3, $inserted, 'prova saltata per un trattamento');
 })->group('GDPR-SAVE-INV-4');
 

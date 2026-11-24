@@ -125,7 +125,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/skills/index.md](wiki/skills/index.md)
 - [wiki/memories/index.md](wiki/memories/index.md)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
-- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md)
+- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
 - [wiki/_templates/concept.md](wiki/_templates/concept.md)
 - [wiki/_templates/entity.md](wiki/_templates/entity.md)
 - [wiki/_templates/source.md](wiki/_templates/source.md)
@@ -161,15 +161,12 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [raw/root-import/links.md](raw/root-import/links.md)
 - [raw/root-import/repo.md](raw/root-import/repo.md)
 
-Le varianti `*-1.md` in `raw/root-import/` (`cloudflare-1.md`, `consents-1.md`, `cookie-consent-1.md`, `filament-1.md`, `google-analytics-1.md`, `links-1.md`, `repo-1.md`) sono duplicati byte-per-byte dei rispettivi file senza suffisso: vedi sezione "Storico / da consolidare".
+Le varianti `*-1.md` in `raw/root-import/` (`cloudflare.md`, `consents.md`, `cookie-consent.md`, `filament.md`, `google-analytics.md`, `links.md`, `repo.md`) sono duplicati byte-per-byte dei rispettivi file senza suffisso: vedi sezione "Storico / da consolidare".
 
 ## Storico / da consolidare (duplicati — non cancellati)
 
 I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. Non sono stati toccati: restano collegati qui per tracciabilità, in attesa di una consolidazione esplicita.
 
-- **Indici concorrenti in root**: [00-index.md](00-index.md), [00-INDEX.md](00-INDEX.md), [INDEX.md](INDEX.md) contengono bozze di indice alternative a questo file (`index.md`), con contenuti diversi tra loro (una è uno stub auto-generato vuoto, un'altra un elenco "canoni/duplicati/deprecated", l'ultima un indice esteso con molti link a file oggi inesistenti nel modulo). Da valutare se unificare in questo `index.md`.
-- **README duplicato di contenuto**: [README.md](README.md) e [00-INDEX.md](00-INDEX.md) condividono lo stesso contenuto esteso (indice "Lettura essenziale" con link a file non presenti in `docs/`, es. `philosophy.md`, `consent-management.md`, `PRD.md`). Da verificare/pulire in futuro, non in questo task.
-- **`changelog.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).
 - **`consents.md` / `consents.txt` / `root-md-files/consents.md` / `raw/root-import/consents.md` / `raw/root-import/consents-1.md`**: stesso argomento in più formati/import.
 - **`cookie_consent.md` / `cookie_consent.txt` / `root-md-files/cookie-consent.md` / `raw/root-import/cookie-consent.md` / `raw/root-import/cookie-consent-1.md` / `_integration/cookie-consent.md` / `packages/cookie-consent.md` / `roadmap/cookie-consent.md` / `development/roadmap/cookie-consent.md`**: argomento "cookie consent" frammentato su 9 file in 6 directory diverse.
@@ -181,8 +178,6 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - **`phpstan-report.md` / `phpstan-report.txt`**: stesso report in due formati.
 - **`code-quality-report.md` vs `code-quality-improvement-report.md`**: possibile sovrapposizione di ambito, da verificare.
 - **Roadmap frammentata**: `roadmap/backup-dati.md` vs `development/roadmap/backup-dati.md`; `roadmap/cookie-consent.md` vs `development/roadmap/cookie-consent.md`; `roadmap/log-attivita.md` vs `development/roadmap/log-attivita.md`; inoltre `roadmap/roadmap.md`, `roadmap/roadmap-q4.md`, `roadmap/-q4-roadmap.md` e `roadmap/legacy-roadmap.md` sembrano variazioni/superseded dello stesso tema roadmap trimestrale.
-- **Indici `index.md` / `INDEX.md` duplicati per-cartella** (stesso contenuto, stessa dimensione, entrambi presenti sul filesystem case-sensitive): `wiki/commands/`, `wiki/concepts/`, `wiki/rules/`, `wiki/skills/`, `wiki/memories/`. Il nome canonico minuscolo è `index.md`.
-- **Agenti duplicati**: [wiki/agents.md](wiki/agents.md), [llm-wiki/agents.md](llm-wiki/agents.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
 - **`raw/root-import/*.md` vs le sue varianti `*-1.md`**: file duplicati byte-per-byte (stesso import eseguito due volte), elencati sopra.
 
 ## Fuori ambito indice (non `.md`)

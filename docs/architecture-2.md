@@ -12,4 +12,4 @@ Core components and design decisions.
 - `database/migrations/` — Database schema
 - `lang/` — Translations
 
-See README.md for overview. See CONTRIBUTING.md for development workflow.
+See README.md for overview. See contributing-2.md for development workflow.

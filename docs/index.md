@@ -16,24 +16,18 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 
 ## (root)
 
-- [00-INDEX.md](00-INDEX.md)
 - [00-index.md](00-index.md)
 - [CHANGELOG.md](CHANGELOG.md)
 - [README.md](README.md)
 - [REDUNDANCY_ANALYSIS.md](REDUNDANCY_ANALYSIS.md)
 - [actions.md](actions.md)
-- [changelog.md](changelog.md)
-- [dry-kiss-analysis.md](dry-kiss-analysis.md)
 - [faq.md](faq.md)
-- [filament-resources-1.md](filament-resources-1.md)
 - [gdpr-module-overview.md](gdpr-module-overview.md)
 - [links.md](links.md)
 - [metodi_duplicati_analisi.md](metodi_duplicati_analisi.md)
 - [phpmd.md](phpmd.md)
 - [prd.md](prd.md)
-- [readme.md](readme.md)
 - [register-widget-copy-ownership.md](register-widget-copy-ownership.md)
-- [repo-2.md](repo-2.md)
 - [repo.md](repo.md)
 - [schema.md](schema.md)
 
@@ -76,7 +70,6 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 
 ## llm-wiki
 
-- [agents-2.md](llm-wiki/agents-2.md)
 - [agents.md](llm-wiki/agents.md)
 
 ## manuals
@@ -101,7 +94,6 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 - [01.gdpr-phpstan-fix.story.md](stories/01.gdpr-phpstan-fix.story.md)
 - [02.gdpr-phpstan-attribute-regression-fix.story.md](stories/02.gdpr-phpstan-attribute-regression-fix.story.md)
 - [12.1.gdpr-owns-legal-pages.story.md](stories/12.1.gdpr-owns-legal-pages.story.md)
-- [continuation-2.story.md](stories/continuation-2.story.md)
 - [continuation.story.md](stories/continuation.story.md)
 - [dcp-135-registrazione-documenti-accettati-termini-e-consensi-registrati.story.md](stories/dcp-135-registrazione-documenti-accettati-termini-e-consensi-registrati.story.md)
 - [dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md](stories/dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md)
@@ -123,15 +115,12 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 ## wiki
 
 - [README.md](wiki/README.md)
-- [SCHEMA.md](wiki/SCHEMA.md)
-- [agents-2.md](wiki/agents-2.md)
 - [agents.md](wiki/agents.md)
 - [bmad-method.md](wiki/bmad-method.md)
 - [index.md](wiki/index.md)
 - [log.md](wiki/log.md)
 - [overview.md](wiki/overview.md)
 - [resource-table-columns.md](wiki/resource-table-columns.md)
-- [schema-2.md](wiki/schema-2.md)
 - [schema.md](wiki/schema.md)
 - [scopo.md](wiki/scopo.md)
 
@@ -169,26 +158,6 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 
 - [index.md](wiki/skills/index.md)
 
-## wiki/topics
-
-- [00-index.md](wiki/topics/00-index.md)
-- [algolia-docsearch.md](wiki/topics/algolia-docsearch.md)
-- [bottlenecks.md](wiki/topics/bottlenecks.md)
-- [cookie-consent.md](wiki/topics/cookie-consent.md)
-- [dry-kiss.md](wiki/topics/dry-kiss.md)
-- [duplicate-methods.md](wiki/topics/duplicate-methods.md)
-- [google-analytics.md](wiki/topics/google-analytics.md)
-- [index-2.md](wiki/topics/index-2.md)
-- [lang-link.md](wiki/topics/lang-link.md)
-- [livewire-widget.md](wiki/topics/livewire-widget.md)
-- [phpstan-compliance.md](wiki/topics/phpstan-compliance.md)
-- [phpstan-fixes.md](wiki/topics/phpstan-fixes.md)
-- [register-page.md](wiki/topics/register-page.md)
-- [register-widget.md](wiki/topics/register-widget.md)
-- [roadmap.md](wiki/topics/roadmap.md)
-- [security.md](wiki/topics/security.md)
-- [sprint-planning.md](wiki/topics/sprint-planning.md)
-- [testing.md](wiki/topics/testing.md)
 
 ## wiki/troubleshooting
 

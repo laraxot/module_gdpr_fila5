@@ -8,14 +8,14 @@ tags: [contract, action, gdpr, cancellazione, art-17]
 created: 2026-11-24
 updated: 2026-11-26
 related:
-  - ../adr/account-deletion-deactivates-and-keeps-proof.md
+  - ../adr/0001-account-deletion-deactivates-and-keeps-proof.md
 ---
 
 # DeleteAccountAction
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Account/DeleteAccountAction.php`. Perché disattiva invece di cancellare:
-[ADR cancellazione dell'account](../adr/account-deletion-deactivates-and-keeps-proof.md).
+[ADR cancellazione dell'account](../adr/0001-account-deletion-deactivates-and-keeps-proof.md).
 
 Ripristinato il 2026-11-26: il file era stato cancellato dal commit `bb71164f` (riordino dei docs «ceiling 100»).
 

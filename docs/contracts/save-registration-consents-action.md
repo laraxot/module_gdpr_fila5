@@ -8,7 +8,7 @@ tags: [contract, action, gdpr, consenso, listener, legacy]
 created: 2026-11-26
 updated: 2026-11-26
 related:
-  - ../adr/consent-proof-is-append-only.md
+  - ../adr/0002-consent-proof-is-append-only.md
   - save-gdpr-consents-action.md
 ---
 
@@ -69,7 +69,7 @@ Limiti noti:
 
 - Un trattamento assente da `treatments` viene saltato **in silenzio**, senza log né errore: la registrazione risulta riuscita
   senza prova per quel consenso. È l'errore che DCP-135 ha corretto in `SaveGdprConsentsAction`, qui rimasto (ADR
-  [prova del consenso](../adr/consent-proof-is-append-only.md), sezione Conseguenze).
+  [prova del consenso](../adr/0002-consent-proof-is-append-only.md), sezione Conseguenze).
 - `created_by`/`updated_by` valgono la stringa `'system'`: un commento di `SaveGdprConsentsAction` dice che quelle colonne sono
   uuid e che una stringa veniva rifiutata da MariaDB/MySQL. Nessun test esercita questo percorso su un database reale, quindi
   non si sa se oggi fallisce.

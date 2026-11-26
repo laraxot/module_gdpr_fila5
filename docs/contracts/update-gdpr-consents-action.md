@@ -8,7 +8,7 @@ tags: [contract, action, gdpr, consenso, profilo]
 created: 2026-11-26
 updated: 2026-11-26
 related:
-  - ../adr/consent-proof-is-append-only.md
+  - ../adr/0002-consent-proof-is-append-only.md
   - save-gdpr-consents-action.md
 ---
 
@@ -16,7 +16,7 @@ related:
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/UpdateGdprConsentsAction.php`. Cambiare idea sul consenso (dal profilo) **aggiunge** righe: perché è nell'
-[ADR prova del consenso](../adr/consent-proof-is-append-only.md).
+[ADR prova del consenso](../adr/0002-consent-proof-is-append-only.md).
 
 Stato d'uso: nessun codice di produzione nel repository la chiama (`rg UpdateGdprConsentsAction`: solo la classe). È un punto
 di ingresso per i progetti ospite.

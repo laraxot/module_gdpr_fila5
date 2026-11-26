@@ -90,9 +90,9 @@ amministrativa avviene nel pannello Filament `gdpr/admin`.
 
 ## Link a codice/docs
 
-- [ADR cancellazione account](../adr/account-deletion-deactivates-and-keeps-proof.md)
-- [ADR banner cookie](../adr/cookie-banner-wired-by-the-module.md)
-- [ADR prova dei consensi](../adr/consent-proof-is-append-only.md)
+- [ADR cancellazione account](../adr/0001-account-deletion-deactivates-and-keeps-proof.md)
+- [ADR banner cookie](../adr/0003-cookie-banner-wired-by-the-module.md)
+- [ADR prova dei consensi](../adr/0002-consent-proof-is-append-only.md)
 - [Panoramica modulo](../README.md)
 - [Azioni](../actions.md)
 - [DeleteAccountAction](../../app/Actions/Account/DeleteAccountAction.php)

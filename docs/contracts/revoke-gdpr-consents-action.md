@@ -8,14 +8,14 @@ tags: [contract, action, gdpr, consenso, revoca, art-7]
 created: 2026-11-24
 updated: 2026-11-26
 related:
-  - ../adr/consent-proof-is-append-only.md
+  - ../adr/0002-consent-proof-is-append-only.md
 ---
 
 # RevokeGdprConsentsAction
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Consent/RevokeGdprConsentsAction.php` (GDPR art. 7 par. 3). Perché la revoca non cancella righe:
-[ADR prova del consenso](../adr/consent-proof-is-append-only.md).
+[ADR prova del consenso](../adr/0002-consent-proof-is-append-only.md).
 
 Ripristinato il 2026-11-26: il file era stato cancellato dal commit `bb71164f` (riordino dei docs «ceiling 100»).
 

@@ -8,14 +8,14 @@ tags: [contract, action, gdpr, consenso, art-7]
 created: 2026-11-18
 updated: 2026-11-26
 related:
-  - ../adr/consent-proof-is-append-only.md
+  - ../adr/0002-consent-proof-is-append-only.md
 ---
 
 # SaveGdprConsentsAction
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/SaveGdprConsentsAction.php`. Perché le righe non si sovrascrivono mai:
-[ADR prova del consenso](../adr/consent-proof-is-append-only.md).
+[ADR prova del consenso](../adr/0002-consent-proof-is-append-only.md).
 
 Ripristinato il 2026-11-26: il file era stato cancellato dal commit `bb71164f` (riordino dei docs «ceiling 100») mentre il
 docblock dell'Action, l'ADR e i test continuavano a citarlo.

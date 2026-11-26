@@ -40,9 +40,9 @@ Indice dei file `.md` presenti sotto `Modules/Gdpr/docs/` dopo la consolidazione
 ## adr
 
 - [README.md](adr/README.md)
-- [account-deletion-deactivates-and-keeps-proof.md](adr/account-deletion-deactivates-and-keeps-proof.md)
-- [consent-proof-is-append-only.md](adr/consent-proof-is-append-only.md)
-- [cookie-banner-wired-by-the-module.md](adr/cookie-banner-wired-by-the-module.md)
+- [0001-account-deletion-deactivates-and-keeps-proof.md](adr/0001-account-deletion-deactivates-and-keeps-proof.md)
+- [0002-consent-proof-is-append-only.md](adr/0002-consent-proof-is-append-only.md)
+- [0003-cookie-banner-wired-by-the-module.md](adr/0003-cookie-banner-wired-by-the-module.md)
 
 ## analysis
 

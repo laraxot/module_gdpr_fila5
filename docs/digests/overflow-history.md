@@ -16,7 +16,7 @@ Overflow force-cap: 19 file oltre target 100.
 
 `Modules\Gdpr\Actions\Account\DeleteAccountAction` **disattiva** l'utente e **conserva** la prova dei consensi; non cancella ne'
 anonimizza nome, email o altri dati personali. Il perche' e' nell'
-[ADR](adr/account-deletion-deactivates-and-keeps-proof.md), le invarianti nel [contratto](contracts/delete-account-action.md).
+[ADR](adr/0001-account-deletion-deactivates-and-keeps-proof.md), le invarianti nel [contratto](contracts/delete-account-action.md).
 
 ## Come si usa
 
@@ -82,7 +82,7 @@ i vecchi docum
 # Consensi e trattamenti
 
 La regola di fondo (GDPR art. 7 par. 1: il titolare deve poter **dimostrare** il consenso) e' nell'
-[ADR sulla prova append-only](adr/consent-proof-is-append-only.md); il comportamento delle Action e' nei
+[ADR sulla prova append-only](adr/0002-consent-proof-is-append-only.md); il comportamento delle Action e' nei
 [contratti](contracts/README.md). Qui il modello e come si usa.
 
 ## Modello dati
@@ -100,7 +100,7 @@ La regola di fondo (GDPR art. 7 par. 1: il titolare deve poter **dimostrare** il
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Account/DeleteAccountAction.php`. Perché disattiva invece di cancellare:
-[ADR cancellazione dell'account](../adr/account-deletion-deactivates-and-keeps-proof.md).
+[ADR cancellazione dell'account](../adr/0001-account-deletion-deactivates-and-keeps-proof.md).
 
 ## Input
 
@@ -145,7 +145,7 @@ Sorgente: `app/Actions/Consent/RevokeGdprConsentsAction.php` (GDPR art. 7 par. 3
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/SaveGdprConsentsAction.php`. Perché le righe non si sovrascrivono mai:
-[ADR prova del consenso](../adr/consent-proof-is-append-only.md).
+[ADR prova del consenso](../adr/0002-consent-proof-is-append-only.md).
 
 ## Input
 
@@ -184,7 +184,7 @@ documentazione nel modulo Xot; qui solo cio' che cambia o che qui e' gia' costat
 # Banner cookie, inventario e terze parti
 
 Il banner e' del pacchetto `statikbe/laravel-cookie-consent`, ma traduzioni, vista e iniezione sono del modulo (decisione in
-[ADR](adr/cookie-banner-wired-by-the-module.md)). Norma di riferimento: D.Lgs. 196/2003 art. 122 e Linee guida cookie del
+[ADR](adr/0003-cookie-banner-wired-by-the-module.md)). Norma di riferimento: D.Lgs. 196/2003 art. 122 e Linee guida cookie del
 Garante (provv. 10.6.2021 n. 231): per i soli cookie tecnici basta l'informativa; i cookie analitici e di marketing richiedono
 consenso preventivo, raccolto con "Accetta" e "Rifiuta" di pari peso, senza caselle preselezionate e senza blocco della navigazione.
 

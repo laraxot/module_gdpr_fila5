@@ -2,75 +2,102 @@
 title: "Manuale utente — Gdpr"
 type: user-manual
 status: active
-screenshot: assets/front-office-home.png
+screenshot: assets/gdpr-dashboard.webp
+created: 2026-11-25
+updated: 2026-11-25
+qmd: "manuale utente gdpr"
 ---
 
-> Screenshot reale del front office FixCity, verificato il 23 novembre 2026. Per questo modulo è una superficie condivisa: il manuale non attribuisce al modulo una UI propria se non documentata dalle fonti.
+> Screenshot reale del pannello `gdpr/admin`, verificato il 25 novembre 2026.
 
-![Screenshot reale del front office](assets/front-office-home.png)
+![Screenshot reale del pannello GDPR](assets/gdpr-dashboard.webp)
 
-# Scopo
+# Manuale d'uso per attori — Gdpr
 
-Gdpr raccoglie i consensi e supporta la registrazione dell'utente. La
-registrazione è front office; le policy dei modelli di consenso, trattamento,
-profilo ed evento appartengono al backoffice.
+## Scopo e perimetro
+
+Il modulo Gdpr gestisce consensi, finalità di trattamento, eventi di consenso,
+il banner cookie e il flusso di cancellazione account richiesto dal GDPR.
+Il front office non espone una sezione autonoma: le interazioni avvengono nel
+banner cookie, nel modulo di registrazione e nella pagina profilo. La gestione
+amministrativa avviene nel pannello Filament `gdpr/admin`.
 
 ## Attori e capacità effettive
 
-| Attore | Dominio | Capacità verificata |
-| --- | --- | --- |
-| Ospite | Cittadino/front office | Può vedere il widget di registrazione e inviarlo se supera validazione e consensi. |
-| Autenticato | Front office | Non vede il widget di registrazione: `canView()` è solo per ospiti. Nessuna ulteriore capacità cittadina è dichiarata qui. |
-| Gruppo/ruolo con permessi | Backoffice | Può operare sui modelli solo con i permessi espliciti `consent.*`, `treatment.*`, `profile.*`, `event.*` corrispondenti all'abilità. |
-| `gdpr::admin` | Backoffice | Bypass delle policy Gdpr. |
-| `super-admin` | Backoffice | Bypass delle policy Gdpr. |
-| Operatore/moderatore | — | N/A: il modulo non dichiara questi ruoli. |
+| Attore | Capacità verificabili |
+|---|---|
+| Ospite | Vede il banner cookie (categoria necessarie sempre attive; analytics e marketing richiedono accettazione esplicita) e, in registrazione, il modulo consensi Gdpr. Non ha consensi persistiti né accesso al pannello. |
+| Utente autenticato | Può revocare i consensi dal pannello di profilo (cluster Profile del modulo) e cancellare il proprio account dalla pagina `/{lang}/profile/edit`, che invia `POST /{lang}/account/delete`. |
+| Gruppo/ruolo | Il ruolo `<modulo>::admin` abilita l'area amministrativa del pannello `gdpr/admin`; le policy ereditano la base Xot/User. |
+| Admin | In `gdpr/admin` gestisce le resource Consensi, Finalità (Treatments), Eventi e Profili, più la pagina Impostazioni. |
+| Super-admin | Bypass amministrativo delle policy base e accesso a tutte le schermate del pannello. |
+| Operatore | N/A come ruolo specifico: il modulo non dichiara un CRUD operativo per operatori. |
 
-È inoltre previsto il bypass per l'email configurata come
-`XotData::make()->super_admin`; non è una capacità cittadina né un ruolo da
-assegnare ordinariamente.
+## Flussi operativi
 
-## Flussi
+### Banner cookie (front office)
 
-### Registrazione cittadina
+1. Il middleware `InjectCookieBanner` inietta il banner nelle pagine pubbliche.
+2. L'ospite sceglie accetta/rifiuta o apre le preferenze; la scelta è persistita
+   nel cookie `__cookie_consent` e le categorie non necessarie restano disattive
+   fino al consenso.
 
-L'ospite compila nome, cognome, email, password e conferma password, accetta
-obbligatoriamente privacy e termini e, se vuole, il marketing. Il submit è
-limitato per IP; dopo la validazione il modulo crea l'utente come
-`customer_user`, salva i consensi e registra l'evento di registrazione.
-L'email è inizialmente non verificata secondo il flusso di registrazione.
+### Registrazione con consensi
 
-### Backoffice
+1. Il widget `GdprConsentForm` (e la variante `RegisterWidget`) raccoglie i
+   consensi durante la registrazione.
+2. `SaveRegistrationConsentsAction` / `CollectGdprConsentsAction` persistono le
+   scelte e `ValidateGdprConsentAction` verifica i dati prima del salvataggio.
 
-Un utente autenticato del backoffice passa dalle policy del modello richiesto:
-prima l'eventuale bypass `super-admin`/`gdpr::admin`, altrimenti il permesso
-specifico dell'azione (`viewAny`, `view`, `create`, `update`, `delete`,
-`restore`, `forceDelete`). Il modulo non prova qui una schermata o un ruolo
-generico di moderazione.
+### Cancellazione account (diritto alla cancellazione)
 
-## Prerequisiti e limiti
+1. L'utente autenticato apre `/{lang}/profile/edit` e usa il modulo
+   "elimina account" (partial `delete-user-form` del tema).
+2. La conferma invia `POST /{lang}/account/delete` con `confirm=cancella`.
+3. `DeleteAccountAction` autorizza `deleteOwnAccount`, revoca i consensi
+   (`RevokeGdprConsentsAction`), esegue la cancellazione lato User
+   (`RevokeUserAccessAction`) e registra l'audit trail nel connection `user`.
+   La GET sulla stessa route reindirizza alla home localizzata: non esiste una
+   pagina di conferma dedicata.
 
-- Email unica, dati obbligatori validi e password conforme a
-  `Password::defaults()`.
-- Privacy e termini sono obbligatori; marketing è opzionale.
-- Limite registrazione: 10 tentativi per IP ogni 600 secondi; conta anche un
-  invio non valido.
-- La visibilità del widget non è una protezione sufficiente per azioni
-  backoffice: valgono le policy del modello.
-- N/A: il modulo non concede accesso al pannello Fixcity né definisce ruoli
-  PA o capacità Geo/Job/Lang.
+### Backoffice `gdpr/admin`
 
-## Riferimenti verificabili
+1. **Dashboard**: vista iniziale del pannello.
+2. **Consensi** (`/gdpr/admin/consents`): elenco e CRUD dei consensi registrati.
+3. **Finalità** (`/gdpr/admin/treatments`): CRUD delle finalità di trattamento
+   (base giuridica, descrizione) a cui i consensi fanno riferimento.
+4. **Eventi** (`/gdpr/admin/events`): registro degli eventi di consenso.
+5. **Profili** (`/gdpr/admin/profiles`): profili di consenso.
+6. **Impostazioni** (`/gdpr/admin/setting`): configurazione del modulo.
+7. **Profilo utente** (`/gdpr/admin/profile/*`): il cluster Profile espone al
+   singolo utente le proprie consents e profiles.
 
-- `app/Filament/Widgets/Auth/RegisterWidget.php:31-73,103-126` — attore
-  ospite, campi, consensi e rate limit.
-- `app/Filament/Widgets/Auth/RegisterWidget.php:128-162` — validazione,
-  creazione utente, salvataggio consensi e log.
-- `app/Models/Policies/GdprBasePolicy.php:11-27` — bypass e super-admin
-  configurato.
-- `app/Models/Policies/ConsentPolicy.php:15-68` — esempio della matrice di
-  permessi `consent.*`; la stessa forma è nelle policy di trattamento,
-  profilo ed evento.
-- `tests/Feature/RegisterWidgetTest.php` e `tests/Feature/RegistrationTest.php`
-  — verifiche del flusso di registrazione.
+## Prerequisiti
 
+- Moduli User, Xot e Activity caricati (audit trail e policy di base).
+- Utente autenticato per la revoca consensi e la cancellazione account.
+- Ruolo `gdpr::admin` o autorizzazioni equivalenti per la gestione Filament.
+- Banner cookie e widget registrazione attivi via middleware/registrazione view.
+
+## Limiti
+
+- La route `/{lang}/account/delete` non ha una pagina GET dedicata: la GET
+  reindirizza alla home localizzata; l'azione avviene via POST dal profilo.
+- Il banner cookie è iniettato solo sulle pagine che passano dal middleware
+  `InjectCookieBanner`.
+- La disponibilità delle categorie analytics/marketing dipende dalla
+  configurazione del cookie-consent del progetto.
+
+## Link a codice/docs
+
+- [ADR cancellazione account](../adr/account-deletion-deactivates-and-keeps-proof.md)
+- [ADR banner cookie](../adr/cookie-banner-wired-by-the-module.md)
+- [ADR prova dei consensi](../adr/consent-proof-is-append-only.md)
+- [Panoramica modulo](../README.md)
+- [Azioni](../actions.md)
+- [DeleteAccountAction](../../app/Actions/Account/DeleteAccountAction.php)
+- [RevokeGdprConsentsAction](../../app/Actions/Consent/RevokeGdprConsentsAction.php)
+- [InjectCookieBanner](../../app/Http/Middleware/InjectCookieBanner.php)
+- [Rotte web](../../routes/web.php)
+- [Resource Consensi](../../app/Filament/Resources/ConsentResource.php)
+- [Resource Finalità](../../app/Filament/Resources/TreatmentResource.php)

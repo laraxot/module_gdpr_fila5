@@ -1,50 +1,22 @@
 ---
-title: "Architecture Decision Records"
+title: "ADR del modulo Gdpr"
 type: index
-tags: [adr, decisioni]
+tags: [adr, decisioni, gdpr]
 created: 2026-11-18
-updated: 2026-11-23
+updated: 2026-11-24
 ---
 
-# Architecture Decision Records
+# ADR del modulo Gdpr
 
-## Metodo Harness
+Il **perché** delle forme di codice del modulo Gdpr che un agente rischia di "semplificare": come si conserva la prova dei
+consensi (GDPR art. 7), cosa fa la cancellazione dell'account (art. 17) e dove si attacca il banner dei cookie.
 
-Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fondata su un trade-off reale. Un ADR deve rendere leggibili contesto, driver, alternative, decisione, conseguenze e una conferma ripetibile; non è un diario né una spiegazione retroattiva inventata.
-
-Le decisioni vanno verificate contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e collega il precedente come superseded/deprecated.
-
-Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
-Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
-
-## Formato
-
-```markdown
----
-title: "ADR — <decisione in una riga>"
-type: decision
-status: accepted | superseded | deprecated
-created: AAAA-MM-GG
-updated: AAAA-MM-GG
-issues: []
----
-
-# ADR: <decisione>
-
-## Contesto
-Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
-
-## Decisione
-Cosa si fa, in concreto, e dove sta nel codice.
-
-## Alternative scartate
-Ogni alternativa seria, con il motivo per cui non e' stata scelta.
-
-## Conseguenze
-Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-```
+Quando leggerli: prima di toccare `consents`/`treatments`, le Action di `app/Actions/Consent` e `app/Actions/Account`, oppure
+`GdprServiceProvider` e `InjectCookieBanner`. Formato e regole (cinque sezioni, `## Verifica`, nomi senza date):
+`Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
 ## Decisioni
 
-- [Asset GDPR pubblicati nella document root](front-office-assets-publication.md)
-
+- [La prova del consenso è una riga per scelta, mai sovrascritta](consent-proof-is-append-only.md) — solo INSERT alla registrazione, revoca con `revoked_at`, nessun DELETE.
+- [La cancellazione dell'account disattiva l'utente e conserva la prova](account-deletion-deactivates-and-keeps-proof.md) — `deleted_at` + revoca consensi e token; anonimizzare è compito del progetto.
+- [Il banner cookie è cablato dal provider del modulo](cookie-banner-wired-by-the-module.md) — traduzioni, vista e middleware sopra statikbe, flag del tenant valutato a ogni richiesta.

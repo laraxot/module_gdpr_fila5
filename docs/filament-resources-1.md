@@ -1,4 +1,3 @@
-<<<<<<< .merge_file_ucf4Q6
 ---
 title: "filament resources 1"
 type: note
@@ -10,8 +9,6 @@ issues: []
 discussions: []
 ---
 
-=======
->>>>>>> .merge_file_iy3YFP
 # Filament Resources - Modulo GDPR
 
 ## Panoramica
@@ -60,7 +57,7 @@ Gestisce le richieste di accesso, modifica o cancellazione dei dati personali.
 
 ## Collegamenti
 
-- [Documentazione Generale GDPR](./readme.md)
-- [Documentazione Generale GDPR](./readme.md)
+- [Documentazione Generale GDPR](./README.md)
+- [Documentazione Generale GDPR](./README.md)
 - [Configurazione del Modulo](./configuration.md)
 - [Gestione dei Consensi](./consent-management.md)

@@ -1,12 +1,9 @@
 ---
-<<<<<<< .merge_file_ram14K
 type: note
 updated: 2026-09-26
 qmd: "SCHEMA"
 issues: []
 discussions: []
-=======
->>>>>>> .merge_file_CF52wG
 title: Wiki Schema
 description: Schema e convenzioni per la manutenzione della wiki
 tags:
@@ -27,7 +24,7 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema.md          # Questo file
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna

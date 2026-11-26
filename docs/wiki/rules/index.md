@@ -1,10 +1,10 @@
 ---
-title: "Index"
+title: "index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "Index"
+qmd: "index"
 issues: []
 discussions: []
 ---
@@ -25,36 +25,12 @@ qmd search "Gdpr rules" --limit 5
 - [Root Wiki](../../../docs/wiki/)
 
 ---
-<<<<<<< .merge_file_sIEe0X
-<<<<<<< .merge_file_Mgk7ma
 title: "index"
-=======
-title: "INDEX"
->>>>>>> .merge_file_FjVHPT
-=======
-<<<<<<< .merge_file_5nAPld
-title: "index"
-=======
-title: "INDEX"
->>>>>>> .merge_file_EW86Tb
->>>>>>> .merge_file_TvAdQb
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< .merge_file_sIEe0X
-<<<<<<< .merge_file_Mgk7ma
 qmd: "index"
-=======
-qmd: "INDEX"
->>>>>>> .merge_file_FjVHPT
-=======
-<<<<<<< .merge_file_5nAPld
-qmd: "index"
-=======
-qmd: "INDEX"
->>>>>>> .merge_file_EW86Tb
->>>>>>> .merge_file_TvAdQb
 issues: []
 discussions: []
 *Updated: 2026-05-11*

@@ -24,11 +24,8 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-<<<<<<< .merge_file_GEP67m
 │   ├── SCHEMA.md          # Questo file
-=======
 │   ├── schema.md          # Questo file
->>>>>>> .merge_file_lJ0O6c
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna

@@ -221,15 +221,7 @@ $consent->delete();
 
 ### Guide Principali
 
-<<<<<<< .merge_file_P5HKP1
 - [README.md](./readme.md) - Overview modulo
-=======
-<<<<<<< .merge_file_qg71zW
-- [README.md](./readme.md) - Overview modulo
-=======
-- [README.md](./README.md) - Overview modulo
->>>>>>> .merge_file_CsvXL3
->>>>>>> .merge_file_mctc0s
 - [implementation-guide.md](./implementation-guide.md) - Guida implementazione
 - [api.md](./api.md) - API reference
 - [testing.md](./testing.md) - Testing guide

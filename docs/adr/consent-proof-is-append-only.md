@@ -5,7 +5,8 @@ status: accepted
 module: Gdpr
 tags: [adr, gdpr, consenso, art-7, audit]
 created: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-26
+decision-makers: Gdpr module owner
 related:
   - ../contracts/save-gdpr-consents-action.md
   - ../contracts/revoke-gdpr-consents-action.md
@@ -22,6 +23,15 @@ related:
 - DCP-285: `RevokeGdprConsentsAction` scriveva colonne inesistenti (`subject_type`, `revoked_user_agent`) e falliva sempre.
 - Un agente che "pulisce" il codice tende a usare `updateOrCreate` per utente e trattamento, a saltare un trattamento mancante o a
   cancellare le righe revocate. Domanda: come si conserva la prova di ogni scelta nel tempo?
+
+## Driver della decisione
+
+- Dimostrabilità: l'art. 7 par. 1 chiede di provare che l'interessato ha acconsentito **e a quale testo**; una riga per scelta, con
+  versione del documento, data, IP e user agent, è la prova minima.
+- Storia: cambiare idea è un fatto nuovo, non una correzione del vecchio; sovrascrivere cancella proprio la prova di cosa valeva prima.
+- Nessun fallimento muto: una registrazione non deve riuscire senza prova (DCP-135, con `Treatment::count() = 0`).
+- Revoca dimostrabile (art. 7 par. 3 e art. 30): la revoca deve restare leggibile, quindi si marca la riga e non la si toglie.
+- Semplicità: una sola tabella, senza una seconda fonte di storico da tenere allineata.
 
 ## Decisione
 
@@ -49,10 +59,14 @@ related:
   `SaveGdprConsents`, sette trattamenti) salta ancora i trattamenti mancanti e scrive `created_by = 'system'`;
   `Account\DeleteAccountAction` usa `updateOrCreate` per la riga `account_deletion` (una per utente, voluto).
 
-## Verifica
+## Conferma
 
-- `vendor/bin/pest Modules/Gdpr/tests --group=GDPR-SAVE-INV-5` (e INV-1..4): fallisce se `SaveGdprConsentsAction` aggiorna invece di
-  inserire, salta un trattamento o perde la versione.
-- La parte revoca è in `tests/Unit/Actions/RevokeGdprConsentsActionTest.php::test_keeps_the_revoked_consents_as_audit_trail_instead_of_deleting_them`,
-  oggi rosso per il DB di prova condiviso indietro (colonna `users.state`): fino ad allora, solo revisione — nessun `delete()` su
-  `Consent` fuori dalla cancellazione a cascata dell'utente.
+- Registrazione (append-only): `cd laravel && vendor/bin/pest Modules/Gdpr/tests --group=GDPR-SAVE-INV-5` (e `GDPR-SAVE-INV-1`…`4`,
+  in `tests/Unit/Actions/SaveGdprConsentsActionTest.php`): fallisce se `SaveGdprConsentsAction` aggiorna invece di inserire, salta un
+  trattamento o perde la versione. Gli INSERT sono intercettati dall'evento `creating`: il test non prova lo schema reale.
+- Revoca senza cancellazioni: `GDPR-REVOKE-INV-1` in `tests/Unit/Actions/RevokeGdprConsentsActionTest.php::test_keeps_the_revoked_consents_as_audit_trail_instead_of_deleting_them`.
+  Ultimo esito noto rosso (2026-11-24, DB di prova condiviso indietro: colonna `users.state`), non rieseguito il 2026-11-26: finché
+  non torna verde vale la revisione.
+- Regola di review: nessun `delete()` né `updateOrCreate` su `Consent` nel flusso di registrazione e di revoca. Unica eccezione
+  voluta: la riga `account_deletion` di `Account\DeleteAccountAction`.
+- Contratti: [SaveGdprConsentsAction](../contracts/save-gdpr-consents-action.md), [RevokeGdprConsentsAction](../contracts/revoke-gdpr-consents-action.md).

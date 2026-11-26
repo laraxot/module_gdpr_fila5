@@ -28,6 +28,7 @@ use Spatie\QueueableAction\QueueableAction;
  * registrati come tali; i log di activity vengono soft-deleted insieme all'utente.
  *
  * @see docs/contracts/delete-account-action.md
+ *
  * @contract docs/contracts/delete-account-action.md
  */
 class DeleteAccountAction

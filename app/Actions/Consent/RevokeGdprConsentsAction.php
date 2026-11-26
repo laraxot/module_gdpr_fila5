@@ -21,6 +21,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Lo user agent della revoca non e' salvato: manca la colonna `revoked_user_agent` (richiesta di schema nella story DCP-285).
  *
  * @see docs/contracts/revoke-gdpr-consents-action.md
+ *
  * @contract docs/contracts/revoke-gdpr-consents-action.md
  */
 class RevokeGdprConsentsAction

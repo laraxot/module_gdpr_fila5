@@ -5,7 +5,8 @@ status: accepted
 module: Gdpr
 tags: [adr, gdpr, cookie, banner, provider, middleware]
 created: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-26
+decision-makers: Gdpr module owner
 related:
   - ../stories/dcp-445-guardia-del-cablaggio-del-banner-cookie.story.md
   - ../stories/dcp-454-terze-parti-prima-del-consenso-gravatar-e-openstreetmap.story.md

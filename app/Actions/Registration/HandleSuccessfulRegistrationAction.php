@@ -17,6 +17,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Dopo una registrazione riuscita: login, mail di verifica (un errore non la annulla), notifica e redirect.
  *
  * @see docs/contracts/handle-successful-registration-action.md
+ *
  * @contract docs/contracts/handle-successful-registration-action.md
  */
 class HandleSuccessfulRegistrationAction

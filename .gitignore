@@ -83,3 +83,6 @@ yarn-error.log
 docs/screenshots/
 tests/coverage-*.xml
 tests/graphify-out/
+
+# Indice vettoriale locale (non versionare)
+ruvector.db

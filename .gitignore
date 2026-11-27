@@ -130,16 +130,11 @@ docs/archive/
 *.orig
 *.rej
 *~head
-
-# Laraxot module hygiene (wiki module-theme-root-hygiene)
-.agents/
-.codex/
-.opencode/
-.qwen/
-audit-coverage/
-rector.php
-phpinsights.php
-.php-cs-fixer.php
-.php-cs-fixer.dist.php
-.devcontainer/
-.vscode/
+<<<<<<< .merge_file_9EJwdH
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> .merge_file_mqjGpq

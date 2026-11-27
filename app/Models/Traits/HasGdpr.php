@@ -22,7 +22,7 @@ use Stringable;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
- * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+ * Test: tests/Unit/Traits/HasGdprTraitTest.php
  */
 trait HasGdpr
 {
@@ -92,7 +92,6 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
      * @param  array<string, mixed>  $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent

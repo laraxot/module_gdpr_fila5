@@ -1,12 +1,6 @@
 ---
 title: "Contratto — RevokeGdprConsentsAction"
 type: contract
-<<<<<<< .merge_file_Of49PA
-action: "Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction"
-tags: [contract, action, gdpr, consenso, revoca]
-created: 2026-11-24
-updated: 2026-11-24
-=======
 action: "Modules\\Gdpr\\Actions\\Consent\\RevokeGdprConsentsAction"
 module: Gdpr
 status: active
@@ -15,20 +9,11 @@ created: 2026-11-24
 updated: 2026-11-26
 related:
   - ../adr/0002-consent-proof-is-append-only.md
->>>>>>> .merge_file_zwIyHl
 ---
 
 # RevokeGdprConsentsAction
 
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
-<<<<<<< .merge_file_Of49PA
-Sorgente: `app/Actions/Consent/RevokeGdprConsentsAction.php` (GDPR art. 7 par. 3).
-
-## Input
-
-- L'utente (`Modules\User\Models\BaseUser`).
-- Implicito: l'IP della richiesta corrente e l'utente autenticato (`auth()->id()`).
-=======
 Sorgente: `app/Actions/Consent/RevokeGdprConsentsAction.php` (GDPR art. 7 par. 3). Perché la revoca non cancella righe:
 [ADR prova del consenso](../adr/0002-consent-proof-is-append-only.md).
 
@@ -41,7 +26,6 @@ Ripristinato il 2026-11-26: il file era stato cancellato dal commit `bb71164f` (
 
 Unico chiamante: `Account\DeleteAccountAction` (riga 72, passo 1 della cancellazione). `Models/Traits/HasGdpr::revokeConsent()`
 (riga 119) non passa da questa Action (`rg RevokeGdprConsentsAction`): revoca per tipo con codice proprio.
->>>>>>> .merge_file_zwIyHl
 
 ## Output
 
@@ -51,24 +35,6 @@ Unico chiamante: `Account\DeleteAccountAction` (riga 72, passo 1 della cancellaz
 
 | ID | Regola | Group Pest |
 |---|---|---|
-<<<<<<< .merge_file_Of49PA
-| GDPR-REVOKE-INV-1 | Revoca = `UPDATE` di `revoked_at`, `revoked_ip_address`, `updated_by`: nessuna riga viene cancellata (traccia per l'art. 30). | — |
-| GDPR-REVOKE-INV-2 | Tocca solo le righe con `revoked_at` nullo: una revoca precedente conserva data e IP originali. | — |
-| GDPR-REVOKE-INV-3 | L'utente si riconosce da `user_id` + `user_type` in entrambe le forme (classe, scritta da `SaveGdprConsentsAction`; alias morph, scritto da `HasGdpr::giveConsent`). | — |
-| GDPR-REVOKE-INV-4 | Scrive solo colonne che esistono in `consents` (DCP-285). | — |
-
-Debito: le quattro righe sono provate da `tests/Unit/Actions/RevokeGdprConsentsActionTest.php`, una classe PHPUnit senza group
-che oggi fallisce prima di arrivare all'Action (la tabella `users` del DB di prova condiviso non ha la colonna `state` che la
-`UserFactory` scrive). Quando torna verde, convertirla in Pest e aggiungere i group.
-
-## Effetti collaterali
-
-- Una sola query `UPDATE consents ... WHERE user_id = ? AND user_type IN (...) AND revoked_at IS NULL`.
-
-## Errori
-
-- Eccezioni del database al chiamante. Un utente senza consensi non è un errore (0 righe aggiornate).
-=======
 | GDPR-REVOKE-INV-1 | Revoca = `UPDATE` di `revoked_at`, `revoked_ip_address`, `updated_by`: nessuna riga di `consents` viene cancellata (traccia per l'art. 30). Una `DELETE` renderebbe la revoca stessa non dimostrabile. | `GDPR-REVOKE-INV-1` |
 | GDPR-REVOKE-INV-2 | Tocca solo le righe con `revoked_at` nullo: una revoca precedente conserva data e IP originali. | `GDPR-REVOKE-INV-2` |
 | GDPR-REVOKE-INV-3 | L'utente si riconosce da `user_id` + `user_type` in entrambe le forme (classe, scritta da `SaveGdprConsentsAction`; alias morph, scritto da `HasGdpr::giveConsent`); i consensi di un altro utente non si toccano. | `GDPR-REVOKE-INV-3` |
@@ -88,7 +54,6 @@ Non rieseguito il 2026-11-26: finché non torna verde il group seleziona il test
 ## Errori
 
 - Le eccezioni del database arrivano al chiamante. Un utente senza consensi non è un errore (INV-5).
->>>>>>> .merge_file_zwIyHl
 
 ## Non fa
 
@@ -96,7 +61,4 @@ Non rieseguito il 2026-11-26: finché non torna verde il group seleziona il test
 - Non revoca un solo trattamento: revoca tutto.
 - Non cancella l'utente né i suoi dati (`Account\DeleteAccountAction`).
 - Non crea una riga che registri la revoca: la prova è la colonna `revoked_at` stessa.
-<<<<<<< .merge_file_Of49PA
-=======
 - Non apre una transazione e non notifica l'utente.
->>>>>>> .merge_file_zwIyHl

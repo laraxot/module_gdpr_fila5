@@ -21,11 +21,7 @@ return [
         'info_banner' => [
             'label' => 'Information bar for technical cookies',
             'placeholder' => '',
-<<<<<<< .merge_file_BFhP5l
-            'helper_text' => "With technical cookies only the bar is not required: the cookie policy is enough. If off, the site opens without a bar. With analytics or marketing cookies the consent bar always appears.",
-=======
             'helper_text' => 'With technical cookies only the bar is not required: the cookie policy is enough. If off, the site opens without a bar. With analytics or marketing cookies the consent bar always appears.',
->>>>>>> .merge_file_lUmYbG
             'tooltip' => '',
             'description' => '',
         ],

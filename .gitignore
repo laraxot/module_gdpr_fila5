@@ -130,16 +130,11 @@ docs/archive/
 *.orig
 *.rej
 *~head
-<<<<<<< .merge_file_YLhB0y
-<<<<<<< .merge_file_9EJwdH
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/
 docs/visual-comparison/
-=======
 tests/coverage-*.*
 docs/screenshots/
->>>>>>> .merge_file_mqjGpq
-=======
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/
 docs/visual-comparison/
@@ -155,4 +150,3 @@ tests/coverage-*.xml
 tests/graphify-out/
 # Indice vettoriale locale (non versionare)
 ruvector.db
->>>>>>> .merge_file_ZD1qI7
